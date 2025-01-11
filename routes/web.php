@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BrandController;
+use App\Http\Controllers\PlatformController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\DashboardsController;
@@ -7,7 +9,7 @@ use App\Http\Controllers\PagesController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\ErrorController;
-use App\Http\Controllers\UielementsController;
+use App\Http\Controllers\UiElementsController;
 use App\Http\Controllers\UtilitiesController;
 use App\Http\Controllers\FormsController;
 use App\Http\Controllers\AdvanceduiController;
@@ -36,19 +38,41 @@ use App\Http\Controllers\IconsController;
 
 // DASHBOARDS //
 Route::get('/', [DashboardsController::class, 'index']);
+
+//Sign up. signin
+Route::get('signup', [AuthenticationController::class, 'signup_basic']);
+Route::get('signin', [AuthenticationController::class, 'signin_cover']);
+
+
+// Platform
+Route::get('/facebook', [PlatformController::class, 'facebook']);
+Route::get('/instagram', [PlatformController::class, 'instagram']);
+Route::get('/twitter', [PlatformController::class, 'twitter']);
+Route::get('/linkedin', [PlatformController::class, 'linkedin']);
+Route::get('authFacebook', [PlatformController::class, 'authFacebook']);
+Route::get('authInstagram', [PlatformController::class, 'authInstagram']);
+Route::get('authTwitter', [PlatformController::class, 'authTwitter']);
+Route::get('authLinkedin', [PlatformController::class, 'authLinkedin']);
+
+// Brand
+Route::get('/create-brand', [BrandController::class, 'create']);
+Route::get('/manage-brand', [BrandController::class, 'manage']);
+Route::get('/edit-brand', [BrandController::class, 'edit']);
+
 Route::get('/ai-tools', [DashboardsController::class, 'aiTools']);
 Route::get('/social', [DashboardsController::class, 'social']);
 Route::get('/advertising', [DashboardsController::class, 'advertising']);
 Route::get('/seo', [DashboardsController::class, 'seo']);
 Route::get('/assets', [DashboardsController::class, 'assets']);
-Route::get('/brands', [DashboardsController::class, 'brands']);
-Route::get('/platform', [DashboardsController::class, 'platform']);
+
 Route::get('/website', [DashboardsController::class, 'website']);
 Route::get('/analytics', [DashboardsController::class, 'analytics']);
 Route::get('/credits', [DashboardsController::class, 'credits']);
 Route::get('/heylix', [DashboardsController::class, 'heylix']);
 Route::get('/upgrade', [DashboardsController::class, 'upgrade']);
 Route::get('/support', [DashboardsController::class, 'support']);
+
+Route::get('alerts', [UiElementsController::class, 'alerts']);
 
 // PAGES //
 Route::get('blog', [PagesController::class, 'blog']);
@@ -74,8 +98,7 @@ Route::get('terms-conditions', [PagesController::class, 'terms_conditions']);
 Route::get('timeline', [PagesController::class, 'timeline']);
 Route::get('todo-list', [PagesController::class, 'todo_list']);
 
-Route::get('signup', [AuthenticationController::class, 'signup_basic']);
-Route::get('signin', [AuthenticationController::class, 'signin_cover']);
+
 
 // ERROR //
 Route::get('error401', [ErrorController::class, 'error401']);

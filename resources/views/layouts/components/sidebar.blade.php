@@ -195,9 +195,9 @@
                 <!-- Brands -->
                 <li
                     class="ml-2 h-12 nav-item group flex items-center px-4 py-3 rounded-md transition-colors hover:bg-[#27283f]"
-                    data-url="/brands"
+                    data-url="/create-brand"
                 >
-                    <a href="/brands" class="flex items-center gap-3 w-full">
+                    <a href="/create-brand" class="flex items-center gap-3 w-full">
                         <div class="icon  group-hover:bg-primary text-gray-400 group-hover:text-white rounded-md p-2">
                             <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 33.96" class="w-5 h-5">
                                 <defs>
@@ -220,9 +220,9 @@
                 <!-- Platform -->
                 <li
                     class="ml-2 h-12 nav-item group flex items-center px-4 py-3 rounded-md transition-colors hover:bg-[#27283f]"
-                    data-url="/platform"
+                    data-url="/facebook"
                 >
-                    <a href="/platform" class="flex items-center gap-3 w-full">
+                    <a href="/facebook" class="flex items-center gap-3 w-full">
                         <div class="icon  group-hover:bg-primary text-gray-400 group-hover:text-white rounded-md p-2">
                             <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37.35 36.97" class="w-5 h-5">
                                 <defs>

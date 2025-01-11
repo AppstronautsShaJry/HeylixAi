@@ -78,7 +78,7 @@
         "shepherd.js": "^11.2.0",
         "simplebar": "^5.3.9",
         "sortablejs": "^1.15.2",
-        "sweetalert2": "^11.4.37",
+        "sweetalert2": "^11.15.10",
         "swiper": "^11.1.15",
         "tabulator-tables": "^5.4.2",
         "toastify-js": "^1.12.0",

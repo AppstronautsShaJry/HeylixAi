@@ -17,7 +17,7 @@
         }
     }"
     x-id="['tab']"
-    class="space-y-6 mx-auto w-full"
+    class=" mx-auto w-full"
 >
     <!-- Tab List -->
     <ul
@@ -29,7 +29,7 @@
         @keydown.end.prevent.stop="$focus.last()"
         @keydown.page-down.prevent.stop="$focus.last()"
         role="tablist"
-        class="box-tab flex justify-start py-8 px-4"
+        class="flex justify-start py-8 px-4"
     >
         <!-- Tab -->
 
@@ -38,10 +38,10 @@
         @endif
 
     </ul>
-    <div class="box-tab shadow-md px-4"></div>
+    <div class="shadow-md px-4"></div>
 
     <!-- Panels -->
-    <div role="tabpanel" class="box-tab text-xs font-lex px-5">
+    <div role="tabpanel" class=" text-xs font-lex ">
 
         <!-- Content -->
 
