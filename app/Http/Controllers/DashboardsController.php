@@ -39,10 +39,6 @@ class DashboardsController extends Controller
         return view('pages.dashboards.test');
     }
 
-    public function platform()
-    {
-        return view('pages.platform.index');
-    }
 
     public function website()
     {
