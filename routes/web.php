@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\PlatformController;
+use App\Http\Controllers\SocialController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\DashboardsController;
@@ -59,8 +60,18 @@ Route::get('/create-brand', [BrandController::class, 'create']);
 Route::get('/manage-brand', [BrandController::class, 'manage']);
 Route::get('/edit-brand', [BrandController::class, 'edit']);
 
+//Social
+//Route::get('/calender', [SocialController::class, 'calender']);
+//Route::get('/posts', [SocialController::class, 'post']);
+Route::get('/calender-social', \App\Livewire\Social\Index::class)->name('calender.social');
+Route::get('/posts-social', \App\Livewire\Social\Post::class)->name('posts.social');
+Route::get('/create-social', \App\Livewire\Social\Create::class)->name('create.social');
+
+//Heylix
+Route::get('/create-heylix', \App\Livewire\Heylix\Create::class)->name('create.heylix');
+
+
 Route::get('/ai-tools', [DashboardsController::class, 'aiTools']);
-Route::get('/social', [DashboardsController::class, 'social']);
 Route::get('/advertising', [DashboardsController::class, 'advertising']);
 Route::get('/seo', [DashboardsController::class, 'seo']);
 Route::get('/assets', [DashboardsController::class, 'assets']);

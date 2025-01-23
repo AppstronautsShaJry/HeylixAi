@@ -145,7 +145,9 @@
                             <div>
                                 <a href="">
                                     <div class="flex flex-col justify-center items-center gap-5">
-                                        <i class="ti ti-circle-plus text-info text-[3rem]"></i>
+{{--                                        <i class="ti ti-circle-plus text-info text-[3rem]"></i>--}}
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="01" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle w-10 h-10 text-info"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+{{--                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="w-9 h-9 fill-blue-600" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M16 2H8C4.691 2 2 4.691 2 8v13a1 1 0 0 0 1 1h13c3.309 0 6-2.691 6-6V8c0-3.309-2.691-6-6-6zm4 14c0 2.206-1.794 4-4 4H4V8c0-2.206 1.794-4 4-4h8c2.206 0 4 1.794 4 4v8z"></path><path d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4z"></path></svg>--}}
                                         <span class="text-xl font-semibold">Create Brand</span>
                                     </div>
                                 </a>

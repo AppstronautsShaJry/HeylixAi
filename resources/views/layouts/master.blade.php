@@ -37,6 +37,8 @@
         <script src="{{asset('build/assets/main.js')}}"></script>
 
         @yield('styles')
+{{--        @livewireStyles--}}
+
 
     </head>
 
@@ -56,6 +58,7 @@
         <div class="page">
             <!-- HEADER -->
             @include('layouts.components.header')
+{{--            <x-livewire:components-header />--}}
 
             <!-- END HEADER -->
             <!-- SIDEBAR -->
@@ -63,6 +66,7 @@
             <!-- END SIDEBAR -->
             <!-- MAIN-CONTENT -->
             @yield('content')
+{{--            {{$slot}}--}}
             <!-- MAIN-CONTENT -->
             <!-- FOOTER -->
             @include('layouts.components.footer')
@@ -74,6 +78,7 @@
 
         @yield('scripts')
 
+
         <!-- STICKY JS -->
         <script src="{{asset('build/assets/sticky.js')}}"></script>
 
@@ -83,6 +88,7 @@
 
         <!-- CUSTOM-SWITCHER JS -->
         @vite('resources/assets/js/custom-switcher.js')
+{{--        @livewireScripts--}}
 
 
         <!-- END SCRIPTS -->
