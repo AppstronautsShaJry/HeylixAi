@@ -42,10 +42,10 @@
 
                     <div class="box-body">
                         <nav class="flex space-x-2 rtl:space-x-reverse" aria-label="Tabs" role="tablist">
-                            <button type="button" class="hs-tab-active:bg-primary hs-tab-active:text-white py-3 px-4 inline-flex items-center gap-2 bg-transparent text-sm font-medium text-center text-defaulttextcolor rounded-sm hover:text-primary  dark:text-[#8c9097] dark:text-white/50 dark:hover:text-white active" id="pills-with-brand-color-item-1" data-hs-tab="#pills-with-brand-color-1" aria-controls="pills-with-brand-color-1">
+                            <button type="button" class="hs-tab-active:bg-[#FF5D9F] hs-tab-active:text-white py-3 px-4 inline-flex items-center gap-2 bg-transparent text-sm font-medium text-center text-defaulttextcolor rounded-sm hover:text-primary  dark:text-[#8c9097] dark:text-white/50 dark:hover:text-white active" id="pills-with-brand-color-item-1" data-hs-tab="#pills-with-brand-color-1" aria-controls="pills-with-brand-color-1">
                                 Tab 1
                             </button>
-                            <button type="button" class="hs-tab-active:bg-primary hs-tab-active:text-white py-3 px-4 inline-flex items-center gap-2 bg-transparent text-sm font-medium text-center text-defaulttextcolor rounded-sm hover:text-primary  dark:text-[#8c9097] dark:text-white/50 dark:hover:text-white" id="pills-with-brand-color-item-2" data-hs-tab="#pills-with-brand-color-2" aria-controls="pills-with-brand-color-2">
+                            <button type="button" class="hs-tab-active:bg-[#FF5D9F] hs-tab-active:text-white py-3 px-4 inline-flex items-center gap-2 bg-transparent text-sm font-medium text-center text-defaulttextcolor rounded-sm hover:text-primary  dark:text-[#8c9097] dark:text-white/50 dark:hover:text-white" id="pills-with-brand-color-item-2" data-hs-tab="#pills-with-brand-color-2" aria-controls="pills-with-brand-color-2">
                                 Tab 2
                             </button>
                         </nav>
@@ -59,15 +59,14 @@
                                         <span class="font-medium text-[15px] block mb-3"><span class="me-1"></span>About Brand</span>
                                     </div>
                                     <ul class="ti-list-group list-group-flush border rounded-3">
-{{--                                        <li class="ti-list-group-item p-4">--}}
-{{--                                            <span class="font-medium text-[15px] block mb-3"><span class="me-1">&#10024;</span>About Brand :</span>--}}
-{{--                                            <p class="text-textmuted dark:text-textmuted/50 mb-2">--}}
-{{--                                                Loius Vuitton--}}
-{{--                                            </p>--}}
-{{--                                            <p class="text-textmuted dark:text-textmuted/50 mb-0">--}}
-{{--                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aut culpa ducimus fuga harum inventore, laborum natus nobis omnis quaerat recusandae reiciendis saepe ullam unde!--}}
-{{--                                            </p>--}}
-{{--                                        </li>--}}
+                                        <li class="ti-list-group-item p-4">
+                                            <p class="text-textmuted dark:text-textmuted mb-2 text-xl font-medium">
+                                                Loius Vuitton
+                                            </p>
+                                            <p class="text-textmuted dark:text-textmuted/50 mb-0">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aut culpa ducimus fuga harum inventore, laborum natus nobis omnis quaerat recusandae reiciendis saepe ullam unde!
+                                            </p>
+                                        </li>
                                         <li class="ti-list-group-item p-4">
                                             <span class="font-medium text-[15px] block mb-3">Contact Info :</span>
                                             <div class="text-textmuted dark:text-textmuted/50">
@@ -102,7 +101,7 @@
                                         </li>
                                         <li class="ti-list-group-item p-4">
                                             <span class="font-medium text-[15px] block mb-3">Social Media :</span>
-                                            <div class="flex items-center gap-5 flex-wrap">
+                                            <div class="grid grid-cols-2  gap-5">
                                                 <div class="flex items-center gap-4 me-2 flex-wrap">
                                                     <div>
                                                         <span class="avatar avatar-md bg-primary"><i class="ri-facebook-line text-[1rem]"></i></span>
@@ -154,7 +153,7 @@
 
                                         <div class="grid grid-cols-12 sm:gap-x-6 gap-5 justify-between">
 
-                                            <div class="xxl:col-span-6 xl:col-span-12 col-span-12">
+                                            <div class="xxl:col-span-6 sm:col-span-8 col-span-12">
                                                 <div class="grid grid-cols-12 sm:gap-x-6 gap-y-6">
                                                     <div class="xl:col-span-12 col-span-12">
                                                         <label for="input-placeholder" class="form-label">Brand Name</label>
@@ -228,7 +227,7 @@
                                     </div>
                                     <div class="box-footer text-center">
                                         <a href="/manage-brand">
-                                            <button type="button" class="ti-btn ti-btn-success-gradient btn-wave ">Save Changes</button>
+                                            <button type="button" class="ti-btn ti-btn-purple-gradient btn-wave ">Save Changes</button>
                                         </a>
                                         <a href="/manage-brand">
                                             <button type="button" class="ti-btn ti-btn-danger-gradient btn-wave ">Cancel</button>
@@ -242,7 +241,7 @@
                 </div>
             </div>
             <div
-                class="w-full xxl:col-span-3 xl:col-span-4 col-span-12 gap-y-8 flex flex-col justify-start items-center">
+                class="w-full xxl:col-span-3 sm:col-span-4 col-span-12 gap-y-8 flex flex-col justify-start items-center">
 
                 <div class="">
                     <div class="">

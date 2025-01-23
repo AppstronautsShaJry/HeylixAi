@@ -78,7 +78,7 @@
 
         <!-- Start::row-1 -->
         <div class="grid grid-cols-12 sm:gap-x-6">
-            <div class="xxl:col-span-9 col-xl-8 col-span-12">
+            <div class="xxl:col-span-9 xl:col-span-8 col-span-12">
                 <div class="box">
                     <div class="box-header">
                         <div class="text-xl font-medium">Add Your Brand</div>
@@ -160,12 +160,12 @@
                         </div>
                     </div>
                     <div class="box-footer text-center">
-                        <button type="button" class="ti-btn ti-btn-success-gradient btn-wave ">Create</button>
+                        <button type="button" class="ti-btn ti-btn-info-gradient btn-wave ">Create</button>
                     </div>
                 </div>
             </div>
             <div
-                class="w-full xxl:col-span-3 xl:col-span-4 col-span-12 gap-y-8 flex flex-col justify-center items-center">
+                class="w-full xxl:col-span-3 sm:col-span-4 col-span-12 gap-y-8 flex flex-col justify-start items-center">
 
                 <div class="">
                     <div class="">
@@ -196,7 +196,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
