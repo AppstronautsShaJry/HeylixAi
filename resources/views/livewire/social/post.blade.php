@@ -53,7 +53,8 @@
                 </thead>
                 <tbody>
                 <tr class="border-b  border-defaultborder dark:border-defaultborder/10">
-                    {{--                        <th scope="row"><input class="form-check-input" type="checkbox" id="checkboxNoLabel1" value="" aria-label="..."></th>--}}
+                    <th scope="row"><input class="form-check-input" type="checkbox" id="checkboxNoLabel1" value=""
+                                           aria-label="..."></th>
                     <td>
                         <div class="flex items-center">
                             <span class="avatar avatar-xs me-2 online avatar-rounded">
@@ -82,20 +83,25 @@
                     </td>
                     <td>
                         <div class="progress progress-xs">
-                            <div class="progress-bar bg-primary w-[52%]" aria-valuenow="52" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-primary w-[52%]" aria-valuenow="52" aria-valuemin="0"
+                                 aria-valuemax="100">
                             </div>
                         </div>
                     </td>
                     <td>$10,984.29</td>
                     <td>
                         <div class="hstack flex gap-3 text-[.9375rem]">
-                            <a aria-label="anchor" href="javascript:void(0);" class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-success"><i class="ri-download-2-line"></i></a>
-                            <a aria-label="anchor" href="javascript:void(0);" class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-info"><i class="ri-edit-line"></i></a>
+                            <a aria-label="anchor" href="javascript:void(0);"
+                               class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-success"><i
+                                    class="ri-download-2-line"></i></a>
+                            <a aria-label="anchor" href="javascript:void(0);"
+                               class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-info"><i class="ri-edit-line"></i></a>
                         </div>
                     </td>
                 </tr>
                 <tr class="border-b  border-defaultborder dark:border-defaultborder/10">
-                    <th scope="row"><input class="form-check-input" type="checkbox" id="checkboxNoLabel2" value="" aria-label="..."></th>
+                    <th scope="row"><input class="form-check-input" type="checkbox" id="checkboxNoLabel2" value=""
+                                           aria-label="..."></th>
                     <td>
                         <div class="flex items-center">
                             <span class="avatar avatar-xs me-2 online avatar-rounded">
@@ -127,20 +133,25 @@
                     </td>
                     <td>
                         <div class="progress progress-xs">
-                            <div class="progress-bar bg-primary w-[91%]" aria-valuenow="91" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-primary w-[91%]" aria-valuenow="91" aria-valuemin="0"
+                                 aria-valuemax="100">
                             </div>
                         </div>
                     </td>
                     <td>$1.4billion</td>
                     <td>
                         <div class="hstack flex gap-3 text-[.9375rem]">
-                            <a aria-label="anchor" href="javascript:void(0);" class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-success"><i class="ri-download-2-line"></i></a>
-                            <a aria-label="anchor" href="javascript:void(0);" class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-info"><i class="ri-edit-line"></i></a>
+                            <a aria-label="anchor" href="javascript:void(0);"
+                               class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-success"><i
+                                    class="ri-download-2-line"></i></a>
+                            <a aria-label="anchor" href="javascript:void(0);"
+                               class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-info"><i class="ri-edit-line"></i></a>
                         </div>
                     </td>
                 </tr>
                 <tr class="border-b  border-defaultborder dark:border-defaultborder/10">
-                    <th scope="row"><input class="form-check-input" type="checkbox" id="checkboxNoLabel3" value="" aria-label="..."></th>
+                    <th scope="row"><input class="form-check-input" type="checkbox" id="checkboxNoLabel3" value=""
+                                           aria-label="..."></th>
                     <td>
                         <div class="flex items-center">
                             <span class="avatar avatar-xs me-2 online avatar-rounded">
@@ -166,20 +177,25 @@
                     </td>
                     <td>
                         <div class="progress progress-xs">
-                            <div class="progress-bar bg-primary w-[45%]" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-primary w-[45%]" aria-valuenow="45" aria-valuemin="0"
+                                 aria-valuemax="100">
                             </div>
                         </div>
                     </td>
                     <td>$7,123.21</td>
                     <td>
                         <div class="hstack flex gap-3 text-[.9375rem]">
-                            <a aria-label="anchor" href="javascript:void(0);" class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-success"><i class="ri-download-2-line"></i></a>
-                            <a aria-label="anchor" href="javascript:void(0);" class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-info"><i class="ri-edit-line"></i></a>
+                            <a aria-label="anchor" href="javascript:void(0);"
+                               class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-success"><i
+                                    class="ri-download-2-line"></i></a>
+                            <a aria-label="anchor" href="javascript:void(0);"
+                               class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-info"><i class="ri-edit-line"></i></a>
                         </div>
                     </td>
                 </tr>
                 <tr class="border-b  border-defaultborder dark:border-defaultborder/10">
-                    <th scope="row"><input class="form-check-input" type="checkbox" id="checkboxNoLabel13" value="" aria-label="..."></th>
+                    <th scope="row"><input class="form-check-input" type="checkbox" id="checkboxNoLabel13" value=""
+                                           aria-label="..."></th>
                     <td>
                         <div class="flex items-center">
                             <span class="avatar avatar-xs me-2 online avatar-rounded">
@@ -208,15 +224,19 @@
                     </td>
                     <td>
                         <div class="progress progress-xs">
-                            <div class="progress-bar bg-primary w-[21%]" aria-valuenow="21" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-primary w-[21%]" aria-valuenow="21" aria-valuemin="0"
+                                 aria-valuemax="100">
                             </div>
                         </div>
                     </td>
                     <td>$2,325.45</td>
                     <td>
                         <div class="hstack flex gap-3 text-[.9375rem]">
-                            <a aria-label="anchor" href="javascript:void(0);" class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-success"><i class="ri-download-2-line"></i></a>
-                            <a aria-label="anchor" href="javascript:void(0);" class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-info"><i class="ri-edit-line"></i></a>
+                            <a aria-label="anchor" href="javascript:void(0);"
+                               class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-success"><i
+                                    class="ri-download-2-line"></i></a>
+                            <a aria-label="anchor" href="javascript:void(0);"
+                               class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-info"><i class="ri-edit-line"></i></a>
                         </div>
                     </td>
                 </tr>
