@@ -40,7 +40,6 @@
                     Facebook
                 </a>
 
-
             </div>
             <div :class="currentPage === '/instagram' ? 'border-b-4 border-blue-500' : 'border-none'" class="max-w-max pb-4 px-2">
                 <a href="/instagram" class="text-lg inline-flex items-center gap-x-3 dark:text-white">
