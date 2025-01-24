@@ -10,7 +10,7 @@
                         </a>
                     </li>
                     <li class="breadcrumb-item active" aria-current="page"><a href="/calender-social">Calendar</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Create</li>
+                    <li class="breadcrumb-item active" aria-current="page">Edit</li>
                 </ol>
             </div>
             <div class="flex gap-2 flex-wrap">
@@ -101,28 +101,25 @@
                                         <input type="text" class="form-control" id="nft-link"
                                                placeholder="Title">
                                     </div>
-
-                                    <div class="flex flex-row items-center gap-5 col-span-12 ">
-                                        <div class="w-full flex flex-col ">
-                                            <label for="input-placeholder" class="form-label">Type of Content</label>
-                                            <x-input.single-select>
-                                                <option value="AI">Image</option>
-                                                <option value="Technology">Corousel</option>
-                                                <option value="Business">Shorts/Reel</option>
-                                                <option value="Business">Animated Post</option>
-                                            </x-input.single-select>
-                                        </div>
-                                        <div class="w-full flex flex-col">
-                                            <label for="nft-link" class="form-label">Select Schedule Time</label>
-                                            <div class="inline-flex items-center gap-x-5">
-                                                <div
-                                                    class="xl:col-span-4 lg:col-span-6 md:col-span-6 sm:col-span-12 col-span-12">
-                                                    <input type="date" class="form-control" id="input-date">
-                                                </div>
-                                                <div
-                                                    class="xl:col-span-4 lg:col-span-6 md:col-span-6 sm:col-span-12 col-span-12">
-                                                    <input type="time" class="form-control" id="input-time">
-                                                </div>
+                                    <div class="xl:col-span-12 col-span-12">
+                                        <label for="input-placeholder" class="form-label">Type of Content</label>
+                                        <x-input.single-select>
+                                            <option value="AI">Image</option>
+                                            <option value="Technology">Corousel</option>
+                                            <option value="Business">Shorts/Reel</option>
+                                            <option value="Business">Animated Post</option>
+                                        </x-input.single-select>
+                                    </div>
+                                    <div class="col-span-12 flex flex-col">
+                                        <label for="nft-link" class="form-label">Select Schedule Time</label>
+                                        <div class="inline-flex items-center gap-x-5">
+                                            <div
+                                                class="xl:col-span-4 lg:col-span-6 md:col-span-6 sm:col-span-12 col-span-12">
+                                                <input type="date" class="form-control" id="input-date">
+                                            </div>
+                                            <div
+                                                class="xl:col-span-4 lg:col-span-6 md:col-span-6 sm:col-span-12 col-span-12">
+                                                <input type="time" class="form-control" id="input-time">
                                             </div>
                                         </div>
                                     </div>
@@ -141,7 +138,8 @@
                                                     id="start-button"
                                                     @click="startVoiceTyping"
                                                     class="inline-flex items-center gap-x-2 bg-transparent border border-info rounded-sm p-3"
-                                                ><span>
+                                                >
+                                                    <span>
                                                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                               fill="currentColor" class="w-6 h-6 text-info"
                                                               viewBox="0 0 16 16">
@@ -194,11 +192,13 @@
                                                                     </svg>
                                                                 </button>
                                                             </div>
+
                                                             <div class="ti-modal-body w-full">
                                                                 <div class="flex w-full gap-5 h-60">
                                                                     <div class="w-full h-full flex flex-wrap gap-5">
                                                                         <div class="w-full h-full">
-                                                                            <div class="h-full">
+                                                                            <div
+                                                                                class="h-full">
                                                                                 <div
                                                                                     class="xl:col-span-12 col-span-12 h-[80%]">
                                                                                     <label for="nft-description"
@@ -214,6 +214,7 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
+
                                                             </div>
 
                                                             <div class="flex px-4 justify-between items-center h-full">
@@ -274,35 +275,50 @@
                                                         {{--                                                        </button>--}}
                                                         <ul class="hs-dropdown-menu ti-dropdown-menu hidden"
                                                             aria-labelledby="dropdownMenuButton1">
-                                                            <li><a class="ti-dropdown-item" href="javascript:void(0);">Food</a>
+                                                            <li><a class="ti-dropdown-item"
+                                                                   href="javascript:void(0);">Food</a>
                                                             </li>
-                                                            <li><a class="ti-dropdown-item" href="javascript:void(0);">Business</a>
+                                                            <li><a class="ti-dropdown-item"
+                                                                   href="javascript:void(0);">Business</a>
                                                             </li>
-                                                            <li><a class="ti-dropdown-item" href="javascript:void(0);">Home</a>
+                                                            <li><a class="ti-dropdown-item"
+                                                                   href="javascript:void(0);">Home</a>
                                                             </li>
-                                                            <li><a class="ti-dropdown-item" href="javascript:void(0);">Finance</a>
+                                                            <li><a class="ti-dropdown-item"
+                                                                   href="javascript:void(0);">Finance</a>
                                                             </li>
-                                                            <li><a class="ti-dropdown-item" href="javascript:void(0);">Travel</a>
+                                                            <li><a class="ti-dropdown-item"
+                                                                   href="javascript:void(0);">Travel</a>
                                                             </li>
-                                                            <li><a class="ti-dropdown-item" href="javascript:void(0);">Technology</a>
+                                                            <li><a class="ti-dropdown-item"
+                                                                   href="javascript:void(0);">Technology</a>
                                                             </li>
-                                                            <li><a class="ti-dropdown-item" href="javascript:void(0);">Health</a>
+                                                            <li><a class="ti-dropdown-item"
+                                                                   href="javascript:void(0);">Health</a>
                                                             </li>
-                                                            <li><a class="ti-dropdown-item" href="javascript:void(0);">Education</a>
+                                                            <li><a class="ti-dropdown-item"
+                                                                   href="javascript:void(0);">Education</a>
                                                             </li>
-                                                            <li><a class="ti-dropdown-item" href="javascript:void(0);">Entertainment</a>
+                                                            <li><a class="ti-dropdown-item"
+                                                                   href="javascript:void(0);">Entertainment</a>
                                                             </li>
-                                                            <li><a class="ti-dropdown-item" href="javascript:void(0);">Sports</a>
+                                                            <li><a class="ti-dropdown-item"
+                                                                   href="javascript:void(0);">Sports</a>
                                                             </li>
-                                                            <li><a class="ti-dropdown-item" href="javascript:void(0);">Shopping</a>
+                                                            <li><a class="ti-dropdown-item"
+                                                                   href="javascript:void(0);">Shopping</a>
                                                             </li>
-                                                            <li><a class="ti-dropdown-item" href="javascript:void(0);">Fashion</a>
+                                                            <li><a class="ti-dropdown-item"
+                                                                   href="javascript:void(0);">Fashion</a>
                                                             </li>
-                                                            <li><a class="ti-dropdown-item" href="javascript:void(0);">Real
+                                                            <li><a class="ti-dropdown-item"
+                                                                   href="javascript:void(0);">Real
                                                                     Estate</a></li>
-                                                            <li><a class="ti-dropdown-item" href="javascript:void(0);">Automotive</a>
+                                                            <li><a class="ti-dropdown-item"
+                                                                   href="javascript:void(0);">Automotive</a>
                                                             </li>
-                                                            <li><a class="ti-dropdown-item" href="javascript:void(0);">Lifestyle</a>
+                                                            <li><a class="ti-dropdown-item"
+                                                                   href="javascript:void(0);">Lifestyle</a>
                                                             </li>
 
                                                         </ul>
@@ -373,7 +389,7 @@
             </div>
 
             <div
-                class="w-full xxl:col-span-3 sm:col-span-4 col-span-12 gap-y-8 flex flex-col justify-start items-center h-[45rem] overflow-y-auto py-8 px-4">
+                class="w-full xxl:col-span-3 sm:col-span-4 col-span-12 gap-y-8 flex flex-col justify-start items-center h-[45rem] overflow-y-auto px-2 py-8">
                 <div class="h-auto w-full rounded-lg border-2 border-gray-600 relative">
                     <div class="max-w-max bg-white rounded-full p-1 absolute -top-3 -right-3">
                         <svg width="90" height="90" viewBox="0 0 90 90" fill="none"
@@ -540,7 +556,8 @@
                         <div class="flex justify-between items-center w-full h-16">
                             <div class="w-full gap-x-4">
                                 <div class="inline-flex items-center gap-x-2 text-xs ">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                         viewBox="0 0 24 24"
                                          fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                                          stroke-linejoin="round" class="feather feather-heart size-4">
                                         <path
@@ -549,7 +566,8 @@
                                     {{--                                    <span>Like</span>--}}
                                 </div>
                                 <div class="inline-flex items-center gap-x-2 text-xs ">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                         viewBox="0 0 24 24"
                                          fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                                          stroke-linejoin="round" class="feather feather-message-circle size-4">
                                         <path
@@ -558,7 +576,8 @@
                                     {{--                                    <span>Comments</span>--}}
                                 </div>
                                 <div class="inline-flex items-center gap-x-2 text-xs ">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                         viewBox="0 0 24 24"
                                          fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                                          stroke-linejoin="round" class="feather feather-send size-4">
                                         <line x1="22" y1="2" x2="11" y2="13"></line>
@@ -582,7 +601,8 @@
 
                 <div class="h-auto w-full rounded-lg border-2 border-gray-600 relative">
                     <div class="max-w-max bg-white rounded-full p-1 absolute -top-3 -right-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                             version="1.1"
                              id="Layer_1" width="24px" class="text-white bg-white" height="24px" viewBox="0 0 24 24"
                              style="enable-background:new 0 0 24 24;" xml:space="preserve">
                 <g>
