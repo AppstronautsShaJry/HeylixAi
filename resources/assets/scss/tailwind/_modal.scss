@@ -16,6 +16,9 @@
         .ti-modal-box {
             @apply sm:max-w-6xl sm:w-full m-3 sm:mx-auto;
         }
+        .ti-modal-box-new {
+            @apply sm:max-w-5xl sm:w-full sm:mx-auto m-3;
+        }
         .ti-modal-content {
             @apply flex flex-col pointer-events-auto bg-white border shadow-sm rounded-sm dark:dark:bg-bodybg dark:border-white/10 dark:shadow-black/[0.05];
         }
