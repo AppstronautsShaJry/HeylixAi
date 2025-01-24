@@ -66,6 +66,7 @@ Route::get('/edit-brand', [BrandController::class, 'edit']);
 Route::get('/calender-social', \App\Livewire\Social\Index::class)->name('calender.social');
 Route::get('/posts-social', \App\Livewire\Social\Post::class)->name('posts.social');
 Route::get('/create-social', \App\Livewire\Social\Create::class)->name('create.social');
+Route::get('/edit-social', \App\Livewire\Social\Edit::class)->name('edit.social');
 
 //Heylix
 Route::get('/create-heylix', \App\Livewire\Heylix\Create::class)->name('create.heylix');
