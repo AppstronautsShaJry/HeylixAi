@@ -27,17 +27,17 @@
 
         <div x-data="{ currentPage: window.location.pathname }" class="p-2 py-6 flex items-center font-medium">
             <div
-                :class="currentPage === '/calender-social' ? 'bg-[#FF5D9F]  rounded-l-sm text-white ' : ' dark:text-gray-400  rounded-md '"
+                :class="currentPage === '/calender-social' ? 'bg-[#FF5D9F]  rounded-l-sm text-white ' : ' hover:text-white dark:text-gray-400  rounded-md '"
                 class="max-w-max py-3 px-2 group">
-                <a href="/calender-social" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
+                <a href="/calender-social" class="text-sm flex items-center gap-x-3 hover:text-white">
                     Calender
                 </a>
             </div>
             <!-- Twitter Tab -->
             <div
-                :class="currentPage === '/post-social' ? 'bg-[#FF5D9F]  rounded-r-sm text-white' : 'hover:text-white dark:text-gray-400  rounded-md'"
+                :class="currentPage === '/post-social' ? 'bg-[#FF5D9F]  rounded-r-sm text-white' : ' dark:text-gray-400  rounded-md'"
                 class="max-w-max py-3 px-2 group">
-                <a href="/posts-social" class="text-sm inline-flex items-center gap-x-3 dark:hover:text-white">
+                <a href="/posts-social" class="text-sm inline-flex items-center gap-x-3 hover:text-gray-600">
                     Post Insights
                 </a>
             </div>
