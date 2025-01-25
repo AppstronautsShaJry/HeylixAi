@@ -6,7 +6,8 @@
             <div>
                 <nav>
                     <ol class="breadcrumb mb-1">
-                        <li class="breadcrumb-item"><a href="javascript:void(0);">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="javascript:void(0);">HexLix</a></li>
+{{--                        <li class="breadcrumb-item active" aria-current="page"></li>--}}
                         <li class="breadcrumb-item active" aria-current="page">Job Status</li>
                     </ol>
                 </nav>
@@ -51,12 +52,7 @@
     <div class="grid grid-cols-12 gap-x-6">
         <div class="xl:col-span-12 col-span-12">
             <div class="box overflow-hidden">
-                <div class="box-header justify-between">
-                    <div class="box-title">
-                        Recent Orders
-                    </div>
-                    <a href="javascript:void(0);" class="ti-btn ti-btn-light btn-wave px-2 py-[0.26rem] text-textmuted dark:text-textmuted/50 waves-effect waves-light">View All</a>
-                </div>
+
                 <div class="box-body p-0">
                     <div class="table-responsive">
                         <table class="ti-custom-table text-nowrap">
@@ -64,7 +60,7 @@
                             <tr class="border !border-defaultborder dark:!border-defaultborder/10">
                                 <th>Job ID</th>
                                 <th>Details</th>
-                                <th class="">Take type</th>
+                                <th class="">Job type</th>
                                 <th>Assigned Date</th>
                                 <th class="">Amount</th>
                                 <th>Status</th>
