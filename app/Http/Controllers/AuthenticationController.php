@@ -2,43 +2,40 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class AuthenticationController extends Controller
 {
-    public function comingsoon()
-    {
-        return view('pages.authentication.comingsoon');
-    }
 
-    public function create_password_basic()
-    {
-        return view('pages.authentication.create-password-basic');
-    }
+//    public function show()
+//    {
+//        return view('auth.signup');
+//    }
 
-    public function create_password_cover()
+    /**
+     * Handle the signup request.
+     */
+    public function register(Request $request)
     {
-        return view('pages.authentication.create-password-cover');
-    }
+        // Validate the incoming request
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:8|confirmed',
+        ]);
 
-    public function lockscreen_basic()
-    {
-        return view('pages.authentication.lockscreen-basic');
-    }
+        // Create a new user
+        $user = User::create([
+            'name' => $validatedData['name'],
+            'email' => $validatedData['email'],
+            'password' => Hash::make($validatedData['password']),
+        ]);
 
-    public function lockscreen_cover()
-    {
-        return view('pages.authentication.lockscreen-cover');
-    }
-
-    public function reset_password_basic()
-    {
-        return view('pages.authentication.reset-password-basic');
-    }
-
-    public function reset_password_cover()
-    {
-        return view('pages.authentication.reset-password-cover');
+        // Redirect to a success page or login page
+        return redirect()->route('signin')->with('success', 'Account created successfully! Please log in.');
     }
 
     public function signup_basic()
@@ -46,34 +43,55 @@ class AuthenticationController extends Controller
         return view('pages.authentication.signup-basic');
     }
 
-    public function signup_cover()
+//    public function show()
+//    {
+//        return view('signin'); // Replace 'signin' with the path to your Blade file, if it's in a subfolder
+//    }
+
+    /**
+     * Handle the sign-in process.
+     */
+    public function login(Request $request)
     {
-        return view('pages.authentication.signup-cover');
+        // Validate the input fields
+        $request->validate([
+            'username' => 'required|string', // Username is required
+            'password' => 'required|string', // Password is required
+        ]);
+
+        // Attempt to authenticate the user
+        if (Auth::attempt(['email' => $request->username, 'password' => $request->password]) ||
+            Auth::attempt(['name' => $request->username, 'password' => $request->password])) {
+
+            // Authentication passed
+            $request->session()->regenerate();
+
+            return redirect()->intended('/'); // Redirect to dashboard
+        }
+
+        // Authentication failed
+        return back()->withErrors([
+            'error' => 'Invalid username or password.', // Custom error message
+        ])->withInput($request->except('password')); // Retain input except for password
     }
 
-    public function signin_basic()
+
+    /**
+     * Logout the user.
+     */
+    public function logout(Request $request)
     {
-        return view('pages.authentication.signin-basic');
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/signin'); // Redirect to the sign-in page
     }
 
     public function signin_cover()
     {
         return view('pages.authentication.signin-cover');
-    }
-
-    public function twostep_verification_basic()
-    {
-        return view('pages.authentication.twostep-verification-basic');
-    }
-
-    public function twostep_verification_cover()
-    {
-        return view('pages.authentication.twostep-verification-cover');
-    }
-
-    public function under_maintenance()
-    {
-        return view('pages.authentication.under-maintenance');
     }
 
 }
