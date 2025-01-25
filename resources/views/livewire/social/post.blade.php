@@ -22,7 +22,7 @@
         <div
             :class="currentPage === '/calender-social' ? 'bg-[#FF5D9F]  rounded-l-sm text-white ' : '  dark:text-gray-400  rounded-md '"
             class="max-w-max py-3 px-2 group">
-            <a href="/calender-social" class="text-sm flex items-center gap-x-3 hover:text-white">
+            <a href="/calender-social" class="text-sm flex items-center gap-x-3 hover:text-gray-600">
                 Calender
             </a>
         </div>
