@@ -10,88 +10,56 @@ use Illuminate\Support\Facades\Hash;
 class AuthenticationController extends Controller
 {
 
-//    public function show()
-//    {
-//        return view('auth.signup');
-//    }
-
-    /**
-     * Handle the signup request.
-     */
     public function register(Request $request)
     {
-        // Validate the incoming request
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8|confirmed',
+            'password_confirmation' => 'required|string|min:8|same:password',
         ]);
-
-        // Create a new user
-        $user = User::create([
+        User::create([
             'name' => $validatedData['name'],
             'email' => $validatedData['email'],
             'password' => Hash::make($validatedData['password']),
         ]);
-
-        // Redirect to a success page or login page
-        return redirect()->route('signin')->with('success', 'Account created successfully! Please log in.');
+        return redirect()->route('dashboard')->with('success', 'Account created successfully! Please log in.');
     }
 
-    public function signup_basic()
+    public function signupBasic()
     {
         return view('pages.authentication.signup-basic');
     }
 
-//    public function show()
-//    {
-//        return view('signin'); // Replace 'signin' with the path to your Blade file, if it's in a subfolder
-//    }
-
-    /**
-     * Handle the sign-in process.
-     */
     public function login(Request $request)
     {
-        // Validate the input fields
-        $request->validate([
-            'username' => 'required|string', // Username is required
-            'password' => 'required|string', // Password is required
+        $credentials = $request->validate([
+            'username' => 'required|string',
+            'password' => 'required|string',
         ]);
-
-        // Attempt to authenticate the user
-        if (Auth::attempt(['email' => $request->username, 'password' => $request->password]) ||
-            Auth::attempt(['name' => $request->username, 'password' => $request->password])) {
-
-            // Authentication passed
+        if (
+            Auth::attempt(['email' => $credentials['username'], 'password' => $credentials['password']]) ||
+            Auth::attempt(['name' => $credentials['username'], 'password' => $credentials['password']])
+        ) {
             $request->session()->regenerate();
 
-            return redirect()->intended('/'); // Redirect to dashboard
+            return redirect()->intended('/')->with('success', 'Welcome back!');
         }
-
-        // Authentication failed
         return back()->withErrors([
-            'error' => 'Invalid username or password.', // Custom error message
-        ])->withInput($request->except('password')); // Retain input except for password
+            'error' => 'Invalid username or password.',
+        ])->withInput($request->except('password'));
     }
 
-
-    /**
-     * Logout the user.
-     */
     public function logout(Request $request)
     {
         Auth::logout();
-
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-
-        return redirect('/signin'); // Redirect to the sign-in page
+        return redirect('/signin')->with('success', 'You have been logged out successfully.');
     }
 
-    public function signin_cover()
+    public function signinCover()
     {
         return view('pages.authentication.signin-cover');
     }
-
 }

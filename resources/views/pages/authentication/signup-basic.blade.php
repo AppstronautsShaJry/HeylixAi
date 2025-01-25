@@ -34,7 +34,7 @@
                             <div class="text-center my-3 authentication-barrier">
                                 <span>OR</span>
                             </div>
-                            <form method="POST" action="/signup">
+                            <form method="POST" action="/signup" onsubmit="return validatePasswords()">
                                 @csrf
                                 <div class="grid grid-cols-12 gap-y-4">
                                     <div class="xl:col-span-12 col-span-12">
@@ -49,7 +49,7 @@
                                         <label for="signup-password" class="form-label text-defaulttextcolor">Password<sup class="text-xs text-danger">*</sup></label>
                                         <div class="relative">
                                             <input type="password" class="form-control create-password-input" id="signup-password" name="password" placeholder="Password" required>
-                                            <a href="javascript:void(0);" class="show-password-button text-textmuted dark:text-textmuted/50" onclick="createpassword('signup-password', this)" id="button-addon2">
+                                            <a href="javascript:void(0);" class="show-password-button text-textmuted dark:text-textmuted/50" onclick="togglePasswordVisibility('signup-password', this)" id="button-addon2">
                                                 <i class="ri-eye-off-line align-middle"></i>
                                             </a>
                                         </div>
@@ -58,7 +58,7 @@
                                         <label for="signup-confirmpassword" class="form-label text-defaulttextcolor">Confirm Password<sup class="text-xs text-danger">*</sup></label>
                                         <div class="relative">
                                             <input type="password" class="form-control create-password-input" id="signup-confirmpassword" name="password_confirmation" placeholder="Confirm Password" required>
-                                            <a href="javascript:void(0);" class="show-password-button text-textmuted dark:text-textmuted/50" onclick="createpassword('signup-confirmpassword', this)" id="button-addon21">
+                                            <a href="javascript:void(0);" class="show-password-button text-textmuted dark:text-textmuted/50" onclick="togglePasswordVisibility('signup-confirmpassword', this)" id="button-addon21">
                                                 <i class="ri-eye-off-line align-middle"></i>
                                             </a>
                                         </div>
@@ -91,5 +91,35 @@
 
         <!-- Show Password JS -->
         <script src="{{asset('build/assets/show-password.js')}}"></script>
+        <script>
+            function validatePasswords() {
+                const password = document.getElementById('signup-password').value;
+                const confirmPassword = document.getElementById('signup-confirmpassword').value;
+
+                if (password !== confirmPassword) {
+                    alert('Passwords do not match.');
+                    return false;
+                }
+
+                if (password.length < 8) {
+                    alert('Password must be at least 8 characters long.');
+                    return false;
+                }
+
+                return true;
+            }
+
+            function togglePasswordVisibility(id, element) {
+                const input = document.getElementById(id);
+                const icon = element.querySelector('i');
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    icon.classList.replace('ri-eye-off-line', 'ri-eye-line');
+                } else {
+                    input.type = 'password';
+                    icon.classList.replace('ri-eye-line', 'ri-eye-off-line');
+                }
+            }
+        </script>
 
 @endsection

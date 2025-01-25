@@ -120,7 +120,7 @@
 	}
 	/*Top left toast js */
 	const topleftToast = document.getElementById('topleftToastBtn')
-	const toplefttoastExample = document.getElementById('topleft-Toast')
+	const toplefttoastExample = document.getElementById('topleft-toast')
 	if (topleftToast) {
 		topleftToast.addEventListener('click', () => {
 			const toast = new bootstrap.Toast(toplefttoastExample)
@@ -129,7 +129,7 @@
 	}
 	/*Top center toast js */
 	const topcenterToast = document.getElementById('topcenterToastBtn')
-	const topcentertoastExample = document.getElementById('topcenter-Toast')
+	const topcentertoastExample = document.getElementById('topcenter-toast')
 	if (topcenterToast) {
 		topcenterToast.addEventListener('click', () => {
 			const toast = new bootstrap.Toast(topcentertoastExample)
@@ -138,7 +138,7 @@
 	}
 	/*Top right toast js */
 	const toprightToast = document.getElementById('toprightToastBtn')
-	const toprighttoastExample = document.getElementById('topright-Toast')
+	const toprighttoastExample = document.getElementById('topright-toast')
 	if (toprightToast) {
 		toprightToast.addEventListener('click', () => {
 			const toast = new bootstrap.Toast(toprighttoastExample)
@@ -147,7 +147,7 @@
 	}
 	/*Middle left toast js */
 	const middleleftToast = document.getElementById('middleleftToastBtn')
-	const middlelefttoastExample = document.getElementById('middleleft-Toast')
+	const middlelefttoastExample = document.getElementById('middleleft-toast')
 	if (middleleftToast) {
 		middleleftToast.addEventListener('click', () => {
 			const toast = new bootstrap.Toast(middlelefttoastExample)
@@ -156,7 +156,7 @@
 	}
 	/*Middle center toast js */
 	const middlecenterToast = document.getElementById('middlecenterToastBtn')
-	const middlecentertoastExample = document.getElementById('middlecenter-Toast')
+	const middlecentertoastExample = document.getElementById('middlecenter-toast')
 	if (middlecenterToast) {
 		middlecenterToast.addEventListener('click', () => {
 			const toast = new bootstrap.Toast(middlecentertoastExample)
@@ -165,7 +165,7 @@
 	}
 	/*Middle right toast js */
 	const middlerightToast = document.getElementById('middlerightToastBtn')
-	const middlerighttoastExample = document.getElementById('middleright-Toast')
+	const middlerighttoastExample = document.getElementById('middleright-toast')
 	if (middlerightToast) {
 		middlerightToast.addEventListener('click', () => {
 			const toast = new bootstrap.Toast(middlerighttoastExample)
@@ -174,7 +174,7 @@
 	}
 	/*Bottom left toast js */
 	const bottomleftToast = document.getElementById('bottomleftToastBtn')
-	const bottomlefttoastExample = document.getElementById('bottomleft-Toast')
+	const bottomlefttoastExample = document.getElementById('bottomleft-toast')
 	if (bottomleftToast) {
 		bottomleftToast.addEventListener('click', () => {
 			const toast = new bootstrap.Toast(bottomlefttoastExample)
@@ -183,7 +183,7 @@
 	}
 	/*Bottom center toast js */
 	const bottomcenterToast = document.getElementById('bottomcenterToastBtn')
-	const bottomcentertoastExample = document.getElementById('bottomcenter-Toast')
+	const bottomcentertoastExample = document.getElementById('bottomcenter-toast')
 	if (bottomcenterToast) {
 		bottomcenterToast.addEventListener('click', () => {
 			const toast = new bootstrap.Toast(bottomcentertoastExample)
@@ -192,7 +192,7 @@
 	}
 	/*Bottom right toast js */
 	const bottomrightToast = document.getElementById('bottomrightToastBtn')
-	const bottomrighttoastExample = document.getElementById('bottomright-Toast')
+	const bottomrighttoastExample = document.getElementById('bottomright-toast')
 	if (bottomrightToast) {
 		bottomrightToast.addEventListener('click', () => {
 			const toast = new bootstrap.Toast(bottomrighttoastExample)
@@ -200,4 +200,4 @@
 		})
 	}
 
-})();    
+})();

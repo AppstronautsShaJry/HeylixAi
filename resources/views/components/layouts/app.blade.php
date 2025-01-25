@@ -23,7 +23,6 @@
     <link href="{{ asset('build/assets/icon-fonts/icons.css') }}" rel="stylesheet">
 
     <!-- APP SCSS -->
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     @vite(['resources/sass/app.scss'])
 
     <!-- APP CSS -->
@@ -38,7 +37,7 @@
     @livewireStyles
 </head>
 
-<body class="font-roboto tracking-wider">
+<body class="font-roboto tracking-wider relative">
 
 <!-- SWITCHER -->
 @include('layouts.components.switcher')
@@ -51,18 +50,18 @@
 <div class="page">
     <!-- HEADER -->
     @include('layouts.components.header')
-
     <!-- SIDEBAR -->
     @include('layouts.components.sidebar')
-
     <!-- MAIN-CONTENT -->
     <main>
         {{ $slot }}
         @yield('content')
     </main>
-
     <!-- FOOTER -->
     @include('layouts.components.footer')
+</div>
+<div class="absolute top-0 right-0">
+    <x-toast.success />
 </div>
 
 <!-- SCRIPTS -->
@@ -72,6 +71,10 @@
 
 <!-- LIVEWIRE SCRIPTS -->
 @livewireScripts
+
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+<script src="//unpkg.com/alpinejs" defer></script>
 
 <!-- STICKY JS -->
 <script src="{{ asset('build/assets/sticky.js') }}"></script>
