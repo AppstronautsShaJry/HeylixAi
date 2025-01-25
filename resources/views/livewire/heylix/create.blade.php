@@ -4,13 +4,13 @@
         <div class="flex items-center justify-between page-header-breadcrumb flex-wrap gap-2">
             <div>
                 <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item">
-                        <a href="/">
-                            Dashboard
-                        </a>
-                    </li>
-                    <li class="breadcrumb-item active" aria-current="page"><a href="/calender-social">Calendar</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Create</li>
+{{--                    <li class="breadcrumb-item">--}}
+{{--                        <a href="/">--}}
+{{--                            Dashboard--}}
+{{--                        </a>--}}
+{{--                    </li>--}}
+                    <li class="breadcrumb-item active" aria-current="page"><a href="/calender-social">HeyLix</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Content Create</li>
                 </ol>
             </div>
             <div class="flex gap-2 flex-wrap">
@@ -51,68 +51,68 @@
     </div>
 
     <div class="box p-5 space-y-8">
-        <div x-cloak x-data="{ tab: 'tab1' }" class="h-12  flex justify-between px-5">
-            <!-- Tab Buttons -->
-            <div class="flex font-medium dark:border-none border rounded-sm dark:bg-black bg-gray-200">
-                <button
-                    @click="tab = 'tab1'"
-                    :class="tab === 'tab1' ? 'bg-[#FF5D9F] text-white' : ' text-gray-400'"
-                    class="px-4 py-2 rounded-l-sm focus:outline-none  dark:hover:text-white hover:text-black">
-                    <i class="ri-facebook-line"></i>
-                </button>
-                <button
-                    @click="tab = 'tab2'"
-                    :class="tab === 'tab2' ? 'bg-[#FF5D9F] text-white' : ' text-gray-400'"
-                    class="px-4 py-2 focus:outline-none  dark:hover:text-white hover:text-black">
-                    <i class="ri-instagram-line"></i>
-                </button>
-                <button
-                    @click="tab = 'tab3'"
-                    :class="tab === 'tab3' ? 'bg-[#FF5D9F] text-white' : ' text-gray-400'"
-                    class="px-4 py-2  focus:outline-none  dark:hover:text-white hover:text-black">
-                    <i class="ri-twitter-x-line"></i>
-                </button>
-                <button
-                    @click="tab = 'tab4'"
-                    :class="tab === 'tab4' ? 'bg-[#FF5D9F] text-white' : ' text-gray-400'"
-                    class="px-4 py-2 rounded-r-sm focus:outline-none  dark:hover:text-white hover:text-black">
-                    <i class="ri-linkedin-line"></i>
-                </button>
-            </div>
+{{--        <div x-cloak x-data="{ tab: 'tab1' }" class="h-12  flex justify-between px-5">--}}
+{{--            <!-- Tab Buttons -->--}}
+{{--            <div class="flex font-medium dark:border-none border rounded-sm dark:bg-black bg-gray-200">--}}
+{{--                <button--}}
+{{--                    @click="tab = 'tab1'"--}}
+{{--                    :class="tab === 'tab1' ? 'bg-[#FF5D9F] text-white' : ' text-gray-400'"--}}
+{{--                    class="px-4 py-2 rounded-l-sm focus:outline-none  dark:hover:text-white hover:text-black">--}}
+{{--                    <i class="ri-facebook-line"></i>--}}
+{{--                </button>--}}
+{{--                <button--}}
+{{--                    @click="tab = 'tab2'"--}}
+{{--                    :class="tab === 'tab2' ? 'bg-[#FF5D9F] text-white' : ' text-gray-400'"--}}
+{{--                    class="px-4 py-2 focus:outline-none  dark:hover:text-white hover:text-black">--}}
+{{--                    <i class="ri-instagram-line"></i>--}}
+{{--                </button>--}}
+{{--                <button--}}
+{{--                    @click="tab = 'tab3'"--}}
+{{--                    :class="tab === 'tab3' ? 'bg-[#FF5D9F] text-white' : ' text-gray-400'"--}}
+{{--                    class="px-4 py-2  focus:outline-none  dark:hover:text-white hover:text-black">--}}
+{{--                    <i class="ri-twitter-x-line"></i>--}}
+{{--                </button>--}}
+{{--                <button--}}
+{{--                    @click="tab = 'tab4'"--}}
+{{--                    :class="tab === 'tab4' ? 'bg-[#FF5D9F] text-white' : ' text-gray-400'"--}}
+{{--                    class="px-4 py-2 rounded-r-sm focus:outline-none  dark:hover:text-white hover:text-black">--}}
+{{--                    <i class="ri-linkedin-line"></i>--}}
+{{--                </button>--}}
+{{--            </div>--}}
 
-            <!-- Tab Content -->
-            <div class="text-md">
-                <div x-cloak x-show="tab === 'tab1'" class="flex gap-x-2 items-center">
-                    <div class="flex items-center gap-x-2 h-12">
-                        <button class="h-full px-3 bg-info-gradient rounded-sm text-white">Feeds</button>
-                    </div>
-                    <div class="flex items-center gap-x-2 h-12">
-                        <button class="h-full px-3 bg-info-gradient rounded-sm text-white">Reels</button>
-                    </div>
-                </div>
-                <div x-cloak x-show="tab === 'tab2'" class="flex gap-x-2">
-                    <div class="flex items-center gap-x-2 h-12">
-                        <button class="h-full px-3 bg-info-gradient rounded-sm text-white">Feeds</button>
-                    </div>
-                    <div class="flex items-center gap-x-2 h-12">
-                        <button class="h-full px-3 bg-info-gradient rounded-sm text-white">Reels</button>
-                    </div>
-                    <div class="flex items-center gap-x-2 h-12">
-                        <button class="h-full px-3 bg-info-gradient rounded-sm text-white">Story</button>
-                    </div>
-                </div>
-                <div x-cloak x-show="tab === 'tab3'" class="flex gap-x-2">
-                    <div class="flex items-center gap-x-2 h-12">
-                        <button class="h-full px-3 bg-info-gradient rounded-sm text-white">Feeds</button>
-                    </div>
-                </div>
-                <div x-cloak x-show="tab === 'tab4'" class="flex gap-x-2">
-                    <div class="flex items-center gap-x-2 h-12">
-                        <button class="h-full px-3 bg-info-gradient rounded-sm text-white">Feeds</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+{{--            <!-- Tab Content -->--}}
+{{--            <div class="text-md">--}}
+{{--                <div x-cloak x-show="tab === 'tab1'" class="flex gap-x-2 items-center">--}}
+{{--                    <div class="flex items-center gap-x-2 h-12">--}}
+{{--                        <button class="h-full px-3 bg-info-gradient rounded-sm text-white">Feeds</button>--}}
+{{--                    </div>--}}
+{{--                    <div class="flex items-center gap-x-2 h-12">--}}
+{{--                        <button class="h-full px-3 bg-info-gradient rounded-sm text-white">Reels</button>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div x-cloak x-show="tab === 'tab2'" class="flex gap-x-2">--}}
+{{--                    <div class="flex items-center gap-x-2 h-12">--}}
+{{--                        <button class="h-full px-3 bg-info-gradient rounded-sm text-white">Feeds</button>--}}
+{{--                    </div>--}}
+{{--                    <div class="flex items-center gap-x-2 h-12">--}}
+{{--                        <button class="h-full px-3 bg-info-gradient rounded-sm text-white">Reels</button>--}}
+{{--                    </div>--}}
+{{--                    <div class="flex items-center gap-x-2 h-12">--}}
+{{--                        <button class="h-full px-3 bg-info-gradient rounded-sm text-white">Story</button>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div x-cloak x-show="tab === 'tab3'" class="flex gap-x-2">--}}
+{{--                    <div class="flex items-center gap-x-2 h-12">--}}
+{{--                        <button class="h-full px-3 bg-info-gradient rounded-sm text-white">Feeds</button>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div x-cloak x-show="tab === 'tab4'" class="flex gap-x-2">--}}
+{{--                    <div class="flex items-center gap-x-2 h-12">--}}
+{{--                        <button class="h-full px-3 bg-info-gradient rounded-sm text-white">Feeds</button>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
 
         <div class="grid grid-cols-12 sm:gap-x-12 px-5">
 
@@ -125,6 +125,17 @@
                         <div class="grid grid-cols-12 sm:gap-x-12 gap-5 justify-between">
                             <div class="xxl:col-span-12 xl:col-span-12 col-span-12">
                                 <div class="grid grid-cols-12 sm:gap-x-6 gap-y-6">
+
+                                    <div class="xl:col-span-12 col-span-12">
+                                        <label for="input-placeholder" class="form-label">Brand Name</label>
+                                        <x-input.single-select>
+                                            <option value="AI">Louis Vuitton</option>
+                                            <option value="Technology">MicroSoft</option>
+                                            <option value="Business">Google</option>
+                                            <option value="Business">Apple</option>
+                                        </x-input.single-select>
+                                    </div>`
+
                                     <div class="xl:col-span-12 col-span-12">
                                         <label for="input-placeholder" class="form-label"
                                                placeholder="eg:Abstract Digital Art">
@@ -133,6 +144,7 @@
                                         <input type="text" class="form-control" id="nft-link"
                                                placeholder="Title">
                                     </div>
+
                                     <div class="xl:col-span-12 col-span-12">
                                         <label for="input-placeholder" class="form-label">Type of Content</label>
                                         <x-input.single-select>
