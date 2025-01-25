@@ -38,15 +38,17 @@ use App\Http\Controllers\IconsController;
 // Route::get('', [Controller::class, 'index']);
 
 // DASHBOARDS //
-Route::get('/', [DashboardsController::class, 'index']);
+Route::get('/', [DashboardsController::class, 'index'])->name('dashboard')->middleware('auth');
 
 //Sign up. signin
-Route::get('signup', [AuthenticationController::class, 'signup_basic'])->name('signup');
+Route::get('signup', [AuthenticationController::class, 'signupBasic'])->name('signup');
 Route::post('signup', [AuthenticationController::class, 'register'])->name('signup.post');
 
-Route::get('signin', [AuthenticationController::class, 'signin_cover'])->name('signin');
+Route::get('signin', [AuthenticationController::class, 'signinCover'])->name('signin');
 Route::post('/signin', [AuthenticationController::class, 'login'])->name('signin.login');
+//Route::post('/logout', [AuthenticationController::class, 'logout'])->name('logout');
 Route::post('/logout', [AuthenticationController::class, 'logout'])->name('logout');
+
 
 
 // Platform
@@ -59,10 +61,14 @@ Route::get('authInstagram', [PlatformController::class, 'authInstagram']);
 Route::get('authTwitter', [PlatformController::class, 'authTwitter']);
 Route::get('authLinkedin', [PlatformController::class, 'authLinkedin']);
 
+
+Route::get('/create-brand', \App\Livewire\Brand\Create::class)->name('brand.create')->middleware('auth');
+Route::get('/manage-brand', \App\Livewire\Brand\Manage::class)->name('brand.manage')->middleware('auth');
+Route::get('/edit-brand', \App\Livewire\Brand\Edit::class)->name('brand.edit')->middleware('auth');
 // Brand
-Route::get('/create-brand', [BrandController::class, 'create']);
-Route::get('/manage-brand', [BrandController::class, 'manage']);
-Route::get('/edit-brand', [BrandController::class, 'edit']);
+//Route::get('/create-brand', [BrandController::class, 'create']);
+//Route::get('/manage-brand', [BrandController::class, 'manage']);
+//Route::get('/edit-brand', [BrandController::class, 'edit']);
 
 //Social
 //Route::get('/calender', [SocialController::class, 'calender']);

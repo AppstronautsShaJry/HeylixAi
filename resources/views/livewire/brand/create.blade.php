@@ -1,4 +1,3 @@
-@extends('layouts.master')
 
 @section('styles')
     <!-- filepond CSS -->
@@ -9,7 +8,6 @@
           href="{{asset('build/assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css')}}">
 @endsection
 
-@section('content')
     <!-- Start::app-content -->
     <div class="main-content app-content">
         <div class="container-fluid">
@@ -201,7 +199,6 @@
     </div>
 
 
-@endsection
 
 @section('scripts')
     <script src="{{asset('build/assets/libs/filepond/filepond.min.js')}}"></script>

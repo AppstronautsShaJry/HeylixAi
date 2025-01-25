@@ -140,7 +140,8 @@
     headerToolbar: {
       left: 'prev,next today',
       center: 'title',
-      right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+      // right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+      right: 'dayGridMonth,timeGridWeek'
     },
     defaultView: 'month',
     navLinks: true, // can click day/week names to navigate views

@@ -615,9 +615,9 @@
                                 aria-labelledby="mainHeaderProfile">
                                 <li>
                                     <div
-                                        class="ti-dropdown-item text-center border-b border-defaultborder dark:border-defaultborder/10 block">
+                                        class="ti-dropdown-item text-center border-b border-defaultborder dark:border-defaultborder/10 block capitalize">
                                         <span>
-                                            Mr.Henry
+                                            {{ auth()->user() ? auth()->user()->name : 'Guest' }}
                                         </span>
                                         <span class="block text-xs text-textmuted dark:text-textmuted/50">UI/UX Designer</span>
                                     </div>
@@ -639,9 +639,16 @@
                                         class="ti-dropdown-item flex items-center" href="{{url('chat')}}"><i
                                             class="fe fe-help-circle p-1 rounded-full bg-primary/10 text-primary set me-2 text-[1rem]"></i>Help</a>
                                 </li>
-                                <li><a class="ti-dropdown-item flex items-center" href="{{url('signin-cover')}}"><i
-                                            class="fe fe-lock p-1 rounded-full bg-primary/10 text-primary ut me-2 text-[1rem]"></i>Log
-                                        Out</a></li>
+                                <li>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                    <a class="ti-dropdown-item flex items-center" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        <i class="fe fe-lock p-1 rounded-full bg-primary/10 text-primary ut me-2 text-[1rem]"></i>Log Out
+                                    </a>
+                                </li>
+
+
                             </ul>
                         </li>
                         <!-- End::header-element -->
