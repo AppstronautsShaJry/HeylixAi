@@ -332,7 +332,7 @@
                     class="ml-2 h-12 nav-item group flex items-center px-4 py-3 rounded-md transition-colors hover:bg-[#27283f]"
                     data-url="/Helix Desk"
                 >
-                    <a href="/heylix" class="flex items-center gap-3 w-full">
+                    <a href="/jobstatus-heylix" class="flex items-center gap-3 w-full">
                         <div class="icon  group-hover:bg-primary text-gray-400 group-hover:text-white rounded-md p-2">
                             <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 29.95" class="w-5 h-5">
                                 <defs>
