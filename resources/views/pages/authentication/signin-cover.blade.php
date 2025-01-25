@@ -51,30 +51,61 @@
                                 <div class="text-center my-3 authentication-barrier">
                                     <span>OR</span>
                                 </div>
-                                <div class="grid grid-cols-12 gap-y-4">
-                                    <div class="xl:col-span-12 col-span-12">
-                                        <label for="signin-username" class="form-label text-defaulttextcolor">User Name</label>
-                                        <input type="text" class="form-control" id="signin-username" placeholder="user name">
-                                    </div>
-                                    <div class="xl:col-span-12 col-span-12 mb-2">
-                                        <label for="signin-password" class="form-label text-defaulttextcolor block">Password<a href="{{url('reset-password-cover')}}" class="float-end font-normal text-textmuted dark:text-textmuted/50">Forget password ?</a></label>
-                                        <div class="relative">
-                                            <input type="password" class="form-control create-password-input" id="signin-password" placeholder="password">
-                                            <a href="javascript:void(0);" class="show-password-button text-textmuted dark:text-textmuted/50" onclick="createpassword('signin-password',this)" id="button-addon2"><i class="ri-eye-off-line align-middle"></i></a>
+                                <form method="POST" action="{{ route('signin.login') }}">
+                                    @csrf
+                                    <div class="grid grid-cols-12 gap-y-4">
+                                        <!-- Username Field -->
+                                        <div class="xl:col-span-12 col-span-12">
+                                            <label for="signin-username" class="form-label text-defaulttextcolor">User Name</label>
+                                            <input
+                                                type="text"
+                                                class="form-control @error('username') is-invalid @enderror"
+                                                id="signin-username"
+                                                name="username"
+                                                placeholder="User Name"
+                                                value="{{ old('username') }}"
+                                                required>
+                                            @error('username')
+                                            <div class="text-danger mt-1">{{ $message }}</div>
+                                            @enderror
                                         </div>
-                                        <div class="mt-2">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                                <label class="form-check-label text-textmuted dark:text-textmuted/50 font-normal" for="defaultCheck1">
-                                                    Remember password ?
-                                                </label>
+
+                                        <!-- Password Field -->
+                                        <div class="xl:col-span-12 col-span-12 mb-2">
+                                            <label for="signin-password" class="form-label text-defaulttextcolor block">
+                                                Password
+                                                <a href="{{ url('reset-password-cover') }}" class="float-end font-normal text-textmuted dark:text-textmuted/50">Forget password?</a>
+                                            </label>
+                                            <div class="relative">
+                                                <input
+                                                    type="password"
+                                                    class="form-control create-password-input @error('password') is-invalid @enderror"
+                                                    id="signin-password"
+                                                    name="password"
+                                                    placeholder="Password"
+                                                    required>
+                                                <a href="javascript:void(0);" class="show-password-button text-textmuted dark:text-textmuted/50" onclick="createpassword('signin-password', this)" id="button-addon2">
+                                                    <i class="ri-eye-off-line align-middle"></i>
+                                                </a>
                                             </div>
+                                            @error('password')
+                                            <div class="text-danger mt-1">{{ $message }}</div>
+                                            @enderror
                                         </div>
                                     </div>
-                                </div>
-                                <div class="grid mt-4">
-                                    <a href="{{url('/')}}" class="ti-btn ti-btn-primary">Sign In</a>
-                                </div>
+
+                                    <!-- Show Authentication Error -->
+                                    @if ($errors->has('error'))
+                                        <div class="alert alert-danger mt-4">
+                                            {{ $errors->first('error') }}
+                                        </div>
+                                    @endif
+
+                                    <div class="grid mt-4">
+                                        <button type="submit" class="ti-btn ti-btn-primary">Sign In</button>
+                                    </div>
+                                </form>
+
                                 <div class="text-center">
                                     <p class="text-textmuted dark:text-textmuted/50 mt-3 mb-0">Dont have an account? <a href="{{url('signup')}}" class="text-primary">Sign Up</a></p>
                                 </div>

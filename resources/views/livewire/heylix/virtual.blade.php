@@ -24,21 +24,21 @@
             </div>
             <!-- Twitter Tab -->
             <div
-                :class="currentPage === '/create-heylix' ? 'bg-[#FF5D9F]  rounded-r-sm text-white' : 'hover:text-white dark:text-gray-400  rounded-md'"
+                :class="currentPage === '/create-heylix' ? 'bg-[#FF5D9F]   text-white' : 'hover:text-white dark:text-gray-400  rounded-md'"
                 class="max-w-max py-3 px-2 group">
                 <a href="/create-heylix" class="text-sm inline-flex items-center gap-x-3 dark:hover:text-white">
                     Content Creation
                 </a>
             </div>
             <div
-                :class="currentPage === '/brand-heylix' ? 'bg-[#FF5D9F]  rounded-l-sm text-white ' : ' dark:text-gray-400  rounded-md '"
+                :class="currentPage === '/brand-heylix' ? 'bg-[#FF5D9F]  text-white ' : ' dark:text-gray-400  rounded-md '"
                 class="max-w-max py-3 px-2 group">
                 <a href="/brand-heylix" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
                     Branding
                 </a>
             </div>
             <div
-                :class="currentPage === '/virtual-heylix' ? 'bg-[#FF5D9F]  rounded-l-sm text-white ' : ' dark:text-gray-400  rounded-md '"
+                :class="currentPage === '/virtual-heylix' ? 'bg-[#FF5D9F]  rounded-r-sm text-white ' : ' dark:text-gray-400  rounded-md '"
                 class="max-w-max py-3 px-2 group">
                 <a href="/virtual-heylix" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
                     Virtual Staff

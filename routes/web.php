@@ -41,8 +41,12 @@ use App\Http\Controllers\IconsController;
 Route::get('/', [DashboardsController::class, 'index']);
 
 //Sign up. signin
-Route::get('signup', [AuthenticationController::class, 'signup_basic']);
-Route::get('signin', [AuthenticationController::class, 'signin_cover']);
+Route::get('signup', [AuthenticationController::class, 'signup_basic'])->name('signup');
+Route::post('signup', [AuthenticationController::class, 'register'])->name('signup.post');
+
+Route::get('signin', [AuthenticationController::class, 'signin_cover'])->name('signin');
+Route::post('/signin', [AuthenticationController::class, 'login'])->name('signin.login');
+Route::post('/logout', [AuthenticationController::class, 'logout'])->name('logout');
 
 
 // Platform
@@ -65,6 +69,7 @@ Route::get('/edit-brand', [BrandController::class, 'edit']);
 //Route::get('/posts', [SocialController::class, 'post']);
 Route::get('/calender-social', \App\Livewire\Social\Index::class)->name('calender.social');
 Route::get('/posts-social', \App\Livewire\Social\Post::class)->name('posts.social');
+
 Route::get('/create-social', \App\Livewire\Social\Create::class)->name('create.social');
 Route::get('/edit-social', \App\Livewire\Social\Edit::class)->name('edit.social');
 

@@ -95,6 +95,7 @@
                                                placeholder="eg:Abstract Digital Art">
                                     </div>
                                     <div class="xl:col-span-12 col-span-12">
+                                        <label for="input-placeholder" class="form-label">Branding Category</label>
                                         <x-input.single-select>
                                             <option value="AI">AI</option>
                                             <option value="Technology">Technology</option>
