@@ -60,9 +60,9 @@
     <!-- FOOTER -->
     @include('layouts.components.footer')
 </div>
-<div class="absolute top-0 right-0">
-    <x-toast.success />
-</div>
+{{--<div class="absolute top-0 right-0">--}}
+{{--    <x-toast.success />--}}
+{{--</div>--}}
 
 <!-- SCRIPTS -->
 @include('layouts.components.scripts')

@@ -14,7 +14,7 @@
             <div>
                 <nav>
                     <ol class="breadcrumb mb-1">
-{{--                        <li class="breadcrumb-item"><a href="javascript:void(0);">Dashboard</a></li>--}}
+                        {{--                        <li class="breadcrumb-item"><a href="javascript:void(0);">Dashboard</a></li>--}}
                         <li class="breadcrumb-item"><a href="javascript:void(0);">HeyLix</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Brand</li>
                     </ol>
@@ -71,36 +71,119 @@
                                         <input type="text" class="form-control" id="input-placeholder"
                                                placeholder="Title">
                                     </div>
-                                    <div class="xl:col-span-12 col-span-12">
-                                        <label for="input-placeholder" class="form-label">Type of Content</label>
-                                        <x-input.single-select>
-                                            <option value="Logo Design">Logo Design</option>
-                                            <option value="Business Card">Business Card</option>
-                                            <option value="Brochure">Brochure</option>
-                                            <option value="Others">Others</option>
-                                        </x-input.single-select>
+                                    {{--                                    <div class="xl:col-span-12 col-span-12">--}}
+                                    {{--                                        <label for="input-placeholder" class="form-label">Type of Content</label>--}}
+                                    {{--                                        <x-input.single-select>--}}
+                                    {{--                                            <option value="Logo Design">Logo Design</option>--}}
+                                    {{--                                            <option value="Business Card">Business Card</option>--}}
+                                    {{--                                            <option value="Brochure">Brochure</option>--}}
+                                    {{--                                            <option value="Others">Others</option>--}}
+                                    {{--                                        </x-input.single-select>--}}
+                                    {{--                                    </div>--}}
+
+                                    <div x-data="{ selectedContent: 'Logo Design' }"
+                                         class="xl:col-span-12 col-span-12 space-y-5">
+                                        <!-- Select Dropdown -->
+                                        <div class="xl:col-span-12 col-span-12">
+                                            <label for="content-type" class="form-label">Type of Content</label>
+                                            <select id="content-type" x-model="selectedContent" class="form-select">
+                                                <option value="Logo Design">Logo Design</option>
+                                                <option value="Business Card">Business Card</option>
+                                                <option value="Brochure">Brochure</option>
+                                                <option value="Others">Others</option>
+                                            </select>
+                                        </div>
+
+
+                                        <!-- Conditionally Render Content -->
+
+                                        <div class="col-span-12 ">
+                                            <label for="nft-link" class="form-label">Select Type</label>
+
+                                            <div x-show="selectedContent === 'Logo Design'">
+                                                <div class="flex gap-x-2">
+                                                    <div class="form-check flex items-center gap-x-2">
+                                                        <input class="form-check-input" type="radio"
+                                                               name="flexRadioDefault"
+                                                               id="flexRadioDefault1">
+                                                        <label class="form-check-label" for="flexRadioDefault1">
+                                                            Standard
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="form-check flex items-center gap-x-2">
+                                                        <input class="form-check-input dark:border-gray-500"
+                                                               type="radio"
+                                                               name="flexRadioDefault"
+                                                               id="flexRadioDefault1">
+                                                        <label class="form-check-label" for="flexRadioDefault1">
+                                                            Premium
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div x-show="selectedContent === 'Business Card'">
+                                                <div class="flex gap-x-2">
+                                                    <div class="form-check flex items-center gap-x-2">
+                                                        <input class="form-check-input" type="radio"
+                                                               name="flexRadioDefault"
+                                                               id="flexRadioDefault1">
+                                                        <label class="form-check-label" for="flexRadioDefault1">
+                                                            One Sided
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="form-check flex items-center gap-x-2">
+                                                        <input class="form-check-input dark:border-gray-500"
+                                                               type="radio"
+                                                               name="flexRadioDefault"
+                                                               id="flexRadioDefault1">
+                                                        <label class="form-check-label" for="flexRadioDefault1">
+                                                            Two Sided
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div x-show="selectedContent === 'Brochure'">
+                                                <div class="flex gap-x-2">
+                                                    <div class="form-check flex items-center gap-x-2">
+                                                        <input class="form-check-input" type="radio"
+                                                               name="flexRadioDefault"
+                                                               id="flexRadioDefault1">
+                                                        <label class="form-check-label" for="flexRadioDefault1">
+                                                            2-fold
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="form-check flex items-center gap-x-2">
+                                                        <input class="form-check-input dark:border-gray-500"
+                                                               type="radio"
+                                                               name="flexRadioDefault"
+                                                               id="flexRadioDefault1">
+                                                        <label class="form-check-label" for="flexRadioDefault1">
+                                                            3-fold
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div x-show="selectedContent === 'Others'">
+                                                <div class="form-check flex items-center gap-x-2">
+                                                    <input class="form-check-input" type="radio"
+                                                           name="flexRadioDefault"
+                                                           id="flexRadioDefault1">
+                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                        Add text section to enter
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
                                     </div>
 
-                                    <div class="col-span-12">
-                                        <label for="nft-link" class="form-label">Select Type</label>
-                                        <div class="flex gap-x-2">
-                                            <div class="form-check flex items-center gap-x-2">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                       id="flexRadioDefault1">
-                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                    Standard
-                                                </label>
-                                            </div>
-                                            <div class="form-check flex items-center gap-x-2">
-                                                <input class="form-check-input dark:border-gray-500" type="radio"
-                                                       name="flexRadioDefault"
-                                                       id="flexRadioDefault1">
-                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                    Premium
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
                                     <div class="upload-container col-span-12 rounded-md md:w-1/2 w-full">
                                         <label class="form-label">Reference Files</label>
                                         <div
@@ -111,7 +194,8 @@
                                                 class="file-upload hidden"
                                             />
                                             <!-- Label with SVG and Text -->
-                                            <div class="inline-flex items-center gap-x-3 cursor-pointer upload-label ">
+                                            <div
+                                                class="inline-flex items-center gap-x-3 cursor-pointer upload-label ">
                                                 <span class="bg-info p-2 rounded-l-md">
                                                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                           fill="currentColor" class="bi bi-card-image"
@@ -150,7 +234,10 @@
                     </div>
                     <div class="box-footer text-center flex items-center gap-x-5">
                         <button type="button" class="ti-btn ti-btn-info-gradient btn-wave ">Post Job</button>
-                        <span class="inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: white;transform: ;msFilter:;"><path d="M12 5C7.031 5 2 6.546 2 9.5S7.031 14 12 14c4.97 0 10-1.546 10-4.5S16.97 5 12 5zm-5 9.938v3c1.237.299 2.605.482 4 .541v-3a21.166 21.166 0 0 1-4-.541zm6 .54v3a20.994 20.994 0 0 0 4-.541v-3a20.994 20.994 0 0 1-4 .541zm6-1.181v3c1.801-.755 3-1.857 3-3.297v-3c0 1.44-1.199 2.542-3 3.297zm-14 3v-3C3.2 13.542 2 12.439 2 11v3c0 1.439 1.2 2.542 3 3.297z"></path></svg><span>12</span></span>
+                        <span class="inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                    height="24" viewBox="0 0 24 24"
+                                                                    style="fill: white;transform: ;msFilter:;"><path
+                                    d="M12 5C7.031 5 2 6.546 2 9.5S7.031 14 12 14c4.97 0 10-1.546 10-4.5S16.97 5 12 5zm-5 9.938v3c1.237.299 2.605.482 4 .541v-3a21.166 21.166 0 0 1-4-.541zm6 .54v3a20.994 20.994 0 0 0 4-.541v-3a20.994 20.994 0 0 1-4 .541zm6-1.181v3c1.801-.755 3-1.857 3-3.297v-3c0 1.44-1.199 2.542-3 3.297zm-14 3v-3C3.2 13.542 2 12.439 2 11v3c0 1.439 1.2 2.542 3 3.297z"></path></svg><span>12</span></span>
                     </div>
                 </div>
             </div>
@@ -206,12 +293,14 @@
         src="{{asset('build/assets/libs/filepond-plugin-file-validate-size/filepond-plugin-file-validate-size.min.js')}}"></script>
     <script
         src="{{asset('build/assets/libs/filepond-plugin-file-encode/filepond-plugin-file-encode.min.js')}}"></script>
-    <script src="{{asset('build/assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.js')}}"></script>
+    <script
+        src="{{asset('build/assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.js')}}"></script>
     <script
         src="{{asset('build/assets/libs/filepond-plugin-file-validate-type/filepond-plugin-file-validate-type.min.js')}}"></script>
     <script
         src="{{asset('build/assets/libs/filepond-plugin-file-validate-type/filepond-plugin-file-validate-type.min.js')}}"></script>
-    <script src="{{asset('build/assets/libs/filepond-plugin-image-crop/filepond-plugin-image-crop.min.js')}}"></script>
+    <script
+        src="{{asset('build/assets/libs/filepond-plugin-image-crop/filepond-plugin-image-crop.min.js')}}"></script>
     <script
         src="{{asset('build/assets/libs/filepond-plugin-image-resize/filepond-plugin-image-resize.min.js')}}"></script>
     <script
