@@ -52,16 +52,16 @@ Route::post('/logout', [AuthenticationController::class, 'logout'])->name('logou
 
 
 // Platform
-Route::get('/facebook', [PlatformController::class, 'facebook']);
-Route::get('/instagram', [PlatformController::class, 'instagram']);
-Route::get('/twitter', [PlatformController::class, 'twitter']);
-Route::get('/linkedin', [PlatformController::class, 'linkedin']);
-Route::get('authFacebook', [PlatformController::class, 'authFacebook']);
-Route::get('authInstagram', [PlatformController::class, 'authInstagram']);
-Route::get('authTwitter', [PlatformController::class, 'authTwitter']);
-Route::get('authLinkedin', [PlatformController::class, 'authLinkedin']);
+Route::get('/facebook', [PlatformController::class, 'facebook'])->middleware('auth');
+Route::get('/instagram', [PlatformController::class, 'instagram'])->middleware('auth');
+Route::get('/twitter', [PlatformController::class, 'twitter'])->middleware('auth');
+Route::get('/linkedin', [PlatformController::class, 'linkedin'])->middleware('auth');
+Route::get('authFacebook', [PlatformController::class, 'authFacebook'])->middleware('auth');
+Route::get('authInstagram', [PlatformController::class, 'authInstagram'])->middleware('auth');
+Route::get('authTwitter', [PlatformController::class, 'authTwitter'])->middleware('auth');
+Route::get('authLinkedin', [PlatformController::class, 'authLinkedin'])->middleware('auth');
 
-
+Route::get('category-brand', \App\Livewire\Brand\Category::class)->name('brand')->middleware('auth');
 Route::get('/create-brand', \App\Livewire\Brand\Create::class)->name('brand.create')->middleware('auth');
 Route::get('/manage-brand', \App\Livewire\Brand\Manage::class)->name('brand.manage')->middleware('auth');
 Route::get('/edit-brand', \App\Livewire\Brand\Edit::class)->name('brand.edit')->middleware('auth');
