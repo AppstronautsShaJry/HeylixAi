@@ -158,8 +158,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="box-footer text-center">
-                        <button type="button" class="ti-btn ti-btn-info-gradient btn-wave ">Create</button>
+                    <div class="box-footer text-end">
+                        <button type="button" class="ti-btn ti-btn-info-gradient btn-wave ">Save Brand</button>
                     </div>
                 </div>
             </div>

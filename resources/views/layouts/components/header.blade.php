@@ -619,6 +619,7 @@
                                         <span>
                                             {{ auth()->user() ? auth()->user()->name : 'Guest' }}
                                         </span>
+
                                         <span class="block text-xs text-textmuted dark:text-textmuted/50">UI/UX Designer</span>
                                     </div>
                                 </li>
