@@ -647,10 +647,7 @@
                             </table>
                         </div>
                     </div>
-
-
                     {{--                    Table end here    --}}
-
                 </div>
             </div>
             <div class="xl:col-span-4 col-span-12">
