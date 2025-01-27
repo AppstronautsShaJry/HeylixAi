@@ -60,9 +60,13 @@
     <!-- FOOTER -->
     @include('layouts.components.footer')
 </div>
-{{--<div class="absolute top-0 right-0">--}}
-{{--    <x-toast.success />--}}
-{{--</div>--}}
+<div class="absolute top-0 right-0">
+    @if (session()->has('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+</div>
 
 <!-- SCRIPTS -->
 @include('layouts.components.scripts')
