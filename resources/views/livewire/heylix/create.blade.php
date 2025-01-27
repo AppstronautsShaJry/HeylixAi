@@ -4,13 +4,13 @@
         <div class="flex items-center justify-between page-header-breadcrumb flex-wrap gap-2">
             <div>
                 <ol class="breadcrumb mb-0">
-{{--                    <li class="breadcrumb-item">--}}
-{{--                        <a href="/">--}}
-{{--                            Dashboard--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
+                    {{--                    <li class="breadcrumb-item">--}}
+                    {{--                        <a href="/">--}}
+                    {{--                            Dashboard--}}
+                    {{--                        </a>--}}
+                    {{--                    </li>--}}
                     <li class="breadcrumb-item active" aria-current="page"><a href="/calender-social">HeyLix</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Content Create</li>
+                    <li class="breadcrumb-item active" aria-current="page">Content Creation Service</li>
                 </ol>
             </div>
             <div class="flex gap-2 flex-wrap">
@@ -51,69 +51,6 @@
     </div>
 
     <div class="box p-5 space-y-8">
-{{--        <div x-cloak x-data="{ tab: 'tab1' }" class="h-12  flex justify-between px-5">--}}
-{{--            <!-- Tab Buttons -->--}}
-{{--            <div class="flex font-medium dark:border-none border rounded-sm dark:bg-black bg-gray-200">--}}
-{{--                <button--}}
-{{--                    @click="tab = 'tab1'"--}}
-{{--                    :class="tab === 'tab1' ? 'bg-[#FF5D9F] text-white' : ' text-gray-400'"--}}
-{{--                    class="px-4 py-2 rounded-l-sm focus:outline-none  dark:hover:text-white hover:text-black">--}}
-{{--                    <i class="ri-facebook-line"></i>--}}
-{{--                </button>--}}
-{{--                <button--}}
-{{--                    @click="tab = 'tab2'"--}}
-{{--                    :class="tab === 'tab2' ? 'bg-[#FF5D9F] text-white' : ' text-gray-400'"--}}
-{{--                    class="px-4 py-2 focus:outline-none  dark:hover:text-white hover:text-black">--}}
-{{--                    <i class="ri-instagram-line"></i>--}}
-{{--                </button>--}}
-{{--                <button--}}
-{{--                    @click="tab = 'tab3'"--}}
-{{--                    :class="tab === 'tab3' ? 'bg-[#FF5D9F] text-white' : ' text-gray-400'"--}}
-{{--                    class="px-4 py-2  focus:outline-none  dark:hover:text-white hover:text-black">--}}
-{{--                    <i class="ri-twitter-x-line"></i>--}}
-{{--                </button>--}}
-{{--                <button--}}
-{{--                    @click="tab = 'tab4'"--}}
-{{--                    :class="tab === 'tab4' ? 'bg-[#FF5D9F] text-white' : ' text-gray-400'"--}}
-{{--                    class="px-4 py-2 rounded-r-sm focus:outline-none  dark:hover:text-white hover:text-black">--}}
-{{--                    <i class="ri-linkedin-line"></i>--}}
-{{--                </button>--}}
-{{--            </div>--}}
-
-{{--            <!-- Tab Content -->--}}
-{{--            <div class="text-md">--}}
-{{--                <div x-cloak x-show="tab === 'tab1'" class="flex gap-x-2 items-center">--}}
-{{--                    <div class="flex items-center gap-x-2 h-12">--}}
-{{--                        <button class="h-full px-3 bg-info-gradient rounded-sm text-white">Feeds</button>--}}
-{{--                    </div>--}}
-{{--                    <div class="flex items-center gap-x-2 h-12">--}}
-{{--                        <button class="h-full px-3 bg-info-gradient rounded-sm text-white">Reels</button>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div x-cloak x-show="tab === 'tab2'" class="flex gap-x-2">--}}
-{{--                    <div class="flex items-center gap-x-2 h-12">--}}
-{{--                        <button class="h-full px-3 bg-info-gradient rounded-sm text-white">Feeds</button>--}}
-{{--                    </div>--}}
-{{--                    <div class="flex items-center gap-x-2 h-12">--}}
-{{--                        <button class="h-full px-3 bg-info-gradient rounded-sm text-white">Reels</button>--}}
-{{--                    </div>--}}
-{{--                    <div class="flex items-center gap-x-2 h-12">--}}
-{{--                        <button class="h-full px-3 bg-info-gradient rounded-sm text-white">Story</button>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div x-cloak x-show="tab === 'tab3'" class="flex gap-x-2">--}}
-{{--                    <div class="flex items-center gap-x-2 h-12">--}}
-{{--                        <button class="h-full px-3 bg-info-gradient rounded-sm text-white">Feeds</button>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div x-cloak x-show="tab === 'tab4'" class="flex gap-x-2">--}}
-{{--                    <div class="flex items-center gap-x-2 h-12">--}}
-{{--                        <button class="h-full px-3 bg-info-gradient rounded-sm text-white">Feeds</button>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-
         <div class="grid grid-cols-12 sm:gap-x-12 px-5">
 
             <div class="xxl:col-span-9 sm:col-span-8 col-span-12">
@@ -134,7 +71,8 @@
                                             <option value="Business">Google</option>
                                             <option value="Business">Apple</option>
                                         </x-input.single-select>
-                                    </div>`
+                                    </div>
+                                    `
 
                                     <div class="xl:col-span-12 col-span-12">
                                         <label for="input-placeholder" class="form-label"
@@ -210,7 +148,8 @@
 
                                     <div class="upload-container col-span-12 rounded-md md:w-1/2 w-full">
                                         <label class="form-label">Raw Files</label>
-                                        <div class="flex border dark:border-gray-700 border-white bg-transparent rounded-md ">
+                                        <div
+                                            class="flex border dark:border-gray-700 border-white bg-transparent rounded-md ">
                                             <!-- Hidden File Input -->
                                             <input
                                                 type="file"
@@ -237,7 +176,8 @@
 
                                     <div class="upload-container col-span-12 rounded-md md:w-1/2 w-full">
                                         <label class="form-label">Reference Files</label>
-                                        <div class="flex border dark:border-gray-700 border-white bg-transparent rounded-md ">
+                                        <div
+                                            class="flex border dark:border-gray-700 border-white bg-transparent rounded-md ">
                                             <!-- Hidden File Input -->
                                             <input
                                                 type="file"
@@ -282,40 +222,65 @@
                     </div>
                     <div class="box-footer text-center flex items-center gap-x-5">
                         <button type="button" class="ti-btn ti-btn-info-gradient btn-wave ">Post Job</button>
-                        <span class="inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: white;transform: ;msFilter:;"><path d="M12 5C7.031 5 2 6.546 2 9.5S7.031 14 12 14c4.97 0 10-1.546 10-4.5S16.97 5 12 5zm-5 9.938v3c1.237.299 2.605.482 4 .541v-3a21.166 21.166 0 0 1-4-.541zm6 .54v3a20.994 20.994 0 0 0 4-.541v-3a20.994 20.994 0 0 1-4 .541zm6-1.181v3c1.801-.755 3-1.857 3-3.297v-3c0 1.44-1.199 2.542-3 3.297zm-14 3v-3C3.2 13.542 2 12.439 2 11v3c0 1.439 1.2 2.542 3 3.297z"></path></svg><span>12</span></span>
+                        <span class="inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                    height="24" viewBox="0 0 24 24"
+                                                                    style="fill: white;transform: ;msFilter:;"><path
+                                    d="M12 5C7.031 5 2 6.546 2 9.5S7.031 14 12 14c4.97 0 10-1.546 10-4.5S16.97 5 12 5zm-5 9.938v3c1.237.299 2.605.482 4 .541v-3a21.166 21.166 0 0 1-4-.541zm6 .54v3a20.994 20.994 0 0 0 4-.541v-3a20.994 20.994 0 0 1-4 .541zm6-1.181v3c1.801-.755 3-1.857 3-3.297v-3c0 1.44-1.199 2.542-3 3.297zm-14 3v-3C3.2 13.542 2 12.439 2 11v3c0 1.439 1.2 2.542 3 3.297z"></path></svg><span>12</span></span>
                     </div>
                 </div>
             </div>
             <div
                 class="w-full xxl:col-span-3 sm:col-span-4 col-span-12 gap-y-8 flex flex-col justify-start items-center">
-                <div class="">
-                    <div class="">
-                        <div class="relative overflow-hidden rounded ">
-                            <img src="{{asset('images/partials/img1.jpg')}}"
-                                 class="w-[280px] h-[260px] mb-3 rounded-md"
-                                 alt="...">
-                        </div>
-                        <div>
-                        </div>
-                        <div class="grid">
-                            <button type="button" class="ti-btn ti-btn-purple-gradient btn-wave ">Send Job</button>
+                <div class="box w-full">
+                    <div class="box-body">
+                        {{--                        <div class="flex items-center gap-2 mb-3">--}}
+                        {{--                            <div class="flex items-center gap-1 flex-wrap">--}}
+                        {{--                                <div class="leading-none">--}}
+                        {{--                                                <span class="avatar avatar-sm avatar-rounded">--}}
+                        {{--                                                    <img src="{{asset('build/assets/images/faces/12.jpg')}}" alt="">--}}
+                        {{--                                                </span>--}}
+                        {{--                                </div>--}}
+                        {{--                                <div>--}}
+                        {{--                                    <div class="">Jane Smith</div>--}}
+                        {{--                                    <div class="text-textmuted dark:text-textmuted/50 text-[10px]">15, April 2024 - 02:15PM</div>--}}
+                        {{--                                </div>--}}
+                        {{--                            </div>--}}
+                        {{--                            <div class="ti-dropdown hs-dropdown ms-auto">--}}
+                        {{--                                <a aria-label="anchor" href="javascript:void(0);" class="ti-btn bg-light ti-btn-icons ti-btn-sm text-textmuted dark:text-textmuted/50 ti-dropdown-toggle hs-dropdown-toggle">--}}
+                        {{--                                    <i class="fe fe-more-vertical"></i>--}}
+                        {{--                                </a>--}}
+                        {{--                                <ul class="ti-dropdown-menu hs-dropdown-menu hidden">--}}
+                        {{--                                    <li><a class="ti-dropdown-item" href="javascript:void(0);">Edit</a></li>--}}
+                        {{--                                    <li><a class="ti-dropdown-item" href="javascript:void(0);">Delete</a></li>--}}
+                        {{--                                    <li><a class="ti-dropdown-item" href="javascript:void(0);">View Details</a></li>--}}
+                        {{--                                </ul>--}}
+                        {{--                            </div>--}}
+                        {{--                        </div>--}}
+
+                        <div class="xxl:col-span-5 col-span-12">
+                            <div
+                                class="box course-main overflow-hidden cover-image bg-cover bg-primary dark:!bg-primary">
+                                <div class="box-body p-6">
+                                    <div class="grid grid-cols-12 justify-between">
+                                        <div class="xl:col-span-12 md:col-span-8 col-span-12 pe-3">
+                                            <h5 class="font-medium mb-2 text-white">Notice 🔔 </h5>
+                                            <span class="text-white block mb-2 opacity-70">we need min 24 hours to create</span>
+                                            <span class="text-white block mb-2 opacity-70">Changes Can be done</span>
+                                            {{--                                            <button type="button"--}}
+                                            {{--                                                    class="ti-btn bg-primarytint1color text-white btn-w-md !mt-2 !mb-0">--}}
+                                            {{--                                                View Courses--}}
+                                            {{--                                            </button>--}}
+                                        </div>
+                                        {{--                                        <div class="xl:col-span-3 md:col-span-4 col-span-12 text-end px-3">--}}
+                                        {{--                                            <img src="{{asset('build/assets/images/media/media-81.png')}}" alt="" class="img-fluid banner10-img">--}}
+                                        {{--                                   </div>--}}
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="">
-                    <div class="">
-                        <div class="relative overflow-hidden rounded ">
-                            <img src="{{asset('images/partials/img1.jpg')}}"
-                                 class="w-[280px] h-[260px] mb-3 rounded-md"
-                                 alt="...">
-                        </div>
-                        <div>
-                        </div>
-                        <div class="grid">
-                            <button type="button" class="ti-btn ti-btn-purple-gradient btn-wave ">Send Job</button>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
