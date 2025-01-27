@@ -55,7 +55,7 @@
             </div>
         </div>
 
-        <div class="grid grid-cols-12 sm:gap-x-6">
+        <div x-data="{ selectedContent: 'Logo Design' }" class="grid grid-cols-12 sm:gap-x-6">
             <div class="xxl:col-span-9 xl:col-span-8 col-span-12">
                 <div class="box">
                     <div class="box-header">
@@ -81,8 +81,8 @@
                                     {{--                                        </x-input.single-select>--}}
                                     {{--                                    </div>--}}
 
-                                    <div x-data="{ selectedContent: 'Logo Design' }"
-                                         class="xl:col-span-12 col-span-12 space-y-5">
+                                    <div
+                                        class="xl:col-span-12 col-span-12 space-y-5">
                                         <!-- Select Dropdown -->
                                         <div class="xl:col-span-12 col-span-12">
                                             <label for="content-type" class="form-label">Type of Content</label>
@@ -184,33 +184,31 @@
 
                                     </div>
 
-                                    <div class="upload-container col-span-12 rounded-md md:w-1/2 w-full">
+                                    <div class="upload-container col-span-12 rounded-md ">
                                         <label class="form-label">Reference Files</label>
                                         <div
-                                            class="flex border dark:border-gray-700 border-white bg-transparent rounded-md ">
-                                            <!-- Hidden File Input -->
+                                            class="flex border border-info bg-transparent rounded-md ">
                                             <input
                                                 type="file"
                                                 class="file-upload hidden"
                                             />
-                                            <!-- Label with SVG and Text -->
                                             <div
                                                 class="inline-flex items-center gap-x-3 cursor-pointer upload-label ">
                                                 <span class="bg-info p-2 rounded-l-md">
-                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                          fill="currentColor" class="bi bi-card-image"
-                                                          viewBox="0 0 16 16">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                         fill="currentColor" class="w-6 h-6 text-white"
+                                                         viewBox="0 0 16 16">
                                                     <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
                                                     <path
                                                         d="M1.5 2A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2zm13 1a.5.5 0 0 1 .5.5v6l-3.775-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12v.54L1 12.5v-9a.5.5 0 0 1 .5-.5z"/>
                                                 </svg>
                                                 </span>
-                                                <span class="p-2  ">Upload Your File</span>
+                                                <span class="p-2  ">Upload Image</span>
                                             </div>
                                         </div>
-                                        <!-- Display the Selected File Name -->
-                                        <p class="file-name mt-2 text-sm text-gray-500">No file selected</p>
+                                        <p class="file-name mt-2 text-xs text-gray-500">No file selected</p>
                                     </div>
+
                                     <div class="xl:col-span-12 col-span-12">
                                         <label for="nft-link" class="form-label">Reference Url</label>
                                         <input type="text" class="form-control" id="nft-link"
@@ -241,37 +239,85 @@
                     </div>
                 </div>
             </div>
-            <div
-                class="w-full xxl:col-span-3 sm:col-span-4 col-span-12 gap-y-8 flex flex-col justify-start items-center">
 
-                <div class="">
-                    <div class="">
-                        <div class="relative overflow-hidden rounded ">
-                            <img src="{{asset('images/partials/img1.jpg')}}"
-                                 class="w-[280px] h-[260px] mb-3 rounded-md"
-                                 alt="...">
-                        </div>
-                        <div>
-                        </div>
-                        <div class="grid">
-                            <button type="button" class="ti-btn ti-btn-purple-gradient btn-wave ">Send Job</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="">
-                    <div class="">
-                        <div class="relative overflow-hidden rounded ">
-                            <img src="{{asset('images/partials/img1.jpg')}}"
-                                 class="w-[280px] h-[260px] mb-3 rounded-md"
-                                 alt="...">
-                        </div>
-                        <div>
-                        </div>
-                        <div class="grid">
-                            <button type="button" class="ti-btn ti-btn-purple-gradient btn-wave ">Send Job</button>
+            <div
+                class="w-full xxl:col-span-3 sm:col-span-4 col-span-12 gap-y-8 flex flex-col justify-start items-center ">
+
+                <div x-show="selectedContent === 'Logo Design'" class="w-full">
+                    <div class="box">
+                        <div class="box-body">
+                            <div class="filemanager-upgrade-storage w-full text-center ">
+                                        <span class="block mb-3 pb-1 bg-primarytint1color/10 rounded-2"> <img
+                                                src="{{asset('build/assets/images/media/file-manager/2.png')}}" alt=""
+                                                class="!inline-flex">
+                                        </span>
+                                <span
+                                    class="text-[1rem] font-semibold text-defaulttextcolor">Standard and Premium</span>
+                                <span
+                                    class="block text-[1rem] font-semibold  text-gray-800 dark:text-textmuted/50 mt-2 text-start">Notice</span>
+                                <span class="block text-textmuted dark:text-textmuted/50 mt-2 text-start">With supporting text below as a natural</span>
+                                <span class="block text-textmuted dark:text-textmuted/50 mt-2 text-start">With supporting text below as a natural</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <div x-show="selectedContent === 'Business Card'" class="w-full">
+                    <div class="box">
+                        <div class="box-body">
+                            <div class="filemanager-upgrade-storage w-full text-center ">
+                                        <span class="block mb-3 pb-1 bg-primarytint1color/10 rounded-2"> <img
+                                                src="{{asset('build/assets/images/media/file-manager/2.png')}}" alt=""
+                                                class="!inline-flex">
+                                        </span>
+                                <span
+                                    class="text-[1rem] font-semibold text-defaulttextcolor">One sided and Two sided</span>
+                                <span
+                                    class="block text-[1rem] font-semibold  text-gray-800 dark:text-textmuted/50 mt-2 text-start">Notice</span>
+                                <span class="block text-textmuted dark:text-textmuted/50 mt-2 text-start">With supporting text below as a natural</span>
+                                <span class="block text-textmuted dark:text-textmuted/50 mt-2 text-start">With supporting text below as a natural</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div x-show="selectedContent === 'Brochure'" class="w-full">
+                    <div class="box">
+                        <div class="box-body">
+                            <div class="filemanager-upgrade-storage w-full text-center ">
+                                        <span class="block mb-3 pb-1 bg-primarytint1color/10 rounded-2"> <img
+                                                src="{{asset('build/assets/images/media/file-manager/2.png')}}" alt=""
+                                                class="!inline-flex">
+                                        </span>
+                                <span class="text-[1rem] font-semibold text-defaulttextcolor">2-fold 3-fold</span>
+                                <span
+                                    class="block text-[1rem] font-semibold  text-gray-800 dark:text-textmuted/50 mt-2 text-start">Notice</span>
+                                <span class="block text-textmuted dark:text-textmuted/50 mt-2 text-start">With supporting text below as a natural</span>
+                                <span class="block text-textmuted dark:text-textmuted/50 mt-2 text-start">With supporting text below as a natural</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div x-show="selectedContent === 'Others'" class="w-full">
+                    <div class="box">
+                        <div class="box-body">
+                            <div class="filemanager-upgrade-storage w-full text-center ">
+                                        <span class="block mb-3 pb-1 bg-primarytint1color/10 rounded-2"> <img
+                                                src="{{asset('build/assets/images/media/file-manager/2.png')}}" alt=""
+                                                class="!inline-flex">
+                                        </span>
+                                <span class="text-[1rem] font-semibold text-defaulttextcolor">Others</span>
+                                {{--                                <span class="text-[1rem] font-semibold text-defaulttextcolor text-start">Notice</span>--}}
+                                <span
+                                    class="block text-[1rem] font-semibold text-gray-800 dark:text-textmuted/50 mt-2 text-start">Notice</span>
+                                <span class="block text-textmuted dark:text-textmuted/50 mt-2 text-start">With supporting text below as a natural</span>
+                                <span class="block text-textmuted dark:text-textmuted/50 mt-2 text-start">With supporting text below as a natural</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
