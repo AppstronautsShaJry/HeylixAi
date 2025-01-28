@@ -30,9 +30,15 @@ class Category extends Component
             'name' => $this->name,
             'description' => $this->description,
             'image' => $imagePath,
-            'is_active' => $this->is_active,
+            'is_active' => $this->is_active ?: true,
         ]);
         session()->flash('success', 'Brand category created successfully.');
+        $this->resetFields();
+
+        $this->emit('closeModal');
+    }
+    public function resetFields()
+    {
         $this->reset(['name', 'description', 'image', 'is_active']);
     }
 

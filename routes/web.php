@@ -44,12 +44,9 @@ Route::get('/', [DashboardsController::class, 'index'])->name('dashboard')->midd
 Route::get('signup', [AuthenticationController::class, 'signupBasic'])->name('signup');
 Route::post('signup', [AuthenticationController::class, 'register'])->name('signup.post');
 
-Route::get('signin', [AuthenticationController::class, 'signinCover'])->name('signin');
+Route::get('signin', [AuthenticationController::class, 'signinCover'])->name('login');
 Route::post('/signin', [AuthenticationController::class, 'login'])->name('signin.login');
-//Route::post('/logout', [AuthenticationController::class, 'logout'])->name('logout');
 Route::post('/logout', [AuthenticationController::class, 'logout'])->name('logout');
-
-
 
 // Platform
 Route::get('/facebook', [PlatformController::class, 'facebook'])->middleware('auth');
@@ -91,7 +88,6 @@ Route::get('/filemanager-generate', \App\Livewire\Filemanager\Generate::class)->
 Route::get('/filemanager-upload', \App\Livewire\Filemanager\Upload::class)->name('filemanager.upload');
 Route::get('/filemanager-heylix', \App\Livewire\Filemanager\Heylix::class)->name('filemanager.heylix');
 
-
 Route::get('/ai-tools', [DashboardsController::class, 'aiTools']);
 Route::get('/advertising', [DashboardsController::class, 'advertising']);
 Route::get('/seo', [DashboardsController::class, 'seo']);
@@ -103,7 +99,6 @@ Route::get('/credits', [DashboardsController::class, 'credits']);
 Route::get('/heylix', [DashboardsController::class, 'heylix']);
 Route::get('/upgrade', [DashboardsController::class, 'upgrade']);
 Route::get('/support', [DashboardsController::class, 'support']);
-
 Route::get('alerts', [UiElementsController::class, 'alerts']);
 
 // PAGES //
@@ -129,8 +124,6 @@ Route::get('team', [PagesController::class, 'team']);
 Route::get('terms-conditions', [PagesController::class, 'terms_conditions']);
 Route::get('timeline', [PagesController::class, 'timeline']);
 Route::get('todo-list', [PagesController::class, 'todo_list']);
-
-
 
 // ERROR //
 Route::get('error401', [ErrorController::class, 'error401']);
