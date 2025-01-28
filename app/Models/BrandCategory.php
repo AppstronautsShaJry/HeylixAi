@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class BrandCategory extends Model
 {
-    protected $table = 'brands_categories';
+    protected $table = 'brand_categories';
     protected $guarded = [];
 }

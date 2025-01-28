@@ -83,7 +83,6 @@
         </div>
 
         <div class="grid grid-cols-12 sm:gap-x-12 px-5">
-
             <div class="xxl:col-span-9 sm:col-span-8 col-span-12">
                 <div class="box">
                     <div class="box-header">
@@ -313,19 +312,8 @@
                                     </div>
 
                                     <div class="xl:col-span-12 col-span-12 flex gap-10 items-start">
-
                                         <div class=" text-center flex items-center gap-x-5">
                                             <a href="{{route('create.heylix')}}">
-{{--                                                <button type="button" class="ti-btn ti-btn-info-gradient btn-wave">--}}
-
-{{--                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"--}}
-{{--                                                         class="w-4 h-4 text-white" viewBox="0 0 16 16">--}}
-{{--                                                        <path--}}
-{{--                                                            d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z"/>--}}
-{{--                                                    </svg>--}}
-{{--                                                    --}}
-{{--                                                </button>--}}
-
                                                 <button
                                                     id="start-button"
                                                     @click="startVoiceTyping"
@@ -345,10 +333,7 @@
                                                     </span>
                                                 </button>
                                             </a>
-
-
                                         </div>
-
                                         <div class="upload-container col-span-12 rounded-md ">
                                             <div
                                                 class="flex border border-info bg-transparent rounded-md ">
