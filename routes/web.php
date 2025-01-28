@@ -87,6 +87,7 @@ Route::get('/filemanager-index', \App\Livewire\Filemanager\Index::class)->name('
 Route::get('/filemanager-generate', \App\Livewire\Filemanager\Generate::class)->name('filemanager.generate');
 Route::get('/filemanager-upload', \App\Livewire\Filemanager\Upload::class)->name('filemanager.upload');
 Route::get('/filemanager-heylix', \App\Livewire\Filemanager\Heylix::class)->name('filemanager.heylix');
+Route::get('/filemanager-gallery', \App\Livewire\Filemanager\Gallery::class)->name('filemanager.gallery');
 
 Route::get('/ai-tools', [DashboardsController::class, 'aiTools']);
 Route::get('/advertising', [DashboardsController::class, 'advertising']);
