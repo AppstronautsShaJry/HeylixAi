@@ -1,7 +1,24 @@
 <div class="main-content app-content px-5 space-y-5">
+
     <div class="container-fluid">
 
-        <link rel="stylesheet" href="{{asset('build/assets/libs/dropzone/dropzone.css')}}">
+        {{--        <link rel="stylesheet" href="{{asset('build/assets/libs/dropzone/dropzone.css')}}">--}}
+
+        <!-- glightbox Css -->
+        <link rel="stylesheet" href="{{asset('build/assets/libs/glightbox/css/glightbox.min.css')}}">
+
+        <!-- Swiper Css -->
+        <link rel="stylesheet" href="{{asset('build/assets/libs/swiper/swiper-bundle.min.css')}}">
+
+        <link rel="stylesheet" href="{{asset('build/assets/libs/quill/quill.snow.css')}}">
+        <link rel="stylesheet" href="{{asset('build/assets/libs/quill/quill.bubble.css')}}">
+
+        <!-- Filepond CSS -->
+        <link rel="stylesheet" href="{{asset('build/assets/libs/filepond/filepond.min.css')}}">
+        <link rel="stylesheet"
+              href="{{asset('build/assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css')}}">
+        <link rel="stylesheet"
+              href="{{asset('build/assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css')}}">
 
         <!-- Start::page-header -->
         <div class="flex items-center justify-between page-header-breadcrumb flex-wrap gap-2">
@@ -20,33 +37,32 @@
             </div>
         </div>
 
-        <div x-data="{ currentPage: window.location.pathname }" class="p-2 py-6 flex items-center font-medium">
-            <div
-                :class="currentPage === '/filemanager-index' ? 'bg-[#FF5D9F]  rounded-l-sm text-white ' : ' hover:text-gray-400 dark:text-gray-400  rounded-md '"
-                class="max-w-max py-3 px-2 group">
-                <a href="/filemanager-index" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
+        <div x-data="{ currentPage: window.location.pathname }" class="flex flex-row p-3 py-5 gap-x-5 items-center">
+            <div :class="currentPage === '/filemanager-index' ? 'border-b-2 border-blue-500' : 'border-none'"
+                 class="max-w-max pb-1.5 px-2">
+                <a href="/filemanager-index" class="text-md inline-flex items-center gap-x-3 dark:text-white">
                     All
+                </a>
+
+            </div>
+            <div :class="currentPage === '/filemanager-upload' ? 'border-b-2 border-blue-500' : 'border-none'"
+                 class="max-w-max pb-2 px-2">
+                <a href="/filemanager-upload" class="text-md inline-flex items-center gap-x-3 dark:text-white">
+                    Uploads
                 </a>
             </div>
             <!-- Twitter Tab -->
-            <div
-                :class="currentPage === '/filemanager-upload' ? 'bg-[#FF5D9F] text-white' : 'hover:text-gray-400 dark:text-gray-400  rounded-md'"
-                class="max-w-max py-3 px-2 group">
-                <a href="/filemanager-upload" class="text-sm inline-flex items-center gap-x-3 dark:hover:text-white">
-                    Upload
-                </a>
-            </div>
-            <div
-                :class="currentPage === '/filemanager-generate' ? 'bg-[#FF5D9F] text-white ' : 'hover:text-gray-400  dark:text-gray-400  rounded-md '"
-                class="max-w-max py-3 px-2 group">
-                <a href="/filemanager-generate" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
+            <div :class="currentPage === '/filemanager-generate' ? 'border-b-2 border-blue-500' : 'border-none'"
+                 class="max-w-max pb-2 px-2">
+                <a href="/filemanager-generate" class="text-md inline-flex items-center gap-x-3 dark:text-white">
                     AI Generated
                 </a>
             </div>
-            <div
-                :class="currentPage === '/filemanager-heylix' ? 'bg-[#FF5D9F] rounded-r-sm text-white ' : ' hover:text-gray-400  dark:text-gray-400  rounded-md '"
-                class="max-w-max py-3 px-2 group">
-                <a href="/filemanager-heylix" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
+
+            <!-- LinkedIn Tab -->
+            <div :class="currentPage === '/filemanager-heylix' ? 'border-b-2 border-blue-500' : 'border-none'"
+                 class="max-w-max pb-2 px-2">
+                <a href="/filemanager-heylix" class="text-md inline-flex items-center gap-x-3">
                     From Desk
                 </a>
             </div>
@@ -58,6 +74,7 @@
                 <div class="xl:col-span-12 col-span-12">
                     <div
                         class="table-responsive border border-defaultborder dark:border-defaultborder/10 border-b-0">
+
                         <table
                             class="ti-custom-table ti-custom-table-head ti-custom-table-hover">
                             <thead>
@@ -70,121 +87,86 @@
                             </tr>
                             </thead>
                             <tbody class="files-list">
+
                             <tr
                                 class="border-b !border-defaultborder dark:!border-defaultborder/10">
                                 <th scope="row">
                                     <div class="flex items-center">
                                         <div class="me-0">
-                                            <span
-                                                class="avatar avatar-md !svg-primary !text-primary">
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 256 256">
-                                                    <rect width="256" height="256"
-                                                          fill="none"/>
-                                                    <path
-                                                        d="M112,175.67V168a8,8,0,0,0-8-8H48a8,8,0,0,0-8,8v40a8,8,0,0,0,8,8h56a8,8,0,0,0,8-8v-8.82L144,216V160Z"
-                                                        opacity="0.2"/>
-                                                    <polyline
-                                                        points="112 175.67 144 160 144 216 112 199.18"
-                                                        fill="none"
-                                                        stroke="currentColor"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        stroke-width="16"/>
-                                                    <rect x="40" y="160" width="72"
-                                                          height="56" rx="8"
-                                                          fill="none"
-                                                          stroke="currentColor"
-                                                          stroke-linecap="round"
-                                                          stroke-linejoin="round"
-                                                          stroke-width="16"/>
-                                                    <polygon
-                                                        points="152 32 152 88 208 88 152 32"
-                                                        opacity="0.2"/>
-                                                    <polyline
-                                                        points="152 32 152 88 208 88"
-                                                        fill="none"
-                                                        stroke="currentColor"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        stroke-width="16"/>
-                                                    <path
-                                                        d="M176,224h24a8,8,0,0,0,8-8V88L152,32H56a8,8,0,0,0-8,8v88"
-                                                        fill="none"
-                                                        stroke="currentColor"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        stroke-width="16"/>
-                                                </svg>
-                                            </span>
+                                             <span
+                                                 class="avatar avatar-md !svg-primarytint3color !text-primarytint3color">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                 stroke-width="1.5"
+                                                 stroke-linecap="round" stroke-linejoin="round"
+                                                 class="icon icon-tabler icons-tabler-outline icon-tabler-video-plus size-5 text-purple-600">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                <path
+                                                    d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4z"/>
+                                                <path
+                                                    d="M3 6m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z"/>
+                                                <path d="M7 12l4 0"/>
+                                                <path d="M9 10l0 4"/>
+                                            </svg>
+                                             </span>
                                         </div>
+
                                         <div>
                                             <a href="javascript:void(0);"
                                                data-hs-overlay="#offcanvasRight">VIDEO_88745_KKI451.mp4</a>
                                         </div>
                                     </div>
                                 </th>
+
                                 <td>89MB</td>
                                 <td>15,Aug 2024</td>
+
                                 <td>
                                     <div class="hstack gap-2 text-[15px]">
+                                        <a href="#youtube-video"
+                                           class="glightbox border-0 mb-0 ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary2"
+                                           data-gallery="gallery1"
+                                           data-title="Compact Laptop"
+                                           data-type="inline"
+                                           data-draggable="true"
+                                        >
+                                            <i class="ri-eye-line"></i>
+                                        </a>
+
                                         <a href="javascript:void(0);"
-                                           class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary2"><i
-                                                class="ri-eye-line"></i></a>
-                                        <a href="javascript:void(0);"
-                                           class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary3"><i
-                                                class="ri-delete-bin-line"></i></a>
+                                           class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary3">
+                                            <i class="ri-delete-bin-line"></i>
+                                        </a>
                                     </div>
+
+                                    <!-- Hidden Iframe Container -->
+                                    <div id="youtube-video" style="display: none;">
+                                        <iframe width="100%" height="100%"
+                                                src="https://youtu.be/rwF-X5STYks?si=YZ2fU9GkG-zdPRwK"
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen>
+                                        </iframe>
+                                    </div>
+
                                 </td>
                             </tr>
+
                             <tr
                                 class="border-b !border-defaultborder dark:!border-defaultborder/10">
                                 <th scope="row">
                                     <div class="flex items-center">
                                         <div class="me-0">
+
                                             <span
                                                 class="avatar avatar-md !svg-primarytint1color !text-primarytint1color">
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 256 256">
-                                                    <rect width="256" height="256"
-                                                          fill="none"/>
-                                                    <path
-                                                        d="M112,175.67V168a8,8,0,0,0-8-8H48a8,8,0,0,0-8,8v40a8,8,0,0,0,8,8h56a8,8,0,0,0,8-8v-8.82L144,216V160Z"
-                                                        opacity="0.2"/>
-                                                    <polyline
-                                                        points="112 175.67 144 160 144 216 112 199.18"
-                                                        fill="none"
-                                                        stroke="currentColor"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        stroke-width="16"/>
-                                                    <rect x="40" y="160" width="72"
-                                                          height="56" rx="8"
-                                                          fill="none"
-                                                          stroke="currentColor"
-                                                          stroke-linecap="round"
-                                                          stroke-linejoin="round"
-                                                          stroke-width="16"/>
-                                                    <polygon
-                                                        points="152 32 152 88 208 88 152 32"
-                                                        opacity="0.2"/>
-                                                    <polyline
-                                                        points="152 32 152 88 208 88"
-                                                        fill="none"
-                                                        stroke="currentColor"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        stroke-width="16"/>
-                                                    <path
-                                                        d="M176,224h24a8,8,0,0,0,8-8V88L152,32H56a8,8,0,0,0-8,8v88"
-                                                        fill="none"
-                                                        stroke="currentColor"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        stroke-width="16"/>
-                                                </svg>
+
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                     stroke-width="1.5" stroke="currentColor"
+                                                     class="size-5 text-purple-600">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                      d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"/>
+                                            </svg>
                                             </span>
                                         </div>
                                         <div>
@@ -197,9 +179,13 @@
                                 <td>18,May 2024</td>
                                 <td>
                                     <div class="hstack gap-2 text-[15px]">
-                                        <a href="javascript:void(0);"
-                                           class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary2"><i
-                                                class="ri-eye-line"></i></a>
+                                        <a href="{{asset('build/assets/images/ecommerce/png/1.png')}}"
+                                           class="glightbox border-0 mb-0 ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary2"
+                                           data-gallery="gallery1"
+                                           data-title="Compact Laptop " data-type="image"
+                                           data-draggable="true"
+                                        ><i class="ri-eye-line"></i></a>
+
                                         <a href="javascript:void(0);"
                                            class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary3"><i
                                                 class="ri-delete-bin-line"></i></a>
@@ -213,49 +199,14 @@
                                         <div class="me-0">
                                             <span
                                                 class="avatar avatar-md !svg-primarytint2color !text-primarytint2color">
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 256 256">
-                                                    <rect width="256" height="256"
-                                                          fill="none"/>
-                                                    <path
-                                                        d="M168,192h16a20,20,0,0,0,0-40H168v56"
-                                                        fill="none"
-                                                        stroke="currentColor"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        stroke-width="16"/>
-                                                    <line x1="128" y1="152" x2="128"
-                                                          y2="208" fill="none"
-                                                          stroke="currentColor"
-                                                          stroke-linecap="round"
-                                                          stroke-linejoin="round"
-                                                          stroke-width="16"/>
-                                                    <polyline
-                                                        points="56 152 88 152 56 208 88 208"
-                                                        fill="none"
-                                                        stroke="currentColor"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        stroke-width="16"/>
-                                                    <polygon
-                                                        points="152 32 152 88 208 88 152 32"
-                                                        opacity="0.2"/>
-                                                    <path
-                                                        d="M48,112V40a8,8,0,0,1,8-8h96l56,56v24"
-                                                        fill="none"
-                                                        stroke="currentColor"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        stroke-width="16"/>
-                                                    <polyline
-                                                        points="152 32 152 88 208 88"
-                                                        fill="none"
-                                                        stroke="currentColor"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        stroke-width="16"/>
-                                                </svg>
+
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                     class="icon icon-tabler icons-tabler-outline icon-tabler-brand-google-drive size-5 text-pink-600"><path
+                                                        stroke="none" d="M0 0h24v24H0z" fill="none"/><path
+                                                        d="M12 10l-6 10l-3 -5l6 -10z"/><path d="M9 15h12l-3 5h-12"/><path
+                                                        d="M15 15l-6 -10h6l6 10z"/></svg>
                                             </span>
                                         </div>
                                         <div>
@@ -268,15 +219,20 @@
                                 <td>06,Mar 2024</td>
                                 <td>
                                     <div class="hstack gap-2 text-[15px]">
-                                        <a href="javascript:void(0);"
-                                           class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary2"><i
-                                                class="ri-eye-line"></i></a>
+                                        <a href="{{asset('build/assets/images/ecommerce/png/1.png')}}"
+                                           class="glightbox border-0 mb-0 ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary2"
+                                           data-gallery="gallery1"
+                                           data-title="Compact Laptop " data-type="image"
+                                           data-draggable="true"
+                                        ><i class="ri-eye-line"></i></a>
+
                                         <a href="javascript:void(0);"
                                            class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary3"><i
                                                 class="ri-delete-bin-line"></i></a>
                                     </div>
                                 </td>
                             </tr>
+
                             <tr
                                 class="border-b !border-defaultborder dark:!border-defaultborder/10">
                                 <th scope="row">
@@ -284,46 +240,21 @@
                                         <div class="me-0">
                                             <span
                                                 class="avatar avatar-md !svg-primarytint3color !text-primarytint3color">
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 256 256">
-                                                    <rect width="256" height="256"
-                                                          fill="none"/>
-                                                    <polygon
-                                                        points="48 200 48 160 72 160 96 136 96 224 72 200 48 200"
-                                                        opacity="0.2"/>
-                                                    <polygon
-                                                        points="48 200 48 160 72 160 96 136 96 224 72 200 48 200"
-                                                        fill="none"
-                                                        stroke="currentColor"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        stroke-width="16"/>
-                                                    <path
-                                                        d="M128,152a32.5,32.5,0,0,1,0,56"
-                                                        fill="none"
-                                                        stroke="currentColor"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        stroke-width="16"/>
-                                                    <polygon
-                                                        points="152 32 152 88 208 88 152 32"
-                                                        opacity="0.2"/>
-                                                    <polyline
-                                                        points="152 32 152 88 208 88"
-                                                        fill="none"
-                                                        stroke="currentColor"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        stroke-width="16"/>
-                                                    <path
-                                                        d="M168,224h32a8,8,0,0,0,8-8V88L152,32H56a8,8,0,0,0-8,8v80"
-                                                        fill="none"
-                                                        stroke="currentColor"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        stroke-width="16"/>
-                                                </svg>
+
+                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                      viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                      stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round"
+                                                      class="icon icon-tabler icons-tabler-outline icon-tabler-video-plus size-5 text-purple-600">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                <path
+                                                    d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4z"/>
+                                                <path
+                                                    d="M3 6m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z"/>
+                                                <path d="M7 12l4 0"/>
+                                                <path d="M9 10l0 4"/>
+                                            </svg>
+
                                             </span>
                                         </div>
                                         <div>
@@ -336,71 +267,37 @@
                                 <td>26,Apr 2024</td>
                                 <td>
                                     <div class="hstack gap-2 text-[15px]">
-                                        <a href="javascript:void(0);"
-                                           class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary2"><i
-                                                class="ri-eye-line"></i></a>
+                                        <a href="{{asset('build/assets/images/ecommerce/png/1.png')}}"
+                                           class="glightbox border-0 mb-0 ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary2"
+                                           data-gallery="gallery1"
+                                           data-title="Compact Laptop " data-type="image"
+                                           data-draggable="true"
+                                        ><i class="ri-eye-line"></i></a>
+
                                         <a href="javascript:void(0);"
                                            class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary3"><i
                                                 class="ri-delete-bin-line"></i></a>
                                     </div>
                                 </td>
                             </tr>
+
                             <tr class="!border-b !border-defaultborder dark:!border-defaultborder/10">
                                 <th scope="row">
                                     <div class="flex items-center">
                                         <div class="me-0">
                                             <span
                                                 class="avatar avatar-md !svg-secondary !text-secondary">
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 256 256">
-                                                    <rect width="256" height="256"
-                                                          fill="none"/>
-                                                    <polygon
-                                                        points="152 32 152 88 208 88 152 32"
-                                                        opacity="0.2"/>
-                                                    <path
-                                                        d="M48,112V40a8,8,0,0,1,8-8h96l56,56v24"
-                                                        fill="none"
-                                                        stroke="currentColor"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        stroke-width="16"/>
-                                                    <polyline
-                                                        points="152 32 152 88 208 88"
-                                                        fill="none"
-                                                        stroke="currentColor"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        stroke-width="16"/>
-                                                    <polyline
-                                                        points="216 152 184 152 184 208"
-                                                        fill="none"
-                                                        stroke="currentColor"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        stroke-width="16"/>
-                                                    <line x1="208" y1="184" x2="184"
-                                                          y2="184" fill="none"
-                                                          stroke="currentColor"
-                                                          stroke-linecap="round"
-                                                          stroke-linejoin="round"
-                                                          stroke-width="16"/>
-                                                    <path
-                                                        d="M48,192H64a20,20,0,0,0,0-40H48v56"
-                                                        fill="none"
-                                                        stroke="currentColor"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        stroke-width="16"/>
-                                                    <path
-                                                        d="M112,152v56h16a28,28,0,0,0,0-56Z"
-                                                        fill="none"
-                                                        stroke="currentColor"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        stroke-width="16"/>
-                                                </svg>
+
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                     class="icon icon-tabler icons-tabler-outline icon-tabler-file-database text-blue-500"><path
+                                                        stroke="none" d="M0 0h24v24H0z" fill="none"/><path
+                                                        d="M12 12.75m-4 0a4 1.75 0 1 0 8 0a4 1.75 0 1 0 -8 0"/><path
+                                                        d="M8 12.5v3.75c0 .966 1.79 1.75 4 1.75s4 -.784 4 -1.75v-3.75"/><path
+                                                        d="M14 3v4a1 1 0 0 0 1 1h4"/><path
+                                                        d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"/></svg>
+
                                             </span>
                                         </div>
                                         <div>
@@ -413,9 +310,13 @@
                                 <td>07,Feb 2024</td>
                                 <td>
                                     <div class="hstack gap-2 text-[15px]">
-                                        <a href="javascript:void(0);"
-                                           class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary2"><i
-                                                class="ri-eye-line"></i></a>
+                                        <a href="{{asset('build/assets/images/ecommerce/png/1.png')}}"
+                                           class="glightbox border-0 mb-0 ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary2"
+                                           data-gallery="gallery1"
+                                           data-title="Compact Laptop " data-type="image"
+                                           data-draggable="true"
+                                        ><i class="ri-eye-line"></i></a>
+
                                         <a href="javascript:void(0);"
                                            class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary3"><i
                                                 class="ri-delete-bin-line"></i></a>
@@ -424,6 +325,7 @@
                             </tr>
                             </tbody>
                         </table>
+
                         <nav aria-label="Page navigation"
                              class="pagination-style-2 border-y px-4 py-3 border-t-0 flex justify-end border-defaultborder dark:border-defaultborder/10">
                             <ul class="ti-pagination mb-0 flex-wrap">
@@ -591,11 +493,12 @@
 
                 <div class="box overflow-hidden">
                     <div class="box-body">
+
                         <div class="flex items-start gap-4">
                             <div>
-                                            <span class="avatar avatar-md bg-secondary/10 !text-secondary">
-                                                <i class="ri-hard-drive-2-fill text-[1rem]"></i>
-                                            </span>
+                                <span class="avatar avatar-md bg-secondary/10 !text-secondary">
+                                    <i class="ri-hard-drive-2-fill text-[1rem]"></i>
+                                </span>
                             </div>
                             <div class="flex-auto">
                                 <div class=" mb-3"> All Folders
@@ -679,12 +582,10 @@
                                         style="width: 86%"></div>
                                 </div>
                             </li>
-
                         </ul>
                     </div>
                 </div>
             </div>
-
         </div>
 
     </div>
@@ -718,5 +619,13 @@
             });
         });
     </script>
+
+    <script src="{{asset('build/assets/libs/swiper/swiper-bundle.min.js')}}"></script>
+
+    <!-- Gallery JS -->
+    <script src="{{asset('build/assets/libs/glightbox/js/glightbox.min.js')}}"></script>
+
+    <!-- Internal Ecommerce Product Details -->
+    @vite('resources/assets/js/ecommerce-product-details.js')
 
 @endsection
