@@ -10,40 +10,68 @@ class Category extends Component
 {
     use WithFileUploads;
 
-    public $name;
-    public $description;
-    public $image;
-    public $is_active = true;
+    public $brandCategoryId, $name, $description, $image, $is_active = true;
+    public $imagePreview;
 
     protected $rules = [
-        'name' => 'required|string|unique:brand_categories,name|max:255',
+        'name' => 'required|unique:brand_categories,name,' . 'id',
         'description' => 'nullable|string',
-        'image' => 'nullable|image|max:2048',
+        'image' => 'nullable|image|max:1024',
         'is_active' => 'boolean',
     ];
+
+    protected $listeners = ['openModal' => 'editCategory'];
+
+    public function createCategory()
+    {
+        $this->reset();
+        $this->dispatchBrowserEvent('open-modal');
+    }
+
+    public function editCategory($id)
+    {
+        $brandCategory = BrandCategory::findOrFail($id);
+        $this->brandCategoryId = $brandCategory->id;
+        $this->name = $brandCategory->name;
+        $this->description = $brandCategory->description;
+        $this->is_active = $brandCategory->is_active;
+        $this->imagePreview = $brandCategory->image;
+
+        $this->dispatchBrowserEvent('open-modal');
+    }
 
     public function save()
     {
         $this->validate();
-        $imagePath = $this->image ? $this->image->store('brand_categories', 'public') : null;
-        BrandCategory::create([
+
+        $data = [
             'name' => $this->name,
             'description' => $this->description,
-            'image' => $imagePath,
-            'is_active' => $this->is_active ?: true,
-        ]);
-        session()->flash('success', 'Brand category created successfully.');
-        $this->resetFields();
+            'is_active' => $this->is_active,
+        ];
 
-        $this->emit('closeModal');
+        if ($this->image) {
+            $data['image'] = $this->image->store('brand_categories', 'public');
+        }
+
+        if ($this->brandCategoryId) {
+            BrandCategory::find($this->brandCategoryId)->update($data);
+            session()->flash('message', 'Brand category updated successfully.');
+        } else {
+            BrandCategory::create($data);
+            session()->flash('message', 'Brand category created successfully.');
+        }
+
+//        $this->dispatchBrowserEvent('close-modal');
+        $this->reset();
     }
-    public function resetFields()
+
+    public function test()
     {
-        $this->reset(['name', 'description', 'image', 'is_active']);
+        dd('clicked');
     }
-
     public function render()
     {
-        return view('livewire.brand.category');
+        return view('livewire.brand.category')->layout('components.layouts.app');
     }
 }

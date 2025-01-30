@@ -29,9 +29,7 @@
                     </div>
                 </div>
             </div>
-
         </div>
-
         <div class="box-tab p-5 flex justify-start items-center gap-x-2 my-10" x-data="buttonHandler">
             <!-- Create Button -->
             <a href="/create-brand"
@@ -51,7 +49,6 @@
                     </button>
                 </div>
             </a>
-
             <!-- Manage Button -->
             <a href="/manage-brand"
                class="dynamic-button"
@@ -71,9 +68,7 @@
                 </div>
             </a>
         </div>
-
         <!-- End::page-header -->
-
         <!-- Start::row-1 -->
         <div class="grid grid-cols-12 sm:gap-x-6">
             <div class="xxl:col-span-9 xl:col-span-8 col-span-12">
@@ -82,9 +77,7 @@
                         <div class="text-xl font-medium">Add Your Brand</div>
                     </div>
                     <div class="box-body">
-
                         <div class="grid grid-cols-12 sm:gap-x-6 gap-5 justify-between">
-
                             <div class="xxl:col-span-6 xl:col-span-12 col-span-12">
                                 <div class="grid grid-cols-12 sm:gap-x-6 gap-y-6">
                                     <div class="xl:col-span-12 col-span-12">
@@ -112,8 +105,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
                             <div class="xxl:col-span-6 xl:col-span-12 col-span-12">
                                 <label class="form-label">Upload Your Logo</label>
                                 <div class="create-nft-item bg-light py-3 rounded">
@@ -121,7 +112,6 @@
                                            accept="image/png, image/jpeg, image/gif">
                                 </div>
                             </div>
-
                             <div class="xl:col-span-12 col-span-12">
                                 <div class="grid grid-cols-12 sm:gap-x-6 gap-y-3">
                                     <div class="xl:col-span-12 col-span-12">
@@ -165,7 +155,6 @@
             </div>
             <div
                 class="w-full xxl:col-span-3 sm:col-span-4 col-span-12 gap-y-8 flex flex-col justify-start items-center">
-
                 <div class="">
                     <div class="">
                         <div class="relative overflow-hidden rounded ">
@@ -197,9 +186,6 @@
             </div>
         </div>
     </div>
-
-
-
 @section('scripts')
     <script src="{{asset('build/assets/libs/filepond/filepond.min.js')}}"></script>
     <script src="{{asset('build/assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js')}}"></script>
@@ -212,7 +198,6 @@
     <script src="{{asset('build/assets/libs/filepond-plugin-image-crop/filepond-plugin-image-crop.min.js')}}"></script>
     <script src="{{asset('build/assets/libs/filepond-plugin-image-resize/filepond-plugin-image-resize.min.js')}}"></script>
     <script src="{{asset('build/assets/libs/filepond-plugin-image-transform/filepond-plugin-image-transform.min.js')}}"></script>
-
     <!-- Create NFT JS -->
     @vite('resources/assets/js/nft-create.js')
     <script>

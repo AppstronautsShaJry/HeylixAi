@@ -73,7 +73,6 @@ class AuthenticationController extends Controller
         ])->withInput($request->except('password')); // Retain input except for password
     }
 
-
     /**
      * Logout the user.
      */
@@ -84,7 +83,7 @@ class AuthenticationController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect()->route('signin'); // Redirect to signin after logout
+        return redirect('/signin');
     }
 
     public function signinCover()

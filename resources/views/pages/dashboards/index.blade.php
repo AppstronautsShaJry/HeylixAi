@@ -174,7 +174,7 @@
                 <div class="box overflow-hidden">
                     <div class="box-header justify-between">
                         <div class="box-title">
-                            Recent Orders
+                            Recent Tasks
                         </div>
                         <a href="javascript:void(0);"
                            class="ti-btn ti-btn-light btn-wave px-2 py-[0.26rem] text-textmuted dark:text-textmuted/50 waves-effect waves-light">View
