@@ -35,33 +35,34 @@
             </div>
         </div>
 
-        <div x-data="{ currentPage: window.location.pathname }" class="flex flex-row p-3 py-5 gap-x-5 items-center">
-            <div :class="currentPage === '/filemanager-index' ? 'border-b-2 border-blue-500' : 'border-none'"
-                 class="max-w-max pb-1.5 px-2">
-                <a href="/filemanager-index" class="text-md inline-flex items-center gap-x-3 dark:text-white">
+        <div x-data="{ currentPage: window.location.pathname }" class="p-2 py-6 flex items-center font-medium">
+            <div
+                :class="currentPage === '/filemanager-index' ? 'bg-[#FF5D9F]  rounded-l-sm text-white ' : ' hover:text-gray-400 dark:text-gray-400  rounded-md '"
+                class="max-w-max py-3 px-2 group">
+                <a href="/filemanager-index" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
                     All
-                </a>
-
-            </div>
-            <div :class="currentPage === '/filemanager-upload' ? 'border-b-2 border-blue-500' : 'border-none'"
-                 class="max-w-max pb-2 px-2">
-                <a href="/filemanager-upload" class="text-md inline-flex items-center gap-x-3 dark:text-white">
-                    Uploads
                 </a>
             </div>
             <!-- Twitter Tab -->
-            <div :class="currentPage === '/filemanager-generate' ? 'border-b-2 border-blue-500' : 'border-none'"
-                 class="max-w-max pb-2 px-2">
-                <a href="/filemanager-generate" class="text-md inline-flex items-center gap-x-3 dark:text-white">
-                    AI Generated
+            <div
+                :class="currentPage === '/filemanager-upload' ? 'bg-[#FF5D9F] text-white' : 'hover:text-gray-400 dark:text-gray-400  rounded-md'"
+                class="max-w-max py-3 px-2 group">
+                <a href="/filemanager-upload" class="text-sm inline-flex items-center gap-x-3 dark:hover:text-white">
+                    Upload
                 </a>
             </div>
-
-            <!-- LinkedIn Tab -->
-            <div :class="currentPage === '/filemanager-heylix' ? 'border-b-2 border-blue-500' : 'border-none'"
-                 class="max-w-max pb-2 px-2">
-                <a href="/filemanager-heylix" class="text-md inline-flex items-center gap-x-3">
-                    From Desk
+            <div
+                :class="currentPage === '/filemanager-generate' ? 'bg-[#FF5D9F] text-white ' : 'hover:text-gray-400  dark:text-gray-400  rounded-md '"
+                class="max-w-max py-3 px-2 group">
+                <a href="/filemanager-generate" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
+                    AI Generate
+                </a>
+            </div>
+            <div
+                :class="currentPage === '/filemanager-heylix' ? 'bg-[#FF5D9F] rounded-r-sm text-white ' : ' hover:text-gray-400  dark:text-gray-400  rounded-md '"
+                class="max-w-max py-3 px-2 group">
+                <a href="/filemanager-heylix" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
+                    Heylix Desk
                 </a>
             </div>
         </div>
@@ -89,26 +90,12 @@
                             <tr
                                 class="border-b !border-defaultborder dark:!border-defaultborder/10">
                                 <th scope="row">
-                                    <div class="flex items-center">
-                                        <div class="me-0">
-                                             <span
-                                                 class="avatar avatar-md !svg-primarytint3color !text-primarytint3color">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                 stroke-width="1.5"
-                                                 stroke-linecap="round" stroke-linejoin="round"
-                                                 class="icon icon-tabler icons-tabler-outline icon-tabler-video-plus size-5 text-purple-600">
-                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                                <path
-                                                    d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4z"/>
-                                                <path
-                                                    d="M3 6m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z"/>
-                                                <path d="M7 12l4 0"/>
-                                                <path d="M9 10l0 4"/>
-                                            </svg>
-                                             </span>
+                                    <div class="flex items-center gap-x-2">
+                                        <div>
+                                            <img src="{{asset('images/partials/img2.jpg')}}"
+                                                 class="w-5 h-4 rounded-sm"
+                                                 alt="...">
                                         </div>
-
                                         <div>
                                             <a href="javascript:void(0);"
                                                data-hs-overlay="#offcanvasRight">VIDEO_88745_KKI451.mp4</a>
@@ -153,19 +140,11 @@
                             <tr
                                 class="border-b !border-defaultborder dark:!border-defaultborder/10">
                                 <th scope="row">
-                                    <div class="flex items-center">
-                                        <div class="me-0">
-
-                                            <span
-                                                class="avatar avatar-md !svg-primarytint1color !text-primarytint1color">
-
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                     stroke-width="1.5" stroke="currentColor"
-                                                     class="size-5 text-purple-600">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                      d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"/>
-                                            </svg>
-                                            </span>
+                                    <div class="flex items-center gap-x-2">
+                                        <div>
+                                            <img src="{{asset('images/partials/img2.jpg')}}"
+                                                 class="w-5 h-4 rounded-sm"
+                                                 alt="...">
                                         </div>
                                         <div>
                                             <a href="javascript:void(0);"
@@ -193,19 +172,11 @@
                             <tr
                                 class="table-active border-b !border-defaultborder dark:!border-defaultborder/10 bg-light">
                                 <th scope="row">
-                                    <div class="flex items-center">
-                                        <div class="me-0">
-                                            <span
-                                                class="avatar avatar-md !svg-primarytint2color !text-primarytint2color">
-
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                                     class="icon icon-tabler icons-tabler-outline icon-tabler-brand-google-drive size-5 text-pink-600"><path
-                                                        stroke="none" d="M0 0h24v24H0z" fill="none"/><path
-                                                        d="M12 10l-6 10l-3 -5l6 -10z"/><path d="M9 15h12l-3 5h-12"/><path
-                                                        d="M15 15l-6 -10h6l6 10z"/></svg>
-                                            </span>
+                                    <div class="flex items-center gap-x-2">
+                                        <div>
+                                            <img src="{{asset('images/partials/img2.jpg')}}"
+                                                 class="w-5 h-4 rounded-sm"
+                                                 alt="...">
                                         </div>
                                         <div>
                                             <a href="javascript:void(0);"
@@ -234,26 +205,11 @@
                             <tr
                                 class="border-b !border-defaultborder dark:!border-defaultborder/10">
                                 <th scope="row">
-                                    <div class="flex items-center">
-                                        <div class="me-0">
-                                            <span
-                                                class="avatar avatar-md !svg-primarytint3color !text-primarytint3color">
-
-                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                      viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                      stroke-width="1.5"
-                                                      stroke-linecap="round" stroke-linejoin="round"
-                                                      class="icon icon-tabler icons-tabler-outline icon-tabler-video-plus size-5 text-purple-600">
-                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                                <path
-                                                    d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4z"/>
-                                                <path
-                                                    d="M3 6m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z"/>
-                                                <path d="M7 12l4 0"/>
-                                                <path d="M9 10l0 4"/>
-                                            </svg>
-
-                                            </span>
+                                    <div class="flex items-center gap-x-2">
+                                        <div>
+                                            <img src="{{asset('images/partials/img2.jpg')}}"
+                                                 class="w-5 h-4 rounded-sm"
+                                                 alt="...">
                                         </div>
                                         <div>
                                             <a href="javascript:void(0);"
@@ -281,23 +237,13 @@
 
                             <tr class="!border-b !border-defaultborder dark:!border-defaultborder/10">
                                 <th scope="row">
-                                    <div class="flex items-center">
-                                        <div class="me-0">
-                                            <span
-                                                class="avatar avatar-md !svg-secondary !text-secondary">
-
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                                     class="icon icon-tabler icons-tabler-outline icon-tabler-file-database text-blue-500"><path
-                                                        stroke="none" d="M0 0h24v24H0z" fill="none"/><path
-                                                        d="M12 12.75m-4 0a4 1.75 0 1 0 8 0a4 1.75 0 1 0 -8 0"/><path
-                                                        d="M8 12.5v3.75c0 .966 1.79 1.75 4 1.75s4 -.784 4 -1.75v-3.75"/><path
-                                                        d="M14 3v4a1 1 0 0 0 1 1h4"/><path
-                                                        d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"/></svg>
-
-                                            </span>
+                                    <div class="flex items-center gap-x-2">
+                                        <div>
+                                            <img src="{{asset('images/partials/img2.jpg')}}"
+                                                 class="w-5 h-4 rounded-sm"
+                                                 alt="...">
                                         </div>
+
                                         <div>
                                             <a href="javascript:void(0);"
                                                data-hs-overlay="#offcanvasRight">Document-file.pdf</a>
