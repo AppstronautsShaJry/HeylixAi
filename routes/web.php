@@ -83,6 +83,12 @@ Route::get('/jobstatus-heylix', \App\Livewire\Heylix\Jobstatus::class)->name('jo
 Route::get('/brand-heylix', \App\Livewire\Heylix\Brand::class)->name('brand.heylix');
 Route::get('/virtual-heylix', \App\Livewire\Heylix\Virtual::class)->name('virtual.heylix');
 
+
+//Credits
+Route::get('/aicredits', \App\Livewire\Credits\Aicredits::class)->name('aicredits');
+Route::get('/adcredits', \App\Livewire\Credits\Adcredits::class)->name('adcredits');
+
+
 //Filemanager
 Route::get('/filemanager-index', \App\Livewire\Filemanager\Index::class)->name('filemanager.index');
 Route::get('/filemanager-generate', \App\Livewire\Filemanager\Generate::class)->name('filemanager.generate');
