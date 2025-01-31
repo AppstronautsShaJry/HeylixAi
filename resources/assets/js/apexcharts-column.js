@@ -83,7 +83,7 @@
     var options = {
         series: [{
             name: 'Inflation',
-            data: [2.3, 3.1, 4.0, 10.1, 4.0, 3.6, 3.2, 2.3, 1.4, 0.8, 0.5, 0.2]
+            data: [2000, 3000, 4000, 5000, 4000, 3400, 3200, 2500, 1400,800, 500, 200]
         }],
         chart: {
             height: 320,
@@ -114,7 +114,7 @@
         colors: ["#5c67f7"],
         xaxis: {
             categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-            position: 'top',
+            position: 'bottom',
             axisBorder: {
                 show: false
             },
