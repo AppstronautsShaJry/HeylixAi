@@ -19,10 +19,6 @@
             </div>
         </div>
 
-
-        {{--        <div class="tab-content mb-6">--}}
-        {{--            <div class="tab-pane show active p-0 border-0" id="pills-monthly1" role="tabpanel"--}}
-        {{--                 aria-labelledby="pills-monthly">--}}
         <div class="grid grid-cols-12 sm:gap-x-6">
             <div class=" xl:col-span-9 col-span-12">
                 <div class="box shadow-none overflow-hidden border-0">
@@ -34,52 +30,51 @@
                                 <tr class="border-b !border-defaultborder dark:!border-defaultborder/10">
                                     <th scope="row" class="dark:bg-gray-700 bg-gray-50">
                                         <div class="mb-0 font-medium text-[1rem]">Basic</div>
-                                        <div class="mb-4 text-[1.75rem] font-medium">₹500<span
-                                                class="text-[13px] opacity-50 ms-1">/ month</span>
+                                        <div class="mb-4 text-[1.75rem] font-medium">800
+                                            <span
+                                                class="text-[13px] opacity-50 ms-1">Credits</span>
                                         </div>
-                                        <div class="text-xs">800 Credits</div>
 
                                         <button type="button"
-                                                class="ti-btn ti-btn-soft-primary3 grid w-full btn-wave waves-effect waves-light">
-                                            <span class="ms-4 me-4">Purchase</span>
+                                                class="ti-btn ti-btn-soft-primary grid w-full btn-wave waves-effect waves-light">
+                                            <span class="ms-4 me-4">₹500</span>
                                         </button>
                                     </th>
 
                                     <th scope="row" class="dark:bg-gray-700 bg-gray-50">
                                         <div class="mb-0 font-medium text-[1rem]">Growth</div>
-                                        <div class="mb-4 text-[1.75rem] font-medium">₹1000<span
-                                                class="text-[13px] opacity-50 ms-1">/ month</span></div>
-                                        <div class="text-xs">2000 Credits</div>
+                                        <div class="mb-4 text-[1.75rem] font-medium">4000
+                                            <span
+                                                class="text-[13px] opacity-50 ms-1">Credits</span>
+                                        </div>
 
                                         <button type="button"
-                                                class="ti-btn ti-btn-soft-primary3 grid w-full btn-wave waves-effect waves-light">
-                                            <span class="ms-4 me-4">Purchase</span>
+                                                class="ti-btn ti-btn-soft-primary grid w-full btn-wave waves-effect waves-light">
+                                            <span class="ms-4 me-4">₹1000</span>
                                         </button>
                                     </th>
 
-                                    <th scope="row" class="relative bg-primary/10 !text-primary">
-                                        <p class="badge badge-lg bg-primarytint1color rounded font-semibold absolute end-0 me-2 mb-0">
-                                            Popular</p>
+                                    <th scope="row" class="dark:bg-gray-700 bg-gray-50">
                                         <div class="mb-0 font-medium text-[1rem]">Pro</div>
-                                        <div class="mb-4 text-[1.75rem] font-medium">₹2500<span
-                                                class="text-[13px] opacity-50 ms-1">/ month</span></div>
-                                        <div class="text-xs">6500 Credits</div>
+                                        <div class="mb-4 text-[1.75rem] font-medium">2000
+                                            <span class="text-[13px] opacity-50 ms-1">Credits</span>
+                                        </div>
 
                                         <button type="button"
-                                                class="ti-btn ti-btn-primary grid w-full btn-wave waves-effect waves-light">
-                                            <span class="ms-4 me-4">Purchase</span>
+                                                class="ti-btn ti-btn-soft-primary grid w-full btn-wave waves-effect waves-light">
+                                            <span class="ms-4 me-4">₹2500</span>
                                         </button>
                                     </th>
 
                                     <th scope="row" class="dark:bg-gray-700 bg-gray-50">
                                         <div class="mb-0 font-medium text-[1rem]">Professional</div>
-                                        <div class="mb-4 text-[1.75rem] font-medium">₹5000<span
-                                                class="text-[13px] opacity-50 ms-1">/ month</span></div>
-                                        <div class="text-xs">15000 Credits</div>
+                                        <div class="mb-4 text-[1.75rem] font-medium">15000
+                                            <span class="text-[13px] opacity-50 ms-1">Credits</span>
+                                        </div>
 
                                         <button type="button"
-                                                class="ti-btn ti-btn-soft-primary3 grid w-full btn-wave waves-effect waves-light">
-                                            <span class="ms-4 me-4">Purchase</span>
+                                                class="ti-btn ti-btn-soft-primary grid w-full btn-wave waves-effect waves-light">
+                                            <span class="ms-4 me-4">₹2500</span>
                                         </button>
                                     </th>
                                 </tr>
@@ -88,11 +83,12 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="xl:col-span-9 col-span-12 flex gap-5">
 
                     <div class="box w-5/12 h-[25rem]">
                         <div class="box-header">
-                            <div class="box-title">Gradient Circle Chart</div>
+                            <div class="box-title">AI Balance</div>
                         </div>
                         <div class="box-body">
                             <div id="gradient-circle"></div>
@@ -101,13 +97,14 @@
 
                     <div class="box w-full h-[25rem]">
                         <div class="box-header">
-                            <div class="box-title">Column Chart With Datalabels</div>
+                            <div class="box-title">Amont Spend</div>
                         </div>
                         <div class="box-body">
                             <div id="column-datalabels"></div>
                         </div>
                     </div>
                 </div>
+
                 <div class="xl:col-span-9 col-span-6">
                     <div class="box">
                         <div class="box-header justify-between">
@@ -157,13 +154,13 @@
                                         <td>
                                             <div class="flex items-center flex-wrap gap-1">
                                             <span
-                                                class="badge bg-primarytint1color/10 text-primarytint1color">Credit</span>
+                                                class="badge bg-primarytint1color/10 text-green-500">Credit</span>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="flex items-center flex-wrap gap-1">
                                             <span
-                                                class="badge">12000</span>
+                                                class="badge text-red-500">12000</span>
                                             </div>
                                         </td>
 
@@ -183,35 +180,22 @@
                                         <td>
                                             <div class="flex items-center flex-wrap gap-1">
                                             <span
-                                                class="badge bg-primarytint1color/10 text-primarytint1color">Debit</span>
+                                                class="badge bg-primarytint1color/10 text-red-500">Debit</span>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="flex items-center flex-wrap gap-1">
                                             <span
-                                                class="badge ">18000</span>
+                                                class="badge text-green-500">18000</span>
                                             </div>
                                         </td>
-
-
-                                        {{--                                    <td>--}}
-                                        {{--                                        <div class="btn-list">--}}
-                                        {{--                                            <a data-bs-toggle="offcanvas" data-hs-overlay="#offcanvasExample"--}}
-                                        {{--                                               class="ti-btn ti-btn-sm ti-btn-soft-primary ti-btn-icon"><i--}}
-                                        {{--                                                    class="ri-eye-line"></i></a>--}}
-                                        {{--                                            <button class="ti-btn ti-btn-sm ti-btn-soft-info ti-btn-icon"><i--}}
-                                        {{--                                                    class="ri-pencil-line"></i></button>--}}
-                                        {{--                                            <button--}}
-                                        {{--                                                class="ti-btn ti-btn-sm ti-btn-soft-primary2 ti-btn-icon contact-delete">--}}
-                                        {{--                                                <i class="ri-delete-bin-line"></i></button>--}}
-                                        {{--                                        </div>--}}
-                                        {{--                                    </td>--}}
                                     </tr>
 
                                     </tbody>
                                 </table>
                             </div>
                         </div>
+
                         <div class="box-footer border-t-0">
                             <div class="flex items-center">
                                 <div>
