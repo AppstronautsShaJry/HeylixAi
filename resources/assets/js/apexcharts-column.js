@@ -103,7 +103,7 @@
         dataLabels: {
             enabled: true,
             formatter: function (val) {
-                return val + "%";
+                return val + "";
             },
             offsetY: -20,
             style: {

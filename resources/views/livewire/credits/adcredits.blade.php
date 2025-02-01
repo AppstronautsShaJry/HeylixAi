@@ -101,7 +101,7 @@
 
                         </div>
                         <div class="box-body">
-                            <div id="gradient-circle"></div>
+                            <div id="gradient-circle1"></div>
                         </div>
                     </div>
 
@@ -145,6 +145,7 @@
                                             #
                                         </th>
                                         <th scope="col">Date</th>
+                                        <th scope="col">Payment ID</th>
                                         <th scope="col">Details</th>
                                         <th scope="col">Type</th>
                                         <th scope="col">Credits</th>
@@ -163,6 +164,10 @@
                                             </div>
                                         </td>
 
+                                        <td class="companies-checkbox">
+                                            AD1234
+                                        </td>
+
                                         <td>
                                             <div>
                                                 <a data-bs-toggle="offcanvas"
@@ -179,7 +184,7 @@
                                         <td>
                                             <div class="flex items-center flex-wrap gap-1">
                                             <span
-                                                class="badge text-red-500">12000</span>
+                                                class="badge text-green-500">12000</span>
                                             </div>
                                         </td>
 
@@ -194,6 +199,10 @@
                                                 <a data-bs-toggle="offcanvas"
                                                    data-hs-overlay="#offcanvasExample">12/11/2020</a>
                                             </div>
+                                        </td>
+
+                                        <td class="companies-checkbox">
+                                            AD1234
                                         </td>
 
                                         <td>
