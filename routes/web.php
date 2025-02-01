@@ -58,12 +58,11 @@ Route::get('authInstagram', [PlatformController::class, 'authInstagram'])->middl
 Route::get('authTwitter', [PlatformController::class, 'authTwitter'])->middleware('auth');
 Route::get('authLinkedin', [PlatformController::class, 'authLinkedin'])->middleware('auth');
 
-Route::get('category-brand', \App\Livewire\Brand\Category::class)->name('brand')->middleware('auth');
+Route::resource('brand_categories', App\Http\Controllers\Brand\CategoryController::class)->middleware('auth');
 Route::get('/create-brand', \App\Livewire\Brand\Create::class)->name('brand.create')->middleware('auth');
 Route::get('/manage-brand', \App\Livewire\Brand\Manage::class)->name('brand.manage')->middleware('auth');
-Route::get('/edit-brand', \App\Livewire\Brand\Edit::class)->name('brand.edit')->middleware('auth');
+Route::get('/edit-brand/{id}', \App\Livewire\Brand\Edit::class)->name('brand.edit')->middleware('auth');
 // Brand
-Route::resource('brand_categories', App\Http\Controllers\Brand\CategoryController::class);
 //Route::get('/create-brand', [BrandController::class, 'create']);
 //Route::get('/manage-brand', [BrandController::class, 'manage']);
 //Route::get('/edit-brand', [BrandController::class, 'edit']);

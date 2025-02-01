@@ -1,7 +1,11 @@
 @extends('layouts.master')
 
-@section('content')
+@section('styles')
+    <!-- Sweetalerts CSS -->
+{{--    <link rel="stylesheet" href="{{asset('build/assets/libs/sweetalert2/sweetalert2.min.css')}}">--}}
+@endsection
 
+@section('content')
     <div class="main-content app-content px-5">
         <div class="container-fluid">
             <!-- Start::page-header -->
@@ -20,8 +24,6 @@
                 </div>
             </div>
         </div>
-
-
         <div class="box w-full">
             <div class="w-full flex justify-between items-center p-5 border-b">
                 <div class="text-lg font-semibold ">Manage You Accounts</div>
@@ -77,10 +79,10 @@
                                             <td>
                                                 <div class="flex items-center gap-2">
                                                     <div class="leading-none">
-                                                       <div class="rounded-xl">
-                                                        <img src="{{ asset('storage/' . $category->image) }}"
-                                                             alt="Category Image"
-                                                             class="w-10 h-10 object-cover rounded-xl">
+                                                        <div class="rounded-xl">
+                                                            <img src="{{ asset('storage/' . $category->image) }}"
+                                                                 alt="Img"
+                                                                 class="w-10 h-10 object-cover rounded-xl">
                                                         </div>
                                                     </div>
                                                     <div>
@@ -92,40 +94,37 @@
 
                                             <td>
                                                 <div class="flex items-center flex-wrap gap-1">
-                                                    <span class="">{{$category->description}}</span>
+                                                    <span class="">{!! \Illuminate\Support\Str::words($category->description, 8)!!}</span>
                                                 </div>
                                             </td>
                                             <td class="">
                                                 <div class="">
                                                     @if($category->is_active == 1 )
-                                                        <div class="toggle  on mb-4">
-                                                            <span></span>
-                                                        </div>
+                                                        <span class="badge bg-success/10 text-success">Active</span>
                                                     @else
-                                                        <div class="toggle off mb-4">
-                                                            <span></span>
-                                                        </div>
+                                                        <span class="badge bg-danger/10 text-danger">Inactive</span>
                                                     @endif
 
                                                 </div>
                                             </td>
                                             <td>
-                                                <div class="btn-list">
+                                                <div class="btn-list flex items-center gap-x-2">
                                                     {{--                                                <a data-bs-toggle="offcanvas" data-hs-overlay="#offcanvasExample" class="ti-btn ti-btn-sm ti-btn-soft-primary ti-btn-icon"><i class="ri-eye-line"></i></a>--}}
                                                     <a href="{{ route('brand_categories.edit', $category) }}"
                                                        class="ti-btn ti-btn-sm ti-btn-soft-info ti-btn-icon"><i
                                                             class="ri-pencil-line"></i></a>
 
-                                                    <form action="{{ route('brand_categories.destroy', $category) }}"
-                                                          method="POST"
-                                                          class="inline-block">
+
+                                                    <form action="{{ route('brand_categories.destroy', $category) }}" method="POST" class="delete-form">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button type="submit" onclick="return confirm('Are you sure?')"
-                                                                class="ti-btn ti-btn-sm ti-btn-soft-primary2 ti-btn-icon contact-delete">
-                                                            <i
-                                                                class="ri-delete-bin-line"></i></button>
+                                                        <button type="button" class="ti-btn ti-btn-sm ti-btn-soft-primary2 ti-btn-icon contact-delete"
+                                                                onclick="confirmDelete(this)">
+                                                            <i class="ri-delete-bin-line"></i>
+                                                        </button>
                                                     </form>
+
+
                                                 </div>
                                             </td>
                                         </tr>
@@ -134,34 +133,6 @@
                                 </table>
                             </div>
                         </div>
-                        {{--                        <div class="box-footer border-t-0">--}}
-                        {{--                            <div class="flex items-center">--}}
-                        {{--                                <div>--}}
-                        {{--                                    Showing 9 Entries <i class="bi bi-arrow-right ms-2 font-medium"></i>--}}
-                        {{--                                </div>--}}
-                        {{--                                <div class="ms-auto">--}}
-                        {{--                                    <nav aria-label="Page navigation" class="pagination-style-4">--}}
-                        {{--                                        <ul class="ti-pagination mb-0 flex-wrap">--}}
-                        {{--                                            <li class="page-item disabled">--}}
-                        {{--                                                <a class="page-link" href="javascript:void(0);">--}}
-                        {{--                                                    Prev--}}
-                        {{--                                                </a>--}}
-                        {{--                                            </li>--}}
-                        {{--                                            <li class="page-item "><a class="page-link active"--}}
-                        {{--                                                                      href="javascript:void(0);">1</a></li>--}}
-                        {{--                                            <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a>--}}
-                        {{--                                            </li>--}}
-                        {{--                                            <li class="page-item">--}}
-                        {{--                                                <a class="page-link !text-primary" href="javascript:void(0);">--}}
-                        {{--                                                    next--}}
-                        {{--                                                </a>--}}
-                        {{--                                            </li>--}}
-                        {{--                                        </ul>--}}
-                        {{--                                    </nav>--}}
-                        {{--                                </div>--}}
-                        {{--                            </div>--}}
-                        {{--                        </div>--}}
-
                         <div class="box-footer border-t-0">
                             <div class="flex items-center">
                                 <div>
@@ -175,13 +146,30 @@
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
+@endsection
+
+@section('scripts')
+    <script>
+        function confirmDelete(button) {
+            Swal.fire({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, delete it!"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    button.closest("form").submit(); // Submits the form if confirmed
+                }
+            });
+        }
+    </script>
 
 @endsection

@@ -41,12 +41,12 @@
                                 <p class="h5 mb-2 text-center">Sign In</p>
                                 <p class="mb-4 text-textmuted dark:text-textmuted/50 opacity-70 font-normal text-center">Welcome back Henry !</p>
                                 <div class="flex mb-3 justify-between gap-2 flex-wrap flex-lg-nowrap">
-                                    <button class="ti-btn ti-btn-lg border border-defaultborder dark:border-defaultborder/10 flex items-center justify-center flex-auto bg-light">
+                                    <a href="" class="ti-btn ti-btn-lg border border-defaultborder dark:border-defaultborder/10 flex items-center justify-center flex-auto bg-light">
                                         <span class="avatar avatar-xs flex-shrink-0">
                                             <img src="{{asset('build/assets/images/media/apps/google.png')}}" alt="">
                                         </span>
                                         <span class="leading-[1.2rem] ms-2 text-[13px] text-defaulttextcolor">Signup with Google</span>
-                                    </button>
+                                    </a>
                                 </div>
                                 <div class="text-center my-3 authentication-barrier">
                                     <span>OR</span>
