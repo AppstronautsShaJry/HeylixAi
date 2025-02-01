@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->longText('description')->nullable();
-            $table->string('category');
+            $table->foreignId('category_id')->constrained('brand_categories')->onDelete('cascade');
             $table->string('image')->nullable();
             $table->string('phone')->nullable();
             $table->string('url')->nullable();
@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('pincode')->nullable();
             $table->string('country')->nullable();
             $table->boolean('is_active')->default(true);
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

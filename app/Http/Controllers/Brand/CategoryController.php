@@ -32,12 +32,12 @@ class CategoryController extends Controller
             'name'        => 'required|string|max:255|unique:brand_categories,name',
             'description' => 'nullable|string',
             'image'       => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'is_active'   => 'boolean',
+            'is_active'   => 'sometimes',
         ]);
 
         try {
             // Set default active status if not provided
-            $validatedData['is_active'] = $request->has('is_active') ? $request->is_active : true;
+            $validatedData['is_active'] = $request->is_active == true ? 1 : 0;
 
             // Handle image upload
             if ($request->hasFile('image')) {
@@ -78,7 +78,7 @@ class CategoryController extends Controller
             'name'        => 'required|string|max:255|unique:brand_categories,name,' . $id,
             'description' => 'nullable|string',
             'image'       => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'is_active'   => 'boolean',
+            'is_active'   => 'sometimes',
         ]);
 
         try {
@@ -86,7 +86,7 @@ class CategoryController extends Controller
             $brandCategory = BrandCategory::findOrFail($id);
 
             // Set default active status if not provided
-            $validatedData['is_active'] = $request->has('is_active') ? $request->is_active : true;
+            $validatedData['is_active'] = $request->is_active == true ? 1 : 0;
 
             // Handle image upload
             if ($request->hasFile('image')) {
