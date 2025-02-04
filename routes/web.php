@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\FacebookController;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\PlatformController;
 use App\Http\Controllers\SocialController;
@@ -65,12 +66,23 @@ Route::resource('brand_categories', App\Http\Controllers\Brand\CategoryControlle
 Route::get('/create-brand', \App\Livewire\Brand\Create::class)->name('brand.create')->middleware('auth');
 Route::get('/manage-brand', \App\Livewire\Brand\Manage::class)->name('brand.manage')->middleware('auth');
 Route::get('/edit-brand/{id}', \App\Livewire\Brand\Edit::class)->name('brand.edit')->middleware('auth');
+
 // Brand
 Route::get('/social-accounts', [\App\Models\SocialAccount::class, 'showSocialAccounts'])->name('social.accounts');
 //Route::get('/create-brand', [BrandController::class, 'create']);
 //Route::get('/manage-brand', [BrandController::class, 'manage']);
 //Route::get('/edit-brand', [BrandController::class, 'edit']);
 
+
+
+Route::get('/login/facebook', [FacebookController::class, 'redirect'])->name('facebook.login');
+Route::get('/login/facebook/callback', [FacebookController::class, 'callback']);
+Route::get('/facebook/pages', [FacebookController::class, 'getPages'])->name('facebook.pages');
+Route::post('/facebook/post', [FacebookController::class, 'createPost'])->name('facebook.post');
+Route::delete('/facebook/post/{postId}/{pageId}', [FacebookController::class, 'deletePost'])->name('facebook.post.delete');
+Route::get('/admin/facebook', function () {
+    return view('admin.facebook', ['pages' => App\Models\FacebookPage::all()]);
+})->name('facebook.admin');
 //Social
 //Route::get('/calender', [SocialController::class, 'calender']);
 //Route::get('/posts', [SocialController::class, 'post']);

@@ -5,7 +5,6 @@
 @endsection
 
 @section('content')
-
     <!-- Start::app-content -->
     <div class="main-content app-content px-5">
         <div class="container-fluid">
@@ -178,7 +177,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach ($socialAccounts as $account)
+{{--                                    @foreach ($socialAccounts as $account)--}}
                                     <tr class="crm-contact companies-list border-b !border-defaultborder dark:!border-defaultborder/10">
                                         <td class="companies-checkbox">
                                             1
@@ -191,7 +190,7 @@
                                                                         </span>
                                                 </div>
                                                 <div>
-                                                    <a data-bs-toggle="offcanvas" data-hs-overlay="#offcanvasExample">{{$account->platform }}</a>
+                                                    <a data-bs-toggle="offcanvas" data-hs-overlay="#offcanvasExample">Green Labels</a>
                                                 </div>
                                             </div>
                                         </td>
@@ -226,7 +225,7 @@
                                             </div>
                                         </td>
                                     </tr>
-                                    @endforeach
+{{--                                    @endforeach--}}
                                     <tr class="crm-contact companies-list border-b !border-defaultborder dark:!border-defaultborder/10">
                                         <td class="companies-checkbox">
                                             1
@@ -313,6 +312,29 @@
 
     </div>
 
+
+    <div>
+        <h1>Facebook Pages</h1>
+        @if(session('success'))
+            <p style="color:green;">{{ session('success') }}</p>
+        @endif
+        @if(session('error'))
+            <p style="color:red;">{{ session('error') }}</p>
+        @endif
+
+        <a href="{{ route('facebook.login') }}">Login with Facebook</a>
+
+        <h2>Your Pages</h2>
+        @foreach($pages as $page)
+            <p><strong>{{ $page->name }}</strong></p>
+            <form action="{{ route('facebook.post') }}" method="POST">
+                @csrf
+                <input type="hidden" name="page_id" value="{{ $page->page_id }}">
+                <input type="text" name="message" placeholder="Write a post">
+                <button type="submit">Post</button>
+            </form>
+        @endforeach
+    </div>
 
 @endsection
 
