@@ -263,6 +263,7 @@
     </div>
 
     @section('scripts')
+
         <!-- Pricing JS -->
         @vite('resources/assets/js/pricing.js')
         <!-- Chartjs Chart JS -->
@@ -279,6 +280,7 @@
         @vite('resources/assets/js/apexcharts-mixed.js')
         <!-- Apex Charts JS -->
         <script src="{{asset('build/assets/libs/apexcharts/apexcharts.min.js')}}"></script>
+
         <!-- Internal Apex-Column-Charts JS -->
 @vite('resources/assets/js/apexcharts-column.js')
 
