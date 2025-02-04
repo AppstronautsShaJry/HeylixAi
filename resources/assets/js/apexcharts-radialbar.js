@@ -199,7 +199,7 @@
 
     /* gradient circle chart */
     var options = {
-        series: [70],
+        series: [75],
         chart: {
             height: 320,
             type: 'radialBar',
@@ -250,7 +250,7 @@
                     },
                     value: {
                         formatter: function (val) {
-                            return 80000;
+                            return 8000;
                         },
                         color: '#111',
                         fontSize: '36px',
@@ -275,7 +275,7 @@
         stroke: {
             lineCap: 'round'
         },
-        labels: ['Limit:1,00,000'],
+        labels: ['Limit:1,00,00'],
     };
     var chart = new ApexCharts(document.querySelector("#gradient-circle1"), options);
     chart.render();
