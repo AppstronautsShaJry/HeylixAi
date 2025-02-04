@@ -178,6 +178,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
+                                    @foreach ($socialAccounts as $account)
                                     <tr class="crm-contact companies-list border-b !border-defaultborder dark:!border-defaultborder/10">
                                         <td class="companies-checkbox">
                                             1
@@ -190,7 +191,7 @@
                                                                         </span>
                                                 </div>
                                                 <div>
-                                                    <a data-bs-toggle="offcanvas" data-hs-overlay="#offcanvasExample">Alpha Solutions</a>
+                                                    <a data-bs-toggle="offcanvas" data-hs-overlay="#offcanvasExample">{{$account->platform }}</a>
                                                 </div>
                                             </div>
                                         </td>
@@ -225,6 +226,7 @@
                                             </div>
                                         </td>
                                     </tr>
+                                    @endforeach
                                     <tr class="crm-contact companies-list border-b !border-defaultborder dark:!border-defaultborder/10">
                                         <td class="companies-checkbox">
                                             1

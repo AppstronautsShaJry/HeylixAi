@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\PlatformController;
 use App\Http\Controllers\SocialController;
 use Illuminate\Support\Facades\Route;
@@ -47,6 +48,8 @@ Route::post('signup', [AuthenticationController::class, 'register'])->name('sign
 Route::get('signin', [AuthenticationController::class, 'signinCover'])->name('login');
 Route::post('/signin', [AuthenticationController::class, 'login'])->name('signin.login');
 Route::post('/logout', [AuthenticationController::class, 'logout'])->name('logout');
+Route::get('auth/google', [GoogleController::class, 'redirectGoogle'])->name('login.google');
+Route::get('auth/google/callback', [GoogleController::class, 'callbackGoogle'])->name('callback.google');
 
 // Platform
 Route::get('/facebook', [PlatformController::class, 'facebook'])->middleware('auth');
@@ -63,6 +66,7 @@ Route::get('/create-brand', \App\Livewire\Brand\Create::class)->name('brand.crea
 Route::get('/manage-brand', \App\Livewire\Brand\Manage::class)->name('brand.manage')->middleware('auth');
 Route::get('/edit-brand/{id}', \App\Livewire\Brand\Edit::class)->name('brand.edit')->middleware('auth');
 // Brand
+Route::get('/social-accounts', [\App\Models\SocialAccount::class, 'showSocialAccounts'])->name('social.accounts');
 //Route::get('/create-brand', [BrandController::class, 'create']);
 //Route::get('/manage-brand', [BrandController::class, 'manage']);
 //Route::get('/edit-brand', [BrandController::class, 'edit']);

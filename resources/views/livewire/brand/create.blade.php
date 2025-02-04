@@ -1,10 +1,9 @@
 @section('styles')
-    <!-- FilePond CSS -->
-    <link rel="stylesheet" href="{{ asset('build/assets/libs/filepond/filepond.min.css') }}">
+    <link rel="stylesheet" href="{{asset('build/assets/libs/filepond/filepond.min.css')}}">
     <link rel="stylesheet"
-          href="{{ asset('build/assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css') }}">
+          href="{{asset('build/assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css')}}">
     <link rel="stylesheet"
-          href="{{ asset('build/assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css') }}">
+          href="{{asset('build/assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css')}}">
 @endsection
 
 <!-- Start::app-content -->
@@ -21,7 +20,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Navigation Buttons -->
         <div class="box-tab p-5 flex justify-start items-center gap-x-2 my-10" x-data="buttonHandler">
             <a href="/create-brand" class="dynamic-button" :class="isActive('/create-brand') ? 'current-button' : ''">
@@ -39,7 +37,6 @@
                 </button>
             </a>
         </div>
-
         <!-- Brand Form -->
         <div class="grid grid-cols-12 sm:gap-x-6">
             <div class="xxl:col-span-9 xl:col-span-8 col-span-12">
@@ -60,7 +57,6 @@
                                                    wire:model="name">
                                             @error('name') <span class="text-red-500">{{ $message }}</span> @enderror
                                         </div>
-
                                         <!-- Branding Category -->
                                         <div class="xl:col-span-12 col-span-12">
                                             <label for="category" class="form-label">Branding Category</label>
@@ -72,7 +68,6 @@
                                             </select>
                                             @error('category_id') <span class="text-red-500">{{ $message }}</span> @enderror
                                         </div>
-
                                         <!-- Website URL -->
                                         <div class="xl:col-span-12 col-span-12">
                                             <label for="url" class="form-label">Website URL</label>
@@ -92,12 +87,18 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <!-- Upload Logo -->
+{{--                                <div class="xxl:col-span-6 xl:col-span-12 col-span-12">--}}
+{{--                                    <label class="form-label">Upload Your Logo</label>--}}
+{{--                                    <input type="file" class="single-fileupload" wire:model="image">--}}
+{{--                                    @error('image') <span class="text-red-500">{{ $message }}</span> @enderror--}}
+{{--                                </div>--}}
                                 <div class="xxl:col-span-6 xl:col-span-12 col-span-12">
                                     <label class="form-label">Upload Your Logo</label>
-                                    <input type="file" class="single-fileupload" wire:model="image">
-                                    @error('image') <span class="text-red-500">{{ $message }}</span> @enderror
+                                    <div class="create-nft-item bg-light py-3 rounded">
+                                        <input type="file" class="single-fileupload" wire:model="image">
+                                        @error('image') <span class="text-red-500">{{ $message }}</span> @enderror
+                                    </div>
                                 </div>
 
                                 <!-- Brand Description -->
@@ -150,20 +151,66 @@
                     </form>
                 </div>
             </div>
+            <div
+                class="w-full xxl:col-span-3 sm:col-span-4 col-span-12 gap-y-8 flex flex-col justify-start items-center">
+                <div class="">
+                    <div class="">
+                        <div class="relative overflow-hidden rounded ">
+                            <img src="{{asset('images/partials/img1.jpg')}}"
+                                 class="w-[280px] h-[260px] mb-3 rounded-md"
+                                 alt="...">
+                        </div>
+                        <div>
+                        </div>
+                        <div class="grid">
+                            <button type="button" class="ti-btn ti-btn-purple-gradient btn-wave ">Send Job</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="">
+                        <div class="relative overflow-hidden rounded ">
+                            <img src="{{asset('images/partials/img1.jpg')}}"
+                                 class="w-[280px] h-[260px] mb-3 rounded-md"
+                                 alt="...">
+                        </div>
+                        <div>
+                        </div>
+                        <div class="grid">
+                            <button type="button" class="ti-btn ti-btn-purple-gradient btn-wave ">Send Job</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </div>
 </div>
 
 @section('scripts')
     <!-- FilePond Scripts -->
-    <script src="{{ asset('build/assets/libs/filepond/filepond.min.js') }}"></script>
-    <script src="{{ asset('build/assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js') }}"></script>
+    <script src="{{asset('build/assets/libs/filepond/filepond.min.js')}}"></script>
+    <script src="{{asset('build/assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js')}}"></script>
+    <script src="{{asset('build/assets/libs/filepond-plugin-image-exif-orientation/filepond-plugin-image-exif-orientation.min.js')}}"></script>
+    <script src="{{asset('build/assets/libs/filepond-plugin-file-validate-size/filepond-plugin-file-validate-size.min.js')}}"></script>
+    <script src="{{asset('build/assets/libs/filepond-plugin-file-encode/filepond-plugin-file-encode.min.js')}}"></script>
+    <script src="{{asset('build/assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.js')}}"></script>
+    <script src="{{asset('build/assets/libs/filepond-plugin-file-validate-type/filepond-plugin-file-validate-type.min.js')}}"></script>
+    <script src="{{asset('build/assets/libs/filepond-plugin-file-validate-type/filepond-plugin-file-validate-type.min.js')}}"></script>
+    <script src="{{asset('build/assets/libs/filepond-plugin-image-crop/filepond-plugin-image-crop.min.js')}}"></script>
+    <script src="{{asset('build/assets/libs/filepond-plugin-image-resize/filepond-plugin-image-resize.min.js')}}"></script>
+    <script src="{{asset('build/assets/libs/filepond-plugin-image-transform/filepond-plugin-image-transform.min.js')}}"></script>
 
+    <!-- Create NFT JS -->
+    @vite('resources/assets/js/nft-create.js')
     <script>
         document.addEventListener("alpine:init", () => {
             Alpine.data('buttonHandler', () => ({
                 currentPage: window.location.pathname,
-                isActive(href) { return this.currentPage === href; }
+
+                isActive(href) {
+                    return this.currentPage === href;
+                }
             }));
         });
     </script>

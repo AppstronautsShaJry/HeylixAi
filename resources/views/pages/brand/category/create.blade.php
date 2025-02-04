@@ -15,7 +15,6 @@
     <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
     <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('build/assets/libs/prismjs/themes/prism-coy.min.css')}}">
-
 @endsection
 @section('content')
     <div class="main-content app-content">
@@ -61,17 +60,24 @@
                     <textarea class="form-control" name="description" id="nft-description" rows="3"
                               placeholder="Enter Description">{{old('description')}}</textarea>
                 </div>
-                <div class="col-span-12 lg:col-span-12">
-                    <div class="box">
-                        <div class="box-header">
-                            <h5 class="box-title">Single File Upload</h5>
-                        </div>
-                        <div class="box-body">
-                            <input type="file" name="image" class="filepond basic-filepond"
-                                   data-allow-reorder="true"
-                                   data-max-file-size="3MB"
-                                   data-max-files="1">
-                        </div>
+{{--                <div class="col-span-12 lg:col-span-12">--}}
+{{--                    <div class="box">--}}
+{{--                        <div class="box-header">--}}
+{{--                            <h5 class="box-title">Single File Upload</h5>--}}
+{{--                        </div>--}}
+{{--                        <div class="box-body">--}}
+{{--                            <input type="file" name="image" class="filepond basic-filepond"--}}
+{{--                                   data-allow-reorder="true"--}}
+{{--                                   data-max-file-size="3MB"--}}
+{{--                                   data-max-files="1">--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+                <div class="xxl:col-span-6 xl:col-span-12 col-span-12">
+                    <label class="form-label">Upload Your Logo</label>
+                    <div class="create-nft-item bg-light py-3 rounded">
+                        <input type="file" class="single-fileupload" namel="image">
+                        @error('image') <span class="text-red-500">{{ $message }}</span> @enderror
                     </div>
                 </div>
                 <div class="form-check form-switch mb-2">
@@ -94,11 +100,6 @@
     </div>
 @endsection
 @section('scripts')
-    <script src="https://unpkg.com/filepond/dist/filepond.min.js"></script>
-    <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js"></script>
-    <script src="{{asset('build/assets/libs/prismjs/prism.js')}}"></script>
-    @vite('resources/assets/js/prism-custom.js')
-    <!-- Filepond JS -->
     <script src="{{asset('build/assets/libs/filepond/filepond.min.js')}}"></script>
     <script src="{{asset('build/assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js')}}"></script>
     <script src="{{asset('build/assets/libs/filepond-plugin-image-exif-orientation/filepond-plugin-image-exif-orientation.min.js')}}"></script>
@@ -110,14 +111,9 @@
     <script src="{{asset('build/assets/libs/filepond-plugin-image-crop/filepond-plugin-image-crop.min.js')}}"></script>
     <script src="{{asset('build/assets/libs/filepond-plugin-image-resize/filepond-plugin-image-resize.min.js')}}"></script>
     <script src="{{asset('build/assets/libs/filepond-plugin-image-transform/filepond-plugin-image-transform.min.js')}}"></script>
-    <!-- Dropzone JS -->
-    <script src="{{asset('build/assets/libs/dropzone/dropzone-min.js')}}"></script>
 
-    <!-- Prism JS -->
-    <script src="{{asset('build/assets/libs/prismjs/prism.js')}}"></script>
-    @vite('resources/assets/js/prism-custom.js')
-    <!-- Fileupload JS -->
-    @vite('resources/assets/js/fileupload.js')
+    <!-- Create NFT JS -->
+    @vite('resources/assets/js/nft-create.js')
     <script>
         document.addEventListener("alpine:init", () => {
             Alpine.data('buttonHandler', () => ({
@@ -127,15 +123,6 @@
                     return this.currentPage === href;
                 }
             }));
-        });
-        FilePond.registerPlugin(FilePondPluginImagePreview);
-        // Initialize FilePond
-        FilePond.create(document.querySelector('.filepond'), {
-            allowImagePreview: true,
-            imagePreviewHeight: 150,
-            allowMultiple: false,
-            acceptedFileTypes: ['image/*'],
-            storeAsFile: true, // Ensures it's sent as a normal file input
         });
     </script>
 @endsection

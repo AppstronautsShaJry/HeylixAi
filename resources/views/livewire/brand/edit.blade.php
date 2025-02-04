@@ -1,4 +1,3 @@
-
 @section('styles')
     <!-- filepond CSS -->
     <link rel="stylesheet" href="{{asset('build/assets/libs/filepond/filepond.min.css')}}">
@@ -7,7 +6,6 @@
     <link rel="stylesheet"
           href="{{asset('build/assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css')}}">
 @endsection
-
     <!-- Start::app-content -->
     <div class="main-content app-content">
         <div class="container-fluid">
@@ -191,11 +189,11 @@
                                                     <div class="create-nft-item bg-light py-3 rounded">
                                                         <input type="file" class="single-fileupload" wire:model="image">
                                                         @error('image') <span class="text-red-500">{{ $message }}</span> @enderror
-                                                        @if($brand->image)
-                                                            <img src="{{ asset('storage/'.$brand->image) }}" alt="Brand Logo" class="mt-3 w-20 h-20 rounded">
-                                                        @endif
                                                     </div>
                                                 </div>
+                                                @if($brand->image)
+                                                    <img src="{{ asset('storage/'.$brand->image) }}" alt="Brand Logo" class="mt-3 w-20 h-20 rounded">
+                                                @endif
 
                                                 <div class="xl:col-span-12 col-span-12">
                                                     <div class="grid grid-cols-12 sm:gap-x-6 gap-y-3">
