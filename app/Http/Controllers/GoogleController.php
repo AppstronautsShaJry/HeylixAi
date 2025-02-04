@@ -13,14 +13,16 @@ class GoogleController extends Controller
     public function redirectGoogle()
     {
         return Socialite::driver('google')
+            ->stateless() // Add this to avoid session issues
             ->with(['prompt' => 'select_account']) // Forces account selection
             ->redirect();
     }
 
+
     public function callbackGoogle()
     {
         try {
-            $googleUser = Socialite::driver('google')->user();
+            $googleUser = Socialite::driver('google')->stateless()->user(); // Add stateless()
 
             // Check if the user exists by Google ID or Email
             $user = User::where('google_id', $googleUser->id)
@@ -49,6 +51,7 @@ class GoogleController extends Controller
             return redirect('/login')->with('error', 'Something went wrong. Please try again.');
         }
     }
+
 
     public function logout()
     {
