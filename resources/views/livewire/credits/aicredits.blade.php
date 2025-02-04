@@ -39,21 +39,19 @@
                 </div>
 
                 <div class="xl:col-span-9 col-span-12 flex gap-5">
-
-
                     <div class="box h-[25rem]">
                         <div class="box-header">
                             <div class="box-title">AI Balance</div>
                         </div>
                         <div class="box-body">
                             <div id="gradient-circle"></div>
-                            <div class="text-md dark:text-white">Credit Details</div>
+                            <div class="text-md dark:text-white py-2">Credit Details</div>
                             <div class="px-5 space-y-2">
                                 <li>Credit Left : 3000</li>
                                 <li>Total Credit : 10000</li>
                             </div>
-                            <div>
-                                <button type="button" class="hs-dropdown-toggle ti-btn  btn-wave ti-btn-primary"
+                            <div class="mt-3">
+                                <button type="button" class="hs-dropdown-toggle ti-btn  btn-wave ti-btn-primary w-full"
                                         data-hs-overlay="#exampleModalgrid">
                                     Add Balance
                                 </button>
