@@ -1,22 +1,15 @@
+@section('styles')
+    <!-- filepond CSS -->
+    <link rel="stylesheet" href="{{asset('build/assets/libs/filepond/filepond.min.css')}}">
+    <link rel="stylesheet"
+          href="{{asset('build/assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css')}}">
+    <link rel="stylesheet"
+          href="{{asset('build/assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css')}}">
+@endsection
 <div class="main-content app-content px-5 space-y-5">
+
     <div class="container-fluid">
 
-        <link rel="stylesheet" href="{{asset('build/assets/libs/dropzone/dropzone.css')}}">
-
-        <link rel="stylesheet" href="{{asset('build/assets/libs/glightbox/css/glightbox.min.css')}}">
-
-        <!-- Swiper Css -->
-        <link rel="stylesheet" href="{{asset('build/assets/libs/swiper/swiper-bundle.min.css')}}">
-
-        <link rel="stylesheet" href="{{asset('build/assets/libs/quill/quill.snow.css')}}">
-        <link rel="stylesheet" href="{{asset('build/assets/libs/quill/quill.bubble.css')}}">
-
-        <!-- Filepond CSS -->
-        <link rel="stylesheet" href="{{asset('build/assets/libs/filepond/filepond.min.css')}}">
-        <link rel="stylesheet"
-              href="{{asset('build/assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css')}}">
-        <link rel="stylesheet"
-              href="{{asset('build/assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css')}}">
 
         <!-- Start::page-header -->
         <div class="flex items-center justify-between page-header-breadcrumb flex-wrap gap-2">
@@ -80,12 +73,16 @@
                                         <div class="ti-dropdown hs-dropdown">
                                             <a href="javascript:void(0);" class="ti-btn bg-light ti-btn-sm btn-wave"
                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                Sort By<i class="ri-arrow-down-s-line align-middle ms-1 inline-block"></i>
+                                                Sort By<i
+                                                    class="ri-arrow-down-s-line align-middle ms-1 inline-block"></i>
                                             </a>
                                             <ul class="ti-dropdown-menu hs-dropdown-menu hidden" role="menu">
-                                                <li><a class="ti-dropdown-item" href="javascript:void(0);">Newest</a></li>
-                                                <li><a class="ti-dropdown-item" href="javascript:void(0);">Date Added</a></li>
-                                                <li><a class="ti-dropdown-item" href="javascript:void(0);">A - Z</a></li>
+                                                <li><a class="ti-dropdown-item" href="javascript:void(0);">Newest</a>
+                                                </li>
+                                                <li><a class="ti-dropdown-item" href="javascript:void(0);">Date
+                                                        Added</a></li>
+                                                <li><a class="ti-dropdown-item" href="javascript:void(0);">A - Z</a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -93,8 +90,7 @@
                                 <div
                                     class="table-responsive border border-defaultborder dark:border-defaultborder/10 border-b-0">
 
-                                    <table
-                                        class="ti-custom-table ti-custom-table-head ti-custom-table-hover">
+                                    <table class="ti-custom-table ti-custom-table-head ti-custom-table-hover">
                                         <thead>
                                         <tr
                                             class="border-b !border-defaultborder dark:!border-defaultborder/10">
@@ -105,188 +101,193 @@
                                         </tr>
                                         </thead>
                                         <tbody class="files-list">
+                                        @foreach($assets as $asset)
+                                            <tr
+                                                class="border-b !border-defaultborder dark:!border-defaultborder/10">
+                                                <th scope="row">
+                                                    <div class="flex items-center gap-x-2">
+                                                        <div>
+                                                            @if($asset->thumbnail_path)
+                                                                <img
+                                                                    src="{{ asset('storage/' . $asset->thumbnail_path) }}"
+                                                                    class="w-5 h-4 rounded-sm"
+                                                                    alt="...">
+                                                            @else
+                                                                <img src=""
+                                                                     class="w-5 h-4 rounded-sm"
+                                                                     alt="...">
+                                                            @endif
 
-                                        <tr
-                                            class="border-b !border-defaultborder dark:!border-defaultborder/10">
-                                            <th scope="row">
-                                                <div class="flex items-center gap-x-2">
-                                                    <div>
-                                                        <img src="{{asset('images/partials/img2.jpg')}}"
-                                                             class="w-5 h-4 rounded-sm"
-                                                             alt="...">
+                                                        </div>
+                                                        <div>
+                                                            <a href="javascript:void(0);"
+                                                               data-hs-overlay="#offcanvasRight">{{ $asset->file_name }}</a>
+                                                        </div>
                                                     </div>
-                                                    <div>
-                                                        <a href="javascript:void(0);"
-                                                           data-hs-overlay="#offcanvasRight">VIDEO_88745_KKI451.mp4</a>
+                                                </th>
+                                                <td>{{ number_format($asset->file_size / 1024, 2) }} KB</td>
+                                                <td>{{ $asset->updated_at->format('Y-m-d H:i:s') }}</td>
+                                                <td>
+                                                    <div class="hstack gap-2 text-[15px]">
+                                                        <a href="#youtube-video"
+                                                           class="glightbox border-0 mb-0 ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary2"
+                                                           data-gallery="gallery1"
+                                                           data-title="Compact Laptop"
+                                                           data-type="inline"
+                                                           data-draggable="true"
+                                                        >
+                                                            <i class="ri-eye-line"></i>
+                                                        </a>
+                                                        <button  wire:click="deleteAsset({{ $asset->id }})"
+                                                                 onclick="confirm('Are you sure you want to delete this asset?') || event.stopImmediatePropagation()"
+                                                           class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary3">
+                                                            <i class="ri-delete-bin-line"></i>
+                                                        </button>
                                                     </div>
-                                                </div>
-                                            </th>
-
-                                            <td>89MB</td>
-                                            <td>15,Aug 2024</td>
-
-                                            <td>
-                                                <div class="hstack gap-2 text-[15px]">
-                                                    <a href="#youtube-video"
-                                                       class="glightbox border-0 mb-0 ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary2"
-                                                       data-gallery="gallery1"
-                                                       data-title="Compact Laptop"
-                                                       data-type="inline"
-                                                       data-draggable="true"
-                                                    >
-                                                        <i class="ri-eye-line"></i>
-                                                    </a>
-
-                                                    <a href="javascript:void(0);"
-                                                       class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary3">
-                                                        <i class="ri-delete-bin-line"></i>
-                                                    </a>
-                                                </div>
-
-                                                <!-- Hidden Iframe Container -->
-                                                <div id="youtube-video" style="display: none;">
-                                                    <iframe width="100%" height="100%"
-                                                            src="https://youtu.be/Yq0QkCxoTHM?si=kUN94C3CDwPiAkDh"
-                                                            title="YouTube video player" frameborder="0"
-                                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                            allowfullscreen>
-                                                    </iframe>
-                                                </div>
-
-                                            </td>
-                                        </tr>
-
-                                        <tr
-                                            class="border-b !border-defaultborder dark:!border-defaultborder/10">
-                                            <th scope="row">
-                                                <div class="flex items-center gap-x-2">
-                                                    <div>
-                                                        <img src="{{asset('images/partials/img2.jpg')}}"
-                                                             class="w-5 h-4 rounded-sm"
-                                                             alt="...">
+                                                    <!-- Hidden Iframe Container -->
+                                                    <div id="youtube-video" style="display: none;">
+                                                        <iframe width="100%" height="100%"
+                                                                src="https://youtu.be/Yq0QkCxoTHM?si=kUN94C3CDwPiAkDh"
+                                                                title="YouTube video player" frameborder="0"
+                                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                                allowfullscreen>
+                                                        </iframe>
                                                     </div>
-                                                    <div>
-                                                        <a href="javascript:void(0);"
-                                                           data-hs-overlay="#offcanvasRight">VID-14211110-AKP823.mp4</a>
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            <td>12MB</td>
-                                            <td>18,May 2024</td>
-                                            <td>
-                                                <div class="hstack gap-2 text-[15px]">
-                                                    <a href="{{asset('build/assets/images/ecommerce/png/1.png')}}"
-                                                       class="glightbox border-0 mb-0 ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary2"
-                                                       data-gallery="gallery1"
-                                                       data-title="Compact Laptop " data-type="image"
-                                                       data-draggable="true"
-                                                    ><i class="ri-eye-line"></i></a>
+                                                </td>
+                                            </tr>
+                                        @endforeach
 
-                                                    <a href="javascript:void(0);"
-                                                       class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary3"><i
-                                                            class="ri-delete-bin-line"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                        {{--                                        <tr--}}
+                                        {{--                                            class="border-b !border-defaultborder dark:!border-defaultborder/10">--}}
+                                        {{--                                            <th scope="row">--}}
+                                        {{--                                                <div class="flex items-center gap-x-2">--}}
+                                        {{--                                                    <div>--}}
+                                        {{--                                                        <img src="{{asset('images/partials/img2.jpg')}}"--}}
+                                        {{--                                                             class="w-5 h-4 rounded-sm"--}}
+                                        {{--                                                             alt="...">--}}
+                                        {{--                                                    </div>--}}
+                                        {{--                                                    <div>--}}
+                                        {{--                                                        <a href="javascript:void(0);"--}}
+                                        {{--                                                           data-hs-overlay="#offcanvasRight">VID-14211110-AKP823.mp4</a>--}}
+                                        {{--                                                    </div>--}}
+                                        {{--                                                </div>--}}
+                                        {{--                                            </th>--}}
+                                        {{--                                            <td>12MB</td>--}}
+                                        {{--                                            <td>18,May 2024</td>--}}
+                                        {{--                                            <td>--}}
+                                        {{--                                                <div class="hstack gap-2 text-[15px]">--}}
+                                        {{--                                                    <a href="{{asset('build/assets/images/ecommerce/png/1.png')}}"--}}
+                                        {{--                                                       class="glightbox border-0 mb-0 ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary2"--}}
+                                        {{--                                                       data-gallery="gallery1"--}}
+                                        {{--                                                       data-title="Compact Laptop " data-type="image"--}}
+                                        {{--                                                       data-draggable="true"--}}
+                                        {{--                                                    ><i class="ri-eye-line"></i></a>--}}
 
-                                        <tr
-                                            class="border-b !border-defaultborder dark:!border-defaultborder/10 ">
-                                            <th scope="row">
-                                                <div class="flex items-center gap-x-2">
-                                                    <div>
-                                                        <img src="{{asset('images/partials/img2.jpg')}}"
-                                                             class="w-5 h-4 rounded-sm"
-                                                             alt="...">
-                                                    </div>
-                                                    <div>
-                                                        <a href="javascript:void(0);"
-                                                           data-hs-overlay="#offcanvasRight">AC-20241.zip</a>
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            <td>564KB</td>
-                                            <td>06,Mar 2024</td>
-                                            <td>
-                                                <div class="hstack gap-2 text-[15px]">
-                                                    <a href="{{asset('build/assets/images/ecommerce/png/1.png')}}"
-                                                       class="glightbox border-0 mb-0 ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary2"
-                                                       data-gallery="gallery1"
-                                                       data-title="Compact Laptop " data-type="image"
-                                                       data-draggable="true"
-                                                    ><i class="ri-eye-line"></i></a>
+                                        {{--                                                    <a href="javascript:void(0);"--}}
+                                        {{--                                                       class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary3"><i--}}
+                                        {{--                                                            class="ri-delete-bin-line"></i></a>--}}
+                                        {{--                                                </div>--}}
+                                        {{--                                            </td>--}}
+                                        {{--                                        </tr>--}}
 
-                                                    <a href="javascript:void(0);"
-                                                       class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary3"><i
-                                                            class="ri-delete-bin-line"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                        {{--                                        <tr--}}
+                                        {{--                                            class="border-b !border-defaultborder dark:!border-defaultborder/10 ">--}}
+                                        {{--                                            <th scope="row">--}}
+                                        {{--                                                <div class="flex items-center gap-x-2">--}}
+                                        {{--                                                    <div>--}}
+                                        {{--                                                        <img src="{{asset('images/partials/img2.jpg')}}"--}}
+                                        {{--                                                             class="w-5 h-4 rounded-sm"--}}
+                                        {{--                                                             alt="...">--}}
+                                        {{--                                                    </div>--}}
+                                        {{--                                                    <div>--}}
+                                        {{--                                                        <a href="javascript:void(0);"--}}
+                                        {{--                                                           data-hs-overlay="#offcanvasRight">AC-20241.zip</a>--}}
+                                        {{--                                                    </div>--}}
+                                        {{--                                                </div>--}}
+                                        {{--                                            </th>--}}
+                                        {{--                                            <td>564KB</td>--}}
+                                        {{--                                            <td>06,Mar 2024</td>--}}
+                                        {{--                                            <td>--}}
+                                        {{--                                                <div class="hstack gap-2 text-[15px]">--}}
+                                        {{--                                                    <a href="{{asset('build/assets/images/ecommerce/png/1.png')}}"--}}
+                                        {{--                                                       class="glightbox border-0 mb-0 ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary2"--}}
+                                        {{--                                                       data-gallery="gallery1"--}}
+                                        {{--                                                       data-title="Compact Laptop " data-type="image"--}}
+                                        {{--                                                       data-draggable="true"--}}
+                                        {{--                                                    ><i class="ri-eye-line"></i></a>--}}
 
-                                        <tr
-                                            class="border-b !border-defaultborder dark:!border-defaultborder/10">
-                                            <th scope="row">
-                                                <div class="flex items-center gap-x-2">
-                                                    <div>
-                                                        <img src="{{asset('images/partials/img2.jpg')}}"
-                                                             class="w-5 h-4 rounded-sm"
-                                                             alt="...">
-                                                    </div>
-                                                    <div>
-                                                        <a href="javascript:void(0);"
-                                                           data-hs-overlay="#offcanvasRight">AUD__145_24152.mp3</a>
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            <td>264KB</td>
-                                            <td>26,Apr 2024</td>
-                                            <td>
-                                                <div class="hstack gap-2 text-[15px]">
-                                                    <a href="{{asset('build/assets/images/ecommerce/png/1.png')}}"
-                                                       class="glightbox border-0 mb-0 ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary2"
-                                                       data-gallery="gallery1"
-                                                       data-title="Compact Laptop " data-type="image"
-                                                       data-draggable="true"
-                                                    ><i class="ri-eye-line"></i></a>
+                                        {{--                                                    <a href="javascript:void(0);"--}}
+                                        {{--                                                       class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary3"><i--}}
+                                        {{--                                                            class="ri-delete-bin-line"></i></a>--}}
+                                        {{--                                                </div>--}}
+                                        {{--                                            </td>--}}
+                                        {{--                                        </tr>--}}
 
-                                                    <a href="javascript:void(0);"
-                                                       class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary3"><i
-                                                            class="ri-delete-bin-line"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                        {{--                                        <tr--}}
+                                        {{--                                            class="border-b !border-defaultborder dark:!border-defaultborder/10">--}}
+                                        {{--                                            <th scope="row">--}}
+                                        {{--                                                <div class="flex items-center gap-x-2">--}}
+                                        {{--                                                    <div>--}}
+                                        {{--                                                        <img src="{{asset('images/partials/img2.jpg')}}"--}}
+                                        {{--                                                             class="w-5 h-4 rounded-sm"--}}
+                                        {{--                                                             alt="...">--}}
+                                        {{--                                                    </div>--}}
+                                        {{--                                                    <div>--}}
+                                        {{--                                                        <a href="javascript:void(0);"--}}
+                                        {{--                                                           data-hs-overlay="#offcanvasRight">AUD__145_24152.mp3</a>--}}
+                                        {{--                                                    </div>--}}
+                                        {{--                                                </div>--}}
+                                        {{--                                            </th>--}}
+                                        {{--                                            <td>264KB</td>--}}
+                                        {{--                                            <td>26,Apr 2024</td>--}}
+                                        {{--                                            <td>--}}
+                                        {{--                                                <div class="hstack gap-2 text-[15px]">--}}
+                                        {{--                                                    <a href="{{asset('build/assets/images/ecommerce/png/1.png')}}"--}}
+                                        {{--                                                       class="glightbox border-0 mb-0 ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary2"--}}
+                                        {{--                                                       data-gallery="gallery1"--}}
+                                        {{--                                                       data-title="Compact Laptop " data-type="image"--}}
+                                        {{--                                                       data-draggable="true"--}}
+                                        {{--                                                    ><i class="ri-eye-line"></i></a>--}}
 
-                                        <tr class="!border-b !border-defaultborder dark:!border-defaultborder/10">
-                                            <th scope="row">
-                                                <div class="flex items-center gap-x-2">
-                                                    <div>
-                                                        <img src="{{asset('images/partials/img2.jpg')}}"
-                                                             class="w-5 h-4 rounded-sm"
-                                                             alt="...">
-                                                    </div>
+                                        {{--                                                    <a href="javascript:void(0);"--}}
+                                        {{--                                                       class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary3"><i--}}
+                                        {{--                                                            class="ri-delete-bin-line"></i></a>--}}
+                                        {{--                                                </div>--}}
+                                        {{--                                            </td>--}}
+                                        {{--                                        </tr>--}}
 
-                                                    <div>
-                                                        <a href="javascript:void(0);"
-                                                           data-hs-overlay="#offcanvasRight">Document-file.pdf</a>
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            <td>2.6MB</td>
-                                            <td>07,Feb 2024</td>
-                                            <td>
-                                                <div class="hstack gap-2 text-[15px]">
-                                                    <a href="{{asset('build/assets/images/ecommerce/png/1.png')}}"
-                                                       class="glightbox border-0 mb-0 ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary2"
-                                                       data-gallery="gallery1"
-                                                       data-title="Compact Laptop " data-type="image"
-                                                       data-draggable="true"
-                                                    ><i class="ri-eye-line"></i></a>
+                                        {{--                                        <tr class="!border-b !border-defaultborder dark:!border-defaultborder/10">--}}
+                                        {{--                                            <th scope="row">--}}
+                                        {{--                                                <div class="flex items-center gap-x-2">--}}
+                                        {{--                                                    <div>--}}
+                                        {{--                                                        <img src="{{asset('images/partials/img2.jpg')}}"--}}
+                                        {{--                                                             class="w-5 h-4 rounded-sm"--}}
+                                        {{--                                                             alt="...">--}}
+                                        {{--                                                    </div>--}}
 
-                                                    <a href="javascript:void(0);"
-                                                       class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary3"><i
-                                                            class="ri-delete-bin-line"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                        {{--                                                    <div>--}}
+                                        {{--                                                        <a href="javascript:void(0);"--}}
+                                        {{--                                                           data-hs-overlay="#offcanvasRight">Document-file.pdf</a>--}}
+                                        {{--                                                    </div>--}}
+                                        {{--                                                </div>--}}
+                                        {{--                                            </th>--}}
+                                        {{--                                            <td>2.6MB</td>--}}
+                                        {{--                                            <td>07,Feb 2024</td>--}}
+                                        {{--                                            <td>--}}
+                                        {{--                                                <div class="hstack gap-2 text-[15px]">--}}
+                                        {{--                                                    <a href="{{asset('build/assets/images/ecommerce/png/1.png')}}"--}}
+                                        {{--                                                       class="glightbox border-0 mb-0 ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary2"--}}
+                                        {{--                                                       data-gallery="gallery1"--}}
+                                        {{--                                                       data-title="Compact Laptop " data-type="image"--}}
+                                        {{--                                                       data-draggable="true"--}}
+                                        {{--                                                    ><i class="ri-eye-line"></i></a>--}}
+
+                                        {{--                                                    <a href="javascript:void(0);"--}}
+                                        {{--                                                       class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary3"><i--}}
+                                        {{--                                                            class="ri-delete-bin-line"></i></a>--}}
+                                        {{--                                                </div>--}}
+                                        {{--                                            </td>--}}
+                                        {{--                                        </tr>--}}
                                         </tbody>
                                     </table>
 
@@ -467,12 +468,31 @@
                             </div>
 
                             <div>
-                                <li
-                                    class="!p-4 mb-3 border border-dashed border-defaultborder dark:border-defaultborder/10 list-none">
-                                    <label class="form-label">Drop File here :</label>
-                                    <form data-single="true" method="post" action="https://httpbin.org/post"
-                                          class="dropzone !bg-light"></form>
-                                </li>
+                                {{--                                <li--}}
+                                {{--                                    class="!p-4 mb-3 border border-dashed border-defaultborder dark:border-defaultborder/10 list-none">--}}
+                                {{--                                    <label class="form-label">Drop File here :</label>--}}
+                                {{--                                    <form data-single="true" method="post" action="https://httpbin.org/post"--}}
+                                {{--                                          class="dropzone !bg-light"></form>--}}
+                                {{--                                </li>--}}
+
+                                <!-- File Upload Form -->
+                                <form wire:submit.prevent="uploadFile" class="mb-6">
+                                    <div class="xxl:col-span-6 xl:col-span-12 col-span-12">
+                                        <label class="form-label">Upload Your Logo</label>
+                                        <div class="create-nft-item bg-light py-3 rounded">
+                                            <input type="file" class="single-fileupload" wire:model="imafilege">
+                                            @error('file') <span class="text-red-500">{{ $message }}</span> @enderror
+                                        </div>
+                                    </div>
+{{--                                    <input type="file" wire:model="file" class="border p-2">--}}
+                                    @error('file') <span class="text-red-600">{{ $message }}</span> @enderror
+                                    <button type="submit" class="bg-blue-500 text-white p-2 ml-2">Upload</button>
+                                </form>
+
+
+
+
+
                             </div>
 
                             <div class="box overflow-hidden">

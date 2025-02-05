@@ -53,14 +53,14 @@ Route::get('auth/google', [GoogleController::class, 'redirectGoogle'])->name('lo
 Route::get('auth/google/callback', [GoogleController::class, 'callbackGoogle'])->name('callback.google');
 
 // Platform
-Route::get('/facebook', [PlatformController::class, 'facebook'])->middleware('auth');
-Route::get('/instagram', [PlatformController::class, 'instagram'])->middleware('auth');
-Route::get('/twitter', [PlatformController::class, 'twitter'])->middleware('auth');
-Route::get('/linkedin', [PlatformController::class, 'linkedin'])->middleware('auth');
-Route::get('authFacebook', [PlatformController::class, 'authFacebook'])->middleware('auth');
-Route::get('authInstagram', [PlatformController::class, 'authInstagram'])->middleware('auth');
-Route::get('authTwitter', [PlatformController::class, 'authTwitter'])->middleware('auth');
-Route::get('authLinkedin', [PlatformController::class, 'authLinkedin'])->middleware('auth');
+Route::get('/facebook', [PlatformController::class, 'facebook'])->middleware('auth')->name('facebook');
+Route::get('/instagram', [PlatformController::class, 'instagram'])->middleware('auth')->name('instagram');
+Route::get('/twitter', [PlatformController::class, 'twitter'])->middleware('auth')->name('twitter');
+Route::get('/linkedin', [PlatformController::class, 'linkedin'])->middleware('auth')->name('linkedin');
+Route::get('authFacebook', [PlatformController::class, 'authFacebook'])->middleware('auth')->name('authFacebook');
+Route::get('authInstagram', [PlatformController::class, 'authInstagram'])->middleware('auth')->name('authInstagram');
+Route::get('authTwitter', [PlatformController::class, 'authTwitter'])->middleware('auth')->name('authTwitter');
+Route::get('authLinkedin', [PlatformController::class, 'authLinkedin'])->middleware('auth')->name('authLinkedin');
 
 Route::resource('brand_categories', App\Http\Controllers\Brand\CategoryController::class)->middleware('auth');
 Route::get('/create-brand', \App\Livewire\Brand\Create::class)->name('brand.create')->middleware('auth');
@@ -69,22 +69,12 @@ Route::get('/edit-brand/{id}', \App\Livewire\Brand\Edit::class)->name('brand.edi
 
 // Brand
 Route::get('/social-accounts', [\App\Models\SocialAccount::class, 'showSocialAccounts'])->name('social.accounts');
-//Route::get('/create-brand', [BrandController::class, 'create']);
-//Route::get('/manage-brand', [BrandController::class, 'manage']);
-//Route::get('/edit-brand', [BrandController::class, 'edit']);
 
 Route::get('/auth/facebook', [FacebookController::class, 'redirect'])->name('facebook.login');
 Route::get('/auth/facebook/callback', [FacebookController::class, 'callback']);
 Route::get('/facebook/pages', [FacebookController::class, 'getPages'])->name('facebook.pages');
 Route::post('/facebook/post', [FacebookController::class, 'createPost'])->name('facebook.post');
 Route::delete('/facebook/post/{postId}/{pageId}', [FacebookController::class, 'deletePost'])->name('facebook.post.delete');
-//Route::get('/admin/facebook', function () {
-//    return view('admin.facebook', ['pages' => App\Models\FacebookPage::all()]);
-//})->name('facebook.admin');
-
-//Social
-//Route::get('/calender', [SocialController::class, 'calender']);
-//Route::get('/posts', [SocialController::class, 'post']);
 
 Route::get('/calender-social', \App\Livewire\Social\Index::class)->name('calender.social');
 Route::get('/posts-social', \App\Livewire\Social\Post::class)->name('posts.social');
@@ -97,7 +87,6 @@ Route::get('/create-heylix', \App\Livewire\Heylix\Create::class)->name('create.h
 Route::get('/jobstatus-heylix', \App\Livewire\Heylix\Jobstatus::class)->name('jobstatus.heylix');
 Route::get('/brand-heylix', \App\Livewire\Heylix\Brand::class)->name('brand.heylix');
 Route::get('/virtual-heylix', \App\Livewire\Heylix\Virtual::class)->name('virtual.heylix');
-
 
 //Credits
 Route::get('/aicredits', \App\Livewire\Credits\Aicredits::class)->name('aicredits');
