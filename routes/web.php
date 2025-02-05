@@ -97,6 +97,10 @@ Route::get('/meta-ads', \App\Livewire\Advertising\Meta::class)->name('meta.ads')
 Route::get('/google-ads', \App\Livewire\Advertising\Google::class)->name('google.ads');
 Route::get('/active-ads', \App\Livewire\Advertising\Active::class)->name('active.ads');
 
+//Credits
+Route::get('/meta-upsert', \App\Livewire\Advertising\Upsert\Meta::class)->name('meta.upsert');
+Route::get('/google-upsert', \App\Livewire\Advertising\Upsert\Google::class)->name('google.upsert');
+
 //Filemanager
 Route::get('/filemanager-index', \App\Livewire\Filemanager\Index::class)->name('filemanager.index');
 Route::get('/filemanager-generate', \App\Livewire\Filemanager\Generate::class)->name('filemanager.generate');

@@ -16,6 +16,10 @@
     /* multi select with remove button */
     const multipleCancelButton = new Choices(
         '#assigned-team-members',
+        '#select1',
+        '#select2',
+        '#select3',
+        '#select4',
         {
             allowHTML: true,
             removeItemButton: true,
