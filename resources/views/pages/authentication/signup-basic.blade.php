@@ -26,7 +26,7 @@
                             <p class="mb-4 text-textmuted dark:text-textmuted/50 opacity-70 font-normal text-center">
                                 Welcome! Begin by creating your account.</p>
                             <div class="flex mb-3 justify-between gap-2 flex-wrap flex-lg-nowrap">
-                                <button
+                                <a href="{{url('auth/google')}}"
                                     class="ti-btn ti-btn-lg border border-defaultborder dark:border-defaultborder/10 flex items-center justify-center flex-auto ti-btn-light">
                                     <span class="avatar avatar-xs">
                                           <svg width="90" height="90" viewBox="0 0 90 90" fill="none"
@@ -46,7 +46,7 @@
                                             </svg>
                                     </span>
                                     <span class="leading-[1.2rem] ms-2 text-[13px] text-defaulttextcolor">Signup with Google</span>
-                                </button>
+                                </a>
                             </div>
                             <div class="text-center my-3 authentication-barrier">
                                 <span>OR</span>

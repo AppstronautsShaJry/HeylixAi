@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\FacebookPage;
 use Illuminate\Http\Request;
 
 class PlatformController extends Controller
 {
     public function facebook() {
-        return view('pages.platform.facebook');
+        $pages = FacebookPage::all();
+        return view('pages.platform.facebook')->with('pages', $pages);
     }
     public function instagram() {
         return view('pages.platform.instagram');

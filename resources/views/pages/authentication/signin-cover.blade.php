@@ -50,7 +50,7 @@
                             </svg>
 {{--                                            <img src="{{asset('build/assets/images/media/apps/google.png')}}" alt="">--}}
                                         </span>
-                                        <span class="leading-[1.2rem] ms-2 text-[13px] text-defaulttextcolor">Signup with Google</span>
+                                        <span class="leading-[1.2rem] ms-2 text-[13px] text-defaulttextcolor">Signin with Google</span>
                                     </a>
                                 </div>
                                 <div class="text-center my-3 authentication-barrier">

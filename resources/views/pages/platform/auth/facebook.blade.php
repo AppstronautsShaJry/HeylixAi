@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('styles')
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
 @endsection
 
 @section('content')
@@ -31,22 +31,6 @@
             <div class="flex justify-between items-center p-5 border-b ">
                 <div class="text-lg">Facebook</div>
                 <a href="/facebook">
-{{--                    <button type="button" class="ti-btn ti-btn-primary-gradient !rounded-full btn-wave ">--}}
-{{--                        View Account--}}
-{{--                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"--}}
-{{--                             stroke="currentColor" class="size-6">--}}
-{{--                            <path stroke-linecap="round" stroke-linejoin="round"--}}
-{{--                                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"/>--}}
-{{--                        </svg>--}}
-{{--                    </button>--}}
-{{--                    <button type="button" class="ti-btn ti-btn-primary-gradient btn-wave ">--}}
-{{--                        View Account--}}
-{{--                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"--}}
-{{--                             stroke="currentColor" class="size-6">--}}
-{{--                            <path stroke-linecap="round" stroke-linejoin="round"--}}
-{{--                                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"/>--}}
-{{--                        </svg>--}}
-{{--                    </button>--}}
                     <button type="button" class="ti-btn ti-btn-primary label-ti-btn">
                         <i class="ri-eye-line label-ti-btn-icon  me-2"></i>
                         View Account
@@ -88,19 +72,10 @@
                     <x-tabs.content>
                         <div class="w-full h-auto flex justify-between items-center">
                             <div class="xl:w-3/4 flex justify-center items-center">
-{{--                                <button type="button" class="ti-btn ti-btn-purple-gradient !rounded-full btn-wave ">--}}
-{{--                                    Create Account--}}
-{{--                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"--}}
-{{--                                         stroke-width="1.5" stroke="currentColor" class="size-6">--}}
-{{--                                        <path stroke-linecap="round" stroke-linejoin="round"--}}
-{{--                                              d="M12 4.5v15m7.5-7.5h-15"/>--}}
-{{--                                    </svg>--}}
-{{--                                </button>--}}
-                                <button type="button" class="ti-btn ti-btn-primary label-ti-btn">
-                                    <i class="ri-links-line label-ti-btn-icon  me-2"></i>
+                                <a href="{{url('auth/facebook') }}" class="ti-btn ti-btn-primary label-ti-btn">
+                                    <i class="ri-links-line label-ti-btn-icon me-2"></i>
                                     Connect Account
-                                </button>
-
+                                </a>
                             </div>
                             <div class="xl:w-1/4">
                                 <div class="box ">
@@ -160,5 +135,40 @@
             </x-tabs.tab-panel>
         </div>
 
-    </div>
+        <!-- Multi-Select with Remove Button -->
+        <label class="ti-form-select rounded-sm !p-0 mb-2 font-medium">With Remove Button</label>
+        <select class="ti-form-select rounded-sm !py-2 !px-3"
+                name="choices-multiple-remove-button"
+                data-choices
+                data-remove-button
+                multiple>
+            <option value="Choice 1" selected>Choice 1</option>
+            <option value="Choice 2">Choice 2</option>
+            <option value="Choice 3">Choice 3</option>
+            <option value="Choice 4">Choice 4</option>
+        </select>
+
+        <!-- Single Select with Search -->
+        <label class="ti-form-select rounded-sm !p-0 mb-2 font-medium">Single Select (With Search)</label>
+        <select class="ti-form-select rounded-sm !py-2 !px-3"
+                name="choices-multiple-remove-button"
+                data-choices
+                data-remove-button
+                multiple
+                data-search>
+            <option value="One">One</option>
+            <option value="Two">Two</option>
+            <option value="Three">Three</option>
+        </select>
+
+        <!-- Email Input with Filtering -->
+
+@endsection
+
+@section('scripts')
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="choices-init.js"></script>
+    @vite('resources/assets/js/select-choice.js')
+
+
 @endsection

@@ -135,5 +135,6 @@
     <orderEntry type="library" name="filepond" level="application" />
     <orderEntry type="library" name="filepond-plugin-image-preview" level="application" />
     <orderEntry type="library" name="sweetalert2" level="application" />
+    <orderEntry type="library" name="choices.js" level="application" />
   </component>
 </module>

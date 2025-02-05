@@ -73,19 +73,19 @@ Route::get('/social-accounts', [\App\Models\SocialAccount::class, 'showSocialAcc
 //Route::get('/manage-brand', [BrandController::class, 'manage']);
 //Route::get('/edit-brand', [BrandController::class, 'edit']);
 
-
-
-Route::get('/login/facebook', [FacebookController::class, 'redirect'])->name('facebook.login');
-Route::get('/login/facebook/callback', [FacebookController::class, 'callback']);
+Route::get('/auth/facebook', [FacebookController::class, 'redirect'])->name('facebook.login');
+Route::get('/auth/facebook/callback', [FacebookController::class, 'callback']);
 Route::get('/facebook/pages', [FacebookController::class, 'getPages'])->name('facebook.pages');
 Route::post('/facebook/post', [FacebookController::class, 'createPost'])->name('facebook.post');
 Route::delete('/facebook/post/{postId}/{pageId}', [FacebookController::class, 'deletePost'])->name('facebook.post.delete');
-Route::get('/admin/facebook', function () {
-    return view('admin.facebook', ['pages' => App\Models\FacebookPage::all()]);
-})->name('facebook.admin');
+//Route::get('/admin/facebook', function () {
+//    return view('admin.facebook', ['pages' => App\Models\FacebookPage::all()]);
+//})->name('facebook.admin');
+
 //Social
 //Route::get('/calender', [SocialController::class, 'calender']);
 //Route::get('/posts', [SocialController::class, 'post']);
+
 Route::get('/calender-social', \App\Livewire\Social\Index::class)->name('calender.social');
 Route::get('/posts-social', \App\Livewire\Social\Post::class)->name('posts.social');
 
