@@ -36,6 +36,8 @@
             </div>
         </div>
 
+        <x-modal.entry-modal/>
+
     </div>
 </div>
 

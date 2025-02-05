@@ -1,6 +1,5 @@
 (function () {
   "use strict";
-
   /* default multi select */
   const secondElement = new Choices('#choices-multiple-default', { allowSearch: false }).setValue(['Choice 2', 'Choice 3']);
 

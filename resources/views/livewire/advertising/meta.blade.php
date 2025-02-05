@@ -39,36 +39,42 @@
 
         <div class="gap-5 grid grid-cols-12 w-full h-auto">
 
-{{--            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 p-4 w-full h-auto">--}}
-{{--                <!-- Card 1 -->--}}
-{{--                <div class="bg-gray-200 dark:bg-gray-800 rounded-md w-full">--}}
-{{--                    <div class="p-4">--}}
-{{--                        <img src="{{asset('build/assets/images/media/media-4.jpg')}}" class="mb-3" alt="...">--}}
-{{--                        <h6 class="font-medium mb-3">Mountains<span class="badge bg-primary float-end text-[10px]">New</span></h6>--}}
-{{--                        <p>With supporting text below as a natural lead-in.</p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <!-- Repeat similar structure for other cards -->--}}
-{{--            </div>--}}
+            {{--            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 p-4 w-full h-auto">--}}
+            {{--                <!-- Card 1 -->--}}
+            {{--                <div class="bg-gray-200 dark:bg-gray-800 rounded-md w-full">--}}
+            {{--                    <div class="p-4">--}}
+            {{--                        <img src="{{asset('build/assets/images/media/media-4.jpg')}}" class="mb-3" alt="...">--}}
+            {{--                        <h6 class="font-medium mb-3">Mountains<span class="badge bg-primary float-end text-[10px]">New</span></h6>--}}
+            {{--                        <p>With supporting text below as a natural lead-in.</p>--}}
+            {{--                    </div>--}}
+            {{--                </div>--}}
+            {{--                <!-- Repeat similar structure for other cards -->--}}
+            {{--            </div>--}}
 
             <div
                 class="xxl:col-span-9 xl:col-span-8 col-span-12 grid grid-cols-1 xl:grid-cols-4 sm:grid-cols-3 lg:grid-cols-3 gap-5 box p-4 w-full h-auto">
                 <!-- Row 1 -->
                 <div class="box-new dark:bg-gray-800 bg-gray-200 rounded-md w-full">
-                    <div class="box-body">
-                        <img src="{{asset('build/assets/images/media/media-4.jpg')}}" class="card-img mb-3" alt="...">
-                        <h6 class="box-title font-medium mb-3">Mountains<span
-                                class="badge bg-primary float-end text-[10px]">New</span></h6>
-                        <p class="card-text">With supporting text below as a natural lead-in.</p>
-                    </div>
+                    <a href="{{route('meta.upsert')}}">
+                        <div class="box-body">
+                            <img src="{{asset('build/assets/images/media/media-4.jpg')}}" class="card-img mb-3"
+                                 alt="...">
+                            <h6 class="box-title font-medium mb-3">Mountains<span
+                                    class="badge bg-primary float-end text-[10px]">New</span></h6>
+                            <p class="card-text">With supporting text below as a natural lead-in.</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="box-new dark:bg-gray-800 bg-gray-200 rounded-md w-full">
-                    <div class="box-body">
-                        <img src="{{asset('build/assets/images/media/media-9.jpg')}}" class="card-img mb-3" alt="...">
-                        <h6 class="box-title font-medium mb-3">Hills<span
-                                class="badge bg-secondary float-end text-[10px]">Hot</span></h6>
-                        <p class="card-text">With supporting text below as a natural lead-in.</p>
-                    </div>
+                    <a href="{{route('google.upsert')}}">
+                        <div class="box-body">
+                            <img src="{{asset('build/assets/images/media/media-9.jpg')}}" class="card-img mb-3"
+                                 alt="...">
+                            <h6 class="box-title font-medium mb-3">Hills<span
+                                    class="badge bg-secondary float-end text-[10px]">Hot</span></h6>
+                            <p class="card-text">With supporting text below as a natural lead-in.</p>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="box-new dark:bg-gray-800 bg-gray-200 rounded-md w-full">
