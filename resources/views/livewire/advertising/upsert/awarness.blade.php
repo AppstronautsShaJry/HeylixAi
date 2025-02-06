@@ -26,7 +26,8 @@
                 <ol class="breadcrumb mb-0">
                     <li class="breadcrumb-item active" aria-current="page"><a href="/calender-social">Advertising</a>
                     </li>
-                    <li class="breadcrumb-item active" aria-current="page">Leads Ad</li>
+                    <li class="breadcrumb-item active" aria-current="page">Awarness Ad</li>
+
                 </ol>
             </div>
             <div class="flex gap-2 flex-wrap">
@@ -38,7 +39,7 @@
                 <form class="p-4 grid grid-cols-12 gap-4 box">
 
                     <div class="col-span-12 ">
-                        <span class="text-lg font-semibold">Generate Leads Ad </span>
+                        <span class="text-lg font-semibold">Awarness Ad</span>
 
                     </div>
 
@@ -48,7 +49,7 @@
                         <div class="col-span-12 md:col-span-6 xl:col-span-6">
                             <div class="">
                                 <select class="ti-form-select rounded-sm p-1" id="select-beast" autocomplete="off">
-                                    <option value=""> Select a person...</option>
+                                    <option value=""> Select a Page...</option>
                                     <option value="4">Page 1</option>
                                     <option value="1">Page 2</option>
                                     <option value="3">Page 3</option>
@@ -60,7 +61,7 @@
 
                     <div class="col-span-12">
                         <label class="ti-form-label">Daily Budget</label>
-                        <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                        <input type="text" class="form-control" placeholder="Amount" aria-label="First name">
                     </div>
 
                     <div class="col-span-12 gap-5">
@@ -93,8 +94,6 @@
                                         </button>
                                     </div>
                                 </div>
-
-
                             </div>
 
                             <span class="mt-1">to</span>
@@ -153,7 +152,7 @@
 
 
                     <div class="col-span-12">
-                        <label for="inputAddress" class="ti-form-label">Primary Text</label>
+                        <label for="inputAddress" class="ti-form-label">Target Audience</label>
 
 
                         <div class="col-span-12 flex flex-col">
@@ -244,73 +243,6 @@
 
                     </div>
 
-                    <div class="col-span-12 my-1">
-
-                        <label for="inputEmail4" class="ti-form-label">Collected Lead Info</label>
-                        <div class="grid grid-cols-3 w-5/12">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Name
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                       checked>
-                                <label class="form-check-label" for="flexCheckChecked">
-                                    Email
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                       checked>
-                                <label class="form-check-label" for="flexCheckChecked">
-                                    Phone
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    City
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                       checked>
-                                <label class="form-check-label" for="flexCheckChecked">
-                                    Gender
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                       checked>
-                                <label class="form-check-label" for="flexCheckChecked">
-                                    County
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-span-12">
-
-                        <label for="inputEmail4" class="ti-form-label">Delivered By</label>
-                        <div class="flex gap-2">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Excel Sheet
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                       checked>
-                                <label class="form-check-label" for="flexCheckChecked">
-                                    Messenger
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
                 </form>
             </div>
 
@@ -345,6 +277,7 @@
                             </div>
                         </div>
                     </div>
+
                     <h5 class="text-xs px-3 font-medium">Square image/video (1080x1080)</h5>
                     <div class="box-body my-2">
                         <input type="file" class="filepond" name="image1"

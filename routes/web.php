@@ -98,8 +98,17 @@ Route::get('/google-ads', \App\Livewire\Advertising\Google::class)->name('google
 Route::get('/active-ads', \App\Livewire\Advertising\Active::class)->name('active.ads');
 
 //Credits
-Route::get('/meta-upsert', \App\Livewire\Advertising\Upsert\Meta::class)->name('meta.upsert');
-Route::get('/google-upsert', \App\Livewire\Advertising\Upsert\Google::class)->name('google.upsert');
+Route::get('/meta-upsert', \App\Livewire\Advertising\Upsert\Lead::class)->name('meta.upsert');
+Route::get('/google-upsert', \App\Livewire\Advertising\Upsert\Call::class)->name('google.upsert');
+
+Route::get('/call', \App\Livewire\Advertising\Upsert\Call::class)->name('call');
+Route::get('/leads', \App\Livewire\Advertising\Upsert\Lead::class)->name('leads');
+Route::get('/awarness', \App\Livewire\Advertising\Upsert\Awarness::class)->name('awarness');
+Route::get('/drive', \App\Livewire\Advertising\Upsert\Drive::class)->name('drive');
+Route::get('/messages', \App\Livewire\Advertising\Upsert\Messages::class)->name('messages');
+Route::get('/post', \App\Livewire\Advertising\Upsert\Post::class)->name('post');
+Route::get('/app', \App\Livewire\Advertising\Upsert\App::class)->name('app');
+Route::get('/whatsapp', \App\Livewire\Advertising\Upsert\Whatsapp::class)->name('whatsapp');
 
 //Filemanager
 Route::get('/filemanager-index', \App\Livewire\Filemanager\Index::class)->name('filemanager.index');

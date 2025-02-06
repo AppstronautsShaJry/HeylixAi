@@ -26,7 +26,8 @@
                 <ol class="breadcrumb mb-0">
                     <li class="breadcrumb-item active" aria-current="page"><a href="/calender-social">Advertising</a>
                     </li>
-                    <li class="breadcrumb-item active" aria-current="page">Leads Ad</li>
+                    <li class="breadcrumb-item active" aria-current="page">Message Ad</li>
+
                 </ol>
             </div>
             <div class="flex gap-2 flex-wrap">
@@ -38,7 +39,7 @@
                 <form class="p-4 grid grid-cols-12 gap-4 box">
 
                     <div class="col-span-12 ">
-                        <span class="text-lg font-semibold">Generate Leads Ad </span>
+                        <span class="text-lg font-semibold">Get Message Ad</span>
 
                     </div>
 
@@ -48,7 +49,7 @@
                         <div class="col-span-12 md:col-span-6 xl:col-span-6">
                             <div class="">
                                 <select class="ti-form-select rounded-sm p-1" id="select-beast" autocomplete="off">
-                                    <option value=""> Select a person...</option>
+                                    <option value=""> Select a Page...</option>
                                     <option value="4">Page 1</option>
                                     <option value="1">Page 2</option>
                                     <option value="3">Page 3</option>
@@ -59,8 +60,37 @@
                     </div>
 
                     <div class="col-span-12">
+
+                        <label for="inputEmail4" class="ti-form-label">Destination</label>
+
+                        <div class="flex flex-row gap-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                       id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Whats' up
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                       id="flexRadioDefault2" checked="">
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Messanger
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                       id="flexRadioDefault2" checked="">
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Instagram
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-12">
                         <label class="ti-form-label">Daily Budget</label>
-                        <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                        <input type="text" class="form-control" placeholder="Amount" aria-label="First name">
                     </div>
 
                     <div class="col-span-12 gap-5">
@@ -214,7 +244,7 @@
                     </div>
 
                     <div class="col-span-12">
-                        <label for="inputAddress2" class="ti-form-label">Update Location</label>
+                        <label for="inputAddress2" class="ti-form-label">Location</label>
 
                         <select class="ti-form-select rounded-sm !py-2 !px-3"
                                 name="choices-multiple-remove-button"
@@ -242,73 +272,6 @@
                             <option value="Choice 4">Karnataka</option>
                         </select>
 
-                    </div>
-
-                    <div class="col-span-12 my-1">
-
-                        <label for="inputEmail4" class="ti-form-label">Collected Lead Info</label>
-                        <div class="grid grid-cols-3 w-5/12">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Name
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                       checked>
-                                <label class="form-check-label" for="flexCheckChecked">
-                                    Email
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                       checked>
-                                <label class="form-check-label" for="flexCheckChecked">
-                                    Phone
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    City
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                       checked>
-                                <label class="form-check-label" for="flexCheckChecked">
-                                    Gender
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                       checked>
-                                <label class="form-check-label" for="flexCheckChecked">
-                                    County
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-span-12">
-
-                        <label for="inputEmail4" class="ti-form-label">Delivered By</label>
-                        <div class="flex gap-2">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Excel Sheet
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                       checked>
-                                <label class="form-check-label" for="flexCheckChecked">
-                                    Messenger
-                                </label>
-                            </div>
-                        </div>
                     </div>
 
                 </form>

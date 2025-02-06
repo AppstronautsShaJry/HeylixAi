@@ -82,7 +82,7 @@
   @apply my-[1px] rounded-sm px-2.5 pt-[0.05rem] pb-[0.2rem] #{!important};
 }
 .choices__list--single .choices__item {
-  @apply text-defaulttextcolor #{!important}; 
+  @apply text-defaulttextcolor #{!important};
 }
 .choices__input {
   @apply mb-0 #{!important};
@@ -468,14 +468,14 @@
 }
 
 .fc-theme-standard .fc-scrollgrid {
-  @apply border border-defaultborder border-solid #{!important}; 
+  @apply border border-defaultborder border-solid #{!important};
 }
 
 .fc-theme-bootstrap5 .fc-list,
 .fc-theme-bootstrap5 .fc-scrollgrid,
 .fc-theme-bootstrap5 td,
 .fc-theme-bootstrap5 th {
-  @apply border border-defaultborder border-solid #{!important}; 
+  @apply border border-defaultborder border-solid #{!important};
 }
 
 @media (max-width: 420px) {
@@ -576,10 +576,10 @@
 }
 
 .flatpickr-calendar.open {
-  @apply z-[99] #{!important}; 
+  @apply z-[99] #{!important};
 }
 .flatpickr-calendar.hasTime.open {
-  @apply z-[999] #{!important}; 
+  @apply z-[999] #{!important};
 }
 
 .flatpickr-current-month .flatpickr-monthDropdown-months {
@@ -606,7 +606,7 @@
 }
 
 .flatpickr-day {
-  @apply text-defaulttextcolor font-medium #{!important}; 
+  @apply text-defaulttextcolor font-medium #{!important};
   &.nextMonthDay,
   &.prevMonthDay {
     @apply opacity-50 #{!important};
@@ -1020,7 +1020,7 @@ span.flatpickr-weekday {
 
 /* End::Vector Maps */
 
-/* Start::Google Maps */
+/* Start::Call Maps */
 #google-map,
 #google-map-overlay,
 #map-layers,
@@ -1042,7 +1042,7 @@ span.flatpickr-weekday {
 .google-overlay_arrow.below {
   @apply top-[-0.938rem] border-b-[1rem] border-b-[#336699] border-x-[1rem] border-x-transparent border-solid;
 }
-/* End::Google Maps */
+/* End::Call Maps */
 
 /* Start::Apex Charts */
 .content-wrapper {
@@ -1339,7 +1339,7 @@ span.flatpickr-weekday {
   @apply border-defaultborder dark:border-defaultborder/10 #{!important};
 }
 .select2-container--default .select2-search--dropdown .select2-search__field {
-  @apply border-defaultborder dark:border-defaultborder/10 #{!important}; 
+  @apply border-defaultborder dark:border-defaultborder/10 #{!important};
 }
 .select2-container--default
   .select2-selection--multiple
@@ -1733,7 +1733,7 @@ div.dtr-modal div.dtr-modal-close {
   @apply border-defaultborder text-2xl bg-transparent border-0 border-solid top-0 #{!important};
 }
 div.dtr-modal div.dtr-modal-background {
-  @apply bg-[rgba(0,0,0,0.3)] #{!important};   
+  @apply bg-[rgba(0,0,0,0.3)] #{!important};
 }
 .dtr-modal-content h2 {
   @apply text-sm font-semibold #{!important};
@@ -1769,14 +1769,14 @@ table.table-bordered.dataTable th:first-child,
 table.table-bordered.dataTable th:first-child,
 table.table-bordered.dataTable td:first-child,
 table.table-bordered.dataTable td:first-child {
-  @apply border-s #{!important}; 
+  @apply border-s #{!important};
 }
 
 table.table-bordered.dataTable th:last-child,
 table.table-bordered.dataTable th:last-child,
 table.table-bordered.dataTable td:last-child,
 table.table-bordered.dataTable td:last-child {
-  @apply border-e #{!important}; 
+  @apply border-e #{!important};
 }
 
 div.dataTables_wrapper div.dataTables_filter#scroll-vertical_filter input {
@@ -1886,7 +1886,7 @@ div:where(.swal2-container) input:where(.swal2-input), div:where(.swal2-containe
   }
   .swal2-icon {
     @apply w-16 h-16 mt-8 mb-0 mx-auto;
-  }  
+  }
   .swal2-icon.swal2-question {
     @apply text-success border-success;
   }
@@ -1926,7 +1926,7 @@ div:where(.swal2-container) input:where(.swal2-input), div:where(.swal2-containe
   }
   .swal2-close {
     @apply text-[2rem] text-textmuted dark:text-textmuted/50;
-  }  
+  }
   .swal2-close:hover {
     @apply text-primary;
   }
@@ -2104,9 +2104,9 @@ code[class*="language-"] {
 }
 @media (max-width: 420px) {
   .fg-emoji-picker {
-    @apply start-[13px] bottom-[136px] #{!important}; 
+    @apply start-[13px] bottom-[136px] #{!important};
   }
-  
+
 }
 .fg-emoji-picker-search input {
   @apply bg-white dark:bg-bodybg text-defaulttextcolor border-b-defaultborder p-2.5 border-b border-solid #{!important};
@@ -2313,7 +2313,7 @@ input.error {
 
 .iti__search-input:focus-visible {
   outline: none;
-} 
+}
 [dir="rtl"] {
   .selected-dial-code-input {
   .iti--allow-dropdown input.iti__tel-input, .iti--allow-dropdown input.iti__tel-input[type=tel], .iti--allow-dropdown input.iti__tel-input[type=text], .iti--show-selected-dial-code input.iti__tel-input, .iti--show-selected-dial-code input.iti__tel-input[type=tel], .iti--show-selected-dial-code input.iti__tel-input[type=text] {
@@ -2454,7 +2454,7 @@ input.error {
   @apply text-white #{!important};
 }
 .dual-listbox__buttons{
-  @apply sm:mt-0 mt-2 #{!important}; 
+  @apply sm:mt-0 mt-2 #{!important};
 }
 .tagify__dropdown__item:active {
   @apply text-white #{!important};
@@ -2556,7 +2556,7 @@ input.error {
 .dual-listbox .dual-listbox__search {
   @apply border-inputborder text-defaulttextcolor dark:border-defaultborder/10 bg-formcontrolbg text-sm font-normal leading-normal px-[0.85rem] py-2 rounded-[0.35rem];
   outline: none;
-  &::-webkit-input-placeholder { 
+  &::-webkit-input-placeholder {
     @apply text-defaulttextcolor opacity-30;
   }
 }
@@ -2567,8 +2567,8 @@ input.error {
   .drop-above {
     @apply border-t-defaultborder dark:border-defaultborder/10 border-t border-solid #{!important};
   }
-  
-} 
+
+}
 .dual-listbox .dual-listbox__title {
   @apply border-s-defaultborder border-e-defaultborder border-t-defaultborder dark:border-defaultborder/10 font-medium border-s border-solid border-e border-t #{!important};
 }

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('social_accounts', function (Blueprint $table) {
             $table->id();
-            $table->string('platform'); // e.g., Facebook, Google, Twitter
+            $table->string('platform'); // e.g., Facebook, Call, Twitter
             $table->string('account_name'); // e.g., John Doe
             $table->boolean('active_status')->default(true); // Active or not
             $table->string('connection_type'); // e.g., Official, Non-Official

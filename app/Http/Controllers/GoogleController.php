@@ -24,13 +24,13 @@ class GoogleController extends Controller
         try {
             $googleUser = Socialite::driver('google')->stateless()->user(); // Add stateless()
 
-            // Check if the user exists by Google ID or Email
+            // Check if the user exists by Call ID or Email
             $user = User::where('google_id', $googleUser->id)
                 ->orWhere('email', $googleUser->email)
                 ->first();
 
             if ($user) {
-                // Update Google ID if it wasn't stored previously
+                // Update Call ID if it wasn't stored previously
                 if (!$user->google_id) {
                     $user->update(['google_id' => $googleUser->id]);
                 }
