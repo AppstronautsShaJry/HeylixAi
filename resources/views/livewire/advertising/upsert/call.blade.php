@@ -24,8 +24,9 @@
         <div class="flex items-center justify-between page-header-breadcrumb flex-wrap gap-2">
             <div>
                 <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item active" aria-current="page"><a href="/calender-social">Assets</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">All</li>
+                    <li class="breadcrumb-item active" aria-current="page"><a href="/calender-social">Advertising</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">Call Ad</li>
                 </ol>
             </div>
             <div class="flex gap-2 flex-wrap">
@@ -37,7 +38,7 @@
                 <form class="p-4 grid grid-cols-12 gap-4 box">
 
                     <div class="col-span-12 ">
-                        <span class="text-lg font-semibold">Generate Leads Ad </span>
+                        <span class="text-lg font-semibold">Get Call Ad</span>
 
                     </div>
 
@@ -58,8 +59,16 @@
                     </div>
 
                     <div class="col-span-12">
+                        <label class="ti-form-label">Phone Number</label>
+                        <div class="flex flex-row gap-3">
+                            <input type="text" class="form-control w-14" placeholder="+91" aria-label="">
+                            <input type="text" class="form-control " placeholder="" aria-label="">
+                        </div>
+                    </div>
+
+                    <div class="col-span-12">
                         <label class="ti-form-label">Daily Budget</label>
-                        <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                        <input type="text" class="form-control" placeholder="Amount" aria-label="First name">
                     </div>
 
                     <div class="col-span-12 gap-5">
@@ -154,7 +163,6 @@
                     <div class="col-span-12">
                         <label for="inputAddress" class="ti-form-label">Target Audience</label>
 
-
                         <div class="col-span-12 flex flex-col">
                             <div id="container" x-data="voiceTyping"
                                  class="text-center w-full ">
@@ -243,79 +251,6 @@
 
                     </div>
 
-                    <div class="col-span-12 w-7/12 ">
-
-                        <label for="inputEmail4" class="ti-form-label">Gender</label>
-
-                        <div class="grid grid-cols-3 ">
-                            <div class="form-check my-1">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                       id="flexRadioDefault1">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    Name
-                                </label>
-                            </div>
-                            <div class="form-check my-1">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                       id="flexRadioDefault2" checked="">
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    Email
-                                </label>
-                            </div>
-                            <div class="form-check my-1">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                       id="flexRadioDefault2" checked="">
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    Phone
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                       id="flexRadioDefault2" checked="">
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    City
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                       id="flexRadioDefault2" checked="">
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    Country
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                       id="flexRadioDefault2" checked="">
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    Gender
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-span-12">
-
-                        <label for="inputEmail4" class="ti-form-label">Delivered By</label>
-
-                        <div class="flex flex-row gap-3">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                       id="flexRadioDefault1">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    Excel Sheet
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                       id="flexRadioDefault2" checked="">
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    Messenger
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-
                 </form>
             </div>
 
@@ -330,6 +265,27 @@
                                 data-hs-overlay="#exampleModalScrollable4">Get Creative
                         </button>
                     </div>
+
+                    <div class="col-span-12">
+                        <div class="flex flex-row gap-5 my-2">
+                            <label for="inputEmail4" class="ti-form-label">File Type</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                       id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Image
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                       id="flexRadioDefault2" checked="">
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Video
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
                     <h5 class="text-xs px-3 font-medium">Square image/video (1080x1080)</h5>
                     <div class="box-body my-2">
                         <input type="file" class="filepond" name="image1"
