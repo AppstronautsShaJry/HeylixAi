@@ -1,26 +1,18 @@
+@section('styles')
+    <!-- filepond CSS -->
+    <link rel="stylesheet" href="{{ asset('build/assets/libs/filepond/filepond.min.css') }}">
+    <link rel="stylesheet"
+          href="{{ asset('build/assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css') }}">
+    <link rel="stylesheet"
+          href="{{ asset('build/assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('build/assets/libs/prismjs/themes/prism-coy.min.css') }}">
+
+    <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+    <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"
+          rel="stylesheet">
+@endsection
 <div class="main-content app-content px-5 space-y-5">
     <div class="container-fluid">
-
-        <link rel="stylesheet" href="{{asset('build/assets/libs/dropzone/dropzone.css')}}">
-
-        <link rel="stylesheet" href="{{asset('build/assets/libs/glightbox/css/glightbox.min.css')}}">
-
-        <!-- Swiper Css -->
-        <link rel="stylesheet" href="{{asset('build/assets/libs/swiper/swiper-bundle.min.css')}}">
-
-        <link rel="stylesheet" href="{{asset('build/assets/libs/quill/quill.snow.css')}}">
-        <link rel="stylesheet" href="{{asset('build/assets/libs/quill/quill.bubble.css')}}">
-
-        <!-- Filepond CSS -->
-        <link rel="stylesheet" href="{{asset('build/assets/libs/filepond/filepond.min.css')}}">
-        <link rel="stylesheet"
-              href="{{asset('build/assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css')}}">
-        <link rel="stylesheet"
-              href="{{asset('build/assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css')}}">
-
-        <link rel="stylesheet" href="{{asset('build/assets/libs/sweetalert2/sweetalert2.min.css')}}">
-
-        <!-- Start::page-header -->
         <div class="flex items-center justify-between page-header-breadcrumb flex-wrap gap-2">
             <div>
                 <ol class="breadcrumb mb-0">
@@ -29,8 +21,8 @@
                     {{--                            Dashboard--}}
                     {{--                        </a>--}}
                     {{--                    </li>--}}
-                    <li class="breadcrumb-item active" aria-current="page"><a href="/calender-social">Assests</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Upload</li>
+                    <li class="breadcrumb-item active" aria-current="page"><a href="/calender-social">Assets</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">All</li>
                 </ol>
             </div>
             <div class="flex gap-2 flex-wrap">
@@ -68,13 +60,10 @@
                 </a>
             </div>
         </div>
-
         <div class="grid grid-cols-12 gap-x-6">
             <div class="xl:col-span-12 col-span-12">
                 <div class="box">
-
                     <div class="flex flex-row w-full gap-3">
-
                         <div class="grid grid-cols-12 gap-x-6 w-8/12">
                             <div class="xl:col-span-12 col-span-12">
                                 <div class="box-header justify-end">
@@ -82,12 +71,16 @@
                                         <div class="ti-dropdown hs-dropdown">
                                             <a href="javascript:void(0);" class="ti-btn bg-light ti-btn-sm btn-wave"
                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                Sort By<i class="ri-arrow-down-s-line align-middle ms-1 inline-block"></i>
+                                                Sort By<i
+                                                    class="ri-arrow-down-s-line align-middle ms-1 inline-block"></i>
                                             </a>
                                             <ul class="ti-dropdown-menu hs-dropdown-menu hidden" role="menu">
-                                                <li><a class="ti-dropdown-item" href="javascript:void(0);">Newest</a></li>
-                                                <li><a class="ti-dropdown-item" href="javascript:void(0);">Date Added</a></li>
-                                                <li><a class="ti-dropdown-item" href="javascript:void(0);">A - Z</a></li>
+                                                <li><a class="ti-dropdown-item" href="javascript:void(0);">Newest</a>
+                                                </li>
+                                                <li><a class="ti-dropdown-item" href="javascript:void(0);">Date
+                                                        Added</a></li>
+                                                <li><a class="ti-dropdown-item" href="javascript:void(0);">A - Z</a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -95,8 +88,7 @@
                                 <div
                                     class="table-responsive border border-defaultborder dark:border-defaultborder/10 border-b-0">
 
-                                    <table
-                                        class="ti-custom-table ti-custom-table-head ti-custom-table-hover">
+                                    <table class="ti-custom-table ti-custom-table-head ti-custom-table-hover">
                                         <thead>
                                         <tr
                                             class="border-b !border-defaultborder dark:!border-defaultborder/10">
@@ -107,188 +99,61 @@
                                         </tr>
                                         </thead>
                                         <tbody class="files-list">
+                                        @foreach($assets as $asset)
+                                            <tr
+                                                class="border-b !border-defaultborder dark:!border-defaultborder/10">
+                                                <th scope="row">
+                                                    <div class="flex items-center gap-x-2">
+                                                        <div>
+                                                            @if($asset->thumbnail_path)
+                                                                <img
+                                                                    src="{{ asset('storage/' . $asset->thumbnail_path) }}"
+                                                                    class="w-5 h-4 rounded-sm"
+                                                                    alt="...">
+                                                            @else
+                                                                <img src=""
+                                                                     class="w-5 h-4 rounded-sm"
+                                                                     alt="...">
+                                                            @endif
 
-                                        <tr
-                                            class="border-b !border-defaultborder dark:!border-defaultborder/10">
-                                            <th scope="row">
-                                                <div class="flex items-center gap-x-2">
-                                                    <div>
-                                                        <img src="{{asset('images/partials/img2.jpg')}}"
-                                                             class="w-5 h-4 rounded-sm"
-                                                             alt="...">
+                                                        </div>
+                                                        <div>
+                                                            <a href="javascript:void(0);"
+                                                               data-hs-overlay="#offcanvasRight">{{ $asset->file_name }}</a>
+                                                        </div>
                                                     </div>
-                                                    <div>
-                                                        <a href="javascript:void(0);"
-                                                           data-hs-overlay="#offcanvasRight">VIDEO_88745_KKI451.mp4</a>
+                                                </th>
+                                                <td>{{ number_format($asset->file_size / 1024, 2) }} KB</td>
+                                                <td>{{ $asset->updated_at->format('Y-m-d H:i:s') }}</td>
+                                                <td>
+                                                    <div class="hstack gap-2 text-[15px]">
+                                                        <a href="#youtube-video"
+                                                           class="glightbox border-0 mb-0 ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary2"
+                                                           data-gallery="gallery1"
+                                                           data-title="Compact Laptop"
+                                                           data-type="inline"
+                                                           data-draggable="true"
+                                                        >
+                                                            <i class="ri-eye-line"></i>
+                                                        </a>
+                                                        <button wire:click="deleteAsset({{ $asset->id }})"
+                                                                onclick="confirm('Are you sure you want to delete this asset?') || event.stopImmediatePropagation()"
+                                                                class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary3">
+                                                            <i class="ri-delete-bin-line"></i>
+                                                        </button>
                                                     </div>
-                                                </div>
-                                            </th>
-
-                                            <td>89MB</td>
-                                            <td>15,Aug 2024</td>
-
-                                            <td>
-                                                <div class="hstack gap-2 text-[15px]">
-                                                    <a href="#youtube-video"
-                                                       class="glightbox border-0 mb-0 ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary2"
-                                                       data-gallery="gallery1"
-                                                       data-title="Compact Laptop"
-                                                       data-type="inline"
-                                                       data-draggable="true"
-                                                    >
-                                                        <i class="ri-eye-line"></i>
-                                                    </a>
-
-                                                    <a href="javascript:void(0);"
-                                                       class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary3">
-                                                        <i class="ri-delete-bin-line"></i>
-                                                    </a>
-                                                </div>
-
-                                                <!-- Hidden Iframe Container -->
-                                                <div id="youtube-video" style="display: none;">
-                                                    <iframe width="100%" height="100%"
-                                                            src="https://youtu.be/Yq0QkCxoTHM?si=kUN94C3CDwPiAkDh"
-                                                            title="YouTube video player" frameborder="0"
-                                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                            allowfullscreen>
-                                                    </iframe>
-                                                </div>
-
-                                            </td>
-                                        </tr>
-
-                                        <tr
-                                            class="border-b !border-defaultborder dark:!border-defaultborder/10">
-                                            <th scope="row">
-                                                <div class="flex items-center gap-x-2">
-                                                    <div>
-                                                        <img src="{{asset('images/partials/img2.jpg')}}"
-                                                             class="w-5 h-4 rounded-sm"
-                                                             alt="...">
+                                                    <!-- Hidden Iframe Container -->
+                                                    <div id="youtube-video" style="display: none;">
+                                                        <iframe width="100%" height="100%"
+                                                                src="https://youtu.be/Yq0QkCxoTHM?si=kUN94C3CDwPiAkDh"
+                                                                title="YouTube video player" frameborder="0"
+                                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                                allowfullscreen>
+                                                        </iframe>
                                                     </div>
-                                                    <div>
-                                                        <a href="javascript:void(0);"
-                                                           data-hs-overlay="#offcanvasRight">VID-14211110-AKP823.mp4</a>
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            <td>12MB</td>
-                                            <td>18,May 2024</td>
-                                            <td>
-                                                <div class="hstack gap-2 text-[15px]">
-                                                    <a href="{{asset('build/assets/images/ecommerce/png/1.png')}}"
-                                                       class="glightbox border-0 mb-0 ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary2"
-                                                       data-gallery="gallery1"
-                                                       data-title="Compact Laptop " data-type="image"
-                                                       data-draggable="true"
-                                                    ><i class="ri-eye-line"></i></a>
-
-                                                    <a href="javascript:void(0);"
-                                                       class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary3"><i
-                                                            class="ri-delete-bin-line"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr
-                                            class="border-b !border-defaultborder dark:!border-defaultborder/10 ">
-                                            <th scope="row">
-                                                <div class="flex items-center gap-x-2">
-                                                    <div>
-                                                        <img src="{{asset('images/partials/img2.jpg')}}"
-                                                             class="w-5 h-4 rounded-sm"
-                                                             alt="...">
-                                                    </div>
-                                                    <div>
-                                                        <a href="javascript:void(0);"
-                                                           data-hs-overlay="#offcanvasRight">AC-20241.zip</a>
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            <td>564KB</td>
-                                            <td>06,Mar 2024</td>
-                                            <td>
-                                                <div class="hstack gap-2 text-[15px]">
-                                                    <a href="{{asset('build/assets/images/ecommerce/png/1.png')}}"
-                                                       class="glightbox border-0 mb-0 ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary2"
-                                                       data-gallery="gallery1"
-                                                       data-title="Compact Laptop " data-type="image"
-                                                       data-draggable="true"
-                                                    ><i class="ri-eye-line"></i></a>
-
-                                                    <a href="javascript:void(0);"
-                                                       class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary3"><i
-                                                            class="ri-delete-bin-line"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr
-                                            class="border-b !border-defaultborder dark:!border-defaultborder/10">
-                                            <th scope="row">
-                                                <div class="flex items-center gap-x-2">
-                                                    <div>
-                                                        <img src="{{asset('images/partials/img2.jpg')}}"
-                                                             class="w-5 h-4 rounded-sm"
-                                                             alt="...">
-                                                    </div>
-                                                    <div>
-                                                        <a href="javascript:void(0);"
-                                                           data-hs-overlay="#offcanvasRight">AUD__145_24152.mp3</a>
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            <td>264KB</td>
-                                            <td>26,Apr 2024</td>
-                                            <td>
-                                                <div class="hstack gap-2 text-[15px]">
-                                                    <a href="{{asset('build/assets/images/ecommerce/png/1.png')}}"
-                                                       class="glightbox border-0 mb-0 ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary2"
-                                                       data-gallery="gallery1"
-                                                       data-title="Compact Laptop " data-type="image"
-                                                       data-draggable="true"
-                                                    ><i class="ri-eye-line"></i></a>
-
-                                                    <a href="javascript:void(0);"
-                                                       class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary3"><i
-                                                            class="ri-delete-bin-line"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr class="!border-b !border-defaultborder dark:!border-defaultborder/10">
-                                            <th scope="row">
-                                                <div class="flex items-center gap-x-2">
-                                                    <div>
-                                                        <img src="{{asset('images/partials/img2.jpg')}}"
-                                                             class="w-5 h-4 rounded-sm"
-                                                             alt="...">
-                                                    </div>
-
-                                                    <div>
-                                                        <a href="javascript:void(0);"
-                                                           data-hs-overlay="#offcanvasRight">Document-file.pdf</a>
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            <td>2.6MB</td>
-                                            <td>07,Feb 2024</td>
-                                            <td>
-                                                <div class="hstack gap-2 text-[15px]">
-                                                    <a href="{{asset('build/assets/images/ecommerce/png/1.png')}}"
-                                                       class="glightbox border-0 mb-0 ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary2"
-                                                       data-gallery="gallery1"
-                                                       data-title="Compact Laptop " data-type="image"
-                                                       data-draggable="true"
-                                                    ><i class="ri-eye-line"></i></a>
-
-                                                    <a href="javascript:void(0);"
-                                                       class="ti-btn ti-btn-icon ti-btn-sm ti-btn-soft-primary3"><i
-                                                            class="ri-delete-bin-line"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                                </td>
+                                            </tr>
+                                        @endforeach
                                         </tbody>
                                     </table>
 
@@ -365,116 +230,26 @@
                                                     </button>
                                                 </div>
                                             </div>
-
-                                            <div class="filemanager-file-details" id="filemanager-file-details">
-                                                <div
-                                                    class="p-4 text-center border-b border-dashed border-defaultborder dark:border-defaultborder/10">
-                                                    <div class="file-details mb-3">
-                                                        <img src="{{asset('build/assets/images/media/blog/9.jpg')}}"
-                                                             alt=""
-                                                             class="!inline-flex">
-                                                    </div>
-                                                    <div>
-                                                        <p class="mb-0 font-medium text-[1rem]">
-                                                            IMG-09123878-SPK734.jpeg</p>
-                                                        <p class="mb-0 text-textmuted dark:text-textmuted/50 text-[10px]">
-                                                            422KB |
-                                                            23,Nov
-                                                            2024
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="p-4 border-b border-dashed border-defaultborder dark:border-defaultborder/10">
-                                                    <ul class="ti-list-group">
-                                                        <li class="ti-list-group-item">
-                                                            <div>
-                                                                <span class="font-medium">File Format : </span><span
-                                                                    class="text-xs text-textmuted dark:text-textmuted/50">jpeg</span>
-                                                            </div>
-                                                        </li>
-                                                        <li class="ti-list-group-item">
-                                                            <div>
-                                                                <p class="font-medium mb-0">File Description : </p>
-                                                                <span
-                                                                    class="text-xs text-textmuted dark:text-textmuted/50">This file contains 3
-                                                folder Xintra.main & Xintra.premium & Xintra.featured and 42 images and
-                                                layout styles are added in this update.</span>
-                                                            </div>
-                                                        </li>
-                                                        <li class="ti-list-group-item">
-                                                            <p class="font-medium mb-0">File Location : </p>
-                                                            <span
-                                                                class="text-xs text-textmuted dark:text-textmuted/50">Device/Storage/Archives/IMG-09123878-SPK734.jpeg</span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div
-                                                    class="p-4 border-b border-dashed border-defaultborder dark:border-defaultborder/10">
-                                                    <p class="mb-1 font-medium text-[14px]">Downloaded from :</p>
-                                                    <a class="text-primary font-medium text-break"
-                                                       href="https://themeforest.net/user/spruko/portfolio"
-                                                       target="_blank">
-                                                        <u>https://themeforest.net/user/spruko/portfolio</u>
-                                                    </a>
-                                                </div>
-                                                <div class="p-4">
-                                                    <p class="mb-2 font-medium text-[14px]">Shared With :</p>
-                                                    <a href="javascript:void(0);">
-                                                        <div class="flex items-center p-2 mb-1">
-                                        <span class="avatar avatar-sm me-2 avatar-rounded">
-                                            <img src="{{asset('build/assets/images/faces/1.jpg')}}" alt="">
-                                        </span>
-                                                            <span class="font-medium flex-auto">Akira Susan</span>
-                                                            <span
-                                                                class="badge bg-success/10 text-success font-normal">28,Nov 2024</span>
-                                                        </div>
-                                                    </a>
-                                                    <a href="javascript:void(0);">
-                                                        <div class="flex items-center p-2 mb-1">
-                                        <span class="avatar avatar-sm me-2 avatar-rounded">
-                                            <img src="{{asset('build/assets/images/faces/15.jpg')}}" alt="">
-                                        </span>
-                                                            <span class="font-medium flex-auto">Khalid Ahmad</span>
-                                                            <span
-                                                                class="badge bg-success/10 text-success font-normal">16,Oct 2024</span>
-                                                        </div>
-                                                    </a>
-                                                    <a href="javascript:void(0);">
-                                                        <div class="flex items-center p-2 mb-1">
-                                        <span class="avatar avatar-sm me-2 avatar-rounded">
-                                            <img src="{{asset('build/assets/images/faces/8.jpg')}}" alt="">
-                                        </span>
-                                                            <span class="font-medium flex-auto">Jeremiah Jackson</span>
-                                                            <span
-                                                                class="badge bg-success/10 text-success font-normal">05,Dec 2024</span>
-                                                        </div>
-                                                    </a>
-                                                    <a href="javascript:void(0);">
-                                                        <div class="flex items-center p-2">
-                                        <span class="avatar avatar-sm me-2 avatar-rounded">
-                                            <img src="{{asset('build/assets/images/faces/13.jpg')}}" alt="">
-                                        </span>
-                                                            <span class="font-medium flex-auto">Brigo Jhonson</span>
-                                                            <span
-                                                                class="badge bg-success/10 text-success font-normal">26,Apr 2024</span>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- End::mail information offcanvas -->
                             </div>
 
-                            <div>
-                                <li
-                                    class="!p-4 mb-3 border border-dashed border-defaultborder dark:border-defaultborder/10 list-none">
-                                    <label class="form-label">Drop File here :</label>
-                                    <form data-single="true" method="post" action="https://httpbin.org/post"
-                                          class="dropzone !bg-light"></form>
-                                </li>
+                            <!-- upload section -->
+                            <div class="col-span-12 lg:col-span-12 my-5">
+                                <div class="box">
+                                    <div class="box-header">
+                                        <h5 class="box-title">Upload Files</h5>
+                                    </div>
+                                    <div class="box-body">
+                                        <input type="file" name="file" class="filepond basic-filepond"
+                                               data-allow-reorder="true"
+                                               data-max-file-size="3MB"
+                                               data-max-files="1" wire:model="file">
+                                    </div>
+                                    <button type="submit" wire:click="uploadFile" class="max-w-max mx-5 self-end p-2 bg-primary text-white rounded-md">Upload</button>
+
+                                </div>
                             </div>
 
                             <div class="box overflow-hidden">
@@ -497,14 +272,12 @@
                                     </div>
                                     <div id="file-manager-storage"></div>
                                 </div>
-
                                 <div class="box-footer p-0">
                                     <div class="mb-0 w-full flex justify-between items-center px-4">
                                         <div>
                                             <span
                                                 class="text-xs text-textmuted dark:text-textmuted/50">Storage Details</span>
                                         </div>
-
                                         <div>
                                             <button type="button" class="ti-btn ti-btn-primary btn-wave ">Upgrade
                                             </button>
@@ -585,54 +358,59 @@
         </div>
 
     </div>
-
 </div>
 
 @section('scripts')
-
-    <!-- Apex Charts JS -->
-    <script src="{{asset('build/assets/libs/apexcharts/apexcharts.min.js')}}"></script>
-
-    <!-- Dropzone JS -->
-    <script src="{{asset('build/assets/libs/dropzone/dropzone-min.js')}}"></script>
-
-    <!-- Internal File Manager JS -->
-    @vite('resources/assets/js/file-manager.js')
+    <script src="{{ asset('build/assets/libs/filepond/filepond.min.js') }}"></script>
+    <script
+        src="{{ asset('build/assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js') }}"></script>
+    <script
+        src="{{ asset('build/assets/libs/filepond-plugin-image-exif-orientation/filepond-plugin-image-exif-orientation.min.js') }}"></script>
+    <script
+        src="{{ asset('build/assets/libs/filepond-plugin-file-validate-size/filepond-plugin-file-validate-size.min.js') }}"></script>
+    <script
+        src="{{ asset('build/assets/libs/filepond-plugin-file-encode/filepond-plugin-file-encode.min.js') }}"></script>
+    <script
+        src="{{ asset('build/assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.js') }}"></script>
+    <script
+        src="{{ asset('build/assets/libs/filepond-plugin-file-validate-type/filepond-plugin-file-validate-type.min.js') }}"></script>
+    <script
+        src="{{ asset('build/assets/libs/filepond-plugin-image-crop/filepond-plugin-image-crop.min.js') }}"></script>
+    <script
+        src="{{ asset('build/assets/libs/filepond-plugin-image-resize/filepond-plugin-image-resize.min.js') }}"></script>
+    <script
+        src="{{ asset('build/assets/libs/filepond-plugin-image-transform/filepond-plugin-image-transform.min.js') }}"></script>
+    <script src="https://unpkg.com/filepond/dist/filepond.min.js"></script>
+    <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js"></script>
 
     <script>
-        // Attach functionality to all upload containers
-        document.querySelectorAll('.upload-container').forEach(container => {
-            const fileInput = container.querySelector('.file-upload');
-            const fileNameDisplay = container.querySelector('.file-name');
-            const uploadLabel = container.querySelector('.upload-label');
+        document.addEventListener("alpine:init", () => {
+            Alpine.data('buttonHandler', () => ({
+                currentPage: window.location.pathname,
 
-            // Trigger file input when clicking the label
-            uploadLabel.addEventListener('click', () => fileInput.click());
+                isActive(href) {
+                    return this.currentPage === href;
+                }
+            }));
+        });
 
-            // Update file name display when a file is selected
-            fileInput.addEventListener('change', () => {
-                fileNameDisplay.textContent = fileInput.files[0]?.name || 'No file selected';
-            });
+        FilePond.registerPlugin(FilePondPluginImagePreview);
+        const pond = FilePond.create(document.querySelector('.filepond'), {
+            allowImagePreview: true,
+            imagePreviewHeight: 150,
+            allowMultiple: false,
+            acceptedFileTypes: ['image/*'],
+            storeAsFile: true, // Makes FilePond act as a normal file input
+            files: [
+                    @if(isset($brandCategory->image))
+                {
+                    source: "{{ asset('storage/' . $brandCategory->image) }}",
+                    options: {
+                        type: 'local'
+                    }
+                }
+                @endif
+            ]
         });
     </script>
-
-    <script src="{{asset('build/assets/libs/swiper/swiper-bundle.min.js')}}"></script>
-
-    <!-- Gallery JS -->
-    <script src="{{asset('build/assets/libs/glightbox/js/glightbox.min.js')}}"></script>
-
-    <!-- Internal Ecommerce Product Details -->
-    @vite('resources/assets/js/ecommerce-product-details.js')
-
-
-    <!-- Sweetalerts JS -->
-    <script src="{{asset('build/assets/libs/sweetalert2/sweetalert2.min.js')}}"></script>
-
-    <!-- Wishlist JS -->
-    @vite('resources/assets/js/wishlist.js')
-
-    <script src="{{asset('build/assets/libs/sweetalert2/sweetalert2.min.js')}}"></script>
-
-    @vite('resources/assets/js/sweet-alerts.js')
-
 @endsection

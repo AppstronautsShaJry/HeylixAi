@@ -83,12 +83,16 @@
                                         <div class="ti-dropdown hs-dropdown">
                                             <a href="javascript:void(0);" class="ti-btn bg-light ti-btn-sm btn-wave"
                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                Sort By<i class="ri-arrow-down-s-line align-middle ms-1 inline-block"></i>
+                                                Sort By<i
+                                                    class="ri-arrow-down-s-line align-middle ms-1 inline-block"></i>
                                             </a>
                                             <ul class="ti-dropdown-menu hs-dropdown-menu hidden" role="menu">
-                                                <li><a class="ti-dropdown-item" href="javascript:void(0);">Newest</a></li>
-                                                <li><a class="ti-dropdown-item" href="javascript:void(0);">Date Added</a></li>
-                                                <li><a class="ti-dropdown-item" href="javascript:void(0);">A - Z</a></li>
+                                                <li><a class="ti-dropdown-item" href="javascript:void(0);">Newest</a>
+                                                </li>
+                                                <li><a class="ti-dropdown-item" href="javascript:void(0);">Date
+                                                        Added</a></li>
+                                                <li><a class="ti-dropdown-item" href="javascript:void(0);">A - Z</a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -293,7 +297,6 @@
                                                 </div>
                                             </td>
                                         </tr>
-
                                         </tbody>
                                     </table>
 
@@ -319,6 +322,7 @@
                                     </nav>
                                 </div>
                             </div>
+                            <x-test />
                         </div>
 
                         <div class="xxl:col-span-3 col-span-8 w-4/12 flex flex-col ">
