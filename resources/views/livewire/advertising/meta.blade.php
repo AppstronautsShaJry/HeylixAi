@@ -36,126 +36,49 @@
             </div>
         </div>
 
-
         <div class="gap-5 grid grid-cols-12 w-full h-auto">
 
-            {{--            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 p-4 w-full h-auto">--}}
-            {{--                <!-- Card 1 -->--}}
-            {{--                <div class="bg-gray-200 dark:bg-gray-800 rounded-md w-full">--}}
-            {{--                    <div class="p-4">--}}
-            {{--                        <img src="{{asset('build/assets/images/media/media-4.jpg')}}" class="mb-3" alt="...">--}}
-            {{--                        <h6 class="font-medium mb-3">Mountains<span class="badge bg-primary float-end text-[10px]">New</span></h6>--}}
-            {{--                        <p>With supporting text below as a natural lead-in.</p>--}}
-            {{--                    </div>--}}
-            {{--                </div>--}}
-            {{--                <!-- Repeat similar structure for other cards -->--}}
-            {{--            </div>--}}
+            <div class="box xxl:col-span-9 xl:col-span-8 col-span-12">
 
-            <div
-                class="xxl:col-span-9 xl:col-span-8 col-span-12 grid grid-cols-1 xl:grid-cols-4 sm:grid-cols-3 lg:grid-cols-3 gap-5 box p-4 w-full h-auto">
-                <!-- Row 1 -->
-                <div class="box-new dark:bg-gray-800 bg-gray-200 rounded-md w-full">
-                    <a href="{{route('meta.upsert')}}">
-                        <div class="box-body">
-                            <img src="{{asset('build/assets/images/media/media-4.jpg')}}" class="card-img mb-3"
-                                 alt="...">
-                            <h6 class="box-title font-medium mb-3">Mountains<span
-                                    class="badge bg-primary float-end text-[10px]">New</span></h6>
-                            <p class="card-text">With supporting text below as a natural lead-in.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="box-new dark:bg-gray-800 bg-gray-200 rounded-md w-full">
-                    <a href="{{route('google.upsert')}}">
-                        <div class="box-body">
-                            <img src="{{asset('build/assets/images/media/media-9.jpg')}}" class="card-img mb-3"
-                                 alt="...">
-                            <h6 class="box-title font-medium mb-3">Hills<span
-                                    class="badge bg-secondary float-end text-[10px]">Hot</span></h6>
-                            <p class="card-text">With supporting text below as a natural lead-in.</p>
-                        </div>
-                    </a>
-                </div>
+                <span class="p-4 text-lg font-semibold">Select your Goal</span>
 
-                <div class="box-new dark:bg-gray-800 bg-gray-200 rounded-md w-full">
-                    <div class="box-body">
-                        <img src="{{asset('build/assets/images/media/media-15.jpg')}}" class="card-img mb-3" alt="...">
-                        <h6 class="box-title font-medium mb-3">Nature<span
-                                class="badge bg-light text-dark float-end text-[10px]">Offer</span></h6>
-                        <p class="card-text">With supporting text below as a natural lead-in.</p>
-                    </div>
-                </div>
+                <div
+                    class=" grid grid-cols-1 xl:grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-5 p-4 w-full h-auto">
+                    <!-- Row 1 -->
 
-                <div class="box-new dark:bg-gray-800 bg-gray-200 rounded-md w-full">
-                    <div class="box-body">
-                        <img src="{{asset('build/assets/images/media/media-4.jpg')}}" class="card-img mb-3" alt="...">
-                        <h6 class="box-title font-medium mb-3">Mountains<span
-                                class="badge bg-primary float-end text-[10px]">New</span></h6>
-                        <p class="card-text">With supporting text below as a natural lead-in.</p>
-                    </div>
-                </div>
+                    <x-cards.card1 :title="'Awarness'"
+                                   description="defre trew dfijl defre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijl"
+                                   route="awarness">
 
-                <!-- Row 2 -->
-                <div class="box-new dark:bg-gray-800 bg-gray-200 rounded-md w-full">
-                    <div class="box-body">
-                        <img src="{{asset('build/assets/images/media/media-9.jpg')}}" class="card-img mb-3" alt="...">
-                        <h6 class="box-title font-medium mb-3">Hills<span
-                                class="badge bg-secondary float-end text-[10px]">Hot</span></h6>
-                        <p class="card-text">With supporting text below as a natural lead-in.</p>
-                    </div>
-                </div>
-                <div class="box-new dark:bg-gray-800 bg-gray-200 rounded-md w-full">
-                    <div class="box-body">
-                        <img src="{{asset('build/assets/images/media/media-15.jpg')}}" class="card-img mb-3" alt="...">
-                        <h6 class="box-title font-medium mb-3">Nature<span
-                                class="badge bg-light text-dark float-end text-[10px]">Offer</span></h6>
-                        <p class="card-text">With supporting text below as a natural lead-in.</p>
-                    </div>
-                </div>
+                    </x-cards.card1>
 
-                <div class="box-new dark:bg-gray-800 bg-gray-200 rounded-md w-full">
-                    <div class="box-body">
-                        <img src="{{asset('build/assets/images/media/media-15.jpg')}}" class="card-img mb-3" alt="...">
-                        <h6 class="box-title font-medium mb-3">Nature<span
-                                class="badge bg-light text-dark float-end text-[10px]">Offer</span></h6>
-                        <p class="card-text">With supporting text below as a natural lead-in.</p>
-                    </div>
-                </div>
+                    <x-cards.card1 :title="'Drive Traffic'"
+                                   description="defre trew dfijl defre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijl"
+                                   route="drive"/>
 
-                <div class="box-new dark:bg-gray-800 bg-gray-200 rounded-md w-full">
-                    <div class="box-body">
-                        <img src="{{asset('build/assets/images/media/media-4.jpg')}}" class="card-img mb-3" alt="...">
-                        <h6 class="box-title font-medium mb-3">Mountains<span
-                                class="badge bg-primary float-end text-[10px]">New</span></h6>
-                        <p class="card-text">With supporting text below as a natural lead-in.</p>
-                    </div>
-                </div>
+                    <x-cards.card1 :title="'Get Message'"
+                                   description="defre trew dfijl defre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijl"
+                                   route="messages"/>
 
-                <!-- Row 2 -->
-                <div class="box-new dark:bg-gray-800 bg-gray-200 rounded-md w-full">
-                    <div class="box-body">
-                        <img src="{{asset('build/assets/images/media/media-9.jpg')}}" class="card-img mb-3" alt="...">
-                        <h6 class="box-title font-medium mb-3">Hills<span
-                                class="badge bg-secondary float-end text-[10px]">Hot</span></h6>
-                        <p class="card-text">With supporting text below as a natural lead-in.</p>
-                    </div>
-                </div>
-                <div class="box-new dark:bg-gray-800 bg-gray-200 rounded-md w-full">
-                    <div class="box-body">
-                        <img src="{{asset('build/assets/images/media/media-15.jpg')}}" class="card-img mb-3" alt="...">
-                        <h6 class="box-title font-medium mb-3">Nature<span
-                                class="badge bg-light text-dark float-end text-[10px]">Offer</span></h6>
-                        <p class="card-text">With supporting text below as a natural lead-in.</p>
-                    </div>
-                </div>
+                    <x-cards.card1 :title="'Generate Leads'"
+                                   description="defre trew dfijl defre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijl"
+                                   route="leads"/>
 
-                <div class="box-new dark:bg-gray-800 bg-gray-200 rounded-md w-full">
-                    <div class="box-body">
-                        <img src="{{asset('build/assets/images/media/media-15.jpg')}}" class="card-img mb-3" alt="...">
-                        <h6 class="box-title font-medium mb-3">Nature<span
-                                class="badge bg-light text-dark float-end text-[10px]">Offer</span></h6>
-                        <p class="card-text">With supporting text below as a natural lead-in.</p>
-                    </div>
+                    <x-cards.card1 :title="'Get Calls'"
+                                   description="defre trew dfijl defre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijl"
+                                   route="call"/>
+
+                    <x-cards.card1 :title="'Post/Video Likes'"
+                                   description="defre trew dfijl defre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijl"
+                                   route="post"/>
+
+                    <x-cards.card1 :title="'Promote App'"
+                                   description="defre trew dfijl defre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijl"
+                                   route="app"/>
+
+                    <x-cards.card1 :title="'Whatsapp'"
+                                   description="defre trew dfijl defre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijl"
+                                   route="whatsapp"/>
                 </div>
             </div>
 
@@ -170,10 +93,13 @@
                                         <h4 class="font-semibold">₹10,000 </h4>
                                     </div>
                                 </div>
-                                <div class="flex justify-center ">
-                                    <button type="button" class="hs-dropdown-toggle ti-btn btn-wave ti-btn-primary"
-                                            data-hs-overlay="#exampleModalgrid">
+                                <div class="flex justify-center gap-5">
+                                    <button type="button" class="hs-dropdown-toggle ti-btn btn-wave ti-btn-primary">
                                         Add Fund
+                                    </button>
+
+                                    <button type="button" class="hs-dropdown-toggle ti-btn btn-wave ti-btn-primary">
+                                        Transactions
                                     </button>
                                 </div>
 
@@ -194,8 +120,7 @@
                                         </span>
 
                                     <div class="flex justify-center ">
-                                        <button type="button" class="hs-dropdown-toggle ti-btn btn-wave ti-btn-primary"
-                                                data-hs-overlay="#exampleModalgrid">
+                                        <button type="button" class="hs-dropdown-toggle ti-btn btn-wave ti-btn-primary">
                                             Hire Now
                                         </button>
                                     </div>
@@ -209,4 +134,6 @@
 
     </div>
 </div>
+
+
 

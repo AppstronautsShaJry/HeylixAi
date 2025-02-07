@@ -24,9 +24,8 @@
         <div class="flex items-center justify-between page-header-breadcrumb flex-wrap gap-2">
             <div>
                 <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item active" aria-current="page"><a href="/calender-social">Advertising</a>
-                    </li>
-                    <li class="breadcrumb-item active" aria-current="page">Leads Ad</li>
+                    <li class="breadcrumb-item active" aria-current="page"><a href="/calender-social">Advertising</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Post/Video Ad</li>
                 </ol>
             </div>
             <div class="flex gap-2 flex-wrap">
@@ -38,7 +37,7 @@
                 <form class="p-4 grid grid-cols-12 gap-4 box">
 
                     <div class="col-span-12 ">
-                        <span class="text-lg font-semibold">Generate Leads Ad </span>
+                        <span class="text-lg font-semibold">Post/Video Ad</span>
 
                     </div>
 
@@ -59,8 +58,42 @@
                     </div>
 
                     <div class="col-span-12">
-                        <label class="ti-form-label">Daily Budget</label>
+                        <label class="ti-form-label">Post/Video URL</label>
                         <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                    </div>
+
+                    <div class="col-span-12">
+                        <label class="ti-form-label">Daily Budget</label>
+                        <input type="text" class="form-control" placeholder="₹300/daily" aria-label="First name">
+                    </div>
+
+                    <div class="col-span-12">
+
+                        <label for="inputEmail4" class="ti-form-label">Get Traffic On</label>
+
+                        <div class="flex flex-row gap-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                       id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Facebook
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                       id="flexRadioDefault2" checked="">
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    What's Up
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                       id="flexRadioDefault2" checked="">
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Instagram
+                                </label>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="col-span-12 gap-5">
@@ -151,10 +184,8 @@
                         </div>
                     </div>
 
-
                     <div class="col-span-12">
-                        <label for="inputAddress" class="ti-form-label">Primary Text</label>
-
+                        <label for="inputAddress" class="ti-form-label">Target Audience</label>
 
                         <div class="col-span-12 flex flex-col">
                             <div id="container" x-data="voiceTyping"
@@ -244,248 +275,215 @@
 
                     </div>
 
-                    <div class="col-span-12 my-1">
-
-                        <label for="inputEmail4" class="ti-form-label">Collected Lead Info</label>
-                        <div class="grid grid-cols-3 w-5/12">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Name
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                       checked>
-                                <label class="form-check-label" for="flexCheckChecked">
-                                    Email
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                       checked>
-                                <label class="form-check-label" for="flexCheckChecked">
-                                    Phone
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    City
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                       checked>
-                                <label class="form-check-label" for="flexCheckChecked">
-                                    Gender
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                       checked>
-                                <label class="form-check-label" for="flexCheckChecked">
-                                    County
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-span-12">
-
-                        <label for="inputEmail4" class="ti-form-label">Delivered By</label>
-                        <div class="flex gap-2">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Excel Sheet
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                       checked>
-                                <label class="form-check-label" for="flexCheckChecked">
-                                    Messenger
-                                </label>
-                            </div>
-                        </div>
-                    </div>
 
                 </form>
             </div>
 
             <div class="xl:col-span-4 col-span-12  dark:bg-bodybg bg-white rounded-lg h-[30rem] px-3">
                 <div class="col-span-12 lg:col-span-12">
-                    <div class="w-full flex justify-between items-center my-5">
-                <span class="flex text-lg font-bold px-3 py-5">
-                    Add Assets
+                    <div class="w-full flex flex-col my-4">
+                <span class="flex text-lg font-bold px-3 ">
+                    Preview of Post
                 </span>
-                        <button type="button"
-                                class="hs-dropdown-toggle ti-btn  py-2btn-wave ti-btn-primary"
-                                data-hs-overlay="#exampleModalScrollable4">Get Creative
-                        </button>
-                    </div>
 
-                    <div class="col-span-12">
-                        <div class="flex flex-row gap-5 my-2">
-                            <label for="inputEmail4" class="ti-form-label">File Type</label>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                       id="flexRadioDefault1">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    Image
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                       id="flexRadioDefault2" checked="">
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    Video
-                                </label>
+                        <div class="xxl:col-span-3 sm:col-span-4 col-span-12 ">
+                            <div class="w-full">
+                                <div class="box">
+                                    <div class="box-body">
+                                        <div class=" w-full text-center h-auto">
+
+                                        <span class="block mb-3 pb-1 rounded-2 w-full">
+                                            <img
+                                                src="{{asset('build/assets/images/media/file-manager/2.png')}}" alt=""
+                                                class="!inline-flex w-full h-64">
+                                        </span>
+
+                                            <span>Add This Option if Possible Or Skip</span>
+
+                                            <div class="flex justify-end gap-5 w-full my-4">
+
+                                                <button type="button"
+                                                        class="hs-dropdown-toggle ti-btn btn-wave ti-btn-primary">
+                                                    Go Back
+                                                </button>
+
+                                                <button type="button"
+                                                        class="hs-dropdown-toggle ti-btn btn-wave ti-btn-primary">
+                                                    Publish
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <h5 class="text-xs px-3 font-medium">Square image/video (1080x1080)</h5>
-                    <div class="box-body my-2">
-                        <input type="file" class="filepond" name="image1"
-                               {{--                    <input type="file" name="image" class="filepond basic-filepond"--}}
-                               data-allow-reorder="true"
-                               data-max-file-size="3MB"
-                               data-max-files="1"
-                            {{ isset($brandCategory->image) ? 'data-default-file=' . asset('storage/' . $brandCategory->image) : '' }}>
-                    </div>
-                </div>
+                        {{--                        <button type="button"--}}
+                        {{--                                class="hs-dropdown-toggle ti-btn  py-2btn-wave ti-btn-primary"--}}
+                        {{--                                data-hs-overlay="#exampleModalScrollable4">Get Creative--}}
+                        {{--                        </button>--}}
+                        {{--                    </div> --}}
+                        {{--                    <div class="col-span-12">--}}
+                        {{--                        <div class="flex flex-row gap-5 my-2">--}}
+                        {{--                            <label for="inputEmail4" class="ti-form-label">File Type</label>--}}
+                        {{--                            <div class="form-check">--}}
+                        {{--                                <input class="form-check-input" type="radio" name="flexRadioDefault"--}}
+                        {{--                                       id="flexRadioDefault1">--}}
+                        {{--                                <label class="form-check-label" for="flexRadioDefault1">--}}
+                        {{--                                    Image--}}
+                        {{--                                </label>--}}
+                        {{--                            </div>--}}
+                        {{--                            <div class="form-check">--}}
+                        {{--                                <input class="form-check-input" type="radio" name="flexRadioDefault"--}}
+                        {{--                                       id="flexRadioDefault2" checked="">--}}
+                        {{--                                <label class="form-check-label" for="flexRadioDefault2">--}}
+                        {{--                                    Video--}}
+                        {{--                                </label>--}}
+                        {{--                            </div>--}}
+                        {{--                        </div>--}}
+                        {{--                    </div>--}}
 
-                <div class="col-span-12 lg:col-span-12">
-                    <h5 class="text-xs px-3  font-medium">Portrait image/video (1080x1080)</h5>
-                    <div class="box-body my-2">
-                        <input type="file" class="filepond" name="image2"
-                               {{--                    <input type="file" name="image" class="filepond basic-filepond"--}}
-                               data-allow-reorder="true"
-                               data-max-file-size="3MB"
-                               data-max-files="1"
-                            {{ isset($brandCategory->image) ? 'data-default-file=' . asset('storage/' . $brandCategory->image) : '' }}>
-                    </div>
-                </div>
+                        {{--                    <h5 class="text-xs px-3 font-medium">Square image/video (1080x1080)</h5>--}}
+                        {{--                    <div class="box-body my-2">--}}
+                        {{--                        <input type="file" class="filepond" name="image1"--}}
+                        {{--                               --}}{{--                    <input type="file" name="image" class="filepond basic-filepond"--}}
+                        {{--                               data-allow-reorder="true"--}}
+                        {{--                               data-max-file-size="3MB"--}}
+                        {{--                               data-max-files="1"--}}
+                        {{--                            {{ isset($brandCategory->image) ? 'data-default-file=' . asset('storage/' . $brandCategory->image) : '' }}>--}}
+                        {{--                    </div>--}}
+                        {{--                </div>--}}
 
-                <div class="flex justify-end items-center w-full gap-3">
-                    <button type="button"
-                            class="hs-dropdown-toggle ti-btn btn-wave ti-btn-primary"
-                            data-hs-overlay="#exampleModalScrollable4">Go Back
-                    </button>
-                    <button type="button"
-                            class="hs-dropdown-toggle ti-btn btn-wave ti-btn-primary"
-                            data-hs-overlay="#exampleModalScrollable4">Publish
-                    </button>
+                        {{--                <div class="col-span-12 lg:col-span-12">--}}
+                        {{--                    <h5 class="text-xs px-3  font-medium">Portrait image/video (1080x1080)</h5>--}}
+                        {{--                    <div class="box-body my-2">--}}
+                        {{--                        <input type="file" class="filepond" name="image2"--}}
+                        {{--                               --}}{{--                    <input type="file" name="image" class="filepond basic-filepond"--}}
+                        {{--                               data-allow-reorder="true"--}}
+                        {{--                               data-max-file-size="3MB"--}}
+                        {{--                               data-max-files="1"--}}
+                        {{--                            {{ isset($brandCategory->image) ? 'data-default-file=' . asset('storage/' . $brandCategory->image) : '' }}>--}}
+                        {{--                    </div>--}}
+                        {{--                </div>--}}
+
+                        {{--                <div class="flex justify-end items-center w-full gap-3">--}}
+                        {{--                    <button type="button"--}}
+                        {{--                            class="hs-dropdown-toggle ti-btn btn-wave ti-btn-primary"--}}
+                        {{--                            data-hs-overlay="#exampleModalScrollable4">Go Back--}}
+                        {{--                    </button>--}}
+                        {{--                    <button type="button"--}}
+                        {{--                            class="hs-dropdown-toggle ti-btn btn-wave ti-btn-primary"--}}
+                        {{--                            data-hs-overlay="#exampleModalScrollable4">Publish--}}
+                        {{--                    </button>--}}
+                        {{--                </div>--}}
+                    </div>
+
                 </div>
             </div>
 
+
         </div>
-    </div>
 
+        @section('scripts')
 
-</div>
+            <script>
+                document.addEventListener('alpine:init', () => {
+                    Alpine.data('voiceTyping', () => ({
+                        text: '',
+                        recognition: null,
 
-@section('scripts')
+                        init() {
+                            // Check if SpeechRecognition is supported
+                            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
-    <script>
-        document.addEventListener('alpine:init', () => {
-            Alpine.data('voiceTyping', () => ({
-                text: '',
-                recognition: null,
+                            if (!SpeechRecognition) {
+                                alert('Speech recognition is not supported in this browser.');
+                                return;
+                            }
 
-                init() {
-                    // Check if SpeechRecognition is supported
-                    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+                            // Initialize SpeechRecognition
+                            this.recognition = new SpeechRecognition();
+                            this.recognition.continuous = true; // Continue recognizing speech
+                            this.recognition.interimResults = true; // Show interim results
 
-                    if (!SpeechRecognition) {
-                        alert('Speech recognition is not supported in this browser.');
-                        return;
-                    }
+                            this.recognition.onresult = (event) => {
+                                this.text = Array.from(event.results)
+                                    .map(result => result[0].transcript)
+                                    .join('');
+                            };
 
-                    // Initialize SpeechRecognition
-                    this.recognition = new SpeechRecognition();
-                    this.recognition.continuous = true; // Continue recognizing speech
-                    this.recognition.interimResults = true; // Show interim results
+                            this.recognition.onerror = (event) => {
+                                alert('Error occurred in recognition: ' + event.error);
+                            };
+                        },
 
-                    this.recognition.onresult = (event) => {
-                        this.text = Array.from(event.results)
-                            .map(result => result[0].transcript)
-                            .join('');
-                    };
-
-                    this.recognition.onerror = (event) => {
-                        alert('Error occurred in recognition: ' + event.error);
-                    };
-                },
-
-                startVoiceTyping() {
-                    if (this.recognition) {
-                        this.recognition.start();
-                    }
-                }
-            }));
-        });
-
-        // Attach functionality to all upload containers
-        document.querySelectorAll('.upload-container').forEach(container => {
-            const fileInput = container.querySelector('.file-upload');
-            const fileNameDisplay = container.querySelector('.file-name');
-            const uploadLabel = container.querySelector('.upload-label');
-
-            // Trigger file input when clicking the label
-            uploadLabel.addEventListener('click', () => fileInput.click());
-
-            // Update file name display when a file is selected
-            fileInput.addEventListener('change', () => {
-                fileNameDisplay.textContent = fileInput.files[0]?.name || 'No file selected';
-            });
-        });
-    </script>
-
-    <script src="{{ asset('build/assets/libs/filepond/filepond.min.js') }}"></script>
-    <script
-        src="{{ asset('build/assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js') }}"></script>
-    <script
-        src="{{ asset('build/assets/libs/filepond-plugin-image-exif-orientation/filepond-plugin-image-exif-orientation.min.js') }}"></script>
-    <script
-        src="{{ asset('build/assets/libs/filepond-plugin-file-validate-size/filepond-plugin-file-validate-size.min.js') }}"></script>
-    <script
-        src="{{ asset('build/assets/libs/filepond-plugin-file-encode/filepond-plugin-file-encode.min.js') }}"></script>
-    <script
-        src="{{ asset('build/assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.js') }}"></script>
-    <script
-        src="{{ asset('build/assets/libs/filepond-plugin-file-validate-type/filepond-plugin-file-validate-type.min.js') }}"></script>
-    <script
-        src="{{ asset('build/assets/libs/filepond-plugin-image-crop/filepond-plugin-image-crop.min.js') }}"></script>
-    <script
-        src="{{ asset('build/assets/libs/filepond-plugin-image-resize/filepond-plugin-image-resize.min.js') }}"></script>
-    <script
-        src="{{ asset('build/assets/libs/filepond-plugin-image-transform/filepond-plugin-image-transform.min.js') }}"></script>
-    <script src="https://unpkg.com/filepond/dist/filepond.min.js"></script>
-    <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js"></script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            "use strict";
-
-            // Register FilePond plugins
-            FilePond.registerPlugin(FilePondPluginImagePreview);
-
-            // Select all elements with the class 'filepond' and apply FilePond
-            document.querySelectorAll(".filepond").forEach((input) => {
-                FilePond.create(input, {
-                    allowImagePreview: true,
-                    imagePreviewHeight: 150,
-                    allowMultiple: false,
-                    acceptedFileTypes: ["image/*"],
-                    storeAsFile: true, // Keeps the file as a normal file input
+                        startVoiceTyping() {
+                            if (this.recognition) {
+                                this.recognition.start();
+                            }
+                        }
+                    }));
                 });
-            });
-        });
-    </script>
 
-    @vite('resources/assets/js/select-choice.js')
+                // Attach functionality to all upload containers
+                document.querySelectorAll('.upload-container').forEach(container => {
+                    const fileInput = container.querySelector('.file-upload');
+                    const fileNameDisplay = container.querySelector('.file-name');
+                    const uploadLabel = container.querySelector('.upload-label');
+
+                    // Trigger file input when clicking the label
+                    uploadLabel.addEventListener('click', () => fileInput.click());
+
+                    // Update file name display when a file is selected
+                    fileInput.addEventListener('change', () => {
+                        fileNameDisplay.textContent = fileInput.files[0]?.name || 'No file selected';
+                    });
+                });
+            </script>
+
+            <script src="{{ asset('build/assets/libs/filepond/filepond.min.js') }}"></script>
+            <script
+                src="{{ asset('build/assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js') }}"></script>
+            <script
+                src="{{ asset('build/assets/libs/filepond-plugin-image-exif-orientation/filepond-plugin-image-exif-orientation.min.js') }}"></script>
+            <script
+                src="{{ asset('build/assets/libs/filepond-plugin-file-validate-size/filepond-plugin-file-validate-size.min.js') }}"></script>
+            <script
+                src="{{ asset('build/assets/libs/filepond-plugin-file-encode/filepond-plugin-file-encode.min.js') }}"></script>
+            <script
+                src="{{ asset('build/assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.js') }}"></script>
+            <script
+                src="{{ asset('build/assets/libs/filepond-plugin-file-validate-type/filepond-plugin-file-validate-type.min.js') }}"></script>
+            <script
+                src="{{ asset('build/assets/libs/filepond-plugin-image-crop/filepond-plugin-image-crop.min.js') }}"></script>
+            <script
+                src="{{ asset('build/assets/libs/filepond-plugin-image-resize/filepond-plugin-image-resize.min.js') }}"></script>
+            <script
+                src="{{ asset('build/assets/libs/filepond-plugin-image-transform/filepond-plugin-image-transform.min.js') }}"></script>
+            <script src="https://unpkg.com/filepond/dist/filepond.min.js"></script>
+            <script
+                src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js"></script>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    "use strict";
+
+                    // Register FilePond plugins
+                    FilePond.registerPlugin(FilePondPluginImagePreview);
+
+                    // Select all elements with the class 'filepond' and apply FilePond
+                    document.querySelectorAll(".filepond").forEach((input) => {
+                        FilePond.create(input, {
+                            allowImagePreview: true,
+                            imagePreviewHeight: 150,
+                            allowMultiple: false,
+                            acceptedFileTypes: ["image/*"],
+                            storeAsFile: true, // Keeps the file as a normal file input
+                        });
+                    });
+                });
+            </script>
+
+@vite('resources/assets/js/select-choice.js')
 
 @endsection
 

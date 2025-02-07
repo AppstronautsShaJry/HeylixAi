@@ -118,7 +118,7 @@
 
                                 <div id="exampleModalgrid" class="hs-overlay hidden ti-modal">
                                     <div
-                                        class="hs-overlay-open:mt-7 ti-modal-box mt-0 ease-out min-h-[calc(100%-3.5rem)] flex items-center">
+                                        class="hs-overlay-open:mt-7 ti-modal-box-new1 sm:max-w-lg mt-0 ease-out min-h-[calc(100%-3.5rem)] flex items-center">
                                         <div class="ti-modal-content w-full">
                                             <div class="ti-modal-header">
                                                 <h6 class="modal-title text-[1rem] font-semibold">Add Amount
@@ -134,9 +134,9 @@
                                                     </svg>
                                                 </button>
                                             </div>
-                                            <div class="ti-modal-body">
+                                            <div class="ti-modal-body ">
                                                 <div class="container-fluid">
-                                                    <div class="grid grid-cols-4 gap-4">
+                                                    <div class="grid grid-cols-2 gap-4">
                                                         <div
                                                             class="rounded-sm bg-light border border-defaultborder dark:border-defaultborder/20 p-4">
                                                             <div class="mb-0 font-medium text-[1rem]">Basic</div>
