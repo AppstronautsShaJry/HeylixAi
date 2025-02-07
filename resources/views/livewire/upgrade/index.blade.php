@@ -21,7 +21,7 @@
 
     <!-- Start:: row-1 -->
     <div class="flex justify-center">
-        <div class="max-w-[75%]" id="convertable-pricing">
+        <div class="max-w-[85%]" id="convertable-pricing">
             <div class="p-4 pt-0">
                 <div class="text-center">
                     <h3 class="text-primarytint1color">Pricing</h3>
@@ -42,7 +42,7 @@
             </div>
             <div class="tab-content show" id="monthly1">
                 <div class="grid grid-cols-12 gap-x-6 items-center justify-center mb-5">
-                    <div class="lg:col-span-12 xl:col-span-12 xxl:col-span-4 md:col-span-12 sm:col-span-12 col-span-12">
+                    <div class="lg:col-span-4 xl:col-span-4 xxl:col-span-4 md:col-span-4 sm:col-span-12 col-span-12">
                         <div class="box pricing-card hover !bg-primary">
                             <div class="pricing-table-item-icon">
                                 <i class="fe fe-zap me-2"></i> Popular
@@ -149,7 +149,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="lg:col-span-12 xl:col-span-12 xxl:col-span-4 md:col-span-12 sm:col-span-12 col-span-12">
+                    <div class="lg:col-span-4 xl:col-span-4 xxl:col-span-4 md:col-span-4 sm:col-span-12 col-span-12">
                         <div class="box pricing-card">
                             <div
                                 class="box-body !p-4 border-b border-dashed border-defaultborder dark:border-defaultborder/10">
@@ -254,7 +254,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="lg:col-span-12 xl:col-span-12 xxl:col-span-4 md:col-span-12 sm:col-span-12 col-span-12">
+                    <div class="lg:col-span-4 xl:col-span-4 xxl:col-span-4 md:col-span-4 sm:col-span-12 col-span-12">
                         <div class="box pricing-card">
                             <div
                                 class="box-body !p-4 border-b border-dashed border-defaultborder dark:border-defaultborder/10">
@@ -363,7 +363,7 @@
             </div>
             <div class="tab-content" id="yearly1">
                 <div class="grid grid-cols-12 gap-x-6 items-center justify-center mb-5">
-                    <div class="lg:col-span-12 xl:col-span-12 xxl:col-span-4 md:col-span-12 sm:col-span-12 col-span-12">
+                    <div class="lg:col-span-4 xl:col-span-4 xxl:col-span-4 md:col-span-4 sm:col-span-12 col-span-12">
                         <div class="box pricing-card hover !bg-primary">
                             <div class="pricing-table-item-icon">
                                 <i class="fe fe-zap me-2"></i> Popular
@@ -470,7 +470,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="lg:col-span-12 xl:col-span-12 xxl:col-span-4 md:col-span-12 sm:col-span-12 col-span-12">
+                    <div class="lg:col-span-4 xl:col-span-4 xxl:col-span-4 md:col-span-4 sm:col-span-12 col-span-12">
                         <div class="box pricing-card">
                             <div
                                 class="box-body !p-4 border-b border-dashed border-defaultborder dark:border-defaultborder/10">
@@ -575,7 +575,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="lg:col-span-12 xl:col-span-12 xxl:col-span-4 md:col-span-12 sm:col-span-12 col-span-12">
+                    <div class="lg:col-span-4 xl:col-span-4 xxl:col-span-4 md:col-span-4 sm:col-span-12 col-span-12">
                         <div class="box pricing-card">
                             <div
                                 class="box-body !p-6 border-b border-dashed border-defaultborder dark:border-defaultborder/10">
