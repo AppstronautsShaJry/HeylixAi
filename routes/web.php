@@ -92,7 +92,7 @@ Route::get('/virtual-heylix', \App\Livewire\Heylix\Virtual::class)->name('virtua
 Route::get('/aicredits', \App\Livewire\Credits\Aicredits::class)->name('aicredits');
 Route::get('/adcredits', \App\Livewire\Credits\Adcredits::class)->name('adcredits');
 
-//Credits
+//advertising
 Route::get('/meta-ads', \App\Livewire\Advertising\Meta::class)->name('meta.ads');
 Route::get('/google-ads', \App\Livewire\Advertising\Google::class)->name('google.ads');
 Route::get('/active-ads', \App\Livewire\Advertising\Active::class)->name('active.ads');
@@ -109,6 +109,9 @@ Route::get('/messages', \App\Livewire\Advertising\Upsert\Messages::class)->name(
 Route::get('/post', \App\Livewire\Advertising\Upsert\Post::class)->name('post');
 Route::get('/app', \App\Livewire\Advertising\Upsert\App::class)->name('app');
 Route::get('/whatsapp', \App\Livewire\Advertising\Upsert\Whatsapp::class)->name('whatsapp');
+
+//advertising
+Route::get('/upgrade-index', \App\Livewire\Upgrade\Index::class)->name('upgrade-index');
 
 //Filemanager
 Route::get('/filemanager-index', \App\Livewire\Filemanager\Index::class)->name('filemanager.index');
