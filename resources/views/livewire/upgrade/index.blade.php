@@ -40,228 +40,130 @@
                             class="badge bg-primarytint2color ms-1 rounded-full leading-none">20% off</span></span>
                 </div>
             </div>
+
             <div class="tab-content show" id="monthly1">
                 <div class="grid grid-cols-12 gap-x-6 items-center justify-center mb-5">
+
                     <div class="lg:col-span-4 xl:col-span-4 xxl:col-span-4 md:col-span-4 sm:col-span-12 col-span-12">
-                        <div class="box pricing-card hover !bg-primary">
+                        <div class="box pricing-card">
+                            <div
+                                class="box-body !p-4 border-b border-dashed border-defaultborder dark:border-defaultborder/10">
+                                <h6 class="font-medium mb-1">Starter</h6>
+                                <h2 class="mb-3 font-semibold block">₹6000
+                                </h2>
+                            </div>
+                            <div class="box-body !p-4">
+                                <ul class="list-none pricing-body">
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto flex-auto">
+                                                                  1 Brand
+                                                                </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto">
+                                                                  3 Any Platform
+                                                                </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto flex-auto">
+                                                                   25 Max Post
+                                                                </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto">
+                                                                   4 Ad Campaign
+                                                                </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto">
+                                                                    3 AI Tools
+                                                                </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto flex-auto">
+                                                                   1 GB Storage
+                                                                </span>
+                                            {{--                                            <span class="text-textmuted dark:text-textmuted/50 text-xs font-medium">52 Days</span>--}}
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto flex-auto">
+                                                                   Allow Post Scheduling
+                                                                </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto flex-auto">
+                                                                   Image Editor Access
+                                                                </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto flex-auto">
+                                                                   Stock Image Access
+                                                                </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="box-footer p-4">
+                                <button type="button" class="ti-btn ti-btn-lg ti-btn-primary grid w-full btn-wave">
+                                    <span class="ms-4 me-4">Choose Plan</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-4 xl:col-span-4 xxl:col-span-4 md:col-span-4 sm:col-span-12 col-span-12">
+                        <div class="box pricing-card hover ">
                             <div class="pricing-table-item-icon">
                                 <i class="fe fe-zap me-2"></i> Popular
                             </div>
                             <div class="box-body !p-4 border-b border-dashed border-white/10">
-                                <h6 class="font-medium mb-1 text-white">Premium</h6>
-                                <h2 class="mb-3 font-semibold block text-white">$22.89<span
-                                        class="text-xs font-medium ms-1 opacity-80"> / Month</span></h2>
-                                <span class="opacity-70 block text-white text-[11px]">Unlock powerful tools tailored for seasoned users, designed to take your skills to the next level.</span>
-                            </div>
-                            <div class="box-body !p-4 text-white">
-                                <ul class="list-none pricing-body">
-                                    <li>
-                                        <div class="flex items-center">
-                                                                <span class="avatar avatar-xs svg-success">
-                                                                <i class="ti ti-circle-arrow-right-filled opacity-80 text-lg"></i>
-                                                                </span>
-                                            <span class="ms-2 my-auto flex-auto">
-                                                                    Unlimited users
-                                                                </span>
-                                            <span class="badge bg-success rounded-full">Unlimited</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="flex items-center">
-                                                                <span class="avatar avatar-xs svg-success">
-                                                                <i class="ti ti-circle-arrow-right-filled opacity-80 text-lg"></i>
-                                                                </span>
-                                            <span class="ms-2 my-auto">
-                                                                    Advanced analytics
-                                                                </span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="flex items-center">
-                                                                <span class="avatar avatar-xs svg-success">
-                                                                <i class="ti ti-circle-arrow-right-filled opacity-80 text-lg"></i>
-                                                                </span>
-                                            <span class="ms-2 my-auto flex-auto">
-                                                                    Customizable dashboards
-                                                                </span>
-                                            <div class="hs-tooltip ti-main-tooltip">
-                                                                    <span
-                                                                        class="bg-white/10 !text-white px-1 py-[0.1rem] leading-none rounded-full">
-                                                                        <i class="ri-information-2-line"></i>
-                                                                        <span
-                                                                            class="hs-tooltip-content max-w-[200px]  ti-main-tooltip-content !border-black py-3 px-2 !bg-black !text-xs !font-medium !text-white shadow-sm "
-                                                                            role="tooltip">
-                                                                            Provide essential insights and data analysis to help you track the performance.
-                                                                        </span>
-                                                                    </span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="flex items-center">
-                                                                <span class="avatar avatar-xs svg-success">
-                                                                <i class="ti ti-circle-arrow-right-filled opacity-80 text-lg"></i>
-                                                                </span>
-                                            <span class="ms-2 my-auto">
-                                                                    Phone support
-                                                                </span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="flex items-center">
-                                                                <span class="avatar avatar-xs svg-success">
-                                                                <i class="ti ti-circle-arrow-right-filled opacity-80 text-lg"></i>
-                                                                </span>
-                                            <span class="ms-2 my-auto">
-                                                                    Dedicated account manager
-                                                                </span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="flex items-center">
-                                                                <span class="avatar avatar-xs svg-success">
-                                                                <i class="ti ti-circle-arrow-right-filled opacity-80 text-lg"></i>
-                                                                </span>
-                                            <span class="ms-2 my-auto flex-auto">
-                                                                    SLA guarantees
-                                                                </span>
-                                            <span class="opacity-50 text-xs font-medium">30 Days</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="flex items-center">
-                                                                <span class="avatar avatar-xs svg-success">
-                                                                <i class="ti ti-circle-arrow-right-filled opacity-80 text-lg"></i>
-                                                                </span>
-                                            <span class="ms-2 my-auto flex-auto">
-                                                                    On-site training for teams
-                                                                </span>
-                                            <span class="opacity-50 text-xs font-medium">120 Days</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="box-footer border-t border-dashed border-white/10 p-4">
-                                <button type="button"
-                                        class="ti-btn ti-btn-lg bg-white !text-black grid w-full btn-wave">
-                                    <span class="ms-4 me-4">Get Started!</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="lg:col-span-4 xl:col-span-4 xxl:col-span-4 md:col-span-4 sm:col-span-12 col-span-12">
-                        <div class="box pricing-card">
-                            <div
-                                class="box-body !p-4 border-b border-dashed border-defaultborder dark:border-defaultborder/10">
-                                <h6 class="font-medium mb-1">Basic</h6>
-                                <h2 class="mb-3 font-semibold block">$8.5<span
-                                        class="text-xs font-medium ms-1"> / Month</span></h2>
-                                <span class="mb-1 text-textmuted dark:text-textmuted/50 block text-[11px]">Discover the vital features that create an enchanting foundation for a magical beginning.</span>
-                            </div>
-                            <div class="box-body !p-4">
-                                <ul class="list-none pricing-body">
-                                    <li>
-                                        <div class="flex items-center">
-                                                                <span class="avatar avatar-xs svg-success">
-                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
-                                                                </span>
-                                            <span class="ms-2 my-auto flex-auto">
-                                                                    Up to 10 users
-                                                                </span>
-                                            <span
-                                                class="badge bg-primarytint2color/10 text-primarytint2color rounded-full">New</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="flex items-center">
-                                                                <span class="avatar avatar-xs svg-success">
-                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
-                                                                </span>
-                                            <span class="ms-2 my-auto">
-                                                                    Community access
-                                                                </span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="flex items-center">
-                                                                <span class="avatar avatar-xs svg-success">
-                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
-                                                                </span>
-                                            <span class="ms-2 my-auto flex-auto">
-                                                                    Basic reporting
-                                                                </span>
-                                            <div class="hs-tooltip ti-main-tooltip">
-                                                                    <span
-                                                                        class="bg-info/10 !text-info px-1 py-[0.1rem] leading-none rounded-full">
-                                                                        <i class="ri-information-2-line"></i>
-                                                                        <span
-                                                                            class="hs-tooltip-content max-w-[200px]  ti-main-tooltip-content !border-black py-3 px-2 !bg-black !text-xs !font-medium !text-white shadow-sm "
-                                                                            role="tooltip">
-                                                                            Provide essential insights and data analysis to help you track the performance.
-                                                                        </span>
-                                                                    </span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="flex items-center">
-                                                                <span class="avatar avatar-xs svg-success">
-                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
-                                                                </span>
-                                            <span class="ms-2 my-auto">
-                                                                    Email support
-                                                                </span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="flex items-center">
-                                                                <span class="avatar avatar-xs svg-success">
-                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
-                                                                </span>
-                                            <span class="ms-2 my-auto">
-                                                                    Community access
-                                                                </span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="flex items-center">
-                                                                <span class="avatar avatar-xs svg-success">
-                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
-                                                                </span>
-                                            <span class="ms-2 my-auto flex-auto">
-                                                                    Access to essential features
-                                                                </span>
-                                            <span class="text-textmuted dark:text-textmuted/50 text-xs font-medium">12 Days</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="flex items-center">
-                                                                <span class="avatar avatar-xs svg-success">
-                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
-                                                                </span>
-                                            <span class="ms-2 my-auto flex-auto">
-                                                                    Mobile app access
-                                                                </span>
-                                            <span class="text-textmuted dark:text-textmuted/50 text-xs font-medium">45 Days</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="box-footer p-4">
-                                <button type="button" class="ti-btn ti-btn-lg ti-btn-primary grid w-full btn-wave">
-                                    <span class="ms-4 me-4">Get Started!</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="lg:col-span-4 xl:col-span-4 xxl:col-span-4 md:col-span-4 sm:col-span-12 col-span-12">
-                        <div class="box pricing-card">
-                            <div
-                                class="box-body !p-4 border-b border-dashed border-defaultborder dark:border-defaultborder/10">
-                                <h6 class="font-medium mb-1">Standard</h6>
-                                <h2 class="mb-3 font-semibold block">$29.99<span class="text-xs font-medium ms-1"> / Month</span>
+                                <h6 class="font-medium mb-1 text-white">Advanced</h6>
+                                <h2 class="mb-3 font-semibold block text-white">₹10,000
                                 </h2>
-                                <span class="text-[11px] text-textmuted dark:text-textmuted/50 block">Elevate to the highest standards with unparalleled excellence and exclusive top-tier support.</span>
                             </div>
                             <div class="box-body !p-4">
                                 <ul class="list-none pricing-body">
@@ -271,50 +173,7 @@
                                                                 <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
                                                                 </span>
                                             <span class="ms-2 my-auto flex-auto">
-                                                                    Up to 50 users
-                                                                </span>
-                                            <span
-                                                class="badge bg-primarytint2color/10 text-primarytint2color rounded-full">New</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="flex items-center">
-                                                                <span class="avatar avatar-xs svg-success">
-                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
-                                                                </span>
-                                            <span class="ms-2 my-auto">
-                                                                    Access to webinars
-                                                                </span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="flex items-center">
-                                                                <span class="avatar avatar-xs svg-success">
-                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
-                                                                </span>
-                                            <span class="ms-2 my-auto flex-auto">
-                                                                    Advanced reporting
-                                                                </span>
-                                            <div class="hs-tooltip ti-main-tooltip">
-                                                                    <span
-                                                                        class="bg-info/10 !text-info px-1 py-[0.1rem] leading-none rounded-full">
-                                                                        <i class="ri-information-2-line"></i>
-                                                                        <span
-                                                                            class="hs-tooltip-content max-w-[200px]  ti-main-tooltip-content !border-black py-3 px-2 !bg-black !text-xs !font-medium !text-white shadow-sm "
-                                                                            role="tooltip">
-                                                                            Provide essential insights and data analysis to help you track the performance.
-                                                                        </span>
-                                                                    </span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="flex items-center">
-                                                                <span class="avatar avatar-xs svg-success">
-                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
-                                                                </span>
-                                            <span class="ms-2 my-auto">
-                                                                    Priority email support
+                                                                  3 Brand
                                                                 </span>
                                         </div>
                                     </li>
@@ -324,7 +183,7 @@
                                                                 <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
                                                                 </span>
                                             <span class="ms-2 my-auto">
-                                                                    24/7 chat support
+                                                                  5 Any Platform
                                                                 </span>
                                         </div>
                                     </li>
@@ -334,9 +193,28 @@
                                                                 <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
                                                                 </span>
                                             <span class="ms-2 my-auto flex-auto">
-                                                                    All Standard features
+                                                                   100 Max Post
                                                                 </span>
-                                            <span class="text-textmuted dark:text-textmuted/50 text-xs font-medium">52 Days</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto">
+                                                                   10 Ad Campaign
+                                                                </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto">
+                                                                    5 AI Tools
+                                                                </span>
                                         </div>
                                     </li>
                                     <li>
@@ -345,139 +223,179 @@
                                                                 <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
                                                                 </span>
                                             <span class="ms-2 my-auto flex-auto">
-                                                                    Team collaboration tools
+                                                                   3 GB Storage
                                                                 </span>
-                                            <span class="text-textmuted dark:text-textmuted/50 text-xs font-medium">60 Days</span>
+                                            {{--                                            <span class="text-textmuted dark:text-textmuted/50 text-xs font-medium">52 Days</span>--}}
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto flex-auto">
+                                                                   Allow Post Scheduling
+                                                                </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto flex-auto">
+                                                                   Image Editor Access
+                                                                </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto flex-auto">
+                                                                   Stock Image Access
+                                                                </span>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
                             <div class="box-footer p-4">
                                 <button type="button" class="ti-btn ti-btn-lg ti-btn-primary grid w-full btn-wave">
-                                    <span class="ms-4 me-4">Get Started!</span>
+                                    <span class="ms-4 me-4">Choose Plan</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-4 xl:col-span-4 xxl:col-span-4 md:col-span-4 sm:col-span-12 col-span-12">
+                        <div class="box pricing-card">
+                            <div
+                                class="box-body !p-4 border-b border-dashed border-defaultborder dark:border-defaultborder/10">
+                                <h6 class="font-medium mb-1">Enterprise</h6>
+                                <h2 class="mb-3 font-semibold block">₹20,000
+                                </h2>
+                            </div>
+                            <div class="box-body !p-4">
+                                <ul class="list-none pricing-body">
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto flex-auto">
+                                                                  5 Brand
+                                                                </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto">
+                                                                  All Platform
+                                                                </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto flex-auto">
+                                                                   Unlimited
+                                                                </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto">
+                                                                  Unlimited
+                                                                </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto">
+                                                                    Unlimited
+                                                                </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto flex-auto">
+                                                                   8 GB Storage
+                                                                </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto flex-auto">
+                                                                   Allow Post Scheduling
+                                                                </span>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto flex-auto">
+                                                                   Image Editor Access
+                                                                </span>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto flex-auto">
+                                                                   Stock Image Access
+                                                                </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="box-footer p-4">
+                                <button type="button" class="ti-btn ti-btn-lg ti-btn-primary grid w-full btn-wave">
+                                    <span class="ms-4 me-4">Choose Plan</span>
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="tab-content" id="yearly1">
                 <div class="grid grid-cols-12 gap-x-6 items-center justify-center mb-5">
-                    <div class="lg:col-span-4 xl:col-span-4 xxl:col-span-4 md:col-span-4 sm:col-span-12 col-span-12">
-                        <div class="box pricing-card hover !bg-primary">
-                            <div class="pricing-table-item-icon">
-                                <i class="fe fe-zap me-2"></i> Popular
-                            </div>
-                            <div class="box-body !p-4 border-b border-dashed border-white/10">
-                                <h6 class="font-medium mb-1 text-white">Premium</h6>
-                                <h2 class="mb-3 font-semibold block text-white">$1,999.89<span
-                                        class="text-xs font-medium ms-1 opacity-80"> / Annum</span></h2>
-                                <span class="opacity-70 block text-white text-[11px]">Unlock powerful tools tailored for seasoned users, designed to take your skills to the next level.</span>
-                            </div>
-                            <div class="box-body !p-4 text-white">
-                                <ul class="list-none pricing-body">
-                                    <li>
-                                        <div class="flex items-center">
-                                                                <span class="avatar avatar-xs svg-success">
-                                                                <i class="ti ti-circle-arrow-right-filled opacity-80 text-lg"></i>
-                                                                </span>
-                                            <span class="ms-2 my-auto flex-auto">
-                                                                    Unlimited users
-                                                                </span>
-                                            <span class="badge bg-success rounded-full">Unlimited</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="flex items-center">
-                                                                <span class="avatar avatar-xs svg-success">
-                                                                <i class="ti ti-circle-arrow-right-filled opacity-80 text-lg"></i>
-                                                                </span>
-                                            <span class="ms-2 my-auto">
-                                                                    Advanced analytics
-                                                                </span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="flex items-center">
-                                                                <span class="avatar avatar-xs svg-success">
-                                                                <i class="ti ti-circle-arrow-right-filled opacity-80 text-lg"></i>
-                                                                </span>
-                                            <span class="ms-2 my-auto flex-auto">
-                                                                    Customizable dashboards
-                                                                </span>
-                                            <div class="hs-tooltip ti-main-tooltip">
-                                                                    <span
-                                                                        class="bg-white/10 !text-white px-1 py-[0.1rem] leading-none rounded-full">
-                                                                        <i class="ri-information-2-line"></i>
-                                                                        <span
-                                                                            class="hs-tooltip-content max-w-[200px]  ti-main-tooltip-content !border-black py-3 px-2 !bg-black !text-xs !font-medium !text-white shadow-sm "
-                                                                            role="tooltip">
-                                                                            Provide essential insights and data analysis to help you track the performance.
-                                                                        </span>
-                                                                    </span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="flex items-center">
-                                                                <span class="avatar avatar-xs svg-success">
-                                                                <i class="ti ti-circle-arrow-right-filled opacity-80 text-lg"></i>
-                                                                </span>
-                                            <span class="ms-2 my-auto">
-                                                                    Phone support
-                                                                </span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="flex items-center">
-                                                                <span class="avatar avatar-xs svg-success">
-                                                                <i class="ti ti-circle-arrow-right-filled opacity-80 text-lg"></i>
-                                                                </span>
-                                            <span class="ms-2 my-auto">
-                                                                    Dedicated account manager
-                                                                </span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="flex items-center">
-                                                                <span class="avatar avatar-xs svg-success">
-                                                                <i class="ti ti-circle-arrow-right-filled opacity-80 text-lg"></i>
-                                                                </span>
-                                            <span class="ms-2 my-auto flex-auto">
-                                                                    SLA guarantees
-                                                                </span>
-                                            <span class="opacity-50 text-xs font-medium">90 Days</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="flex items-center">
-                                                                <span class="avatar avatar-xs svg-success">
-                                                                <i class="ti ti-circle-arrow-right-filled opacity-80 text-lg"></i>
-                                                                </span>
-                                            <span class="ms-2 my-auto flex-auto">
-                                                                    On-site training for teams
-                                                                </span>
-                                            <span class="opacity-50 text-xs font-medium">300 Days</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="box-footer border-t border-dashed border-white/10 p-4">
-                                <button type="button"
-                                        class="ti-btn ti-btn-lg bg-white !text-black grid w-full btn-wave">
-                                    <span class="ms-4 me-4">Get Started!</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="lg:col-span-4 xl:col-span-4 xxl:col-span-4 md:col-span-4 sm:col-span-12 col-span-12">
                         <div class="box pricing-card">
                             <div
                                 class="box-body !p-4 border-b border-dashed border-defaultborder dark:border-defaultborder/10">
-                                <h6 class="font-medium mb-1">Basic</h6>
-                                <h2 class="mb-3 font-semibold block">$899.96<span class="text-xs font-medium ms-1"> / Annum</span>
+                                <h6 class="font-medium mb-1">Starter</h6>
+                                <h2 class="mb-3 font-semibold block">₹65,000
+                                    {{--                                    <span--}}
+                                    {{--                                        class="text-xs font-medium ms-1"> / Month</span>--}}
                                 </h2>
-                                <span class="mb-1 text-textmuted dark:text-textmuted/50 block text-[11px]">Discover the vital features that create an enchanting foundation for a magical beginning.</span>
+                                <span
+                                    class="mb-1 text-textmuted dark:text-textmuted/50 block text-[11px]">Save ₹7,000</span>
                             </div>
                             <div class="box-body !p-4">
                                 <ul class="list-none pricing-body">
@@ -487,7 +405,7 @@
                                                                 <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
                                                                 </span>
                                             <span class="ms-2 my-auto flex-auto">
-                                                                    Up to 10 users
+                                                                  1 Brand
                                                                 </span>
                                             <span
                                                 class="badge bg-primarytint2color/10 text-primarytint2color rounded-full">New</span>
@@ -499,7 +417,7 @@
                                                                 <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
                                                                 </span>
                                             <span class="ms-2 my-auto">
-                                                                    Community access
+                                                                  3 Any Platform
                                                                 </span>
                                         </div>
                                     </li>
@@ -509,7 +427,7 @@
                                                                 <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
                                                                 </span>
                                             <span class="ms-2 my-auto flex-auto">
-                                                                    Basic reporting
+                                                                   25 Max Post / Month
                                                                 </span>
                                             <div class="hs-tooltip ti-main-tooltip">
                                                                     <span
@@ -530,7 +448,7 @@
                                                                 <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
                                                                 </span>
                                             <span class="ms-2 my-auto">
-                                                                    Email support
+                                                                   4 Ad Campaign
                                                                 </span>
                                         </div>
                                     </li>
@@ -540,7 +458,7 @@
                                                                 <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
                                                                 </span>
                                             <span class="ms-2 my-auto">
-                                                                    Community access
+                                                                    3 AI Tools
                                                                 </span>
                                         </div>
                                     </li>
@@ -550,9 +468,9 @@
                                                                 <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
                                                                 </span>
                                             <span class="ms-2 my-auto flex-auto">
-                                                                    Access to essential features
+                                                                   1 GB Storage
                                                                 </span>
-                                            <span class="text-textmuted dark:text-textmuted/50 text-xs font-medium">40 Days</span>
+                                            {{--                                            <span class="text-textmuted dark:text-textmuted/50 text-xs font-medium">52 Days</span>--}}
                                         </div>
                                     </li>
                                     <li>
@@ -561,30 +479,56 @@
                                                                 <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
                                                                 </span>
                                             <span class="ms-2 my-auto flex-auto">
-                                                                    Mobile app access
+                                                                   Allow Post Scheduling
                                                                 </span>
-                                            <span class="text-textmuted dark:text-textmuted/50 text-xs font-medium">180 Days</span>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto flex-auto">
+                                                                   Image Editor Access
+                                                                </span>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto flex-auto">
+                                                                   Stock Image Access
+                                                                </span>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
                             <div class="box-footer p-4">
                                 <button type="button" class="ti-btn ti-btn-lg ti-btn-primary grid w-full btn-wave">
-                                    <span class="ms-4 me-4">Get Started!</span>
+                                    <span class="ms-4 me-4">Choose Plan</span>
                                 </button>
                             </div>
                         </div>
                     </div>
+
                     <div class="lg:col-span-4 xl:col-span-4 xxl:col-span-4 md:col-span-4 sm:col-span-12 col-span-12">
-                        <div class="box pricing-card">
-                            <div
-                                class="box-body !p-6 border-b border-dashed border-defaultborder dark:border-defaultborder/10">
-                                <h6 class="font-medium mb-1">Standard</h6>
-                                <h2 class="mb-3 font-semibold block">$589.99<span class="text-xs font-medium ms-1"> / Annum</span>
-                                </h2>
-                                <span class="text-[11px] text-textmuted dark:text-textmuted/50 block">Elevate to the highest standards with unparalleled excellence and exclusive top-tier support.</span>
+                        <div class="box pricing-card hover ">
+                            <div class="pricing-table-item-icon">
+                                <i class="fe fe-zap me-2"></i> Popular
                             </div>
-                            <div class="box-body !p-6">
+                            <div class="box-body !p-4 border-b border-dashed border-white/10">
+                                <h6 class="font-medium mb-1 text-white">Advanced</h6>
+                                <h2 class="mb-3 font-semibold block text-white">₹1,00,000
+                                    {{--                                    <span--}}
+                                    {{--                                        class="text-xs font-medium ms-1 opacity-80"> / Month</span>--}}
+                                </h2>
+                                <span class="opacity-70 block text-white text-[11px]">Save ₹20,000</span>
+                            </div>
+                            <div class="box-body !p-4">
                                 <ul class="list-none pricing-body">
                                     <li>
                                         <div class="flex items-center">
@@ -592,7 +536,7 @@
                                                                 <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
                                                                 </span>
                                             <span class="ms-2 my-auto flex-auto">
-                                                                    Up to 50 users
+                                                                  3 Brand
                                                                 </span>
                                             <span
                                                 class="badge bg-primarytint2color/10 text-primarytint2color rounded-full">New</span>
@@ -604,7 +548,7 @@
                                                                 <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
                                                                 </span>
                                             <span class="ms-2 my-auto">
-                                                                    Access to webinars
+                                                                  5 Any Platform
                                                                 </span>
                                         </div>
                                     </li>
@@ -614,7 +558,7 @@
                                                                 <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
                                                                 </span>
                                             <span class="ms-2 my-auto flex-auto">
-                                                                    Advanced reporting
+                                                                   100 Max Post / Month
                                                                 </span>
                                             <div class="hs-tooltip ti-main-tooltip">
                                                                     <span
@@ -635,7 +579,7 @@
                                                                 <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
                                                                 </span>
                                             <span class="ms-2 my-auto">
-                                                                    Priority email support
+                                                                   10 Ad Campaign
                                                                 </span>
                                         </div>
                                     </li>
@@ -645,7 +589,7 @@
                                                                 <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
                                                                 </span>
                                             <span class="ms-2 my-auto">
-                                                                    24/7 chat support
+                                                                    5 AI Tools
                                                                 </span>
                                         </div>
                                     </li>
@@ -655,9 +599,9 @@
                                                                 <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
                                                                 </span>
                                             <span class="ms-2 my-auto flex-auto">
-                                                                    All Standard features
+                                                                   3 GB Storage
                                                                 </span>
-                                            <span class="text-textmuted dark:text-textmuted/50 text-xs font-medium">250 Days</span>
+                                            {{--                                            <span class="text-textmuted dark:text-textmuted/50 text-xs font-medium">52 Days</span>--}}
                                         </div>
                                     </li>
                                     <li>
@@ -666,16 +610,166 @@
                                                                 <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
                                                                 </span>
                                             <span class="ms-2 my-auto flex-auto">
-                                                                    Team collaboration tools
+                                                                   Allow Post Scheduling
                                                                 </span>
-                                            <span class="text-textmuted dark:text-textmuted/50 text-xs font-medium">320 Days</span>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto flex-auto">
+                                                                   Image Editor Access
+                                                                </span>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto flex-auto">
+                                                                   Stock Image Access
+                                                                </span>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
                             <div class="box-footer p-4">
                                 <button type="button" class="ti-btn ti-btn-lg ti-btn-primary grid w-full btn-wave">
-                                    <span class="ms-4 me-4">Get Started!</span>
+                                    <span class="ms-4 me-4">Choose Plan</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-4 xl:col-span-4 xxl:col-span-4 md:col-span-4 sm:col-span-12 col-span-12">
+                        <div class="box pricing-card">
+                            <div
+                                class="box-body !p-4 border-b border-dashed border-defaultborder dark:border-defaultborder/10">
+                                <h6 class="font-medium mb-1">Enterprise</h6>
+                                <h2 class="mb-3 font-semibold block">₹2,00,000
+                                    {{--                                    <span class="text-xs font-medium ms-1"> / Month</span>--}}
+                                </h2>
+                                <span
+                                    class="text-[11px] text-textmuted dark:text-textmuted/50 block">Save ₹40,000</span>
+                            </div>
+                            <div class="box-body !p-4">
+                                <ul class="list-none pricing-body">
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto flex-auto">
+                                                                  5 Brand
+                                                                </span>
+                                            <span
+                                                class="badge bg-primarytint2color/10 text-primarytint2color rounded-full">New</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto">
+                                                                  All Platform
+                                                                </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto flex-auto">
+                                                                   Unlimited
+                                                                </span>
+                                            <div class="hs-tooltip ti-main-tooltip">
+                                                                    <span
+                                                                        class="bg-info/10 !text-info px-1 py-[0.1rem] leading-none rounded-full">
+                                                                        <i class="ri-information-2-line"></i>
+                                                                        <span
+                                                                            class="hs-tooltip-content max-w-[200px]  ti-main-tooltip-content !border-black py-3 px-2 !bg-black !text-xs !font-medium !text-white shadow-sm "
+                                                                            role="tooltip">
+                                                                            Provide essential insights and data analysis to help you track the performance.
+                                                                        </span>
+                                                                    </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto">
+                                                                  Unlimited
+                                                                </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto">
+                                                                    Unlimited
+                                                                </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto flex-auto">
+                                                                   8 GB Storage
+                                                                </span>
+                                            {{--                                            <span class="text-textmuted dark:text-textmuted/50 text-xs font-medium">52 Days</span>--}}
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto flex-auto">
+                                                                   Allow Post Scheduling
+                                                                </span>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto flex-auto">
+                                                                   Image Editor Access
+                                                                </span>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center">
+                                                                <span class="avatar avatar-xs svg-success">
+                                                                <i class="ti ti-circle-arrow-right-filled text-primary text-lg"></i>
+                                                                </span>
+                                            <span class="ms-2 my-auto flex-auto">
+                                                                   Stock Image Access
+                                                                </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="box-footer p-4">
+                                <button type="button" class="ti-btn ti-btn-lg ti-btn-primary grid w-full btn-wave">
+                                    <span class="ms-4 me-4">Choose Plan</span>
                                 </button>
                             </div>
                         </div>
