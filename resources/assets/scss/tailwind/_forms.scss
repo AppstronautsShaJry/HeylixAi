@@ -32,6 +32,9 @@ select {
 .ti-form-select {
   @apply py-3 px-4 pe-9 block w-full border-gray-200 rounded-sm text-sm focus:border-primary focus:ring-primary dark:dark:bg-bodybg dark:border-white/10 dark:text-white/70;
 }
+.ti-form-select-1 {
+    @apply py-3 px-4 pe-9 block w-full rounded-sm text-sm focus:border-primary focus:ring-primary dark:dark:bg-bodybg dark:text-white/70;
+}
 
 .ti-form-select-label {
   @apply block text-[0.8rem] font-medium mb-2 dark:text-white;
@@ -314,7 +317,7 @@ select:focus {
     &.toggle-light {
       @apply bg-light dark:bg-light/60;
       span {
-        @apply bg-light before:text-textmuted dark:before:text-textmuted/50; 
+        @apply bg-light before:text-textmuted dark:before:text-textmuted/50;
       }
     }
 
@@ -689,8 +692,8 @@ input::placeholder, textarea::placeholder {
 			&:nth-of-type(9) {
 			  @apply before:transition-all before:duration-[0.2s]  before:ease-in before:delay-[0.9s];
 			}
-		
-    @apply before:absolute before:-top-[16px] before:start-[50%] before:w-full before:h-[2px] before:z-[2] before:bg-primary after:absolute after:-top-[16px] 
+
+    @apply before:absolute before:-top-[16px] before:start-[50%] before:w-full before:h-[2px] before:z-[2] before:bg-primary after:absolute after:-top-[16px]
     after:start-[50%] after:w-full after:h-[2px] after:bg-gray-300 dark:after:bg-light after:z-[1];
 		}
 		.wizard-step.active~.wizard-step {

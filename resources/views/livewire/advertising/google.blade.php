@@ -36,7 +36,105 @@
             </div>
         </div>
 
-        <x-modal.entry-modal/>
+        <div class="gap-5 grid grid-cols-12 w-full h-auto">
+
+            <div class="box xxl:col-span-9 xl:col-span-8 col-span-12">
+
+                <span class="p-4 text-lg font-semibold">Select your Goal</span>
+
+                <div
+                    class=" grid grid-cols-1 xl:grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-5 p-4 w-full h-auto">
+                    <!-- Row 1 -->
+
+                    <x-cards.card2 :title="'Awarness'"
+                                   description="defre trew dfijl defre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijl"
+                                   route="awarness">
+
+                    </x-cards.card2>
+
+                    <x-cards.card2 :title="'Drive Traffic'"
+                                   description="defre trew dfijl defre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijl"
+                                   route="drive"/>
+
+                    <x-cards.card2 :title="'Get Message'"
+                                   description="defre trew dfijl defre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijl"
+                                   route="messages"/>
+
+                    <x-cards.card1 :title="'Awarness'"
+                                   description="defre trew dfijl defre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijl"
+                                   route="awarness">
+
+                    </x-cards.card1>
+
+                    <x-cards.card1 :title="'Drive Traffic'"
+                                   description="defre trew dfijl defre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijl"
+                                   route="drive"/>
+
+                    <x-cards.card1 :title="'Get Message'"
+                                   description="defre trew dfijl defre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijl"
+                                   route="messages"/>
+
+                    <x-cards.card1 :title="'Generate Leads'"
+                                   description="defre trew dfijl defre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijl"
+                                   route="leads"/>
+
+                    <x-cards.card1 :title="'Get Calls'"
+                                   description="defre trew dfijl defre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijl"
+                                   route="call"/>
+
+
+                </div>
+            </div>
+
+            <div class="xxl:col-span-3 sm:col-span-4 col-span-12  flex flex-col">
+                <div class="w-full">
+                    <div class="box">
+                        <div class="box-body">
+                            <div class="sm:col-span-6 xl:col-span-3 col-span-12">
+                                <div class="box overflow-hidden">
+                                    <div class="box-body text-center ">
+                                        <p class="mb-1 text-lg font-semibold">Total AD Balance</p>
+                                        <h4 class="font-semibold">₹10,000 </h4>
+                                    </div>
+                                </div>
+                                <div class="flex justify-center gap-5">
+                                    <button type="button" class="hs-dropdown-toggle ti-btn btn-wave ti-btn-primary">
+                                        Add Fund
+                                    </button>
+
+                                    <button type="button" class="hs-dropdown-toggle ti-btn btn-wave ti-btn-primary">
+                                        Transactions
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="xxl:col-span-3 sm:col-span-4 col-span-12 ">
+                    <div class="w-full">
+                        <div class="box">
+                            <div class="box-body">
+                                <div class=" w-full text-center ">
+                                        <span class="block mb-3 pb-1 rounded-2 w-full">
+                                            <img
+                                                src="{{asset('build/assets/images/media/file-manager/2.png')}}" alt=""
+                                                class="!inline-flex w-full">
+                                        </span>
+
+                                    <div class="flex justify-center ">
+                                        <button type="button" class="hs-dropdown-toggle ti-btn btn-wave ti-btn-primary">
+                                            Hire Now
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 </div>
