@@ -33,6 +33,7 @@
             <div class="flex gap-2 flex-wrap">
             </div>
         </div>
+
         <div class="grid grid-cols-12 gap-x-6">
 
             <div class="xl:col-span-8 col-span-12">
@@ -43,92 +44,111 @@
 
                     </div>
 
-                    <div class="col-span-12">
-                        <label for="inputPassword4" class="ti-form-label">Select Page</label>
+                    <div class="xl:col-span-12 flex flex-row items-center gap-8">
+                        <!-- Label & Tooltip -->
+                        <div class="flex items-center gap-2">
 
-                        <div class="col-span-12 md:col-span-6 xl:col-span-6">
-                            <div class="">
-                                <select class="ti-form-select rounded-sm p-1" id="select-beast" autocomplete="off">
-                                    <option value=""> Select a Page...</option>
-                                    <option value="4">Page 1</option>
-                                    <option value="1">Page 2</option>
-                                    <option value="3">Page 3</option>
-                                    <option value="5">Page 4</option>
-                                </select>
+                            <label for="select-beast" class="ti-form-label">Select Page</label>
+
+                            <div class="hs-tooltip ti-main-tooltip [--trigger:click] [--placement:top]">
+                                <a class="hs-tooltip-toggle ti-main-tooltip-toggle" href="javascript:void(0);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="size-5 fill-primary mb-2"
+                                         height="24px" viewBox="0 0 24 24" width="24px">
+                                        <path d="M0 0h24v24H0V0z" fill="none"/>
+                                        <path
+                                            d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"/>
+                                    </svg>
+                                    <div
+                                        class="hs-tooltip-content ti-main-tooltip-content border border-defaultborder dark:border-defaultborder/10 !py-4 !px-4 !bg-primary !text-white"
+                                        role="tooltip">
+                                        <p>The Icon Popover</p>
+                                    </div>
+                                </a>
                             </div>
+
+                        </div>
+
+                        <!-- Select Dropdown -->
+                        <div class="w-9/12">
+                            <select class="ti-form-select rounded-sm p-2 w-full" id="select-beast" autocomplete="off">
+                                <option value="">Select a Page...</option>
+                                <option value="4">Page 1</option>
+                                <option value="1">Page 2</option>
+                                <option value="3">Page 3</option>
+                                <option value="5">Page 4</option>
+                            </select>
                         </div>
                     </div>
 
-                    <div class="col-span-12">
-                        <label class="ti-form-label">Daily Budget</label>
-                        <input type="text" class="form-control" placeholder="Amount" aria-label="First name">
+
+                    {{--                    <div class="xl:col-span-12 flex flex-row">--}}
+
+                    {{--                        <div class="gap-3 col-span-4 inline-flex">--}}
+                    {{--                            <label for="inputPassword4" class="ti-form-label">Select Page</label>--}}
+
+                    {{--                            <div--}}
+                    {{--                                class="hs-tooltip ti-main-tooltip me-6 [--trigger:click] [--placement:top]">--}}
+                    {{--                                <a class="hs-tooltip-toggle ti-main-tooltip-toggle" href="javascript:void(0);">--}}
+                    {{--                                    <svg xmlns="http://www.w3.org/2000/svg" class="size-5 fill-primary"--}}
+                    {{--                                         height="24px"--}}
+                    {{--                                         viewBox="0 0 24 24" width="24px" fill="#000000">--}}
+                    {{--                                        <path d="M0 0h24v24H0V0z" fill="none"/>--}}
+                    {{--                                        <path--}}
+                    {{--                                            d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"/>--}}
+                    {{--                                    </svg>--}}
+                    {{--                                    <div--}}
+                    {{--                                        class="hs-tooltip-content ti-main-tooltip-content border border-defaultborder dark:border-defaultborder/10 !py-4 !px-4 !bg-primary !text-white"--}}
+                    {{--                                        role="tooltip">--}}
+                    {{--                                        <p>The Icon Popover</p>--}}
+                    {{--                                    </div>--}}
+                    {{--                                </a>--}}
+                    {{--                            </div>--}}
+                    {{--                        </div>--}}
+
+                    {{--                        <div class="col-span-12 xl:col-span-8 ">--}}
+                    {{--                            <div class="">--}}
+                    {{--                                <select class="ti-form-select rounded-sm p-1" id="select-beast"--}}
+                    {{--                                        autocomplete="off">--}}
+                    {{--                                    <option value=""> Select a Page...</option>--}}
+                    {{--                                    <option value="4">Page 1</option>--}}
+                    {{--                                    <option value="1">Page 2</option>--}}
+                    {{--                                    <option value="3">Page 3</option>--}}
+                    {{--                                    <option value="5">Page 4</option>--}}
+                    {{--                                </select>--}}
+                    {{--                            </div>--}}
+                    {{--                        </div>--}}
+                    {{--                    </div>--}}
+
+                    <div class="col-span-12 flex flex-row gap-14">
+                        <div>
+                            <label class="ti-form-label">Daily Budget</label>
+                        </div>
+                        <div class="w-9/12">
+                            <input type="text" class="form-control" placeholder="Amount" aria-label="First name">
+                        </div>
                     </div>
 
-                    <div class="col-span-12 gap-5">
-                        <label class="ti-form-label">Target Age</label>
+                    {{--                    <div class="col-span-12  flex flex-row gap-16">--}}
+                    <div class="col-span-12 flex flex-row gap-[68px]">
 
-                        <div class="flex flex-row gap-5">
+                        <label class="ti-form-label ">Target Age</label>
 
-                            <div
-                                class="bg-white border border-inputborder rounded-sm dark:bg-bodybg dark:border-white/10 w-1/12"
-                                data-hs-input-number>
-                                <div class="flex justify-between items-center gap-x-1 overflow-hidden w-full h-6">
-                                    <div class="grow py-2 px-3 w-1/4">
-                                        <input
-                                            class="p-0 bg-transparent border-0 text-gray-800 focus:ring-0 dark:text-white"
-                                            type="text" value="18" data-hs-input-number-input>
-                                    </div>
+                        <div class="flex flex-row gap-5 ">
 
-                                    <div
-                                        class="flex flex-col -gap-y-px divide-y divide-gray-200 border-s border-inputborder dark:divide-white/10 dark:border-white/10 w-5 p-0.5">
-                                        <button type="button"
-                                                class="size-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-ee-sm bg-gray-50 text-gray-800 hover:bg-light disabled:opacity-50 disabled:pointer-events-none dark:bg-bodybg dark:text-white dark:hover:bg-bgdark/70 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10"
-                                                data-hs-input-number-increment>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                 viewBox="0 0 24 24"
-                                                 fill="none" stroke="currentColor" stroke-width="2"
-                                                 stroke-linecap="round"
-                                                 stroke-linejoin="round" class="feather feather-chevron-down size-4">
-                                                <polyline points="6 9 12 15 18 9"></polyline>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
+                            <input class="form-control mb-3 w-32 h-8 dark:text-white" type="number" min="18"
+                                   max="50" placeholder="18"
+                                   aria-label="default input example">
 
                             <span class="mt-1">to</span>
 
-                            <div
-                                class="bg-white border border-inputborder rounded-sm dark:bg-bodybg dark:border-white/10 w-1/12"
-                                data-hs-input-number>
-                                <div class="flex justify-between items-center gap-x-1 overflow-hidden w-full h-6">
-                                    <div class="grow py-2 px-3 w-1/4">
-                                        <input
-                                            class="p-0 bg-transparent border-0 text-gray-800 focus:ring-0 dark:text-white"
-                                            type="text" value="50" data-hs-input-number-input>
-                                    </div>
-
-                                    <div
-                                        class="flex flex-col -gap-y-px divide-y divide-gray-200 border-s border-inputborder dark:divide-white/10 dark:border-white/10 w-5 p-0.5">
-                                        <button type="button"
-                                                class="size-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-ee-sm bg-gray-50 text-gray-800 hover:bg-light disabled:opacity-50 disabled:pointer-events-none dark:bg-bodybg dark:text-white dark:hover:bg-bgdark/70 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10"
-                                                data-hs-input-number-increment>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                 viewBox="0 0 24 24"
-                                                 fill="none" stroke="currentColor" stroke-width="2"
-                                                 stroke-linecap="round"
-                                                 stroke-linejoin="round" class="feather feather-chevron-down size-4">
-                                                <polyline points="6 9 12 15 18 9"></polyline>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-
+                            <input class="form-control mb-3 w-32 h-8 dark:text-white" type="number" min="50"
+                                   max="65" placeholder="50"
+                                   aria-label="default input example">
                         </div>
 
                     </div>
-                    <div class="col-span-12">
+
+                    <div class="col-span-12 flex gap-24">
 
                         <label for="inputEmail4" class="ti-form-label">Gender</label>
 
@@ -150,12 +170,11 @@
                         </div>
                     </div>
 
-
-                    <div class="col-span-12">
+                    <div class="col-span-12 flex flex-row gap-8">
                         <label for="inputAddress" class="ti-form-label">Target Audience</label>
 
 
-                        <div class="col-span-12 flex flex-col">
+                        <div class="col-span-12 flex flex-col w-9/12">
                             <div id="container" x-data="voiceTyping"
                                  class="text-center w-full ">
                                                 <textarea
@@ -173,7 +192,7 @@
                                             class="inline-flex items-center gap-x-2 bg-transparent border border-info rounded-sm p-3"
                                         >
                                 <span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
                                          fill="currentColor" class="w-6 h-6 text-info"
                                          viewBox="0 0 16 16">
                                         <path
@@ -212,34 +231,38 @@
                         </div>
                     </div>
 
-                    <div class="col-span-12">
+                    <div class="col-span-12 flex flex-row gap-8">
                         <label for="inputAddress2" class="ti-form-label">Update Location</label>
 
-                        <select class="ti-form-select rounded-sm !py-2 !px-3"
-                                name="choices-multiple-remove-button"
-                                data-choices
-                                data-remove-button
-                                multiple>
-                            <option value="Choice 1" selected>Bangalore</option>
-                            <option value="Choice 2">Chennai</option>
-                            <option value="Choice 3">Hyderabad</option>
-                            <option value="Choice 4">Karnataka</option>
-                        </select>
+                        <div class="w-9/12">
+                            <select class="ti-form-select rounded-sm !py-2 !px-3"
+                                    name="choices-multiple-remove-button"
+                                    data-choices
+                                    data-remove-button
+                                    multiple>
+                                <option value="Choice 1" selected>Bangalore</option>
+                                <option value="Choice 2">Chennai</option>
+                                <option value="Choice 3">Hyderabad</option>
+                                <option value="Choice 4">Karnataka</option>
+                            </select>
+                        </div>
                     </div>
 
-                    <div class="col-span-12">
+                    <div class="col-span-12 flex flex-row gap-7">
                         <label for="inputCity" class="ti-form-label">Exclude Location</label>
 
-                        <select class="ti-form-select rounded-sm !py-2 !px-3"
-                                name="choices-multiple-remove-button"
-                                data-choices
-                                data-remove-button
-                                multiple>
-                            <option value="Choice 1" selected>Bangalore</option>
-                            <option value="Choice 2">Chennai</option>
-                            <option value="Choice 3">Hyderabad</option>
-                            <option value="Choice 4">Karnataka</option>
-                        </select>
+                        <div class="w-9/12">
+                            <select class="ti-form-select rounded-sm !py-2 !px-3"
+                                    name="choices-multiple-remove-button"
+                                    data-choices
+                                    data-remove-button
+                                    multiple>
+                                <option value="Choice 1" selected>Bangalore</option>
+                                <option value="Choice 2">Chennai</option>
+                                <option value="Choice 3">Hyderabad</option>
+                                <option value="Choice 4">Karnataka</option>
+                            </select>
+                        </div>
 
                     </div>
 
@@ -314,6 +337,7 @@
             </div>
 
         </div>
+
     </div>
 
 
