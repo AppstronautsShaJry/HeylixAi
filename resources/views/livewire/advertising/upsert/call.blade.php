@@ -39,7 +39,7 @@
                 <form class="p-4 grid grid-cols-12 gap-4 box">
 
                     <div class="col-span-12 ">
-                        <span class="text-lg font-semibold">Awarness Ad</span>
+                        <span class="text-lg font-semibold">Get Call Ad</span>
 
                     </div>
 

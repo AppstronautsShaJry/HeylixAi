@@ -42,99 +42,10 @@
 
                 <span class="p-4 text-lg font-semibold">Choose your Goal</span>
 
-                {{--                <div x-data="{ activeTab: 'website' }">--}}
-                {{--                    <!-- Tabs Navigation -->--}}
-                {{--                    <div class="flex space-x-4 border-b border-gray-400 p-4">--}}
-                {{--                        <button class="px-4 py-2 cursor-pointer"--}}
-                {{--                                :class="activeTab === 'website' ? 'border-b-2 border-blue-500 font-bold' : 'text-gray-500'"--}}
-                {{--                                @click="activeTab = 'website'">Website Traffic--}}
-                {{--                        </button>--}}
-
-                {{--                        <button class="px-4 py-2 cursor-pointer"--}}
-                {{--                                :class="activeTab === 'lead' ? 'border-b-2 border-blue-500 font-bold' : 'text-gray-500'"--}}
-                {{--                                @click="activeTab = 'lead'">Lead Generation--}}
-                {{--                        </button>--}}
-
-                {{--                        <button class="px-4 py-2 cursor-pointer"--}}
-                {{--                                :class="activeTab === 'app' ? 'border-b-2 border-blue-500 font-bold' : 'text-gray-500'"--}}
-                {{--                                @click="activeTab = 'app'">App Promotion--}}
-                {{--                        </button>--}}
-                {{--                    </div>--}}
-
-                {{--                    <!-- Tab Content -->--}}
-                {{--                    <div class="p-4">--}}
-                {{--                        <!-- Website Traffic Tab -->--}}
-                {{--                        <div x-show="activeTab === 'website'" x-transition class="grid grid-cols-1 xl:grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-5">--}}
-                {{--                            <x-cards.card2 :title="'Website Traffic'" description="Website Traffic details..." route="website"></x-cards.card2>--}}
-                {{--                        </div>--}}
-
-                {{--                        <!-- Lead Generation Tab -->--}}
-                {{--                        <div x-show="activeTab === 'lead'" x-transition class="grid grid-cols-1 xl:grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-5">--}}
-                {{--                            <x-cards.card2 :title="'Lead Generation'" description="Lead Generation details..." route="lead"></x-cards.card2>--}}
-                {{--                        </div>--}}
-
-                {{--                        <!-- App Promotion Tab -->--}}
-                {{--                        <div x-show="activeTab === 'app'" x-transition class="grid grid-cols-1 xl:grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-5">--}}
-                {{--                            <x-cards.card2 :title="'App Promotion'" description="App Promotion details..." route="app"></x-cards.card2>--}}
-                {{--                        </div>--}}
-                {{--                    </div>--}}
-                {{--                </div>--}}
-
-
-{{--                <div x-data="{ activeTab: 'website' }">--}}
-{{--                    <div--}}
-{{--                        class=" grid grid-cols-1 xl:grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-5 p-4 w-full h-auto mb-2.5 pb-6 border-b border-gray-400">--}}
-{{--                        <!-- Row 1 -->--}}
-
-{{--                        <x-cards.card2 :title="'Website Traffic'"--}}
-{{--                                       description="defre trew dfijl defre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijl"--}}
-{{--                                       @click="activeTab = 'website'" />--}}
-
-
-{{--                        <x-cards.card2 :title="'Lead Generation'"--}}
-{{--                                       description="defre trew dfijl defre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijl"--}}
-{{--                                       @click="activeTab = 'lead'" />--}}
-
-{{--                        <x-cards.card2 :title="'App Promotion'"--}}
-{{--                                       description="defre trew dfijl defre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijldefre trew dfijl"--}}
-{{--                                       @click="activeTab = 'app'" />--}}
-{{--                    </div>--}}
-
-{{--                    <!-- Tab Content -->--}}
-{{--                    <div class="p-4">--}}
-{{--                        <div x-show="activeTab === 'website'"--}}
-{{--                             class="grid grid-cols-1 xl:grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-5">--}}
-{{--                            <x-cards.card1 :title="'Search Ad'" description="..." route="google.ads"></x-cards.card1>--}}
-{{--                            <x-cards.card1 :title="'Display Ad'" description="..." route="google.ads"></x-cards.card1>--}}
-{{--                            <x-cards.card1 :title="'Gmail & Youtube'" description="..."--}}
-{{--                                           route="google.ads"></x-cards.card1>--}}
-{{--                            <x-cards.card1 :title="'Shopping'" description="..." route="google.ads"></x-cards.card1>--}}
-{{--                            <x-cards.card1 :title="'Youtube Video'" description="..."--}}
-{{--                                           route="google.ads"></x-cards.card1>--}}
-{{--                        </div>--}}
-
-{{--                        <div x-show="activeTab === 'lead'"--}}
-{{--                             class="grid grid-cols-1 xl:grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-5">--}}
-{{--                            <x-cards.card1 :title="'Search Ad'" description="..." route="google.ads"></x-cards.card1>--}}
-{{--                            <x-cards.card1 :title="'Display Ad'" description="..." route="google.ads"></x-cards.card1>--}}
-{{--                            <x-cards.card1 :title="'Gmail & Youtube'" description="..."--}}
-{{--                                           route="google.ads"></x-cards.card1>--}}
-{{--                            <x-cards.card1 :title="'Shopping'" description="..." route="google.ads"></x-cards.card1>--}}
-{{--                            <x-cards.card1 :title="'Youtube Video'" description="..."--}}
-{{--                                           route="google.ads"></x-cards.card1>--}}
-{{--                        </div>--}}
-
-{{--                        <div x-show="activeTab === 'app'"--}}
-{{--                             class="grid grid-cols-1 xl:grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-5">--}}
-{{--                            <x-cards.card1 :title="'Search Ad'" description="..." route="google.ads"></x-cards.card1>--}}
-{{--                            <x-cards.card1 :title="'Display Ad'" description="..." route="google.ads"></x-cards.card1>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-
                 <div x-data="{ activeTab: 'website' }">
                     <!-- Cards2 Section (Tabs) -->
-                    <div id="cards2-section" class="grid grid-cols-1 xl:grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-5 p-4 w-full h-auto mb-2.5 pb-6 border-b border-gray-400">
+                    <div id="cards2-section"
+                         class="grid grid-cols-1 xl:grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-5 p-4 w-full h-auto mb-2.5 pb-6 border-b border-gray-400">
                         <x-cards.card2 :title="'Website Traffic'"
                                        description="Website Traffic details..."
                                        @click="activeTab = 'website'; $nextTick(() => document.getElementById('cards1-section').scrollIntoView({ behavior: 'smooth' }));">
@@ -162,7 +73,7 @@
 
                         <div x-show="activeTab === 'website'"
                              class="grid grid-cols-1 xl:grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-5">
-                            <x-cards.card1 :title="'Search Ad'" description="..." route="google.ads"></x-cards.card1>
+                            <x-cards.card1 :title="'Search Ad'" description="..." route="google-search"></x-cards.card1>
                             <x-cards.card1 :title="'Display Ad'" description="..." route="google.ads"></x-cards.card1>
                             <x-cards.card1 :title="'Gmail & Youtube'" description="..."
                                            route="google.ads"></x-cards.card1>
@@ -173,7 +84,7 @@
 
                         <div x-show="activeTab === 'lead'"
                              class="grid grid-cols-1 xl:grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-5">
-                            <x-cards.card1 :title="'Search Ad'" description="..." route="google.ads"></x-cards.card1>
+                            <x-cards.card1 :title="'Search Ad'" description="..." route="lead-search"></x-cards.card1>
                             <x-cards.card1 :title="'Display Ad'" description="..." route="google.ads"></x-cards.card1>
                             <x-cards.card1 :title="'Gmail & Youtube'" description="..."
                                            route="google.ads"></x-cards.card1>
