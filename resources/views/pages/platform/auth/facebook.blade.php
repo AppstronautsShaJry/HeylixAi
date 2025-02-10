@@ -72,10 +72,19 @@
                     <x-tabs.content>
                         <div class="w-full h-auto flex justify-between items-center">
                             <div class="xl:w-3/4 flex justify-center items-center">
-                                <a href="{{url('auth/facebook') }}" class="ti-btn ti-btn-primary label-ti-btn">
-                                    <i class="ri-links-line label-ti-btn-icon me-2"></i>
-                                    Connect Account
-                                </a>
+
+                                @if(auth()->user() && auth()->user()->facebook_token)
+                                    <form action="{{ route('facebook.post') }}" method="POST">
+                                        @csrf
+                                        <button type="submit" class="btn btn-primary">Post to Facebook</button>
+                                    </form>
+                                @else
+                                    <a href="{{url('/facebook/login') }}" class="ti-btn ti-btn-primary label-ti-btn">
+                                        <i class="ri-links-line label-ti-btn-icon me-2"></i>
+                                        Connect Account
+                                    </a>
+                                @endif
+
                             </div>
                             <div class="xl:w-1/4">
                                 <div class="box ">

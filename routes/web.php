@@ -70,11 +70,9 @@ Route::get('/edit-brand/{id}', \App\Livewire\Brand\Edit::class)->name('brand.edi
 // Brand
 Route::get('/social-accounts', [\App\Models\SocialAccount::class, 'showSocialAccounts'])->name('social.accounts');
 
-Route::get('/auth/facebook', [FacebookController::class, 'redirect'])->name('facebook.login');
-Route::get('/auth/facebook/callback', [FacebookController::class, 'callback']);
-Route::get('/facebook/pages', [FacebookController::class, 'getPages'])->name('facebook.pages');
-Route::post('/facebook/post', [FacebookController::class, 'createPost'])->name('facebook.post');
-Route::delete('/facebook/post/{postId}/{pageId}', [FacebookController::class, 'deletePost'])->name('facebook.post.delete');
+Route::get('/facebook/login', [FacebookController::class, 'redirectToFacebook'])->name('facebook.login');
+Route::get('/facebook/callback', [FacebookController::class, 'handleFacebookCallback'])->name('facebook.callback');
+Route::post('/facebook/post', [FacebookController::class, 'postToFacebook'])->name('facebook.post');
 
 Route::get('/calender-social', \App\Livewire\Social\Index::class)->name('calender.social');
 Route::get('/posts-social', \App\Livewire\Social\Post::class)->name('posts.social');
