@@ -44,7 +44,7 @@
 
                     </div>
 
-                    <div class="xl:col-span-12 flex flex-row items-center gap-8">
+                    <div class="xl:col-span-12 flex flex-row items-center gap-10">
                         <!-- Label & Tooltip -->
                         <div class="flex items-center gap-2">
 
@@ -80,48 +80,26 @@
                         </div>
                     </div>
 
+                    <div class="col-span-12 flex flex-row gap-[32px]">
 
-                    {{--                    <div class="xl:col-span-12 flex flex-row">--}}
-
-                    {{--                        <div class="gap-3 col-span-4 inline-flex">--}}
-                    {{--                            <label for="inputPassword4" class="ti-form-label">Select Page</label>--}}
-
-                    {{--                            <div--}}
-                    {{--                                class="hs-tooltip ti-main-tooltip me-6 [--trigger:click] [--placement:top]">--}}
-                    {{--                                <a class="hs-tooltip-toggle ti-main-tooltip-toggle" href="javascript:void(0);">--}}
-                    {{--                                    <svg xmlns="http://www.w3.org/2000/svg" class="size-5 fill-primary"--}}
-                    {{--                                         height="24px"--}}
-                    {{--                                         viewBox="0 0 24 24" width="24px" fill="#000000">--}}
-                    {{--                                        <path d="M0 0h24v24H0V0z" fill="none"/>--}}
-                    {{--                                        <path--}}
-                    {{--                                            d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"/>--}}
-                    {{--                                    </svg>--}}
-                    {{--                                    <div--}}
-                    {{--                                        class="hs-tooltip-content ti-main-tooltip-content border border-defaultborder dark:border-defaultborder/10 !py-4 !px-4 !bg-primary !text-white"--}}
-                    {{--                                        role="tooltip">--}}
-                    {{--                                        <p>The Icon Popover</p>--}}
-                    {{--                                    </div>--}}
-                    {{--                                </a>--}}
-                    {{--                            </div>--}}
-                    {{--                        </div>--}}
-
-                    {{--                        <div class="col-span-12 xl:col-span-8 ">--}}
-                    {{--                            <div class="">--}}
-                    {{--                                <select class="ti-form-select rounded-sm p-1" id="select-beast"--}}
-                    {{--                                        autocomplete="off">--}}
-                    {{--                                    <option value=""> Select a Page...</option>--}}
-                    {{--                                    <option value="4">Page 1</option>--}}
-                    {{--                                    <option value="1">Page 2</option>--}}
-                    {{--                                    <option value="3">Page 3</option>--}}
-                    {{--                                    <option value="5">Page 4</option>--}}
-                    {{--                                </select>--}}
-                    {{--                            </div>--}}
-                    {{--                        </div>--}}
-                    {{--                    </div>--}}
-
-                    <div class="col-span-12 flex flex-row gap-14">
-                        <div>
+                        <div class="flex flex-row gap-2">
                             <label class="ti-form-label">Daily Budget</label>
+
+                            <div class="hs-tooltip ti-main-tooltip [--trigger:click] [--placement:top]">
+                                <a class="hs-tooltip-toggle ti-main-tooltip-toggle" href="javascript:void(0);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="size-5 fill-primary mb-2"
+                                         height="24px" viewBox="0 0 24 24" width="24px">
+                                        <path d="M0 0h24v24H0V0z" fill="none"/>
+                                        <path
+                                            d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"/>
+                                    </svg>
+                                    <div
+                                        class="hs-tooltip-content ti-main-tooltip-content border border-defaultborder dark:border-defaultborder/10 !py-4 !px-4 !bg-primary !text-white"
+                                        role="tooltip">
+                                        <p>The Icon Popover</p>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                         <div class="w-9/12">
                             <input type="text" class="form-control" placeholder="Amount" aria-label="First name">
@@ -129,9 +107,27 @@
                     </div>
 
                     {{--                    <div class="col-span-12  flex flex-row gap-16">--}}
-                    <div class="col-span-12 flex flex-row gap-[68px]">
+                    <div class="col-span-12 flex flex-row gap-[44px]">
 
-                        <label class="ti-form-label ">Target Age</label>
+                        <div class="flex gap-2">
+                            <label class="ti-form-label ">Target Age</label>
+
+                            <div class="hs-tooltip ti-main-tooltip [--trigger:click] [--placement:top]">
+                                <a class="hs-tooltip-toggle ti-main-tooltip-toggle" href="javascript:void(0);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="size-5 fill-primary mb-2"
+                                         height="24px" viewBox="0 0 24 24" width="24px">
+                                        <path d="M0 0h24v24H0V0z" fill="none"/>
+                                        <path
+                                            d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"/>
+                                    </svg>
+                                    <div
+                                        class="hs-tooltip-content ti-main-tooltip-content border border-defaultborder dark:border-defaultborder/10 !py-4 !px-4 !bg-primary !text-white"
+                                        role="tooltip">
+                                        <p>The Icon Popover</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
 
                         <div class="flex flex-row gap-5 ">
 
@@ -148,9 +144,27 @@
 
                     </div>
 
-                    <div class="col-span-12 flex gap-24">
+                    <div class="col-span-12 flex gap-[66px]">
 
-                        <label for="inputEmail4" class="ti-form-label">Gender</label>
+                        <div class="flex gap-2">
+                            <label for="inputEmail4" class="ti-form-label">Gender</label>
+
+                            <div class="hs-tooltip ti-main-tooltip [--trigger:click] [--placement:top]">
+                                <a class="hs-tooltip-toggle ti-main-tooltip-toggle" href="javascript:void(0);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="size-5 fill-primary mb-2"
+                                         height="24px" viewBox="0 0 24 24" width="24px">
+                                        <path d="M0 0h24v24H0V0z" fill="none"/>
+                                        <path
+                                            d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"/>
+                                    </svg>
+                                    <div
+                                        class="hs-tooltip-content ti-main-tooltip-content border border-defaultborder dark:border-defaultborder/10 !py-4 !px-4 !bg-primary !text-white"
+                                        role="tooltip">
+                                        <p>The Icon Popover</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
 
                         <div class="flex flex-row gap-3">
                             <div class="form-check">
@@ -171,7 +185,25 @@
                     </div>
 
                     <div class="col-span-12 flex flex-row gap-8">
-                        <label for="inputAddress" class="ti-form-label">Target Audience</label>
+                        <div class="flex gap-2">
+                            <label for="inputAddress" class="ti-form-label">Primary Text</label>
+
+                            <div class="hs-tooltip ti-main-tooltip [--trigger:click] [--placement:top]">
+                                <a class="hs-tooltip-toggle ti-main-tooltip-toggle" href="javascript:void(0);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="size-5 fill-primary mb-2"
+                                         height="24px" viewBox="0 0 24 24" width="24px">
+                                        <path d="M0 0h24v24H0V0z" fill="none"/>
+                                        <path
+                                            d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"/>
+                                    </svg>
+                                    <div
+                                        class="hs-tooltip-content ti-main-tooltip-content border border-defaultborder dark:border-defaultborder/10 !py-4 !px-4 !bg-primary !text-white"
+                                        role="tooltip">
+                                        <p>The Icon Popover</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
 
 
                         <div class="col-span-12 flex flex-col w-9/12">
@@ -231,8 +263,25 @@
                         </div>
                     </div>
 
-                    <div class="col-span-12 flex flex-row gap-8">
-                        <label for="inputAddress2" class="ti-form-label">Update Location</label>
+                    <div class="col-span-12 flex flex-row gap-[60px]">
+                        <div class="flex gap-2">
+                            <label for="inputAddress2" class="ti-form-label">Location</label>
+                            <div class="hs-tooltip ti-main-tooltip [--trigger:click] [--placement:top]">
+                                <a class="hs-tooltip-toggle ti-main-tooltip-toggle" href="javascript:void(0);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="size-5 fill-primary mb-2"
+                                         height="24px" viewBox="0 0 24 24" width="24px">
+                                        <path d="M0 0h24v24H0V0z" fill="none"/>
+                                        <path
+                                            d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"/>
+                                    </svg>
+                                    <div
+                                        class="hs-tooltip-content ti-main-tooltip-content border border-defaultborder dark:border-defaultborder/10 !py-4 !px-4 !bg-primary !text-white"
+                                        role="tooltip">
+                                        <p>The Icon Popover</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
 
                         <div class="w-9/12">
                             <select class="ti-form-select rounded-sm !py-2 !px-3"
@@ -248,8 +297,25 @@
                         </div>
                     </div>
 
-                    <div class="col-span-12 flex flex-row gap-7">
-                        <label for="inputCity" class="ti-form-label">Exclude Location</label>
+                    <div class="col-span-12 flex flex-row gap-2">
+                        <div class="flex gap-1">
+                            <label for="inputCity" class="ti-form-label">Exclude Location</label>
+                            <div class="hs-tooltip ti-main-tooltip [--trigger:click] [--placement:top]">
+                                <a class="hs-tooltip-toggle ti-main-tooltip-toggle" href="javascript:void(0);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="size-5 fill-primary mb-2"
+                                         height="24px" viewBox="0 0 24 24" width="24px">
+                                        <path d="M0 0h24v24H0V0z" fill="none"/>
+                                        <path
+                                            d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"/>
+                                    </svg>
+                                    <div
+                                        class="hs-tooltip-content ti-main-tooltip-content border border-defaultborder dark:border-defaultborder/10 !py-4 !px-4 !bg-primary !text-white"
+                                        role="tooltip">
+                                        <p>The Icon Popover</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
 
                         <div class="w-9/12">
                             <select class="ti-form-select rounded-sm !py-2 !px-3"
