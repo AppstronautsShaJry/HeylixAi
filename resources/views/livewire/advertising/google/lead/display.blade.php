@@ -38,7 +38,7 @@
                 <form class="p-4 grid grid-cols-12 gap-4 box">
 
                     <div class="col-span-12 ">
-                        <span class="text-lg font-semibold">Lead Generation - Search Ad</span>
+                        <span class="text-lg font-semibold">Lead Generation - Display Ad</span>
 
                     </div>
 
@@ -525,7 +525,7 @@
             <div class="xl:col-span-4 col-span-12  dark:bg-bodybg bg-white rounded-lg h-[30rem] px-3">
                 <div class="col-span-12 lg:col-span-12">
                     <div class="w-full flex justify-between items-center my-5">
-                <span class="flex text-lg font-bold px-3 py-5">
+                <span class="flex text-lg font-bold px-3 py-2">
                     Add Assets
                 </span>
                         <button type="button"
@@ -534,27 +534,47 @@
                         </button>
                     </div>
 
-                    <div class="col-span-12">
-                        <div class="flex flex-row gap-5 my-2">
-                            <label for="inputEmail4" class="ti-form-label">File Type</label>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                       id="flexRadioDefault1">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    Image
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                       id="flexRadioDefault2" checked="">
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    Video
-                                </label>
+                    <div class="flex flex-col px-4">
+                        <div class="flex flex-row gap-1.5">
+                            <div class="text-lg font-medium">Images</div>
+                            <div class="hs-tooltip ti-main-tooltip [--trigger:hover] [--placement:bottom]">
+                                <a class="hs-tooltip-toggle ti-main-tooltip-toggle" href="javascript:void(0);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="size-5 mt-0.5 fill-primary"
+                                         height="24px" viewBox="0 0 24 24" width="24px">
+                                        <path d="M0 0h24v24H0V0z" fill="none"/>
+                                        <path
+                                            d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"/>
+                                    </svg>
+                                    <div
+                                        class="hs-tooltip-content ti-main-tooltip-content border border-defaultborder dark:border-defaultborder/10 !py-4 !px-4 !bg-primary !text-white space-y-2"
+                                        role="tooltip">
+                                        <div class="flex flex-col text-start text-sm">
+                                            Landscape Image (1.91:1)
+                                            <div class="text-[10px]">
+                                                <li>Recommended Size: 1200x628</li>
+                                                <li>Min Size:600x314</li>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col text-start text-sm">
+                                            Square Image (1:1)
+                                            <div class="text-[10px]">
+                                                <li>Recommended Size: 1200x1200</li>
+                                                <li>Min Size:300x300</li>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col text-start text-sm">
+                                            Portrait (9:16)
+                                            <div class="text-[10px]">
+                                                <li>Recommended Size: 900x600</li>
+                                                <li>Min Size:600x1064</li>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
                         </div>
+                        <div class="text-md">Add upto 15 Images</div>
                     </div>
-
-                    <h5 class="text-xs px-3 font-medium">Square image/video (1080x1080)</h5>
                     <div class="box-body my-2">
                         <input type="file" class="filepond" name="image1"
                                {{--                    <input type="file" name="image" class="filepond basic-filepond"--}}
@@ -566,7 +586,29 @@
                 </div>
 
                 <div class="col-span-12 lg:col-span-12">
-                    <h5 class="text-xs px-3  font-medium">Portrait image/video (1080x1080)</h5>
+                    <div class="flex flex-col px-4">
+                        <div class="flex flex-row gap-1">
+                            <div class="text-lg font-medium">Logos</div>
+                            <div class="hs-tooltip ti-main-tooltip [--trigger:click] [--placement:top]">
+                                <a class="hs-tooltip-toggle ti-main-tooltip-toggle" href="javascript:void(0);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="size-5 mt-0.5 fill-primary"
+                                         height="24px" viewBox="0 0 24 24" width="24px">
+                                        <path d="M0 0h24v24H0V0z" fill="none"/>
+                                        <path
+                                            d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"/>
+                                    </svg>
+                                    <div
+                                        class="hs-tooltip-content ti-main-tooltip-content border border-defaultborder dark:border-defaultborder/10 !py-4 !px-4 !bg-primary !text-white"
+                                        role="tooltip">
+                                        <p>The Icon Popover</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="text-md">Add upto 5 Logos</div>
+                    </div>
+
                     <div class="box-body my-2">
                         <input type="file" class="filepond" name="image2"
                                {{--                    <input type="file" name="image" class="filepond basic-filepond"--}}

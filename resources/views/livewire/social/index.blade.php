@@ -116,15 +116,15 @@
                                 {{--                                    </div>--}}
                                 <div class=" text-center flex items-center gap-x-5">
                                     <button type="button" class="ti-btn ti-btn-info-gradient btn-wave">
-                                       Generate
+                                        Generate
                                     </button>
                                 </div>
 
-{{--                                <ul class="ti-dropdown-menu hs-dropdown-menu hidden" role="menu">--}}
-{{--                                    <li><a class="ti-dropdown-item" href="javascript:void(0);">Download</a></li>--}}
-{{--                                    <li><a class="ti-dropdown-item" href="javascript:void(0);">Import</a></li>--}}
-{{--                                    <li><a class="ti-dropdown-item" href="javascript:void(0);">Export</a></li>--}}
-{{--                                </ul>--}}
+                                {{--                                <ul class="ti-dropdown-menu hs-dropdown-menu hidden" role="menu">--}}
+                                {{--                                    <li><a class="ti-dropdown-item" href="javascript:void(0);">Download</a></li>--}}
+                                {{--                                    <li><a class="ti-dropdown-item" href="javascript:void(0);">Import</a></li>--}}
+                                {{--                                    <li><a class="ti-dropdown-item" href="javascript:void(0);">Export</a></li>--}}
+                                {{--                                </ul>--}}
                             </div>
                         </div>
                         <div class="box-body">
@@ -194,140 +194,11 @@
                                         <span class="font-medium">New Job Posted</span>
                                     </div>
                                 </li>
-{{--                                <li class="flex gap-2 items-start">--}}
-{{--                                    <div--}}
-{{--                                        class="avatar avatar-sm bg-primarytint1color/10 !text-primarytint1color flex-shrink-0 avatar-rounded border border-primarytint1color/10">--}}
-{{--                                        <i class="ri-file-list-3-fill"></i>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="truncate">--}}
-{{--                                        <span class="font-medium">New Application</span>--}}
-{{--                                        <p class="text-textmuted dark:text-textmuted/50 mb-0 text-xs w-[90%] truncate">--}}
-{{--                                            <a href="javascript:void(0);" class="font-medium text-primary">John Doe</a>--}}
-{{--                                            applied for Frontend Developer position</p>--}}
-{{--                                    </div>--}}
-{{--                                    <span class="text-textmuted dark:text-textmuted/50 ms-auto text-xs flex-shrink-0">5 mins ago</span>--}}
-{{--                                </li>--}}
-{{--                                <li class="flex gap-2 items-start">--}}
-{{--                                    <div--}}
-{{--                                        class="avatar avatar-sm bg-primarytint2color/10 !text-primarytint2color flex-shrink-0 avatar-rounded border border-primarytint2color/10">--}}
-{{--                                        <i class="ri-user-fill"></i>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="truncate">--}}
-{{--                                        <span class="font-medium">New Job Posted</span>--}}
-{{--                                        <p class="text-textmuted dark:text-textmuted/50 mb-0 text-xs w-[90%] truncate">--}}
-{{--                                            <span class="font-medium text-primarytint1color">#245</span> Backend--}}
-{{--                                            Developer </p>--}}
-{{--                                    </div>--}}
-{{--                                    <span class="text-textmuted dark:text-textmuted/50 ms-auto text-xs flex-shrink-0">10 mins ago</span>--}}
-{{--                                </li>--}}
-{{--                                <li class="flex gap-2 items-start">--}}
-{{--                                    <div--}}
-{{--                                        class="avatar avatar-sm bg-primarytint3color/10 !text-primarytint3color flex-shrink-0 avatar-rounded border border-primarytint3color/10">--}}
-{{--                                        <i class="ri-user-fill"></i>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="truncate">--}}
-{{--                                        <span class="font-medium">New Job Posted</span>--}}
-{{--                                        <p class="text-textmuted dark:text-textmuted/50 mb-0 text-xs w-[90%] truncate">--}}
-{{--                                            Backend Developer</p>--}}
-{{--                                    </div>--}}
-{{--                                    <span class="text-textmuted dark:text-textmuted/50 ms-auto text-xs flex-shrink-0">10 mins ago</span>--}}
-{{--                                </li>--}}
-{{--                                <li class="flex gap-2 items-start">--}}
-{{--                                    <div--}}
-{{--                                        class="avatar avatar-sm bg-secondary/10 !text-secondary flex-shrink-0 avatar-rounded border border-secondary/10">--}}
-{{--                                        <i class="ri-calendar-check-fill"></i>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="truncate">--}}
-{{--                                        <span class="font-medium">Updated Interview Dates</span>--}}
-{{--                                        <p class="text-textmuted dark:text-textmuted/50 mb-0 text-xs w-[90%] truncate">--}}
-{{--                                            Updated new interview scheduled and added in the <a--}}
-{{--                                                href="javascript:void(0);"--}}
-{{--                                                class="font-medium text-primarytint2color underline">notification--}}
-{{--                                                list</a></p>--}}
-{{--                                    </div>--}}
-{{--                                    <span class="text-textmuted dark:text-textmuted/50 ms-auto text-xs flex-shrink-0">15 mins ago</span>--}}
-{{--                                </li>--}}
-{{--                                <li class="flex gap-2 items-start">--}}
-{{--                                    <div--}}
-{{--                                        class="avatar avatar-sm bg-danger/10 !text-danger flex-shrink-0 avatar-rounded border border-danger/10">--}}
-{{--                                        <i class="ri-calendar-check-fill"></i>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="truncate">--}}
-{{--                                        <span class="font-medium">Rescheduled Interview Dates</span>--}}
-{{--                                        <p class="text-textmuted dark:text-textmuted/50 mb-0 text-xs w-[90%] truncate">--}}
-{{--                                            Rescheduled interview dates <a href="javascript:void(0);"--}}
-{{--                                                                           class="font-medium text-primarytint2color underline">notification--}}
-{{--                                                list</a></p>--}}
-{{--                                    </div>--}}
-{{--                                    <span class="text-textmuted dark:text-textmuted/50 ms-auto text-xs flex-shrink-0">15 mins ago</span>--}}
-{{--                                </li>--}}
-{{--                                <li class="flex gap-2 items-start !mb-0">--}}
-{{--                                    <div--}}
-{{--                                        class="avatar avatar-sm bg-warning/10 !text-warning flex-shrink-0 avatar-rounded border border-warning/25">--}}
-{{--                                        <i class="ri-time-fill"></i>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="truncate">--}}
-{{--                                        <span class="font-medium">Closed Job Post</span>--}}
-{{--                                        <p class="text-textmuted dark:text-textmuted/50 mb-0 text-xs w-[90%] truncate">--}}
-{{--                                            closed React Job ID: <span class="font-medium text-primary">#454</span></p>--}}
-{{--                                    </div>--}}
-{{--                                    <span class="text-textmuted dark:text-textmuted/50 ms-auto text-xs flex-shrink-0">15 mins ago</span>--}}
-{{--                                </li>--}}
                             </ul>
 
                         </div>
                     </div>
                 </div>
-
-                {{--                    <div class="box">--}}
-                {{--                        <div class="box-header justify-between pb-1">--}}
-                {{--                            <div class="box-title">--}}
-                {{--                                Activity :--}}
-                {{--                            </div>--}}
-                {{--                            <button class="ti-btn ti-btn-soft-primary ti-btn-sm btn-wave">View All</button>--}}
-                {{--                        </div>--}}
-                {{--                        <div class="box-body p-0">--}}
-                {{--                            <div class="p-4" id="full-calendar-activity">--}}
-                {{--                                <ul class="list-none mb-0 fullcalendar-events-activity">--}}
-                {{--                                    <li>--}}
-                {{--                                        <div class="flex items-center justify-between flex-wrap">--}}
-                {{--                                            <p class="mb-1 font-medium">Tuesday, Feb 5, 2024</p>--}}
-                {{--                                            <span class="badge bg-light text-defaulttextcolor mb-1">10:00AM - 11:00AM</span>--}}
-                {{--                                        </div>--}}
-                {{--                                        <p class="mb-0 text-textmuted dark:text-textmuted/50 text-xs">Discussion with team on project updates.</p>--}}
-                {{--                                    </li>--}}
-                {{--                                    <li>--}}
-                {{--                                        <div class="flex items-center justify-between flex-wrap">--}}
-                {{--                                            <p class="mb-1 font-medium">Monday, Jan 2, 2023</p>--}}
-                {{--                                            <span class="badge bg-success mb-1">Completed</span>--}}
-                {{--                                        </div>--}}
-                {{--                                        <p class="mb-0 text-textmuted dark:text-textmuted/50 text-xs">Review and finalize budget proposal.</p>--}}
-                {{--                                    </li>--}}
-                {{--                                    <li>--}}
-                {{--                                        <div class="flex items-center justify-between flex-wrap">--}}
-                {{--                                            <p class="mb-1 font-medium">Thursday, Mar 8, 2024</p>--}}
-                {{--                                            <span class="badge bg-warning/10 text-warning mb-1">Reminder</span>--}}
-                {{--                                        </div>--}}
-                {{--                                        <p class="mb-0 text-textmuted dark:text-textmuted/50 text-xs">Prepare presentation slides for client meeting.</p>--}}
-                {{--                                    </li>--}}
-                {{--                                    <li>--}}
-                {{--                                        <div class="flex items-center justify-between flex-wrap">--}}
-                {{--                                            <p class="mb-1 font-medium">Friday, Apr 12, 2024</p>--}}
-                {{--                                            <span class="badge bg-light text-defaulttextcolor mb-1">2:00PM - 4:00PM</span>--}}
-                {{--                                        </div>--}}
-                {{--                                        <p class="mb-0 text-textmuted dark:text-textmuted/50 text-xs">Training session on new software tools.</p>--}}
-                {{--                                    </li>--}}
-                {{--                                    <li>--}}
-                {{--                                        <div class="flex items-center justify-between flex-wrap">--}}
-                {{--                                            <p class="mb-1 font-medium">Saturday, Mar 16, 2024</p>--}}
-                {{--                                            <span class="badge bg-danger/10 text-danger mb-1">Due Date</span>--}}
-                {{--                                        </div>--}}
-                {{--                                        <p class="mb-0 text-textmuted dark:text-textmuted/50 text-xs">Submit quarterly report to management.</p>--}}
-                {{--                                    </li>--}}
-                {{--                                </ul>--}}
-                {{--                            </div>--}}
-                {{--                        </div>--}}
-                {{--                    </div>--}}
             </div>
         </div>
         <!--End::row-1 -->

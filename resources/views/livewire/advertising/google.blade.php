@@ -12,9 +12,9 @@
             </div>
         </div>
 
-        <div x-data="{ currentPage: window.location.pathname }" class="p-2 py-6 flex items-center font-medium">
+        <div x-data="{ currentPage: window.location.pathname }" class="box flex flex-row p-4">
             <div
-                :class="currentPage === '/meta-ads' ? 'bg-[#FF5D9F]  rounded-l-sm text-white ' : ' hover:text-gray-400 dark:text-gray-400  rounded-md '"
+                :class="currentPage === '/meta-ads' ? 'bg-[#FF5D9F]  rounded-l-sm text-white ' : ' hover:text-gray-400 dark:text-gray-400 dark:bg-[#252528] bg-[#F8F9FB] rounded-l-sm '"
                 class="max-w-max py-3 px-2 group">
                 <a href="/meta-ads" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
                     Meta Ads
@@ -28,7 +28,7 @@
                 </a>
             </div>
             <div
-                :class="currentPage === '/active-ads' ? 'bg-[#FF5D9F] rounded-r-sm text-white ' : ' hover:text-gray-400  dark:text-gray-400  rounded-md '"
+                :class="currentPage === '/active-ads' ? 'bg-[#FF5D9F] rounded-r-sm text-white ' : ' hover:text-gray-400  dark:text-gray-400 dark:bg-[#252528] bg-[#F8F9FB] rounded-r-sm '"
                 class="max-w-max py-3 px-2 group">
                 <a href="/active-ads" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
                     Active Ads
@@ -73,8 +73,8 @@
 
                         <div x-show="activeTab === 'website'"
                              class="grid grid-cols-1 xl:grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-5">
-                            <x-cards.card1 :title="'Search Ad'" description="..." route="google-search"></x-cards.card1>
-                            <x-cards.card1 :title="'Display Ad'" description="..." route="google.ads"></x-cards.card1>
+                            <x-cards.card1 :title="'Search Ad'" description="..." route="website-search"></x-cards.card1>
+                            <x-cards.card1 :title="'Display Ad'" description="..." route="website-display"></x-cards.card1>
                             <x-cards.card1 :title="'Gmail & Youtube'" description="..."
                                            route="google.ads"></x-cards.card1>
                             <x-cards.card1 :title="'Shopping'" description="..." route="google.ads"></x-cards.card1>
@@ -85,7 +85,7 @@
                         <div x-show="activeTab === 'lead'"
                              class="grid grid-cols-1 xl:grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-5">
                             <x-cards.card1 :title="'Search Ad'" description="..." route="lead-search"></x-cards.card1>
-                            <x-cards.card1 :title="'Display Ad'" description="..." route="google.ads"></x-cards.card1>
+                            <x-cards.card1 :title="'Display Ad'" description="..." route="lead-display"></x-cards.card1>
                             <x-cards.card1 :title="'Gmail & Youtube'" description="..."
                                            route="google.ads"></x-cards.card1>
                             <x-cards.card1 :title="'Shopping'" description="..." route="google.ads"></x-cards.card1>

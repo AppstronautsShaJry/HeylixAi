@@ -16,41 +16,33 @@
                     <ol class="breadcrumb mb-1">
                         {{--                        <li class="breadcrumb-item"><a href="javascript:void(0);">Dashboard</a></li>--}}
                         <li class="breadcrumb-item"><a href="javascript:void(0);">HeyLix</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Brand</li>
+                        <li class="breadcrumb-item active" aria-current="page">Create Video</li>
                     </ol>
                 </nav>
             </div>
         </div>
         <!-- Page Header Close -->
 
-        <div x-data="{ currentPage: window.location.pathname }" class="p-2 py-6 flex items-center font-medium">
+        <div x-data="{ currentPage: window.location.pathname }" class="box flex flex-row p-3">
             <div
-                :class="currentPage === '/jobstatus-heylix' ? 'bg-[#FF5D9F]  rounded-l-sm text-white ' : 'hover:text-gray-400 dark:text-gray-400  rounded-md '"
+                :class="currentPage === '/create-heylix' ? 'bg-[#FF5D9F]  rounded-l-sm text-white ' : ' hover:text-gray-400 dark:text-gray-400 dark:bg-[#252528] bg-[#F8F9FB] rounded-l-sm'"
+                class="max-w-max py-3 px-2 group">
+                <a href="/create-heylix" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
+                    Create Image
+                </a>
+            </div>
+            <div
+                :class="currentPage === '/brand-heylix' ? 'bg-[#FF5D9F]  text-white ' : 'hover:text-gray-400 dark:text-gray-400  rounded-md '"
+                class="max-w-max py-3 px-2 group">
+                <a href="/brand-heylix" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
+                   Create Video
+                </a>
+            </div>
+            <div
+                :class="currentPage === '/jobstatus-heylix' ? 'bg-[#FF5D9F]  rounded-r-sm text-white ' : ' hover:text-gray-400 dark:text-gray-400 dark:bg-[#252528] bg-[#F8F9FB]  rounded-r-sm '"
                 class="max-w-max py-3 px-2 group">
                 <a href="/jobstatus-heylix" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
                     JobStatus
-                </a>
-            </div>
-            <!-- Twitter Tab -->
-            <div
-                :class="currentPage === '/create-heylix' ? 'bg-[#FF5D9F] text-white' : 'hover:text-gray-400 dark:text-gray-400  rounded-md'"
-                class="max-w-max py-3 px-2 group">
-                <a href="/create-heylix" class="text-sm inline-flex items-center gap-x-3 dark:hover:text-white">
-                    Content Creation
-                </a>
-            </div>
-            <div
-                :class="currentPage === '/brand-heylix' ? 'bg-[#FF5D9F] text-white ' : ' hover:text-gray-400 dark:text-gray-400  rounded-md '"
-                class="max-w-max py-3 px-2 group">
-                <a href="/brand-heylix" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
-                    Branding
-                </a>
-            </div>
-            <div
-                :class="currentPage === '/virtual-heylix' ? 'bg-[#FF5D9F]  rounded-r-sm text-white ' : ' hover:text-gray-400 dark:text-gray-400  rounded-md '"
-                class="max-w-max py-3 px-2 group">
-                <a href="/virtual-heylix" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
-                    Virtual Staff
                 </a>
             </div>
         </div>
