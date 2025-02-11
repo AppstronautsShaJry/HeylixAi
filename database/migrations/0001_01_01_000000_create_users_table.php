@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('google_id')->nullable();
             $table->string('facebook_token')->nullable();
             $table->timestamp('facebook_token_expires_at')->nullable();
+            $table->string('role')->default('staff');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
