@@ -110,6 +110,9 @@ Route::get('/whatsapp', \App\Livewire\Advertising\Upsert\Whatsapp::class)->name(
 
 //advertising
 Route::get('/upgrade-index', \App\Livewire\Upgrade\Index::class)->name('upgrade-index');
+Route::get('/google-search', \App\Livewire\Advertising\Google\Website\Search::class)->name('google-search');
+
+Route::get('/lead-search', \App\Livewire\Advertising\Google\Lead\Search::class)->name('lead-search');
 
 //Filemanager
 Route::get('/filemanager-index', \App\Livewire\Filemanager\Index::class)->name('filemanager.index');
