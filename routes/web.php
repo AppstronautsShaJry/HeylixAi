@@ -103,6 +103,9 @@ Route::get('/edit-social', \App\Livewire\Social\Edit::class)->name('edit.social'
 
 //Heylix
 Route::get('/create-heylix', \App\Livewire\Heylix\Create::class)->name('create.heylix');
+Route::get('/social-temp', \App\Livewire\Heylix\Template\Social::class)->name('social.temp');
+
+Route::get('/create-social', \App\Livewire\Heylix\Form\Social::class)->name('create.social');
 Route::get('/jobstatus-heylix', \App\Livewire\Heylix\Jobstatus::class)->name('jobstatus.heylix');
 Route::get('/brand-heylix', \App\Livewire\Heylix\Brand::class)->name('brand.heylix');
 Route::get('/virtual-heylix', \App\Livewire\Heylix\Virtual::class)->name('virtual.heylix');
