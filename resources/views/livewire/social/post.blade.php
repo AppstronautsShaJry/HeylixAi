@@ -14,8 +14,8 @@
                     <li class="breadcrumb-item active" aria-current="page">Post Insights</li>
                 </ol>
             </div>
-{{--            <div class="flex gap-2 flex-wrap">--}}
-{{--            </div>--}}
+            {{--            <div class="flex gap-2 flex-wrap">--}}
+            {{--            </div>--}}
         </div>
     </div>
 
@@ -128,7 +128,7 @@
                 <tr class="border-b  border-defaultborder dark:border-defaultborder/10">
                     {{--                    <th scope="row"><input class="form-check-input" type="checkbox" id="checkboxNoLabel1" value=""--}}
                     {{--                                           aria-label="..."></th>--}}
-                    <
+
                     <td>
                         <div class="flex items-center">
                             <span class="">

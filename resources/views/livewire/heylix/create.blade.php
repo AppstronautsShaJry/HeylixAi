@@ -17,34 +17,26 @@
             </div>
         </div>
 
-        <div x-data="{ currentPage: window.location.pathname }" class="p-2 py-6 flex items-center font-medium">
+        <div x-data="{ currentPage: window.location.pathname }" class="box flex flex-row p-3">
             <div
-                :class="currentPage === '/jobstatus-heylix' ? 'bg-[#FF5D9F]  rounded-l-sm text-white ' : ' hover:text-gray-400 dark:text-gray-400  rounded-md '"
+                :class="currentPage === '/create-heylix' ? 'bg-[#FF5D9F]  rounded-l-sm text-white ' : ' hover:text-gray-400 dark:text-gray-400  rounded-md '"
+                class="max-w-max py-3 px-2 group">
+                <a href="/create-heylix" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
+                    Create Image
+                </a>
+            </div>
+            <div
+                :class="currentPage === '/brand-heylix' ? 'bg-[#FF5D9F]  text-white ' : 'hover:text-gray-400 dark:text-gray-400 dark:bg-[#252528] bg-[#F8F9FB]'"
+                class="max-w-max py-3 px-2 group">
+                <a href="/brand-heylix" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
+                    Create Video
+                </a>
+            </div>
+            <div
+                :class="currentPage === '/jobstatus-heylix' ? 'bg-[#FF5D9F]  rounded-r-sm text-white ' : ' hover:text-gray-400 dark:text-gray-400 dark:bg-[#252528] bg-[#F8F9FB] rounded-r-sm'"
                 class="max-w-max py-3 px-2 group">
                 <a href="/jobstatus-heylix" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
                     JobStatus
-                </a>
-            </div>
-            <!-- Twitter Tab -->
-            <div
-                :class="currentPage === '/create-heylix' ? 'bg-[#FF5D9F] text-white' : 'hover:text-gray-400 dark:text-gray-400  rounded-md'"
-                class="max-w-max py-3 px-2 group">
-                <a href="/create-heylix" class="text-sm inline-flex items-center gap-x-3 dark:hover:text-white">
-                    Content Creation
-                </a>
-            </div>
-            <div
-                :class="currentPage === '/brand-heylix' ? 'bg-[#FF5D9F] text-white ' : 'hover:text-gray-400  dark:text-gray-400  rounded-md '"
-                class="max-w-max py-3 px-2 group">
-                <a href="/brand-heylix" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
-                    Branding
-                </a>
-            </div>
-            <div
-                :class="currentPage === '/virtual-heylix' ? 'bg-[#FF5D9F] rounded-r-sm text-white ' : ' hover:text-gray-400  dark:text-gray-400  rounded-md '"
-                class="max-w-max py-3 px-2 group">
-                <a href="/virtual-heylix" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
-                    Virtual Staff
                 </a>
             </div>
         </div>
@@ -72,7 +64,6 @@
                                             <option value="Business">Apple</option>
                                         </x-input.single-select>
                                     </div>
-                                    `
 
                                     <div class="xl:col-span-12 col-span-12">
                                         <label for="input-placeholder" class="form-label"
@@ -233,29 +224,6 @@
                 class="w-full xxl:col-span-3 sm:col-span-4 col-span-12 gap-y-8 flex flex-col justify-start items-center">
                 <div class="box w-full">
                     <div class="box-body">
-                        {{--                        <div class="flex items-center gap-2 mb-3">--}}
-                        {{--                            <div class="flex items-center gap-1 flex-wrap">--}}
-                        {{--                                <div class="leading-none">--}}
-                        {{--                                                <span class="avatar avatar-sm avatar-rounded">--}}
-                        {{--                                                    <img src="{{asset('build/assets/images/faces/12.jpg')}}" alt="">--}}
-                        {{--                                                </span>--}}
-                        {{--                                </div>--}}
-                        {{--                                <div>--}}
-                        {{--                                    <div class="">Jane Smith</div>--}}
-                        {{--                                    <div class="text-textmuted dark:text-textmuted/50 text-[10px]">15, April 2024 - 02:15PM</div>--}}
-                        {{--                                </div>--}}
-                        {{--                            </div>--}}
-                        {{--                            <div class="ti-dropdown hs-dropdown ms-auto">--}}
-                        {{--                                <a aria-label="anchor" href="javascript:void(0);" class="ti-btn bg-light ti-btn-icons ti-btn-sm text-textmuted dark:text-textmuted/50 ti-dropdown-toggle hs-dropdown-toggle">--}}
-                        {{--                                    <i class="fe fe-more-vertical"></i>--}}
-                        {{--                                </a>--}}
-                        {{--                                <ul class="ti-dropdown-menu hs-dropdown-menu hidden">--}}
-                        {{--                                    <li><a class="ti-dropdown-item" href="javascript:void(0);">Edit</a></li>--}}
-                        {{--                                    <li><a class="ti-dropdown-item" href="javascript:void(0);">Delete</a></li>--}}
-                        {{--                                    <li><a class="ti-dropdown-item" href="javascript:void(0);">View Details</a></li>--}}
-                        {{--                                </ul>--}}
-                        {{--                            </div>--}}
-                        {{--                        </div>--}}
 
                         <div class="xxl:col-span-5 col-span-12">
                             <div
@@ -266,14 +234,7 @@
                                             <h5 class="font-medium mb-2 text-white">Notice 🔔 </h5>
                                             <span class="text-white block mb-2 opacity-70">we need min 24 hours to create</span>
                                             <span class="text-white block mb-2 opacity-70">Changes Can be done</span>
-                                            {{--                                            <button type="button"--}}
-                                            {{--                                                    class="ti-btn bg-primarytint1color text-white btn-w-md !mt-2 !mb-0">--}}
-                                            {{--                                                View Courses--}}
-                                            {{--                                            </button>--}}
                                         </div>
-                                        {{--                                        <div class="xl:col-span-3 md:col-span-4 col-span-12 text-end px-3">--}}
-                                        {{--                                            <img src="{{asset('build/assets/images/media/media-81.png')}}" alt="" class="img-fluid banner10-img">--}}
-                                        {{--                                   </div>--}}
                                     </div>
                                 </div>
                             </div>

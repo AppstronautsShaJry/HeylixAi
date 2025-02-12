@@ -12,61 +12,30 @@
                 </nav>
             </div>
         </div>
+
         <!-- Page Header Close -->
 
-        <div x-data="{ currentPage: window.location.pathname }" class="p-2 py-6 flex items-center font-medium">
-            <div
-                :class="currentPage === '/jobstatus-heylix' ? 'bg-[#FF5D9F]  rounded-l-sm text-white ' : ' hover:text-gray-400 dark:text-gray-400  rounded-md '"
-                class="max-w-max py-3 px-2 group">
-                <a href="/jobstatus-heylix" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
-                    JobStatus
-                </a>
-            </div>
-            <!-- Twitter Tab -->
-            <div
-                :class="currentPage === '/create-heylix' ? 'bg-[#FF5D9F]   text-white' : 'hover:text-gray-400 dark:text-gray-400  rounded-md'"
-                class="max-w-max py-3 px-2 group">
-                <a href="/create-heylix" class="text-sm inline-flex items-center gap-x-3 dark:hover:text-white">
-                    Content Creation
-                </a>
-            </div>
-            <div
-                :class="currentPage === '/brand-heylix' ? 'bg-[#FF5D9F]  text-white ' : 'hover:text-gray-400 dark:text-gray-400  rounded-md '"
-                class="max-w-max py-3 px-2 group">
-                <a href="/brand-heylix" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
-                    Branding
-                </a>
-            </div>
-            <div
-                :class="currentPage === '/virtual-heylix' ? 'bg-[#FF5D9F]  rounded-r-sm text-white ' : ' hover:text-gray-400 dark:text-gray-400  rounded-md '"
-                class="max-w-max py-3 px-2 group">
-                <a href="/virtual-heylix" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
-                    Virtual Staff
-                </a>
-            </div>
+        <div class="box ">
+            <nav
+                class="flex rtl:space-x-reverse p-4 border-b border-defaultborder dark:border-defaultborder/10 flex-wrap sm:flex-nowrap gap-2"
+                aria-label="Tabs" role="tablist">
+                <button type="button"
+                        class="hs-tab-active:bg-[#FF5D9F] hs-tab-active:text-white flex-grow sm:flex-grow-0 bg-primary/10 py-2 px-[1.35rem] inline-flex items-center gap-2 text-sm font-medium text-center text-primary rounded-sm hover:text-primary  dark:text-[#8c9097] dark:text-white/50 dark:hover:text-white active"
+                        id="users-tab" data-hs-tab="#users-tab1" aria-controls="users-tab1">
+                    My Staff
+                </button>
+                <button type="button"
+                        class="hs-tab-active:bg-[#FF5D9F] hs-tab-active:text-white flex-grow sm:flex-grow-0 py-2 px-[1.35rem] inline-flex items-center gap-2 bg-primary/10 text-sm font-medium text-center text-primary rounded-sm hover:text-primary  dark:text-[#8c9097] dark:text-white/50 dark:hover:text-white"
+                        id="groups-tab" data-hs-tab="#groups-tab-pane" aria-controls="groups-tab-pane">
+                    Hire New
+                </button>
+            </nav>
         </div>
 
-
-        <!-- Start::app-content -->
-
-        <!-- Page Header Close -->
-
         <div class="main-chart-wrapper lg:gap-2 gap-0 mb-2 lg:flex ">
+
             <div class="chat-info border border-defaultborder dark:border-defaultborder/10">
-                <nav
-                    class="flex rtl:space-x-reverse p-4 border-b border-defaultborder dark:border-defaultborder/10 flex-wrap sm:flex-nowrap gap-2"
-                    aria-label="Tabs" role="tablist">
-                    <button type="button"
-                            class="hs-tab-active:bg-primary hs-tab-active:text-white flex-grow sm:flex-grow-0 bg-primary/10 py-2 px-[1.35rem] inline-flex items-center gap-2 text-sm font-medium text-center text-primary rounded-sm hover:text-primary  dark:text-[#8c9097] dark:text-white/50 dark:hover:text-white active"
-                            id="users-tab" data-hs-tab="#users-tab1" aria-controls="users-tab1">
-                        My Staff
-                    </button>
-                    <button type="button"
-                            class="hs-tab-active:bg-primary hs-tab-active:text-white flex-grow sm:flex-grow-0 py-2 px-[1.35rem] inline-flex items-center gap-2 bg-primary/10 text-sm font-medium text-center text-primary rounded-sm hover:text-primary  dark:text-[#8c9097] dark:text-white/50 dark:hover:text-white"
-                            id="groups-tab" data-hs-tab="#groups-tab-pane" aria-controls="groups-tab-pane">
-                        Hire New
-                    </button>
-                </nav>
+
 
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane show active border-0 chat-users-tab" id="users-tab1" role="tabpanel"
@@ -280,11 +249,13 @@
                                                 <p class="mb-1 grow"><span
                                                         class="text-textmuted dark:text-textmuted/50">Part Time
                                                             :</span> <span class="font-medium"> $55,000</span> - <span
-                                                        class="font-medium"> $80,000</span><span class="font-medium"> (4 hours)</span></p>
+                                                        class="font-medium"> $80,000</span><span class="font-medium"> (4 hours)</span>
+                                                </p>
                                                 <p class="mb-1 grow"><span
                                                         class="text-textmuted dark:text-textmuted/50">Full Time
                                                             :</span> <span class="font-medium"> $55,000</span> - <span
-                                                        class="font-medium"> $80,000</span><span class="font-medium"> (8 hours)</span></p>
+                                                        class="font-medium"> $80,000</span><span class="font-medium"> (8 hours)</span>
+                                                </p>
                                                 <p class="mb-0"><span class="text-textmuted dark:text-textmuted/50">
                                                             Languages :</span> <span class="font-medium"> English,
                                                             Spanish, Kannada</span></p>
@@ -522,9 +493,9 @@
                                             <p class="mb-0">okay. &#128516;</p>
                                         </div>
                                     </div>
-{{--                                    <span class="chatting-user-info chatnameperson">--}}
-{{--                                                Kerina Cherish <span class="msg-sent-time">11:45PM</span>--}}
-{{--                                            </span>--}}
+                                    {{--                                    <span class="chatting-user-info chatnameperson">--}}
+                                    {{--                                                Kerina Cherish <span class="msg-sent-time">11:45PM</span>--}}
+                                    {{--                                            </span>--}}
                                 </div>
                             </div>
                         </li>
