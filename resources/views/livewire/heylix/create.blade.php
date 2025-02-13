@@ -49,7 +49,8 @@
 
             <div class="box xxl:col-span-9 xl:col-span-9 col-span-12">
 
-                <span class="text-lg font-semibold">Select your Goal</span>
+                <span class="text-xl font-semibold mb-3">Select your goal</span>
+                <span class="text-sm font-semibold">Single Image Post</span>
 
                 <div
                     class="flex xl:grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-5 p-4 w-full h-auto">
@@ -73,7 +74,7 @@
 
                 </div>
 
-                <span class="text-lg font-semibold">Single Image Post</span>
+                <span class="text-lg font-semibold">Multiple image post</span>
 
                 <div
                     class=" flex justify-between gap-5 p-4 w-full h-auto">
@@ -93,7 +94,7 @@
 
             <div
                 class="w-full xxl:col-span-3 xl:col-span-3 sm:col-span-4 col-span-12 justify-start items-center">
-                <div class="box w-full mt-[45px]">
+                <div class="w-full mt-[80px]">
                     <div class="xxl:col-span-5 col-span-12">
                         <div
                             class="box course-main overflow-hidden cover-image bg-cover bg-primary dark:!bg-primary">
