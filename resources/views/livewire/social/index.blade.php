@@ -11,7 +11,6 @@
 <!-- Start::app-content -->
 <div class="main-content app-content">
     <div class="container-fluid">
-
         <!-- Page Header -->
         <div class="flex items-center justify-between page-header-breadcrumb flex-wrap gap-2">
             <div>

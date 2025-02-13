@@ -6,6 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
+use Spatie\Permission\Exceptions\UnauthorizedException;
 
 class RoleMiddleware
 {
@@ -19,11 +20,25 @@ class RoleMiddleware
 //        return $next($request);
 //    }
 
+//    public function handle(Request $request, Closure $next, $role)
+//    {
+//        if (!Auth::check() || !Auth::user()->hasRole($role)) {
+//            abort(403, 'Unauthorized access.');
+//        }
+//        return $next($request);
+//    }
+
+
     public function handle(Request $request, Closure $next, $role)
     {
-        if (!Auth::check() || !Auth::user()->hasRole($role)) {
-            abort(403, 'Unauthorized access.');
+        if (!Auth::check()) {
+            throw UnauthorizedException::notLoggedIn();
         }
+
+        if (!Auth::user()->hasRole($role)) {
+            throw UnauthorizedException::forRoles([$role]);
+        }
+
         return $next($request);
     }
 }

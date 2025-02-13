@@ -8,4 +8,6 @@ class SocialAccount extends Model
 {
    protected $table = 'social_accounts';
    protected $guarded = [];
+
+
 }
