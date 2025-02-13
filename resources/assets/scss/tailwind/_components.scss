@@ -3,6 +3,11 @@
 .box {
   @apply flex flex-col shadow-defaultshadow dark:shadow-[0px_2px_1px_-1px_rgba(255,255,255,0.05)] rounded-md border-0 text-defaulttextcolor dark:text-defaulttextcolor/70 bg-white  text-[0.813rem]  mb-6 relative dark:bg-bodybg;
 }
+
+.box-new {
+    @apply flex flex-col shadow-defaultshadow dark:shadow-[0px_2px_1px_-1px_rgba(255,255,255,0.05)] rounded-md border-0 text-defaulttextcolor dark:text-defaulttextcolor/70 bg-white  text-[0.813rem] relative dark:bg-bodybg;
+}
+
 .box-tab {
     @apply flex shadow-defaultshadow dark:shadow-[0px_2px_1px_-1px_rgba(255,255,255,0.05)] rounded-md border-0 text-defaulttextcolor dark:text-defaulttextcolor/70 bg-white  text-[0.813rem]  mb-6 relative dark:bg-bodybg;
 }
