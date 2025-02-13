@@ -98,7 +98,7 @@ Route::post('/facebook/post', [FacebookController::class, 'postToFacebook'])->na
 Route::get('/calender-social', \App\Livewire\Social\Index::class)->name('calender.social');
 Route::get('/posts-social', \App\Livewire\Social\Post::class)->name('posts.social');
 
-Route::get('/create-social', \App\Livewire\Social\Create::class)->name('create.social');
+Route::get('/create-event', \App\Livewire\Social\Create::class)->name('create.event');
 Route::get('/edit-social', \App\Livewire\Social\Edit::class)->name('edit.social');
 
 //Heylix
