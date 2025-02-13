@@ -57,7 +57,7 @@
             <div class="xl:col-span-3 col-span-12">
                 <div class="box">
                     <div class="box-header justify-between">
-                        <a href="{{route('create.social')}}">
+                        <a href="{{route('create.event')}}">
                             <button class="ti-btn bg-gradient-to-r from-info to-primary text-white btn-wave"><i
                                     class="ri-add-line align-middle me-1 font-medium inline-block"></i>Create New Event
                             </button>

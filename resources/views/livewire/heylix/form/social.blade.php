@@ -24,9 +24,9 @@
         <div class="flex items-center justify-between page-header-breadcrumb flex-wrap gap-2">
             <div>
                 <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item active" aria-current="page"><a href="/calender-social">Advertising</a>
+                    <li class="breadcrumb-item active" aria-current="page"><a href="/calender-social">Heylix</a>
                     </li>
-                    <li class="breadcrumb-item active" aria-current="page">Awarness Ad</li>
+                    <li class="breadcrumb-item active" aria-current="page">Create Social</li>
 
                 </ol>
             </div>
@@ -42,6 +42,32 @@
                     <div class="col-span-12 ">
                         <span class="text-lg font-semibold">Create Social</span>
 
+                    </div>
+
+                    <div class="col-span-12 flex flex-row gap-[32px]">
+
+                        <div class="flex flex-row gap-2">
+                            <label class="ti-form-label"></label>
+
+                            <div class="hs-tooltip ti-main-tooltip [--trigger:click] [--placement:top]">
+                                <a class="hs-tooltip-toggle ti-main-tooltip-toggle" href="javascript:void(0);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="size-5 fill-primary mb-2"
+                                         height="24px" viewBox="0 0 24 24" width="24px">
+                                        <path d="M0 0h24v24H0V0z" fill="none"/>
+                                        <path
+                                            d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"/>
+                                    </svg>
+                                    <div
+                                        class="hs-tooltip-content ti-main-tooltip-content border border-defaultborder dark:border-defaultborder/10 !py-4 !px-4 !bg-primary !text-white"
+                                        role="tooltip">
+                                        <p>The Icon Popover</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w-9/12">
+                            <input type="text" class="form-control" placeholder="" aria-label="First name">
+                        </div>
                     </div>
 
                     <div class="col-span-12 flex flex-row gap-[32px]">
@@ -208,31 +234,8 @@
                 <span class="flex text-lg font-bold px-3 py-5">
                     Add Assets
                 </span>
-                        {{--                        <button type="button"--}}
-                        {{--                                class="hs-dropdown-toggle ti-btn  py-2btn-wave ti-btn-primary"--}}
-                        {{--                                data-hs-overlay="#exampleModalScrollable4">Get Creative--}}
-                        {{--                        </button>--}}
-                    </div>
 
-                    {{--                    <div class="col-span-12">--}}
-                    {{--                        <div class="flex flex-row gap-5 my-2">--}}
-                    {{--                            <label for="inputEmail4" class="ti-form-label">File Type</label>--}}
-                    {{--                            <div class="form-check">--}}
-                    {{--                                <input class="form-check-input" type="radio" name="flexRadioDefault"--}}
-                    {{--                                       id="flexRadioDefault1">--}}
-                    {{--                                <label class="form-check-label" for="flexRadioDefault1">--}}
-                    {{--                                    Image--}}
-                    {{--                                </label>--}}
-                    {{--                            </div>--}}
-                    {{--                            <div class="form-check">--}}
-                    {{--                                <input class="form-check-input" type="radio" name="flexRadioDefault"--}}
-                    {{--                                       id="flexRadioDefault2" checked="">--}}
-                    {{--                                <label class="form-check-label" for="flexRadioDefault2">--}}
-                    {{--                                    Video--}}
-                    {{--                                </label>--}}
-                    {{--                            </div>--}}
-                    {{--                        </div>--}}
-                    {{--                    </div>--}}
+                    </div>
 
                     <div class="text-xs px-3 font-medium">Image 1</div>
                     <div class="box-body">
