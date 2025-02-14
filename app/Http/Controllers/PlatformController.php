@@ -3,23 +3,28 @@
 namespace App\Http\Controllers;
 
 use App\Models\FacebookPage;
+use App\Models\SocialAccount;
 use Illuminate\Http\Request;
 
 class PlatformController extends Controller
 {
     public function facebook() {
-        $pages = FacebookPage::all();
+        $pages = SocialAccount::where('platform', 'facebook')->get();
         return view('pages.platform.facebook')->with('pages', $pages);
     }
     public function instagram() {
-        return view('pages.platform.instagram');
+        $pages = SocialAccount::where('platform', 'instagram')->get();
+        return view('pages.platform.instagram')->with('pages', $pages);
     }
     public function twitter() {
-        return view('pages.platform.twitter');
+        $pages = SocialAccount::where('platform', 'twitter')->get();
+
+        return view('pages.platform.twitter')->with('pages', $pages);
     }
     public function linkedin()
     {
-        return view('pages.platform.linkedin');
+        $pages = SocialAccount::where('platform', 'linkedin')->get();
+        return view('pages.platform.linkedin')->with('pages', $pages);
     }
 
     public function authFacebook()

@@ -17,71 +17,95 @@
             </div>
         </div>
     </div>
-
     <div class="box p-5 space-y-8">
-        <div x-cloak x-data="{ tab: 'tab1' }" class="h-12  flex justify-between px-5">
+
+        <div x-cloak x-data="{
+            activeTab: 'facebook',
+            selectedTabs: {
+                facebook: [],
+                instagram: [],
+                twitter: [],
+                linkedin: []
+            }
+            }" class="h-auto flex justify-between item-center px-5 gap-y-3">
             <!-- Tab Buttons -->
-            <div class="flex font-medium dark:border-none border rounded-sm dark:bg-black bg-gray-200">
-                <button
-                    @click="tab = 'tab1'"
-                    :class="tab === 'tab1' ? 'bg-[#FF5D9F] text-white' : ' text-gray-400'"
-                    class="px-4 py-2 rounded-l-sm focus:outline-none  dark:hover:text-white hover:text-black">
+            <div class="flex font-medium dark:border-none border rounded-sm  ">
+                <button @click="activeTab = 'facebook'"
+                        :class="activeTab === 'facebook' ? 'bg-[#FF5D9F] text-white border-2 border-[#FF5D9F]' : 'dark:bg-black bg-gray-200 text-gray-400'"
+                        class="px-4 py-2 rounded-l-sm focus:outline-none dark:hover:text-white hover:text-black">
                     <i class="ri-facebook-line"></i>
                 </button>
-                <button
-                    @click="tab = 'tab2'"
-                    :class="tab === 'tab2' ? 'bg-[#FF5D9F] text-white' : ' text-gray-400'"
-                    class="px-4 py-2 focus:outline-none  dark:hover:text-white hover:text-black">
+                <button @click="activeTab = 'instagram'"
+                        :class="activeTab === 'instagram' ? 'bg-[#FF5D9F] text-white border-2 border-[#FF5D9F]' : 'dark:bg-black bg-gray-200 text-gray-400'"
+                        class="px-4 py-2 focus:outline-none dark:hover:text-white hover:text-black">
                     <i class="ri-instagram-line"></i>
                 </button>
-                <button
-                    @click="tab = 'tab3'"
-                    :class="tab === 'tab3' ? 'bg-[#FF5D9F] text-white' : ' text-gray-400'"
-                    class="px-4 py-2  focus:outline-none  dark:hover:text-white hover:text-black">
+                <button @click="activeTab = 'twitter'"
+                        :class="activeTab === 'twitter' ? 'bg-[#FF5D9F] text-white border-2 border-[#FF5D9F]' : 'dark:bg-black bg-gray-200 text-gray-400'"
+                        class="px-4 py-2 focus:outline-none dark:hover:text-white hover:text-black">
                     <i class="ri-twitter-x-line"></i>
                 </button>
-                <button
-                    @click="tab = 'tab4'"
-                    :class="tab === 'tab4' ? 'bg-[#FF5D9F] text-white' : ' text-gray-400'"
-                    class="px-4 py-2 rounded-r-sm focus:outline-none  dark:hover:text-white hover:text-black">
+                <button @click="activeTab = 'linkedin'"
+                        :class="activeTab === 'linkedin' ? 'bg-[#FF5D9F] text-white border-2 border-[#FF5D9F]' : 'dark:bg-black bg-gray-200 text-gray-400'"
+                        class="px-4 py-2 rounded-r-sm focus:outline-none dark:hover:text-white hover:text-black">
                     <i class="ri-linkedin-line"></i>
                 </button>
             </div>
-
             <!-- Tab Content -->
             <div class="text-md">
-                <div x-cloak x-show="tab === 'tab1'" class="flex gap-x-2 items-center">
-                    <div class="flex items-center gap-x-2 h-12">
-                        <button class="h-full px-3 bg-info-gradient rounded-sm text-white">Feeds</button>
+                <template x-if="activeTab === 'facebook'">
+                    <div class="flex gap-x-2">
+                        <button
+                            @click="selectedTabs.facebook.includes('Feeds') ? selectedTabs.facebook = selectedTabs.facebook.filter(i => i !== 'Feeds') : selectedTabs.facebook.push('Feeds')"
+                            :class="selectedTabs.facebook.includes('Feeds') ? 'px-4 py-2  bg-info-gradient text-white border-2 border-[#FF5D9F]' : ' px-4 py-2 bg-gray-200 text-black'"
+                            class="h-full px-3 rounded-sm">Feeds
+                        </button>
+                        <button
+                            @click="selectedTabs.facebook.includes('Reels') ? selectedTabs.facebook = selectedTabs.facebook.filter(i => i !== 'Reels') : selectedTabs.facebook.push('Reels')"
+                            :class="selectedTabs.facebook.includes('Reels') ? 'px-4 py-2  bg-info-gradient text-white border-2 border-[#FF5D9F]' : ' px-4 py-2 bg-gray-200 text-black'"
+                            class="h-full px-3 rounded-sm">Reels
+                        </button>
                     </div>
-                    <div class="flex items-center gap-x-2 h-12">
-                        <button class="h-full px-3 bg-info-gradient rounded-sm text-white">Reels</button>
+                </template>
+                <template x-if="activeTab === 'instagram'">
+                    <div class="flex gap-x-2">
+                        <button
+                            @click="selectedTabs.instagram.includes('Feeds') ? selectedTabs.instagram = selectedTabs.instagram.filter(i => i !== 'Feeds') : selectedTabs.instagram.push('Feeds')"
+                            :class="selectedTabs.instagram.includes('Feeds') ? 'px-4 py-2  bg-info-gradient text-white border-2 border-[#FF5D9F]' : ' px-4 py-2 bg-gray-200 text-black'"
+                            class="h-full px-3 rounded-sm">Feeds
+                        </button>
+                        <button
+                            @click="selectedTabs.instagram.includes('Reels') ? selectedTabs.instagram = selectedTabs.instagram.filter(i => i !== 'Reels') : selectedTabs.instagram.push('Reels')"
+                            :class="selectedTabs.instagram.includes('Reels') ? 'px-4 py-2  bg-info-gradient text-white border-2 border-[#FF5D9F]' : ' px-4 py-2 bg-gray-200 text-black'"
+                            class="h-full px-3 rounded-sm">Reels
+                        </button>
+                        <button
+                            @click="selectedTabs.instagram.includes('Story') ? selectedTabs.instagram = selectedTabs.instagram.filter(i => i !== 'Story') : selectedTabs.instagram.push('Story')"
+                            :class="selectedTabs.instagram.includes('Story') ? 'px-4 py-2  bg-info-gradient text-white border-2 border-[#FF5D9F]' : ' px-4 py-2 bg-gray-200 text-black'"
+                            class="h-full px-3 rounded-sm">Story
+                        </button>
                     </div>
-                </div>
-                <div x-cloak x-show="tab === 'tab2'" class="flex gap-x-2">
-                    <div class="flex items-center gap-x-2 h-12">
-                        <button class="h-full px-3 bg-info-gradient rounded-sm text-white">Feeds</button>
+                </template>
+                <template x-if="activeTab === 'twitter'">
+                    <div class="flex gap-x-2">
+                        <button
+                            @click="selectedTabs.twitter.includes('Feeds') ? selectedTabs.twitter = selectedTabs.twitter.filter(i => i !== 'Feeds') : selectedTabs.twitter.push('Feeds')"
+                            :class="selectedTabs.twitter.includes('Feeds') ? 'px-4 py-2  bg-info-gradient text-white border-2 border-[#FF5D9F]' : ' px-4 py-2 bg-gray-200 text-black'"
+                            class="h-full px-3 rounded-sm">Feeds
+                        </button>
                     </div>
-                    <div class="flex items-center gap-x-2 h-12">
-                        <button class="h-full px-3 bg-info-gradient rounded-sm text-white">Reels</button>
+                </template>
+                <template x-if="activeTab === 'linkedin'">
+                    <div class="flex gap-x-2">
+                        <button
+                            @click="selectedTabs.linkedin.includes('Feeds') ? selectedTabs.linkedin = selectedTabs.linkedin.filter(i => i !== 'Feeds') : selectedTabs.linkedin.push('Feeds')"
+                            :class="selectedTabs.linkedin.includes('Feeds') ? 'px-4 py-2  bg-info-gradient text-white border-2 border-[#FF5D9F]' : ' px-4 py-2 bg-gray-200 text-black'"
+                            class="h-full px-3 rounded-sm">Feeds
+                        </button>
                     </div>
-                    <div class="flex items-center gap-x-2 h-12">
-                        <button class="h-full px-3 bg-info-gradient rounded-sm text-white">Story</button>
-                    </div>
-                </div>
-                <div x-cloak x-show="tab === 'tab3'" class="flex gap-x-2">
-                    <div class="flex items-center gap-x-2 h-12">
-                        <button class="h-full px-3 bg-info-gradient rounded-sm text-white">Feeds</button>
-                    </div>
-                </div>
-                <div x-cloak x-show="tab === 'tab4'" class="flex gap-x-2">
-                    <div class="flex items-center gap-x-2 h-12">
-                        <button class="h-full px-3 bg-info-gradient rounded-sm text-white">Feeds</button>
-                    </div>
-                </div>
+                </template>
             </div>
         </div>
-
         <div class="grid grid-cols-12 sm:gap-x-12 px-5">
             <div class="xxl:col-span-9 sm:col-span-8 col-span-12">
                 <div class="box">
@@ -100,7 +124,6 @@
                                         <input type="text" class="form-control" id="nft-link"
                                                placeholder="Title">
                                     </div>
-
                                     <div class="flex flex-row items-center gap-5 col-span-12 ">
                                         <div class="w-full flex flex-col ">
                                             <label for="input-placeholder" class="form-label">Type of Content</label>
@@ -108,7 +131,6 @@
                                                 <option value="AI">Image</option>
                                                 <option value="Technology">Corousel</option>
                                                 <option value="Business">Shorts/Reel</option>
-{{--                                                <option value="Business">Animated Post</option>--}}
                                             </x-input.single-select>
                                         </div>
                                         <div class="w-full flex flex-col">
@@ -125,7 +147,6 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div x-data="voiceTyping" class="col-span-12  flex flex-col">
                                         <h2 class="text-xl font-bold text-gray-700 mb-4">Description</h2>
                                         <!-- Textarea -->
@@ -152,7 +173,6 @@
                                                         :class="isListening ? 'text-red-500' : 'text-[#A5A5A6]'"></span>
                                                     <span>
                                                 </span>
-
                                                 </button>
 
                                                 <!-- Recording Indicator -->
@@ -177,84 +197,11 @@
                                                         AI Assistant
                                                     </span>
                                             </button>
-                                            <div class="hs-dropdown ti-dropdown">
-                                                <button type="button" id="dropdownMenuButton1"
-                                                        aria-expanded="false"
-                                                        class="inline-flex items-center gap-x-2 bg-transparent border border-info rounded-sm p-3">
-                                                    <span>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                             fill="currentColor" class="w-6 h-6 text-info"
-                                                             viewBox="0 0 16 16">
-                                                        <path
-                                                            d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5M3 8.062C3 6.76 4.235 5.765 5.53 5.886a26.6 26.6 0 0 0 4.94 0C11.765 5.765 13 6.76 13 8.062v1.157a.93.93 0 0 1-.765.935c-.845.147-2.34.346-4.235.346s-3.39-.2-4.235-.346A.93.93 0 0 1 3 9.219zm4.542-.827a.25.25 0 0 0-.217.068l-.92.9a25 25 0 0 1-1.871-.183.25.25 0 0 0-.068.495c.55.076 1.232.149 2.02.193a.25.25 0 0 0 .189-.071l.754-.736.847 1.71a.25.25 0 0 0 .404.062l.932-.97a25 25 0 0 0 1.922-.188.25.25 0 0 0-.068-.495c-.538.074-1.207.145-1.98.189a.25.25 0 0 0-.166.076l-.754.785-.842-1.7a.25.25 0 0 0-.182-.135"/>
-                                                        <path
-                                                            d="M8.5 1.866a1 1 0 1 0-1 0V3h-2A4.5 4.5 0 0 0 1 7.5V8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1v-.5A4.5 4.5 0 0 0 10.5 3h-2zM14 7.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.5A3.5 3.5 0 0 1 5.5 4h5A3.5 3.5 0 0 1 14 7.5"/>
-                                                    </svg>
-                                                    </span>
-                                                    <span class="">
-                                                        Pre Defined <i
-                                                            class="ri-arrow-down-s-line align-middle inline-block"></i>
-                                                    </span>
-                                                </button>
-                                                {{--                                                        <button class="ti-btn btn-wave  ti-btn-outline-info ti-dropdown-toggle" type="button"--}}
-                                                {{--                                                                id="dropdownMenuButton1"--}}
-                                                {{--                                                                aria-expanded="false">--}}
-                                                {{--                                                            Pre Defined<i class="ri-arrow-down-s-line align-middle inline-block"></i>--}}
-                                                {{--                                                        </button>--}}
-                                                <ul class="hs-dropdown-menu ti-dropdown-menu hidden"
-                                                    aria-labelledby="dropdownMenuButton1">
-                                                    <li><a class="ti-dropdown-item"
-                                                           href="javascript:void(0);">Food</a>
-                                                    </li>
-                                                    <li><a class="ti-dropdown-item"
-                                                           href="javascript:void(0);">Business</a>
-                                                    </li>
-                                                    <li><a class="ti-dropdown-item"
-                                                           href="javascript:void(0);">Home</a>
-                                                    </li>
-                                                    <li><a class="ti-dropdown-item"
-                                                           href="javascript:void(0);">Finance</a>
-                                                    </li>
-                                                    <li><a class="ti-dropdown-item"
-                                                           href="javascript:void(0);">Travel</a>
-                                                    </li>
-                                                    <li><a class="ti-dropdown-item" href="javascript:void(0);">Technology</a>
-                                                    </li>
-                                                    <li><a class="ti-dropdown-item"
-                                                           href="javascript:void(0);">Health</a>
-                                                    </li>
-                                                    <li><a class="ti-dropdown-item"
-                                                           href="javascript:void(0);">Education</a>
-                                                    </li>
-                                                    <li><a class="ti-dropdown-item" href="javascript:void(0);">Entertainment</a>
-                                                    </li>
-                                                    <li><a class="ti-dropdown-item"
-                                                           href="javascript:void(0);">Sports</a>
-                                                    </li>
-                                                    <li><a class="ti-dropdown-item"
-                                                           href="javascript:void(0);">Shopping</a>
-                                                    </li>
-                                                    <li><a class="ti-dropdown-item"
-                                                           href="javascript:void(0);">Fashion</a>
-                                                    </li>
-                                                    <li><a class="ti-dropdown-item" href="javascript:void(0);">Real
-                                                            Estate</a></li>
-                                                    <li><a class="ti-dropdown-item" href="javascript:void(0);">Automotive</a>
-                                                    </li>
-                                                    <li><a class="ti-dropdown-item"
-                                                           href="javascript:void(0);">Lifestyle</a>
-                                                    </li>
-
-                                                </ul>
-                                            </div>
-
                                         </div>
                                     </div>
-
                                     <div class="col-span-12 flex flex-col">
                                         <div id="container" x-data="voiceTyping"
                                              class="text-center w-full ">
-
                                             <div id="hs-vertically-centered-modal"
                                                  class="hs-overlay hidden ti-modal">
                                                 <div
@@ -298,7 +245,6 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-
                                                         <div class="flex px-4 justify-between items-center h-full">
                                                             <div
                                                                 class="xl:col-span-6 lg:col-span-6 md:col-span-6 sm:col-span-12 col-span-12 h-full">
@@ -306,7 +252,6 @@
                                                                        id="input-number"
                                                                        placeholder="Words Limit">
                                                             </div>
-
                                                             <div class="flex inline-flex">
                                                                 <button type="button"
                                                                         class="hs-dropdown-toggle ti-btn  btn-wave ti-btn-secondary"
@@ -329,10 +274,6 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-
-                                            <div class="ti-btn-group !p-0 !border-0 !m-0">
-
                                             </div>
                                         </div>
                                     </div>
@@ -435,7 +376,6 @@
                                     </span>
                                 </div>
                             </div>
-
                         </div>
                         <div class="py-1.5">
                             {{\Illuminate\Support\Str::words('
@@ -791,11 +731,9 @@
                     </div>
                 </div>
             </div>
-
         </div>
-
-
     </div>
+
 </div>
 <script>
     document.addEventListener("alpine:init", () => {
@@ -849,58 +787,32 @@
         alert("Your browser does not support speech recognition.");
     }
 </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let currentStep = 1;
+        const steps = document.querySelectorAll(".step");
 
-{{--<script>--}}
-{{--    document.addEventListener('alpine:init', () => {--}}
-{{--        Alpine.data('voiceTyping', () => ({--}}
-{{--            text: '',--}}
-{{--            recognition: null,--}}
+        function showStep(step) {
+            steps.forEach(s => s.style.display = "none");
+            document.querySelector(`.step[data-step='${step}']`).style.display = "block";
+        }
 
-{{--            init() {--}}
-{{--                // Check if SpeechRecognition is supported--}}
-{{--                const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;--}}
+        document.querySelectorAll(".next-step").forEach(button => {
+            button.addEventListener("click", function() {
+                if (currentStep < steps.length) {
+                    currentStep++;
+                    showStep(currentStep);
+                }
+            });
+        });
 
-{{--                if (!SpeechRecognition) {--}}
-{{--                    alert('Speech recognition is not supported in this browser.');--}}
-{{--                    return;--}}
-{{--                }--}}
-
-{{--                // Initialize SpeechRecognition--}}
-{{--                this.recognition = new SpeechRecognition();--}}
-{{--                this.recognition.continuous = true; // Continue recognizing speech--}}
-{{--                this.recognition.interimResults = true; // Show interim results--}}
-
-{{--                this.recognition.onresult = (event) => {--}}
-{{--                    this.text = Array.from(event.results)--}}
-{{--                        .map(result => result[0].transcript)--}}
-{{--                        .join('');--}}
-{{--                };--}}
-
-{{--                this.recognition.onerror = (event) => {--}}
-{{--                    alert('Error occurred in recognition: ' + event.error);--}}
-{{--                };--}}
-{{--            },--}}
-
-{{--            startVoiceTyping() {--}}
-{{--                if (this.recognition) {--}}
-{{--                    this.recognition.start();--}}
-{{--                }--}}
-{{--            }--}}
-{{--        }));--}}
-{{--    });--}}
-
-{{--    // Attach functionality to all upload containers--}}
-{{--    document.querySelectorAll('.upload-container').forEach(container => {--}}
-{{--        const fileInput = container.querySelector('.file-upload');--}}
-{{--        const fileNameDisplay = container.querySelector('.file-name');--}}
-{{--        const uploadLabel = container.querySelector('.upload-label');--}}
-
-{{--        // Trigger file input when clicking the label--}}
-{{--        uploadLabel.addEventListener('click', () => fileInput.click());--}}
-
-{{--        // Update file name display when a file is selected--}}
-{{--        fileInput.addEventListener('change', () => {--}}
-{{--            fileNameDisplay.textContent = fileInput.files[0]?.name || 'No file selected';--}}
-{{--        });--}}
-{{--    });--}}
-{{--</script>--}}
+        document.querySelectorAll(".prev-step").forEach(button => {
+            button.addEventListener("click", function() {
+                if (currentStep > 1) {
+                    currentStep--;
+                    showStep(currentStep);
+                }
+            });
+        });
+    });
+</script>
