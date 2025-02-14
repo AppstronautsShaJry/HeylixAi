@@ -1,8 +1,13 @@
+@props([
+   'placeholer' => 'Search ....',
+])
+
 <div class="w-5/12">
+
     <label for="hs-trailing-button-add-on-with-icon" class="sr-only">Label</label>
     <div class="flex rounded-sm">
         <input type="text" id="hs-trailing-button-add-on-with-icon"
-               name="hs-trailing-button-add-on-with-icon"
+               name="hs-trailing-button-add-on-with-icon" placeholder="{{$placeholer}}"
                class="rtl:!rounded-tl-none !rounded-ee-none ti-form-input rounded-none !rounded-s-sm focus:z-10" {{$attributes}}>
         <button aria-label="button" type="button"
                 class="inline-flex flex-shrink-0 justify-center items-center h-[2.875rem] w-[2.875rem] rounded-e-sm border border-transparent font-semibold bg-primary text-white hover:bg-primary focus:z-10 focus:outline-none focus:ring-0 focus:ring-primary transition-all text-sm">
