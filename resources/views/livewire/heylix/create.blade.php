@@ -9,7 +9,7 @@
                     {{--                            Dashboard--}}
                     {{--                        </a>--}}
                     {{--                    </li>--}}
-                    <li class="breadcrumb-item active" aria-current="page"><a href="/calender-social">HeyLix</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><a href="/create-heylix">HeyLix</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Content Creation Service</li>
                 </ol>
             </div>
@@ -47,10 +47,7 @@
 
         <div class="grid grid-cols-12 sm:gap-x-12">
 
-            <div class="box xxl:col-span-9 xl:col-span-9 col-span-12">
-
-                <span class="text-xl font-semibold mb-3">Select your goal</span>
-                <span class="text-sm font-semibold">Single Image Post</span>
+            <div class="xxl:col-span-9 xl:col-span-9 col-span-12">
 
                 <div
                     class="flex xl:grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-5 p-4 w-full h-auto">
@@ -74,27 +71,20 @@
 
                 </div>
 
-                <span class="text-lg font-semibold">Multiple image post</span>
-
                 <div
                     class=" flex justify-between gap-5 p-4 w-full h-auto">
 
-                    <x-cards.card1 :title="'Facebook/LinkedIn Cover'"
-                                   description="Square - 1080x1080 "
-                                   route="leads" display="hidden"/>
-                    <x-cards.card1 :title="'Stories'"
-                                   description="Square - 1080x1080 "
-                                   route="messages" display="hidden"/>
-                    <x-cards.card1 :title="'Carousel'"
-                                   description="3-4 Slide Post"
-                                   description2="Square - 1080x1080"
-                                   route="call" display="hidden" />
+                    <div class="w-4/12">
+                        <x-cards.card1 :title="'Facebook/LinkedIn Cover'"
+                                       description="Square - 1080x1080 "
+                                       route="leads" display="hidden"/>
+                    </div>
                 </div>
             </div>
 
             <div
                 class="w-full xxl:col-span-3 xl:col-span-3 sm:col-span-4 col-span-12 justify-start items-center">
-                <div class="w-full mt-[80px]">
+                <div class="w-full mt-[20px]">
                     <div class="xxl:col-span-5 col-span-12">
                         <div
                             class="box course-main overflow-hidden cover-image bg-cover bg-primary dark:!bg-primary">

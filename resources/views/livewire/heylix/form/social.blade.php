@@ -24,9 +24,14 @@
         <div class="flex items-center justify-between page-header-breadcrumb flex-wrap gap-2">
             <div>
                 <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item active" aria-current="page"><a href="/calender-social">Heylix</a>
+                    <li class="breadcrumb-item active" aria-current="page"><a href="create-heylix">Heylix</a>
                     </li>
-                    <li class="breadcrumb-item active" aria-current="page">Create Social</li>
+
+                    <li class="breadcrumb-item active" aria-current="page"><a href="social-temp"> Template </a>
+                    </li>
+
+                    <li class="breadcrumb-item active" aria-current="page"><a href="create-social"> Create Social </a>
+                    </li>
 
                 </ol>
             </div>
@@ -38,12 +43,9 @@
 
             <div class="xl:col-span-8 col-span-12">
                 <form class="p-4 flex flex-col gap-4 box">
-
                     <div class="col-span-12 ">
                         <span class="text-lg font-semibold">Create Social</span>
-
                     </div>
-
                     <div class="col-span-12 flex flex-row gap-8">
                         <div class="text-md font-lg">Add Logo</div>
                         <div class="w-10/12">
@@ -55,7 +57,6 @@
                                 {{ isset($brandCategory->image) ? 'data-default-file=' . asset('storage/' . $brandCategory->image) : '' }}>
                         </div>
                     </div>
-
                     <div class="flex flex-row col-span-12 space-x-5">
 
                         <div class="flex flex-row w-full gap-[46px]">
@@ -110,7 +111,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="flex flex-row col-span-12 space-x-5">
 
                         <div class="flex flex-row w-full gap-7">
@@ -165,7 +165,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="flex flex-row col-span-12 space-x-5">
 
                         <div class="flex flex-row w-6/12 gap-8">
@@ -220,7 +219,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-span-12 flex flex-row gap-[32px]">
 
                         <div class="flex flex-row gap-2">
@@ -246,7 +244,6 @@
                             <input type="text" class="form-control" placeholder="" aria-label="First name">
                         </div>
                     </div>
-
                     <div class="flex flex-row col-span-12 space-x-3">
 
                         <div class="flex flex-row w-6/12 gap-[36px]">
@@ -301,7 +298,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="flex flex-row col-span-12 space-x-5">
 
                         <div class="flex flex-row w-full gap-10">
@@ -356,7 +352,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="flex flex-row col-span-12 space-x-5">
 
                         <div class="flex flex-row w-full gap-10">
@@ -411,7 +406,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-span-12 lg:col-span-12">
                         <div class="px-3  text-lg">Image 1</div>
                         <div class="box-body">
@@ -423,7 +417,6 @@
                                 {{ isset($brandCategory->image) ? 'data-default-file=' . asset('storage/' . $brandCategory->image) : '' }}>
                         </div>
                     </div>
-
                     <div class="col-span-12 lg:col-span-12">
                         <div class="text-lg px-3  ">Image 2</div>
                         <div class="box-body">
@@ -435,7 +428,6 @@
                                 {{ isset($brandCategory->image) ? 'data-default-file=' . asset('storage/' . $brandCategory->image) : '' }}>
                         </div>
                     </div>
-
                     <div class="col-span-12 lg:col-span-12">
                         <div class="text-lg px-3 ">Image 3</div>
                         <div class="box-body ">
@@ -446,7 +438,6 @@
                                 {{ isset($brandCategory->image) ? 'data-default-file=' . asset('storage/' . $brandCategory->image) : '' }}>
                         </div>
                     </div>
-
                     <button type="button"
                             class="ti-btn ti-btn-primary-gradient btn-wave self-end mx-4">Save
                     </button>
