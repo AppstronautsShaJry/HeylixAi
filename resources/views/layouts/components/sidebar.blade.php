@@ -111,7 +111,7 @@
                 <!-- Advertising -->
                 <li
                     class="ml-2 h-12 nav-item group flex items-center px-4 py-3 rounded-md transition-colors hover:bg-[#27283f]"
-                    data-url="/advertising"
+                    data-url="/meta-ads"
                 >
                     <a href="/meta-ads" class="flex items-center gap-3 w-full">
                         <div class="icon  group-hover:bg-primary text-gray-400 group-hover:text-white rounded-md p-2">
@@ -166,7 +166,7 @@
                 <!-- Assets -->
                 <li
                     class="ml-2 h-12 nav-item group flex items-center px-4 py-3 rounded-md transition-colors hover:bg-[#27283f]"
-                    data-url="/assets"
+                    data-url="/filemanager-index"
                 >
                     <a href="/filemanager-index" class="flex items-center gap-3 w-full">
                         <div class="icon  group-hover:bg-primary text-gray-400 group-hover:text-white rounded-md p-2">
@@ -301,7 +301,7 @@
                 <!-- Credits -->
                 <li
                     class="ml-2 h-12 nav-item group flex items-center px-4 py-3 rounded-md transition-colors hover:bg-[#27283f]"
-                    data-url="/credits"
+                    data-url="/aicredits"
                 >
                     <a href="/aicredits" class="flex items-center gap-3 w-full">
                         <div class="icon  group-hover:bg-primary text-gray-400 group-hover:text-white rounded-md p-2">

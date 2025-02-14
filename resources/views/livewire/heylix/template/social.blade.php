@@ -11,7 +11,7 @@
     <div class="container-fluid">
         <x-breadcrumb.nav>
             <x-breadcrumb.list route="create.heylix" list="Create Content"/>
-            <x-breadcrumb.list route="social.temp" list="Template" active="text-white"/>
+            <x-breadcrumb.list route="social.temp" list="Template" active="dark:text-white text-gray-700"/>
         </x-breadcrumb.nav>
         <!-- Page Header Close -->
     </div>
