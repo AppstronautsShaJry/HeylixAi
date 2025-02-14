@@ -9,103 +9,84 @@
 <!-- Start::app-content -->
 <div class="main-content app-content">
     <div class="container-fluid">
-
-        <!-- Page Header -->
-        <div class="flex items-center justify-between page-header-breadcrumb flex-wrap gap-2">
-            <div>
-                <nav>
-                    <ol class="breadcrumb mb-1">
-                        <li class="breadcrumb-item"><a href="javascript:void(0);">Dashboard</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Gallery</li>
-                        <li class="breadcrumb-item"><a href="javascript:void(0);">Template</a></li>
-                    </ol>
-                </nav>
-                {{--                    <h1 class="page-title font-medium text-lg mb-0">Gallery</h1>--}}
-            </div>
-
-        </div>
+        <x-breadcrumb.nav>
+            <x-breadcrumb.list route="dashboard" list="Dashboard"/>
+            <x-breadcrumb.list route="dashboard" list="Create Content"/>
+            <x-breadcrumb.list route="dashboard" list="Template" active="text-white"/>
+        </x-breadcrumb.nav>
         <!-- Page Header Close -->
-
-
     </div>
 
-    <!-- Start::row-1 -->
-    <div class="box p-5 w-full">
-        <div class="flex justify-between my-3 w-full">
-            <div class="my-2 text-xl w-4/12">Select Template</div>
 
-            <div class="w-4/12 ">
-                <label for="hs-trailing-button-add-on-with-icon" class="sr-only">Label</label>
-                <div class="flex rounded-sm">
-                    <input type="text" id="hs-trailing-button-add-on-with-icon"
-                           name="hs-trailing-button-add-on-with-icon"
-                           class="rtl:!rounded-tl-none !rounded-ee-none ti-form-input rounded-none !rounded-s-sm focus:z-10">
-                    <button aria-label="button" type="button"
-                            class="inline-flex flex-shrink-0 justify-center items-center h-[2.875rem] w-[2.875rem] rounded-e-sm border border-transparent font-semibold bg-primary text-white hover:bg-primary focus:z-10 focus:outline-none focus:ring-0 focus:ring-primary transition-all text-sm">
-                        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                             fill="currentColor" viewBox="0 0 16 16">
+    <!-- Start::row-1 -->
+    <div class="box p-5 space-y-5">
+
+        <div class="flex flex-col w-full justify-between">
+            <x-filter.search/>
+
+            <button type="button"
+                    class="ti-btn ti-btn-primary-gradient btn-wave self-end mx-4">create Your Own
+            </button>
+
+
+            <!-- Label & Tooltip -->
+            <div class="flex justify-end gap-2 mr-4 my-3">
+
+                <label for="select-beast" class="ti-form-label">Dropdown</label>
+
+                <div class="hs-tooltip ti-main-tooltip [--trigger:click] [--placement:top]">
+                    <a class="hs-tooltip-toggle ti-main-tooltip-toggle" href="javascript:void(0);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-5 fill-primary mb-2"
+                             height="24px" viewBox="0 0 24 24" width="24px">
+                            <path d="M0 0h24v24H0V0z" fill="none"/>
                             <path
-                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"/>
                         </svg>
-                    </button>
+                        <div
+                            class="hs-tooltip-content ti-main-tooltip-content border border-defaultborder dark:border-defaultborder/10 !py-4 !px-4 !bg-primary !text-white"
+                            role="tooltip">
+                            <p>The Icon Popover</p>
+                        </div>
+                    </a>
+                </div>
+
+
+                <!-- Select Dropdown -->
+                <div class="w-32">
+                    <select class="ti-form-select rounded-sm p-1.5 w-full" id="select-beast" autocomplete="off">
+                        <option value=""></option>
+                        <option value="4">Page 1</option>
+                        <option value="1">Page 2</option>
+                        <option value="3">Page 3</option>
+                        <option value="5">Page 4</option>
+                    </select>
                 </div>
             </div>
-        </div>
 
-        <div class="grid grid-cols-5 gap-6 ">
-            <div class="w-auto h-28 md:h-28 lg:32 xxl:44 rounded-md overflow-hidden">
-                <a href="{{route('create.social')}}">
-                    <img src="{{asset('images/partials/img3.jpeg')}}" alt="image"></a>
-            </div>
-            <div class="w-auto h-28 md:h-28 lg:32 xxl:44 rounded-md overflow-hidden">
-                <a href="{{route('create.social')}}">
-                    <img src="{{asset('images/partials/img3.jpeg')}}" alt="image"></a>
-            </div>
-            <div class="w-auto h-28 md:h-28 lg:32 xxl:44 rounded-md overflow-hidden">
-                <a href="{{route('create.social')}}">
-                    <img src="{{asset('images/partials/img3.jpeg')}}" alt="image"></a>
-            </div>
-            <div class="w-auto h-28 md:h-28 lg:32 xxl:44 rounded-md overflow-hidden">
-                <a href="{{route('create.social')}}">
-                    <img src="{{asset('images/partials/img3.jpeg')}}" alt="image"></a>
-            </div>
-            <div class="w-auto h-28 md:h-28 lg:32 xxl:44 rounded-md overflow-hidden">
-                <a href="{{route('create.social')}}">
-                    <img src="{{asset('images/partials/img3.jpeg')}}" alt="image"></a>
-            </div>
-            <div class="w-auto h-28 md:h-28 lg:32 xxl:44 rounded-md overflow-hidden">
-                <a href="{{route('create.social')}}">
-                    <img src="{{asset('images/partials/img4.jpeg')}}" alt="image" class="h-full"></a>
-            </div>
-            <div class="w-auto h-28 md:h-28 lg:32 xxl:44 rounded-md overflow-hidden">
-                <a href="{{route('create.social')}}">
-                    <img src="{{asset('images/partials/img4.jpeg')}}" alt="image" class="h-full"></a>
-            </div>
-            <div class="w-auto h-28 md:h-28 lg:32 xxl:44 rounded-md overflow-hidden">
-                <a href="{{route('create.social')}}">
-                    <img src="{{asset('images/partials/img4.jpeg')}}" alt="image" class="h-full"></a>
-            </div>
-            <div class="w-auto h-28 md:h-28 lg:32 xxl:44 rounded-md overflow-hidden">
-                <a href="{{route('create.social')}}">
-                    <img src="{{asset('images/partials/img4.jpeg')}}" alt="image" class="h-full"></a>
-            </div>
-            <div class="w-auto h-28 md:h-28 lg:32 xxl:44 rounded-md overflow-hidden">
-                <a href="{{route('create.social')}}">
-                    <img src="{{asset('images/partials/img4.jpeg')}}" alt="image" class="h-full"></a>
-            </div>
+        </div>
+        <div class="text-xl">Select Template</div>
+        <div class="grid grid-cols-5 gap-6">
+            <x-heylix.template.image :route="'create.social'" asset="images/partials/img3.jpeg" class="w-auto h-40"/>
+            <x-heylix.template.image :route="'create.social'" asset="images/partials/img3.jpeg" class="w-auto h-8"/>
+            <x-heylix.template.image :route="'create.social'" asset="images/partials/img3.jpeg" class="w-auto h-8"/>
+            <x-heylix.template.image :route="'create.social'" asset="images/partials/img3.jpeg" class="w-auto h-8"/>
+            <x-heylix.template.image :route="'create.social'" asset="images/partials/img3.jpeg" class="w-auto h-8"/>
+
+            <x-heylix.template.image :route="'create.social'" asset="images/partials/img3.jpeg" class="w-auto h-8"/>
+            <x-heylix.template.image :route="'create.social'" asset="images/partials/img3.jpeg" class="w-auto h-8"/>
+            <x-heylix.template.image :route="'create.social'" asset="images/partials/img3.jpeg" class="w-auto h-8"/>
+            <x-heylix.template.image :route="'create.social'" asset="images/partials/img3.jpeg" class="w-auto h-8"/>
+            <x-heylix.template.image :route="'create.social'" asset="images/partials/img3.jpeg" class="w-auto h-8"/>
         </div>
     </div>
     <!--End::row-1 -->
+</div>
 
-</div>
-</div>
 <!-- End::app-content -->
 
 @section('scripts')
-
     <!-- Gallery JS -->
     <script src="{{asset('build/assets/libs/glightbox/js/glightbox.min.js')}}"></script>
     @vite('resources/assets/js/gallery.js')
-
 @endsection
 
