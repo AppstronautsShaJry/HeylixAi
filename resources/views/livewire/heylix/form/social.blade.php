@@ -32,11 +32,10 @@
                     <div class="text-md font-lg">Add Logo</div>
                     <div class="w-10/12">
                         <input type="file" class="filepond" name="image2"
-                               {{--                    <input type="file" name="image" class="filepond basic-filepond"--}}
                                data-allow-reorder="true"
                                data-max-file-size="3MB"
                                data-max-files="1"
-                            {{ isset($brandCategory->image) ? 'data-default-file=' . asset('storage/' . $brandCategory->image) : '' }}>
+                            {{isset($brandCategory->image) ? 'data-default-file=' . asset('storage/' . $brandCategory->image) : '' }}>
                     </div>
                 </div>
                 <div class="flex flex-row col-span-12 space-x-5">
@@ -46,7 +45,6 @@
                     <x-input.text label="Text T1">
                         <x-tooltip.popover message="Lorem ipsum dolor sit amet, consectetur." />
                     </x-input.text>
-
                 </div>
                 <div class="flex flex-row col-span-12 space-x-5">
                     <x-input.text label="Text T2">

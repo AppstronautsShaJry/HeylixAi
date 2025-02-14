@@ -18,7 +18,6 @@
         </div>
     </div>
     <div class="box p-5 space-y-8">
-
         <div x-cloak x-data="{
             activeTab: 'facebook',
             selectedTabs: {

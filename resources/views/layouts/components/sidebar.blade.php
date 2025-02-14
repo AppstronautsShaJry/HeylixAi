@@ -244,9 +244,8 @@
                 <!-- Website/App -->
                 <li
                     class="ml-2 h-12 nav-item group flex items-center px-4 py-3 rounded-md transition-colors hover:bg-[#27283f]"
-                    data-url="/website"
-                >
-                    <a href="/website" class="flex items-center gap-3 w-full">
+                    data-url="/web-website">
+                    <a href="/web-website" class="flex items-center gap-3 w-full">
                         <div class="icon  group-hover:bg-primary text-gray-400 group-hover:text-white rounded-md p-2">
                             <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37.33 35.8" class="w-5 h-5">
                                 <defs>

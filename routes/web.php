@@ -161,3 +161,7 @@ Route::get('/upgrade', [DashboardsController::class, 'upgrade']);
 Route::get('/support', [DashboardsController::class, 'support']);
 Route::get('alerts', [UiElementsController::class, 'alerts']);
 
+Route::get('/web-website', App\Livewire\Web\Website::class)->name('web-website');
+Route::get('/web-app', App\Livewire\Web\App::class)->name('web-app');
+
+

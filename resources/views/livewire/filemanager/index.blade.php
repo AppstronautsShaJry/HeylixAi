@@ -180,7 +180,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="xxl:col-span-3 col-span-8 w-4/12 flex flex-col ">
                             <div class="col-span-12 flex flex-col">
                                 <!-- Start::mail information offcanvas -->

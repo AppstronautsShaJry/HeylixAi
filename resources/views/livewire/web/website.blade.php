@@ -1,28 +1,28 @@
-@props([
-    'label' => 'Multiple file Upload',
-])
-@section('styles')
-    <!-- Prism CSS -->
-    <link rel="stylesheet" href="{{asset('build/assets/libs/prismjs/themes/prism-coy.min.css')}}">
-    <!-- Filepond CSS -->
-    <link rel="stylesheet" href="{{asset('build/assets/libs/filepond/filepond.min.css')}}">
-    <link rel="stylesheet" href="{{asset('build/assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css')}}">
-    <link rel="stylesheet" href="{{asset('build/assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css')}}">
-    <link rel="stylesheet" href="{{asset('build/assets/libs/dropzone/dropzone.css')}}">
-@endsection
 
-<div class="col-span-12 lg:col-span-12">
-    <div class="box">
-        <div class="box-header">
-            <h5 class="box-title">{{$label}}</h5>
-            <div data-single="true" action="https://httpbin.org/post" class="dropzone hidden"></div>
-        </div>
-        <div class="box-body">
-            <input {{$attributes}} type="file" class="filepond multiple-filepond" multiple data-allow-reorder="true" data-max-file-size="3MB" data-max-files="5"  data-single="true" action="https://httpbin.org/post">
-        </div>
-    </div>
+<div>
+    <x-form.layout>
+        <x-breadcrumb.nav>
+            <x-breadcrumb.list list="Dashboard" route="dashboard" />
+            <x-breadcrumb.list list="Website" route="web-website" />
+        </x-breadcrumb.nav>
+
+        <x-tabs.url-tab>
+{{--            <x-tabs.url-content />--}}
+            <x-tabs.url-content label="Website" url="/web-website" />
+            <x-tabs.url-content label="App" url="/web-app" rounded="rounded-r-sm"/>
+        </x-tabs.url-tab>
+
+        <x-form.body>
+            <x-form.col1>
+                <x-input.multiple-file-upload label="File Upload"/>
+            </x-form.col1>
+            <x-form.col2>
+
+            </x-form.col2>
+        </x-form.body>
+
+    </x-form.layout>
 </div>
-
 @section('scripts')
     <!-- Prism JS -->
     <script src="{{asset('build/assets/libs/prismjs/prism.js')}}"></script>
