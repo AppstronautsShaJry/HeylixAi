@@ -1,4 +1,6 @@
+
 <div class="main-content app-content px-5 space-y-5">
+
     <div class="container-fluid">
         <div class="grid grid-cols-12 gap-x-6 box">
 
@@ -8,19 +10,117 @@
                     <!-- Step 1 -->
                     <div class="step flex space-y-4 flex-col" x-show="currentStep === 1">
                         <div>Step 1</div>
-                        <div class="xl:col-span-4 lg:col-span-6 md:col-span-6 sm:col-span-12 col-span-12">
-                            <p class="mb-2 text-muted">Name</p>
-                            <input type="text" class="form-control" id="name" x-model="name" @blur="validate('name')">
+                        <x-input.single-file-upload/>
+{{--                        <x-input.multiple-file-upload/>--}}
+                        <div>
+                            <x-input.text label="Logo Image" id="logo" type="file" x-model="logoImage" @blur="validate('logoImage')">
+                                <x-tooltip.popover message="Lorem ipsum dolor sit amet, consectetur."/>
+                            </x-input.text>
+{{--                            <x-input.file-upload :label="'Add Image'" id="image4" x-model="addimage" @blur="validate('addimage')"/>--}}
+                            <span x-show="errors.logoImage" class="text-red-500" x-text="errors.logoImage"></span>
+                        </div>
+                        <div class="flex flex-row col-span-12 space-x-5">
+                            <x-input.text label="Logo" id="logo" x-model="logo" @blur="validate('logo')">
+                                <x-tooltip.popover message="Lorem ipsum dolor sit amet, consectetur."/>
+                            </x-input.text>
 
-                            <span x-show="errors.name" class="text-red-500" x-text="errors.name"></span>
+                            <span x-show="errors.logo" class="text-red-500" x-text="errors.logo"></span>
+
+                            <x-input.text label="Text 1" id="text1" x-model="text1" @blur="validate('text1')">
+                                <x-tooltip.popover message="Lorem ipsum dolor sit amet, consectetur."/>
+                            </x-input.text>
+
+                            <span x-show="errors.text1" class="text-red-500" x-text="errors.text1"></span>
                         </div>
 
-                        <div class="xl:col-span-4 lg:col-span-6 md:col-span-6 sm:col-span-12 col-span-12">
-                            <label for="input-email" class="ti-form-label">Type Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Email@xyz.com"
-                                   x-model="email" @blur="validate('email')">
-                            <span x-show="errors.email" class="text-red-500" x-text="errors.email"></span>
+                        <div class="flex flex-row col-span-12 space-x-5">
+                            <x-input.text label="Text T2" id="textt2" x-model="textt2" @blur="validate('textt2')">
+                                <x-tooltip.popover message="Lorem ipsum dolor sit amet, consectetur."/>
+                            </x-input.text>
+
+                            <span x-show="errors.textt2" class="text-red-500" x-text="errors.textt2"></span>
+
+                            <x-input.text label="Text T3" id="textt3" x-model="textt3" @blur="validate('textt3')">
+                                <x-tooltip.popover message="Lorem ipsum dolor sit amet, consectetur."/>
+                            </x-input.text>
+
+                            <span x-show="errors.textt3" class="text-red-500" x-text="errors.textt3"></span>
                         </div>
+
+                        <div class="flex flex-row col-span-12 space-x-5">
+                            <x-input.text label="Text 2" id="text2" x-model="text2" @blur="validate('text2')">
+                                <x-tooltip.popover message="Lorem ipsum dolor sit amet, consectetur."/>
+                            </x-input.text>
+
+                            <span x-show="errors.text2" class="text-red-500" x-text="errors.text2"></span>
+
+                            <x-input.text label="Prize" id="prize" x-model="prize" @blur="validate('prize')">
+                                <x-tooltip.popover message="Lorem ipsum dolor sit amet, consectetur."/>
+                            </x-input.text>
+
+                            <span x-show="errors.prize" class="text-red-500" x-text="errors.prize"></span>
+                        </div>
+
+                        <div class="w-1/2 flex pr-2.5">
+                            <x-input.text label="Text 3">
+                                <x-tooltip.popover message="Lorem ipsum dolor sit amet, consectetur."/>
+                            </x-input.text>
+                        </div>
+
+                        <div class="flex flex-row col-span-12 space-x-5">
+                            <x-input.text label="Phone" id="phone" x-model="phone" @blur="validate('phone')">
+                                <x-tooltip.popover message="Lorem ipsum dolor sit amet, consectetur."/>
+                            </x-input.text>
+
+                            <span x-show="errors.phone" class="text-red-500" x-text="errors.phone"></span>
+
+                            <x-input.text label="Website Url" id="websiteurl" x-model="websiteurl"
+                                          @blur="validate('websiteurl')">
+                                <x-tooltip.popover message="Lorem ipsum dolor sit amet, consectetur."/>
+                            </x-input.text>
+
+                            <span x-show="errors.websiteurl" class="text-red-500" x-text="errors.websiteurl"></span>
+                        </div>
+
+                        <div class="flex flex-row col-span-12 space-x-5">
+                            <x-input.text label="List 1" id="list1" x-model="list1" @blur="validate('list1')">
+                                <x-tooltip.popover message="Lorem ipsum dolor sit amet, consectetur."/>
+                            </x-input.text>
+
+                            <span x-show="errors.list1" class="text-red-500" x-text="errors.list1"></span>
+
+                            <x-input.text label="List 2" id="list2" x-model="list2" @blur="validate('list2')">
+                                <x-tooltip.popover message="Lorem ipsum dolor sit amet, consectetur."/>
+                            </x-input.text>
+
+                            <span x-show="errors.list2" class="text-red-500" x-text="errors.list2"></span>
+                        </div>
+
+                        <div class="flex flex-row col-span-12 space-x-5">
+                            <x-input.text label="List 3" id="list3" x-model="list3" @blur="validate('list3')">
+                                <x-tooltip.popover message="Lorem ipsum dolor sit amet, consectetur."/>
+                            </x-input.text>
+
+                            <span x-show="errors.list3" class="text-red-500" x-text="errors.list3"></span>
+
+                            <x-input.text label="List 4" id="list4" x-model="list4" @blur="validate('list4')">
+                                <x-tooltip.popover message="Lorem ipsum dolor sit amet, consectetur."/>
+                            </x-input.text>
+
+                            <span x-show="errors.list4" class="text-red-500" x-text="errors.list4"></span>
+                        </div>
+
+                        <x-input.file-upload :label="'Image 1'" id="image1" x-model="image1"
+                                             @blur="validate('image1')"/>
+                        <span x-show="errors.image1" class="text-red-500" x-text="errors.image1"></span>
+
+                        <x-input.file-upload :label="'Image 2'" id="image2" x-model="image2"
+                                             @blur="validate('image2')"/>
+                        <span x-show="errors.image2" class="text-red-500" x-text="errors.image2"></span>
+
+                        <x-input.file-upload :label="'Image 3'" id="image3" x-model="image3"
+                                             @blur="validate('image3')"/>
+                        <span x-show="errors.image3" class="text-red-500" x-text="errors.image3"></span>
 
                         <button type="button" class="next-step self-end" @click="nextStep(1)">Next</button>
                     </div>
@@ -118,12 +218,23 @@
     function multiStepForm() {
         return {
             currentStep: 1,
-            name: '',
-            email: '',
+            logoImage: '',
+            logo: '',
+            text1: '',
+            textt2: '',
+            textt3: '',
+            text2: '',
+            text3: '',
+            prize: '',
             phone: '',
-            dob: '',
-            address: '',
-            city: '',
+            websiteurl: '',
+            list1: '',
+            list2: '',
+            list3: '',
+            list4: '',
+            image1: '',
+            image2: '',
+            image3: '',
             errors: {},
 
             validate(field) {
@@ -136,7 +247,7 @@
             nextStep(step) {
                 let valid = true;
                 const stepFields = {
-                    1: ['name', 'email'],
+                    1: ['logoImage', 'logo', 'text1', 'textt2', 'textt3', 'text2', 'text3', 'prize', 'phone', 'websiteurl', 'list1', 'list2', 'list3', 'list4', 'image1', 'image2', 'image3'],
                     2: ['phone', 'dob'],
                     3: ['address', 'city']
                 };
