@@ -3,9 +3,7 @@
 
     <div class="container-fluid">
         <div class="grid grid-cols-12 gap-x-6 box">
-
             <div class="xl:col-span-8 col-span-12 p-6">
-
                 <div id="multiStepForm" x-data="multiStepForm()">
                     <!-- Step 1 -->
                     <div class="step flex space-y-4 flex-col" x-show="currentStep === 1">
@@ -131,7 +129,6 @@
                         <label for="phone">Phone:</label>
                         <input type="tel" id="phone" class="form-control" x-model="phone" @blur="validate('phone')">
                         <span x-show="errors.phone" class="text-red-500" x-text="errors.phone"></span>
-
                         <label for="dob">Date of Birth:</label>
                         <input type="date" id="dob" class="form-control" x-model="dob" @blur="validate('dob')">
                         <span x-show="errors.dob" class="text-red-500" x-text="errors.dob"></span>

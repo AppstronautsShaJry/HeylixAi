@@ -23,27 +23,18 @@ class Create extends Component
 
     public function create()
     {
-        $this->validate([
-            'name' => 'required|string|max:255',
-            'category_id' => 'required|integer|exists:brand_categories,id',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'phone' => 'nullable|string|max:15',
-            'url' => 'nullable|string',
-            'address' => 'nullable|string',
-            'city' => 'nullable|string',
-            'state' => 'nullable|string',
-            'pincode' => 'nullable|string|max:10',
-            'country' => 'nullable|string',
-            'is_active' => 'sometimes|boolean',
-        ]);
+        // Check if image is uploaded
+        $imagePath = null;
+        if ($this->image) {
+            // Store image in 'brands' directory under 'public' disk
+            $imagePath = $this->image->store('brands', 'public');
+        }
 
-        $imagePath = $this->image ? $this->image->store('brands', 'public') : null;
-
+        // Create the brand record
         Brand::create([
             'name' => $this->name,
             'description' => $this->description,
             'category_id' => $this->category_id,
-            'image' => $imagePath,
             'phone' => $this->phone,
             'url' => $this->url,
             'address' => $this->address,
@@ -51,19 +42,15 @@ class Create extends Component
             'state' => $this->state,
             'pincode' => $this->pincode,
             'country' => $this->country,
-            'user_id' => auth()->id(),
-            'is_active' => $this->is_active ?: 1,
+            'is_active' => $this->is_active,
+            'image' => $imagePath,
         ]);
 
-        session()->flash('success', 'Brand created successfully!');
+        // Clear input fields after saving
+        $this->reset();
 
-        // Reset form fields
-        $this->reset(['name', 'description', 'category_id', 'image',
-            'phone', 'url', 'address',
-            'city', 'state',
-            'pincode', 'country']);
-
-        return redirect()->route('brand.create'); // Adjust to your actual route
+        // Notify success
+        session()->flash('message', 'Brand created successfully.');
     }
 
 

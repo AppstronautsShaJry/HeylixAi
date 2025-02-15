@@ -93,12 +93,23 @@
 {{--                                    <input type="file" class="single-fileupload" wire:model="image">--}}
 {{--                                    @error('image') <span class="text-red-500">{{ $message }}</span> @enderror--}}
 {{--                                </div>--}}
-                                <div class="xxl:col-span-6 xl:col-span-12 col-span-12">
-                                    <label class="form-label">Upload Your Logo</label>
-                                    <div class="create-nft-item bg-light py-3 rounded">
-                                        <input type="file" class="single-fileupload" wire:model="image">
-                                        @error('image') <span class="text-red-500">{{ $message }}</span> @enderror
-                                    </div>
+{{--                                <div class="xxl:col-span-6 xl:col-span-12 col-span-12">--}}
+{{--                                    <label class="form-label">Upload Your Logo</label>--}}
+{{--                                    <div class="create-nft-item bg-light py-3 rounded">--}}
+{{--                                        <input type="file" class="single-fileupload" wire:model="image">--}}
+{{--                                        @error('image') <span class="text-red-500">{{ $message }}</span> @enderror--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+
+{{--                                <x-input.single-file-upload wire:model="image" />--}}
+                                <div class="xl:col-span-12 col-span-12">
+                                    <x-input.file-type >
+                                        <input type="file" name="image" class="filepond basic-filepond"
+                                               data-allow-reorder="true"
+                                               data-max-file-size="3MB"
+                                               data-max-files="1"
+                                            wire:model="image" />
+                                    </x-input.file-type>
                                 </div>
 
                                 <!-- Brand Description -->

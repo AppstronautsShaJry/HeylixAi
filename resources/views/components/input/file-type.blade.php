@@ -1,5 +1,9 @@
+@props([
+    'name' => 'image',
+])
+
 @section('styles')
-    <!-- Prism CSS -->
+    <!-- filepond CSS -->
     <link rel="stylesheet" href="{{ asset('build/assets/libs/filepond/filepond.min.css') }}">
     <link rel="stylesheet"
           href="{{ asset('build/assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css') }}">
@@ -12,31 +16,20 @@
           rel="stylesheet">
 @endsection
 
-<div class="col-span-12 lg:col-span-12">
+<div class="col-span-12 lg:col-span-12 my-5">
     <div class="box">
         <div class="box-header">
-            <h5 class="box-title">Single File Upload</h5>
-            <div data-single="true" action="https://httpbin.org/post" class="dropzone hidden"></div>
-
+            <h5 class="box-title">Upload Category Image</h5>
         </div>
         <div class="box-body">
-            <input  type="file" class="filepond basic-filepond"
-                   data-allow-reorder="true" data-max-file-size="3MB"
-                   data-max-files="1" {{$attributes}}>
+            {{$slot}}
         </div>
+{{--        <div class="create-nft-item bg-light py-3 rounded">--}}
+{{--            <input type="file" class="single-fileupload" namel="image">--}}
+{{--            @error('image') <span class="text-red-500">{{ $message }}</span> @enderror--}}
+{{--        </div>--}}
     </div>
 </div>
-
-{{--<div class="col-span-12 lg:col-span-12">--}}
-{{--    <div class="box">--}}
-{{--        <div class="box-header">--}}
-{{--            <h5 class="box-title">Dropzone File Upload</h5>--}}
-{{--        </div>--}}
-{{--        <div class="box-body">--}}
-{{--            <div data-single="true" action="https://httpbin.org/post" class="dropzone"></div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</div>--}}
 
 @section('scripts')
     <script src="{{ asset('build/assets/libs/filepond/filepond.min.js') }}"></script>

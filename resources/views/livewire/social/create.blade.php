@@ -106,7 +106,7 @@
             </div>
         </div>
         <div class="grid grid-cols-12 sm:gap-x-12 px-5">
-            <div class="xxl:col-span-9 sm:col-span-8 col-span-12">
+            <form wire:click.prevent="createEvent" class="xxl:col-span-9 sm:col-span-8 col-span-12">
                 <div class="box">
                     <div class="box-header">
                         <div class="text-xl font-medium">Content Creation</div>
@@ -120,9 +120,39 @@
                                                placeholder="eg:Abstract Digital Art">
                                             Content Title
                                         </label>
-                                        <input type="text" class="form-control" id="nft-link"
+                                        <input type="text" wire:model="title" class="form-control" id="nft-link"
                                                placeholder="Title">
                                     </div>
+
+                                    <div class="xl:col-span-12 col-span-12">
+                                        <label>Platform:</label>
+                                        <select wire:model="platform_id" class="w-full p-2 border">
+                                            <option value="">Select Platform</option>
+                                            <option value="1">Facebook</option>
+                                            <option value="2">Instagram</option>
+                                            <option value="3">Twitter</option>
+                                            <option value="4">LinkedIn</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="xl:col-span-12 col-span-12">
+                                        <label>Content Type:</label>
+                                        <select wire:model="content_type" multiple class="w-full p-2 border">
+                                            <option value="Feeds">Feeds</option>
+                                            <option value="Story">Story</option>
+                                            <option value="Reels">Reels</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="xl:col-span-12 col-span-12">
+                                        <x-input.single-file-upload label="File Content" wire:model="file_content" />
+                                    </div>
+
+
+                                    <div class="xl:col-span-12 col-span-12">
+                                        <x-input.multiple-file-upload label="image" wire:model="image" />
+                                    </div>
+
                                     <div class="flex flex-row items-center gap-5 col-span-12 ">
                                         <div class="w-full flex flex-col ">
                                             <label for="input-placeholder" class="form-label">Type of Content</label>
@@ -137,11 +167,11 @@
                                             <div class="inline-flex items-center gap-x-5">
                                                 <div
                                                     class="xl:col-span-4 lg:col-span-6 md:col-span-6 sm:col-span-12 col-span-12">
-                                                    <input type="date" class="form-control" id="input-date">
+                                                    <input  type="date" class="form-control" id="input-date" wire:model="event_date">
                                                 </div>
                                                 <div
                                                     class="xl:col-span-4 lg:col-span-6 md:col-span-6 sm:col-span-12 col-span-12">
-                                                    <input type="time" class="form-control" id="input-time">
+                                                    <input  type="time" class="form-control" id="input-time" wire:model="event_time">
                                                 </div>
                                             </div>
                                         </div>
@@ -149,7 +179,7 @@
                                     <div x-data="voiceTyping" class="col-span-12  flex flex-col">
                                         <h2 class="text-xl font-bold text-gray-700 mb-4">Description</h2>
                                         <!-- Textarea -->
-                                        <textarea x-model="text"
+                                        <textarea x-model="text" wire:model="description"
                                                   class=" h-40 p-3 border-2 border-gray-300 rounded-lg focus:ring focus:ring-blue-200"
                                                   placeholder="Start speaking..."></textarea>
                                         <div class="flex justify-between items-center py-3">
@@ -341,7 +371,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
             <div
                 class="w-full xxl:col-span-3 sm:col-span-4 col-span-12 gap-y-8 flex flex-col justify-start items-center h-[45rem] overflow-y-auto py-8 px-4">
                 <div class="h-auto w-full rounded-lg border-2 border-gray-600 relative">

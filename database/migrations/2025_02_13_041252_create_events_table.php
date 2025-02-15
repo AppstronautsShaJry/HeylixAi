@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('title')->nullable();
             $table->longText('file_content')->nullable(); // ✅ JSON for structured data
             $table->date('event_date')->nullable();
-            $table->timestamp('event_time')->nullable(); // ✅ More efficient than dateTime
+            $table->time('event_time')->nullable(); // ✅ More efficient than dateTime
             $table->text('description')->nullable();
             $table->longText('image')->nullable(); // ✅ JSON allows multiple image URLs
             $table->boolean('is_active')->default(true);

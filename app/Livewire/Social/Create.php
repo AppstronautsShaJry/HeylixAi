@@ -9,16 +9,7 @@ use Livewire\WithFileUploads;
 class Create extends Component
 {
     use WithFileUploads;
-
-    public $platforms = ['facebook', 'instagram', 'twitter', 'linkedin'];
-    public $contentTypes = [
-        'facebook' => ['Feeds', 'Story'],
-        'instagram' => ['Feeds', 'Story', 'Reels'],
-        'twitter' => ['Feeds'],
-        'linkedin' => ['Feeds']
-    ];
-
-    public $platform_id = [];
+    public $platform_id;
     public $content_type = [];
     public $title;
     public $file_content = [];
@@ -28,48 +19,51 @@ class Create extends Component
     public $image = [];
     public $is_active = true;
 
-    public function saveEvent()
+    protected $rules = [
+        'platform_id' => 'nullable|exists:social_accounts,id',
+        'content_type' => 'nullable|array',
+        'title' => 'nullable|string|max:255',
+        'file_content.*' => 'nullable|file|mimes:jpg,png,jpeg,pdf,mp4|max:10240',
+        'event_date' => 'nullable|date',
+        'event_time' => 'nullable|date_format:H:i',
+        'description' => 'nullable|string',
+        'image.*' => 'nullable|image|max:10240',
+        'is_active' => 'boolean',
+    ];
+
+    public function storeFiles($files, $folder)
     {
-        $this->validate([
-            'platform_id' => 'required|array',
-            'content_type' => 'required|array',
-            'title' => 'required|string|max:255',
-            'event_date' => 'required|date',
-            'event_time' => 'required',
-            'file_content.*' => 'nullable|file|max:10240',
-            'image.*' => 'nullable|image|max:5120',
-            'description' => 'nullable|string',
-        ]);
+        $paths = [];
+        foreach ($files as $file) {
+            $paths[] = $file->store($folder, 'public');
+        }
+        return $paths;
+    }
 
-        $filePaths = collect($this->file_content)->map(fn($file) => $file->store('events/files', 'public'))->toJson();
-        $imagePaths = collect($this->image)->map(fn($image) => $image->store('events/images', 'public'))->toJson();
-
+    public function createEvent()
+    {
+        $this->validate();
+        $fileContentPaths = $this->storeFiles($this->file_content, 'event_files');
+        $imagePaths = $this->storeFiles($this->image, 'event_images');
         Events::create([
-            'platform_id' => json_encode($this->platform_id),
+            'platform_id' => $this->platform_id,
             'content_type' => json_encode($this->content_type),
             'title' => $this->title,
-            'file_content' => $filePaths,
+            'file_content' => json_encode($fileContentPaths),
             'event_date' => $this->event_date,
             'event_time' => $this->event_time,
             'description' => $this->description,
-            'image' => $imagePaths,
+            'image' => json_encode($imagePaths),
             'is_active' => $this->is_active,
             'user_id' => auth()->id(),
         ]);
-
-        session()->flash('message', 'Event created successfully!');
-        $this->reset();
+        session()->flash('message', 'Event created successfully.');
+        $this->reset(); // Clear form
     }
 
     public function render()
     {
-        return view('livewire.social.create', [
-//            'socialAccounts' => SocialAccount::all()/
-        ]);
+        return view('livewire.social.create');
     }
-//    public function render()
-//    {
-////        $socialAccounts = SocialAccount::all();
-//        return view('livewire.social.create');
-//    }
+
 }
