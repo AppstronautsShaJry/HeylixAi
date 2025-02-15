@@ -24,7 +24,6 @@
             <x-filter.search/>
             <div class="flex flex-row items-center gap-x-3">
                 <label for="select-beast" class="ti-form-label">Filter</label>
-                <!-- Select Dropdown -->
                 <x-dropdown.default>
                     <option value="choose" selected>Choose</option>
                     <option value="1">Image Post</option>
