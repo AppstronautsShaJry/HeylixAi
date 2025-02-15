@@ -13,13 +13,13 @@
 @endsection
 
 <div class="col-span-12 lg:col-span-12">
-    <div class="box">
-        <div class="box-header">
+    <div class="">
+        <div class="">
             <h5 class="box-title">Single File Upload</h5>
             <div data-single="true" action="https://httpbin.org/post" class="dropzone hidden"></div>
 
         </div>
-        <div class="box-body">
+        <div class="">
             <input  type="file" class="filepond basic-filepond"
                    data-allow-reorder="true" data-max-file-size="3MB"
                    data-max-files="1" {{$attributes}}>
