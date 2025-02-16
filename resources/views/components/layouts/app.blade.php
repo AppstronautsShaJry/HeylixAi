@@ -73,6 +73,10 @@
 <script src="//unpkg.com/alpinejs" defer></script>
 <!-- STICKY JS -->
 <script src="{{ asset('build/assets/sticky.js') }}"></script>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- APP JS -->
+
 <!-- APP JS -->
 @vite('resources/js/app.js')
 <!-- CUSTOM-SWITCHER JS -->

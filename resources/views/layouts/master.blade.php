@@ -82,7 +82,8 @@
         <!-- STICKY JS -->
         <script src="{{asset('build/assets/sticky.js')}}"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <!-- APP JS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         @vite('resources/js/app.js')
 
 
