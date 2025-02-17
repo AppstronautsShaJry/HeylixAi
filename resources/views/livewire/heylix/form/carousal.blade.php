@@ -8,6 +8,7 @@
     <div x-data="{ step: 1 }" class="grid grid-cols-12 gap-x-6">
         <div class="xl:col-span-8 col-span-12">
             <div  class="space-y-6">
+
                 <!-- Step Indicators -->
                 <div class="flex justify-between">
                     <div :class="step >= 1 ? 'bg-blue-500 text-white' : 'bg-gray-300 text-gray-700'"
@@ -274,6 +275,7 @@
                     </div>
                     <p>Please review your details and submit the form.</p>
                 </div>
+
                 <!-- Navigation Buttons -->
                 <div class="flex justify-between pb-10">
                     <button @click="step--" :disabled="step === 1"
@@ -283,12 +285,12 @@
                     </button>
                     <button x-show="step === 3" class="px-4 py-2 bg-success-gradient text-white rounded-md">Submit</button>
                 </div>
+
             </div>
         </div>
 
         <div class="xl:col-span-4 col-span-12 dark:bg-bodybg bg-white mb-6 rounded-lg  px-3">
             <div class="col-span-12 lg:col-span-12 p-4 space-y-8">
-
                 <div class="flex flex-col space-y-4">
                     <div>
                         <div class="font-semibold h5 block lh-base">
@@ -313,8 +315,6 @@
                     </a>
                 </div>
             </div>
-
         </div>
-
     </div>
 </x-form.layout>

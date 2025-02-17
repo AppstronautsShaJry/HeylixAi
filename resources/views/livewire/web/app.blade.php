@@ -12,11 +12,13 @@
         </x-tabs.url-tab>
 
         <x-form.body>
-            <x-form.col1>
+{{--            <x-form.col1>--}}
+                <div class="col-span-12">
+
                 <div class="box space-y-8 p-5">
                     <div x-cloak x-data="{ tab: 'tab1' }" class="h-auto gap-5 flex flex-col justify-between">
                         <!-- Tab Buttons -->
-                        <div class="px- w-full overflow-x-auto flex items-center font-medium rounded-sm pb-2.5 justify-between">
+                        <div class="px- w-full overflow-x-auto flex items-center font-medium rounded-sm pb-2.5 justify-between gap-x-5">
                             <button @click="tab = 'tab1'"
                                     class="max-w-max inline-flex items-center px-4 py-2 rounded-l-sm focus:outline-none dark:hover:text-white hover:text-black space-x-3"
                                     :class="tab === 'tab1' ? 'bg-[#FF5D9F] text-white' : 'dark:bg-black bg-gray-200 text-gray-400'">
@@ -1110,11 +1112,11 @@
                         </div>
                     </div>
                 </div>
+                </div>
+{{--            </x-form.col1>--}}
+{{--            <x-form.col2>--}}
 
-            </x-form.col1>
-            <x-form.col2>
-
-            </x-form.col2>
+{{--            </x-form.col2>--}}
         </x-form.body>
 
 
