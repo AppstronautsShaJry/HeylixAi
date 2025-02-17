@@ -62,22 +62,22 @@
                     <x-cards.card1 :title="'Meta Ads'"
                                    description="Square - 1080x1080 "
                                    description2="Portrait - 1080x1920"
-                                   route="drive" display="hidden"/>
+                                   route="create.meta" display="hidden"/>
 
                     <x-cards.card1 :title="'Google Image Ad'"
                                    description="Horizontal,Vertical"
                                    description2="Square"
-                                   route="call" display="hidden"/>
+                                   route="create.social" display="hidden"/>
 
                 </div>
 
                 <div
                     class=" flex justify-between gap-5 p-4 w-full h-auto">
 
-                    <div class="w-4/12">
+                    <div class="w-[225px]">
                         <x-cards.card1 :title="'Facebook/LinkedIn Cover'"
                                        description="Square - 1080x1080 "
-                                       route="leads" display="hidden"/>
+                                       route="create.social" display="hidden"/>
                     </div>
                 </div>
             </div>
