@@ -106,7 +106,8 @@ Route::get('/create-heylix', \App\Livewire\Heylix\Create::class)->name('create.h
 Route::get('/social-temp', \App\Livewire\Heylix\Template\Social::class)->name('social.temp');
 
 Route::get('/create-social', \App\Livewire\Heylix\Form\Social::class)->name('create.social');
-Route::get('/create-carousel', \App\Livewire\Heylix\Form\Carousel::class)->name('create.carousel');
+//Route::get('/create-carousel', \App\Livewire\Heylix\Form\Carousel::class)->name('create.carousel');
+Route::get('/create-carousal', \App\Livewire\Heylix\Form\Carousal::class)->name('create.carousal');
 Route::get('/jobstatus-heylix', \App\Livewire\Heylix\Jobstatus::class)->name('jobstatus.heylix');
 Route::get('/brand-heylix', \App\Livewire\Heylix\Brand::class)->name('brand.heylix');
 Route::get('/virtual-heylix', \App\Livewire\Heylix\Virtual::class)->name('virtual.heylix');

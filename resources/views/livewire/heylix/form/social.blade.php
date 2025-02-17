@@ -21,7 +21,6 @@
                     <x-input.text label="Text T1">
                         <x-tooltip.popover message="Lorem ipsum dolor sit amet, consectetur."/>
                     </x-input.text>
-
                 </div>
 
                 <div class="flex flex-row col-span-12 space-x-5">
@@ -122,6 +121,7 @@
                              alt="...">
                     </a>
                 </div>
+
             </div>
 
         </div>

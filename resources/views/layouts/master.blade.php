@@ -22,7 +22,13 @@
         <!-- ICONS CSS -->
         <link href="{{asset('build/assets/icon-fonts/icons.css')}}" rel="stylesheet">
 
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <link href=" https://cdn.jsdelivr.net/npm/swiper@11.2.4/swiper-bundle.min.css " rel="stylesheet">
         <!-- APP SCSS -->
+
         <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
         @vite(['resources/sass/app.scss'])
 
@@ -82,8 +88,10 @@
         <!-- STICKY JS -->
         <script src="{{asset('build/assets/sticky.js')}}"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src=" https://cdn.jsdelivr.net/npm/swiper@11.2.4/swiper-bundle.min.js "></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+{{--        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">--}}
+{{--        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>--}}
         @vite('resources/js/app.js')
 
 

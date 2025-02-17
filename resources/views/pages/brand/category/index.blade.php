@@ -123,8 +123,6 @@
                                                             <i class="ri-delete-bin-line"></i>
                                                         </button>
                                                     </form>
-
-
                                                 </div>
                                             </td>
                                         </tr>
@@ -171,5 +169,4 @@
             });
         }
     </script>
-
 @endsection

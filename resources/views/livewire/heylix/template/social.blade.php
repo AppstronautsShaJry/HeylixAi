@@ -46,7 +46,7 @@
             <x-heylix.template.image :route="'create.social'" asset="images/partials/img3.jpeg" class="w-auto h-8"/>
             <x-heylix.template.image :route="'create.social'" asset="images/partials/img3.jpeg" class="w-auto h-8"/>
 
-            <x-heylix.template.image :route="'create.carousel'" asset="images/partials/img3.jpeg" class="w-auto h-8"/>
+            <x-heylix.template.image :route="'create.carousal'" asset="images/partials/img3.jpeg" class="w-auto h-8"/>
             <x-heylix.template.image :route="'create.social'" asset="images/partials/img3.jpeg" class="w-auto h-8"/>
             <x-heylix.template.image :route="'create.social'" asset="images/partials/img3.jpeg" class="w-auto h-8"/>
             <x-heylix.template.image :route="'create.social'" asset="images/partials/img3.jpeg" class="w-auto h-8"/>
