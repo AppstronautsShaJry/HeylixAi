@@ -1,4 +1,8 @@
+@props([
+    'value' => '',
+
+])
 <div>
-    <option value="choose" selected>Choose</option>
-    {{$slot}}
+    <option value="{{$value}}" selected> {{$slot}}</option>
+
 </div>

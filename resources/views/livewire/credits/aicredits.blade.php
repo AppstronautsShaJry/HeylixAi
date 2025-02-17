@@ -1,22 +1,11 @@
 <div class="main-content app-content px-5 space-y-5">
 
     <div class="container-fluid">
-        <div x-data="{ currentPage: window.location.pathname }" class="p-2 py-6 flex items-center font-medium">
-            <div
-                :class="currentPage === '/aicredits' ? 'bg-[#FF5D9F]  rounded-l-sm text-white ' : ' hover:text-gray-400 dark:text-gray-400  rounded-md '"
-                class="max-w-max py-3 px-2 group">
-                <a href="/aicredits" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
-                    AI Credits
-                </a>
-            </div>
-            <div
-                :class="currentPage === '/adcredits' ? 'bg-[#FF5D9F] rounded-r-sm text-white ' : ' hover:text-gray-400  dark:text-gray-400  rounded-md '"
-                class="max-w-max py-3 px-2 group">
-                <a href="/adcredits" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
-                    AD Credits
-                </a>
-            </div>
-        </div>
+
+        <x-tabs.url-tab>
+            <x-tabs.url-content label="AI Credits" url="/aicredits" rounded="rounded-l-sm"/>
+            <x-tabs.url-content label=" AD Credits" url="/adcredits" rounded="rounded-r-sm"/>
+        </x-tabs.url-tab>
 
         <div class="grid grid-cols-12 sm:gap-x-6">
             <div class=" xl:col-span-9 col-span-12">

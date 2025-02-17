@@ -24,23 +24,28 @@
         </div>
         <!-- Page Header Close -->
 
-        <div x-data="{ currentPage: window.location.pathname }" class="p-2 py-6 flex items-center font-medium">
-            <div
-                :class="currentPage === '/calender-social' ? 'bg-[#FF5D9F]  rounded-l-sm text-white ' : ' hover:text-white dark:text-gray-400  rounded-md '"
-                class="max-w-max py-3 px-2 group">
-                <a href="/calender-social" class="text-sm flex items-center gap-x-3 hover:text-white">
-                    Calender
-                </a>
-            </div>
-            <!-- Twitter Tab -->
-            <div
-                :class="currentPage === '/post-social' ? 'bg-[#FF5D9F]  rounded-r-sm text-white' : ' dark:text-gray-400  rounded-md'"
-                class="max-w-max py-3 px-2 group">
-                <a href="/posts-social" class="text-sm inline-flex items-center gap-x-3 hover:text-gray-600">
-                    Post Insights
-                </a>
-            </div>
-        </div>
+        <x-tabs.url-tab>
+            <x-tabs.url-content label=" Calender" url="/calender-social" rounded="rounded-l-sm"/>
+            <x-tabs.url-content label=" Post Insights" url="/posts-social" rounded="rounded-r-sm"/>
+        </x-tabs.url-tab>
+
+{{--        <div x-data="{ currentPage: window.location.pathname }" class="p-2 py-6 flex items-center font-medium">--}}
+{{--            <div--}}
+{{--                :class="currentPage === '/calender-social' ? 'bg-[#FF5D9F]  rounded-l-sm text-white ' : ' hover:text-white dark:text-gray-400  rounded-md '"--}}
+{{--                class="max-w-max py-3 px-2 group">--}}
+{{--                <a href="/calender-social" class="text-sm flex items-center gap-x-3 hover:text-white">--}}
+{{--                    Calender--}}
+{{--                </a>--}}
+{{--            </div>--}}
+{{--            <!-- Twitter Tab -->--}}
+{{--            <div--}}
+{{--                :class="currentPage === '/post-social' ? 'bg-[#FF5D9F]  rounded-r-sm text-white' : ' dark:text-gray-400  rounded-md'"--}}
+{{--                class="max-w-max py-3 px-2 group">--}}
+{{--                <a href="/posts-social" class="text-sm inline-flex items-center gap-x-3 hover:text-gray-600">--}}
+{{--                    Post Insights--}}
+{{--                </a>--}}
+{{--            </div>--}}
+{{--        </div>--}}
 
         <!-- Start::row-1 -->
         <div class="grid grid-cols-12 gap-x-6">

@@ -12,29 +12,36 @@
             </div>
         </div>
 
-        <div x-data="{ currentPage: window.location.pathname }" class="box flex flex-row p-4">
-            <div
-                :class="currentPage === '/meta-ads' ? 'bg-[#FF5D9F]  rounded-l-sm text-white ' : ' hover:text-gray-400 dark:text-gray-400  rounded-md '"
-                class="max-w-max py-3 px-2 group">
-                <a href="/meta-ads" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
-                    Meta Ads
-                </a>
-            </div>
-            <div
-                :class="currentPage === '/google-ads' ? 'bg-[#FF5D9F] text-white ' : 'hover:text-gray-400  dark:text-gray-400 dark:bg-[#252528] bg-[#F8F9FB] '"
-                class="max-w-max py-3 px-2 group">
-                <a href="/google-ads" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
-                    Google Ads
-                </a>
-            </div>
-            <div
-                :class="currentPage === '/active-ads' ? 'bg-[#FF5D9F] rounded-r-sm text-white ' : ' hover:text-gray-400  dark:text-gray-400 dark:bg-[#252528] bg-[#F8F9FB] rounded-md '"
-                class="max-w-max py-3 px-2 group">
-                <a href="/active-ads" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
-                    Active Ads
-                </a>
-            </div>
-        </div>
+        <x-tabs.url-tab>
+            {{--            <x-tabs.url-content />--}}
+            <x-tabs.url-content label="Meta Ads" url="/meta-ads"/>
+            <x-tabs.url-content label="Google Ads" url="/google-ads"/>
+            <x-tabs.url-content label="Active Ads" url="/active-ads" rounded="rounded-r-sm" class=""/>
+        </x-tabs.url-tab>
+
+{{--        <div x-data="{ currentPage: window.location.pathname }" class="box flex flex-row p-4">--}}
+{{--            <div--}}
+{{--                :class="currentPage === '/meta-ads' ? 'bg-[#FF5D9F]  rounded-l-sm text-white ' : ' hover:text-gray-400 dark:text-gray-400 dark:bg-[#252528] bg-[#F8F9FB]  rounded-l-sm '"--}}
+{{--                class="max-w-max py-3 px-2 group">--}}
+{{--                <a href="/meta-ads" class="text-sm flex items-center gap-x-3 dark:hover:text-white">--}}
+{{--                    Meta Ads--}}
+{{--                </a>--}}
+{{--            </div>--}}
+{{--            <div--}}
+{{--                :class="currentPage === '/google-ads' ? 'bg-[#FF5D9F] text-white ' : 'hover:text-gray-400  dark:text-gray-400 dark:bg-[#252528] bg-[#F8F9FB] '"--}}
+{{--                class="max-w-max py-3 px-2 group">--}}
+{{--                <a href="/google-ads" class="text-sm flex items-center gap-x-3 dark:hover:text-white">--}}
+{{--                    Google Ads--}}
+{{--                </a>--}}
+{{--            </div>--}}
+{{--            <div--}}
+{{--                :class="currentPage === '/active-ads' ? 'bg-[#FF5D9F] rounded-r-sm text-white ' : ' hover:text-gray-400  dark:text-gray-400 dark:bg-[#252528] bg-[#F8F9FB] rounded-md '"--}}
+{{--                class="max-w-max py-3 px-2 group">--}}
+{{--                <a href="/active-ads" class="text-sm flex items-center gap-x-3 dark:hover:text-white">--}}
+{{--                    Active Ads--}}
+{{--                </a>--}}
+{{--            </div>--}}
+{{--        </div>--}}
 
     </div>
 </div>

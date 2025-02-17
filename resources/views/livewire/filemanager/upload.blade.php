@@ -29,37 +29,45 @@
             </div>
         </div>
 
-        <div x-data="{ currentPage: window.location.pathname }" class="p-2 py-6 flex items-center font-medium">
-            <div
-                :class="currentPage === '/filemanager-index' ? 'bg-[#FF5D9F]  rounded-l-sm text-white ' : ' hover:text-gray-400 dark:text-gray-400  rounded-md '"
-                class="max-w-max py-3 px-2 group">
-                <a href="/filemanager-index" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
-                    All
-                </a>
-            </div>
-            <!-- Twitter Tab -->
-            <div
-                :class="currentPage === '/filemanager-upload' ? 'bg-[#FF5D9F] text-white' : 'hover:text-gray-400 dark:text-gray-400  rounded-md'"
-                class="max-w-max py-3 px-2 group">
-                <a href="/filemanager-upload" class="text-sm inline-flex items-center gap-x-3 dark:hover:text-white">
-                    Upload
-                </a>
-            </div>
-            <div
-                :class="currentPage === '/filemanager-generate' ? 'bg-[#FF5D9F] text-white ' : 'hover:text-gray-400  dark:text-gray-400  rounded-md '"
-                class="max-w-max py-3 px-2 group">
-                <a href="/filemanager-generate" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
-                    AI Generate
-                </a>
-            </div>
-            <div
-                :class="currentPage === '/filemanager-heylix' ? 'bg-[#FF5D9F] rounded-r-sm text-white ' : ' hover:text-gray-400  dark:text-gray-400  rounded-md '"
-                class="max-w-max py-3 px-2 group">
-                <a href="/filemanager-heylix" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
-                    Heylix Desk
-                </a>
-            </div>
-        </div>
+        <x-tabs.url-tab >
+            <x-tabs.url-content label="All" url="/filemanager-index" rounded="rounded-l-sm"/>
+            <x-tabs.url-content label="Upload" url="/filemanager-upload" rounded="rounded-0"/>
+            <x-tabs.url-content label="AI Generate" url="/filemanager-generate" rounded="rounded-0"/>
+            <x-tabs.url-content label="Active Ads" url="/filemanager-heylix" rounded="rounded-r-sm" class=""/>
+        </x-tabs.url-tab>
+
+
+{{--        <div x-data="{ currentPage: window.location.pathname }" class="p-2 py-6 flex items-center font-medium">--}}
+{{--            <div--}}
+{{--                :class="currentPage === '/filemanager-index' ? 'bg-[#FF5D9F]  rounded-l-sm text-white ' : ' hover:text-gray-400 dark:text-gray-400  rounded-md '"--}}
+{{--                class="max-w-max py-3 px-2 group">--}}
+{{--                <a href="/filemanager-index" class="text-sm flex items-center gap-x-3 dark:hover:text-white">--}}
+{{--                    All--}}
+{{--                </a>--}}
+{{--            </div>--}}
+{{--            <!-- Twitter Tab -->--}}
+{{--            <div--}}
+{{--                :class="currentPage === '/filemanager-upload' ? 'bg-[#FF5D9F] text-white' : 'hover:text-gray-400 dark:text-gray-400  rounded-md'"--}}
+{{--                class="max-w-max py-3 px-2 group">--}}
+{{--                <a href="/filemanager-upload" class="text-sm inline-flex items-center gap-x-3 dark:hover:text-white">--}}
+{{--                    Upload--}}
+{{--                </a>--}}
+{{--            </div>--}}
+{{--            <div--}}
+{{--                :class="currentPage === '/filemanager-generate' ? 'bg-[#FF5D9F] text-white ' : 'hover:text-gray-400  dark:text-gray-400  rounded-md '"--}}
+{{--                class="max-w-max py-3 px-2 group">--}}
+{{--                <a href="/filemanager-generate" class="text-sm flex items-center gap-x-3 dark:hover:text-white">--}}
+{{--                    AI Generate--}}
+{{--                </a>--}}
+{{--            </div>--}}
+{{--            <div--}}
+{{--                :class="currentPage === '/filemanager-heylix' ? 'bg-[#FF5D9F] rounded-r-sm text-white ' : ' hover:text-gray-400  dark:text-gray-400  rounded-md '"--}}
+{{--                class="max-w-max py-3 px-2 group">--}}
+{{--                <a href="/filemanager-heylix" class="text-sm flex items-center gap-x-3 dark:hover:text-white">--}}
+{{--                    Heylix Desk--}}
+{{--                </a>--}}
+{{--            </div>--}}
+{{--        </div>--}}
         <div class="grid grid-cols-12 gap-x-6">
             <div class="xl:col-span-12 col-span-12">
                 <div class="box">
