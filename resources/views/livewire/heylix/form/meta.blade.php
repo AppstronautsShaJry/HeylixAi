@@ -104,7 +104,7 @@
                         </div>
                     </div>
                     <a href="javascript:void(0);">
-                        <img src="{{asset('images/partials/img5.jpeg')}}" class="card-img-bottom rounded-md"
+                        <img src="{{asset('images/partials/img4.jpeg')}}" class="card-img-bottom rounded-md"
                              alt="...">
                     </a>
                 </div>
@@ -116,7 +116,7 @@
                         </div>
                     </div>
                     <a href="javascript:void(0);">
-                        <img src="{{asset('images/partials/img3.jpeg')}}" class="card-img-bottom rounded-md"
+                        <img src="{{asset('images/partials/img6.jpeg')}}" class="card-img-bottom rounded-md"
                              alt="...">
                     </a>
                 </div>

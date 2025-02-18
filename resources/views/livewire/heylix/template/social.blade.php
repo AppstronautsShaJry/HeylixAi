@@ -41,7 +41,7 @@
 
         <div class="grid grid-cols-5 gap-6">
             <x-heylix.template.image :route="'create.social'" asset="images/partials/img3.jpeg" class="w-auto h-40"/>
-            <x-heylix.template.image :route="'create.social'" asset="images/partials/img3.jpeg" class="w-auto h-8"/>
+            <x-heylix.template.image :route="'create.meta'" asset="images/partials/img6.jpeg" class="w-auto h-8"/>
             <x-heylix.template.image :route="'create.social'" asset="images/partials/img3.jpeg" class="w-auto h-8"/>
             <x-heylix.template.image :route="'create.social'" asset="images/partials/img3.jpeg" class="w-auto h-8"/>
             <x-heylix.template.image :route="'create.social'" asset="images/partials/img3.jpeg" class="w-auto h-8"/>

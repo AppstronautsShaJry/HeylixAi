@@ -144,6 +144,8 @@ Route::get('/website-display', \App\Livewire\Advertising\Google\Website\Display:
 
 Route::get('/lead-search', \App\Livewire\Advertising\Google\Lead\Search::class)->name('lead-search');
 Route::get('/lead-display', \App\Livewire\Advertising\Google\Lead\Display::class)->name('lead-display');
+Route::get('/lead-gmail', \App\Livewire\Advertising\Google\Lead\Gmail::class)->name('lead-gmail');
+Route::get('/lead-youtube', \App\Livewire\Advertising\Google\Lead\Youtube::class)->name('lead-youtube');
 
 //Filemanager
 Route::get('/filemanager-index', \App\Livewire\Filemanager\Index::class)->name('filemanager.index');

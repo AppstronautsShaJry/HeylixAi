@@ -2,66 +2,94 @@
     <x-form.layout>
 
         <x-breadcrumb.nav>
-            <x-breadcrumb.list list="Dashboard" route="dashboard" />
-            <x-breadcrumb.list list="Website" route="web-website" />
+            <x-breadcrumb.list list="Dashboard" route="dashboard"/>
+            <x-breadcrumb.list list="Website" route="web-website"/>
         </x-breadcrumb.nav>
 
         <x-tabs.url-tab>
-            <x-tabs.url-content label="Website" url="/web-website" />
+            <x-tabs.url-content label="Website" url="/web-website"/>
             <x-tabs.url-content label="App" url="/web-app" rounded="rounded-r-sm"/>
         </x-tabs.url-tab>
 
         <x-form.body>
-{{--            <x-form.col1>--}}
-                <div class="col-span-12">
+            {{--            <x-form.col1>--}}
+            <div class="col-span-12">
 
                 <div class="box space-y-8 p-5">
-                    <div x-cloak x-data="{ tab: 'tab1' }" class="h-auto gap-5 flex flex-col justify-between">
+                    {{--                    <div x-cloak x-data="{ tab: 'tab1' }" class="h-auto gap-5 flex flex-col justify-between">--}}
+
+                    <div x-cloak x-data="{ tab: 'tab1' }">
+                        <!-- Dropdown -->
+                        <x-dropdown.default>
+                            <x-dropdown.option value="1">
+                                <button @click="tab = 'tab1'" class="w-full">Ecommerce</button>
+                            </x-dropdown.option>
+                            <x-dropdown.option value="2">
+                                <button @click="tab = 'tab2'" class="w-full">Finance</button>
+                            </x-dropdown.option>
+                            <x-dropdown.option value="3">
+                                <button @click="tab = 'tab3'" class="w-full">Business</button>
+                            </x-dropdown.option>
+                            <x-dropdown.option value="4">
+                                <button @click="tab = 'tab4'" class="w-full">Management</button>
+                            </x-dropdown.option>
+                            <x-dropdown.option value="5">
+                                <button @click="tab = 'tab5'" class="w-full">Accounting</button>
+                            </x-dropdown.option>
+                            <x-dropdown.option value="6">
+                                <button @click="tab = 'tab6'" class="w-full">Manufacturing</button>
+                            </x-dropdown.option>
+                            <x-dropdown.option value="6">
+                                <button @click="tab = 'tab6'" class="w-full">Transportation</button>
+                            </x-dropdown.option>
+                        </x-dropdown.default>
+
                         <!-- Tab Buttons -->
-                        <div class="px- w-full overflow-x-auto flex items-center font-medium rounded-sm pb-2.5 justify-between gap-x-5">
-                            <button @click="tab = 'tab1'"
-                                    class="max-w-max inline-flex items-center px-4 py-2 rounded-l-sm focus:outline-none dark:hover:text-white hover:text-black space-x-3"
-                                    :class="tab === 'tab1' ? 'bg-[#FF5D9F] text-white' : 'dark:bg-black bg-gray-200 text-gray-400'">
-                                <input type="radio" name="tab" value="tab1" class="" :checked="tab === 'tab1'">
-                                <span>Ecommerce</span>
-                            </button>
-                            <button @click="tab = 'tab2'"
-                                    class="max-w-max inline-flex items-center px-4 py-2 focus:outline-none dark:hover:text-white hover:text-black space-x-3"
-                                    :class="tab === 'tab2' ? 'bg-[#FF5D9F] text-white' : 'dark:bg-black bg-gray-200 text-gray-400'">
-                                <input type="radio" name="tab" value="tab2" class="" :checked="tab === 'tab2'">
-                                <span class="inline-flex items-center">SocialMedia</span>
-                            </button>
-                            <button @click="tab = 'tab3'"
-                                    class="max-w-max inline-flex items-center px-4 py-2 rounded-r-sm focus:outline-none dark:hover:text-white hover:text-black space-x-3"
-                                    :class="tab === 'tab3' ? 'bg-[#FF5D9F] text-white' : 'dark:bg-black bg-gray-200 text-gray-400'">
-                                <input type="radio" name="tab" value="tab3" class="" :checked="tab === 'tab3'">
-                                <span>Management</span>
-                            </button>
-                            <button @click="tab = 'tab4'"
-                                    class="max-w-max inline-flex items-center px-4 py-2 rounded-r-sm focus:outline-none dark:hover:text-white hover:text-black space-x-3"
-                                    :class="tab === 'tab4' ? 'bg-[#FF5D9F] text-white' : 'dark:bg-black bg-gray-200 text-gray-400'">
-                                <input type="radio" name="tab" value="tab4" class="" :checked="tab === 'tab4'">
-                                <span>Accounting</span>
-                            </button>
-                            <button @click="tab = 'tab5'"
-                                    class="max-w-max inline-flex items-center px-4 py-2 rounded-r-sm focus:outline-none dark:hover:text-white hover:text-black space-x-3"
-                                    :class="tab === 'tab5' ? 'bg-[#FF5D9F] text-white' : 'dark:bg-black bg-gray-200 text-gray-400'">
-                                <input type="radio" name="tab" value="tab5" class="" :checked="tab === 'tab5'">
-                                <span>Manufacturing</span>
-                            </button>
-                            <button @click="tab = 'tab6'"
-                                    class="max-w-max inline-flex items-center px-4 py-2 rounded-r-sm focus:outline-none dark:hover:text-white hover:text-black space-x-3"
-                                    :class="tab === 'tab6' ? 'bg-[#FF5D9F] text-white' : 'dark:bg-black bg-gray-200 text-gray-400'">
-                                <input type="radio" name="tab" value="tab6" class="" :checked="tab === 'tab6'">
-                                <span>Transportation</span>
-                            </button>
-                            <button @click="tab = 'tab7'"
-                                    class="max-w-max inline-flex items-center px-4 py-2 rounded-r-sm focus:outline-none dark:hover:text-white hover:text-black space-x-3"
-                                    :class="tab === 'tab7' ? 'bg-[#FF5D9F] text-white' : 'dark:bg-black bg-gray-200 text-gray-400'">
-                                <input type="radio" name="tab" value="tab7" class="" :checked="tab === 'tab7'">
-                                <span>Others</span>
-                            </button>
-                        </div>
+{{--                        <div--}}
+{{--                            class="px- w-full overflow-x-auto flex items-center font-medium rounded-sm pb-2.5 justify-between gap-x-5">--}}
+{{--                            <button @click="tab = 'tab1'"--}}
+{{--                                    class="max-w-max inline-flex items-center px-4 py-2 rounded-l-sm focus:outline-none dark:hover:text-white hover:text-black space-x-3"--}}
+{{--                                    :class="tab === 'tab1' ? 'bg-[#FF5D9F] text-white' : 'dark:bg-black bg-gray-200 text-gray-400'">--}}
+{{--                                <input type="radio" name="tab" value="tab1" class="" :checked="tab === 'tab1'">--}}
+{{--                                <span>Ecommerce</span>--}}
+{{--                            </button>--}}
+{{--                            <button @click="tab = 'tab2'"--}}
+{{--                                    class="max-w-max inline-flex items-center px-4 py-2 focus:outline-none dark:hover:text-white hover:text-black space-x-3"--}}
+{{--                                    :class="tab === 'tab2' ? 'bg-[#FF5D9F] text-white' : 'dark:bg-black bg-gray-200 text-gray-400'">--}}
+{{--                                <input type="radio" name="tab" value="tab2" class="" :checked="tab === 'tab2'">--}}
+{{--                                <span class="inline-flex items-center">SocialMedia</span>--}}
+{{--                            </button>--}}
+{{--                            <button @click="tab = 'tab3'"--}}
+{{--                                    class="max-w-max inline-flex items-center px-4 py-2 rounded-r-sm focus:outline-none dark:hover:text-white hover:text-black space-x-3"--}}
+{{--                                    :class="tab === 'tab3' ? 'bg-[#FF5D9F] text-white' : 'dark:bg-black bg-gray-200 text-gray-400'">--}}
+{{--                                <input type="radio" name="tab" value="tab3" class="" :checked="tab === 'tab3'">--}}
+{{--                                <span>Management</span>--}}
+{{--                            </button>--}}
+{{--                            <button @click="tab = 'tab4'"--}}
+{{--                                    class="max-w-max inline-flex items-center px-4 py-2 rounded-r-sm focus:outline-none dark:hover:text-white hover:text-black space-x-3"--}}
+{{--                                    :class="tab === 'tab4' ? 'bg-[#FF5D9F] text-white' : 'dark:bg-black bg-gray-200 text-gray-400'">--}}
+{{--                                <input type="radio" name="tab" value="tab4" class="" :checked="tab === 'tab4'">--}}
+{{--                                <span>Accounting</span>--}}
+{{--                            </button>--}}
+{{--                            <button @click="tab = 'tab5'"--}}
+{{--                                    class="max-w-max inline-flex items-center px-4 py-2 rounded-r-sm focus:outline-none dark:hover:text-white hover:text-black space-x-3"--}}
+{{--                                    :class="tab === 'tab5' ? 'bg-[#FF5D9F] text-white' : 'dark:bg-black bg-gray-200 text-gray-400'">--}}
+{{--                                <input type="radio" name="tab" value="tab5" class="" :checked="tab === 'tab5'">--}}
+{{--                                <span>Manufacturing</span>--}}
+{{--                            </button>--}}
+{{--                            <button @click="tab = 'tab6'"--}}
+{{--                                    class="max-w-max inline-flex items-center px-4 py-2 rounded-r-sm focus:outline-none dark:hover:text-white hover:text-black space-x-3"--}}
+{{--                                    :class="tab === 'tab6' ? 'bg-[#FF5D9F] text-white' : 'dark:bg-black bg-gray-200 text-gray-400'">--}}
+{{--                                <input type="radio" name="tab" value="tab6" class="" :checked="tab === 'tab6'">--}}
+{{--                                <span>Transportation</span>--}}
+{{--                            </button>--}}
+{{--                            <button @click="tab = 'tab7'"--}}
+{{--                                    class="max-w-max inline-flex items-center px-4 py-2 rounded-r-sm focus:outline-none dark:hover:text-white hover:text-black space-x-3"--}}
+{{--                                    :class="tab === 'tab7' ? 'bg-[#FF5D9F] text-white' : 'dark:bg-black bg-gray-200 text-gray-400'">--}}
+{{--                                <input type="radio" name="tab" value="tab7" class="" :checked="tab === 'tab7'">--}}
+{{--                                <span>Others</span>--}}
+{{--                            </button>--}}
+{{--                        </div>--}}
 
                         <!-- Tab Content -->
                         <div class="text-md">
@@ -1112,13 +1140,12 @@
                         </div>
                     </div>
                 </div>
-                </div>
-{{--            </x-form.col1>--}}
-{{--            <x-form.col2>--}}
+            </div>
+            {{--            </x-form.col1>--}}
+            {{--            <x-form.col2>--}}
 
-{{--            </x-form.col2>--}}
+            {{--            </x-form.col2>--}}
         </x-form.body>
-
 
 
     </x-form.layout>
