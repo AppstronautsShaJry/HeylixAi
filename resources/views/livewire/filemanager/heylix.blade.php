@@ -31,10 +31,10 @@
         </div>
 
         <x-tabs.url-tab >
-            <x-tabs.url-content label="All" url="/filemanager-index" rounded="rounded-l-sm"/>
+            <x-tabs.url-content label="All" url="/filemanager-index" rounded="rounded-l-md"/>
             <x-tabs.url-content label="Upload" url="/filemanager-upload" rounded="rounded-0"/>
             <x-tabs.url-content label="AI Generate" url="/filemanager-generate" rounded="rounded-0"/>
-            <x-tabs.url-content label="Active Ads" url="/filemanager-heylix" rounded="rounded-r-sm" class=""/>
+            <x-tabs.url-content label="Active Ads" url="/filemanager-heylix" rounded="rounded-r-md" class=""/>
         </x-tabs.url-tab>
 
         <div class="grid grid-cols-12 gap-x-6">

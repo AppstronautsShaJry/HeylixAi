@@ -40,9 +40,9 @@
         <div class="flex justify-between dark:bg-bodybg my-3 rounded-md px-4">
             <div>
                 <x-tabs.url-tab>
-                    <x-tabs.url-content label="Meta Ads" url="/meta-ads" rounded="rounded-l-sm"/>
+                    <x-tabs.url-content label="Meta Ads" url="/meta-ads" rounded="rounded-l-md"/>
                     <x-tabs.url-content label="Google Ads" url="/google-ads" rounded=""/>
-                    <x-tabs.url-content label="Active Ads" url="/active-ads" rounded="rounded-r-sm"/>
+                    <x-tabs.url-content label="Active Ads" url="/active-ads" rounded="rounded-r-md"/>
                 </x-tabs.url-tab>
 {{--                <x-tabs.url-tab>--}}
 {{--                    <x-tabs.url-content label="Meta Ads" url="/web-website" rounded="rounded-l-sm"/>--}}
@@ -52,9 +52,9 @@
             </div>
 
             <div class="flex items-center">
-                <div class="flex flex-col space-y-1">
-                    <div class="text-lg font-semibold">Total AD Balance</div>
-                    <div class="font-semibold text-primary text-center">₹10,000</div>
+                <div class="flex flex-col mr-4 space-y-1">
+                    <div class="text-lg font-semibold">AD Balance</div>
+                    <div class="font-semibold text-primary text-xl text-center">₹10,000</div>
                 </div>
             </div>
         </div>

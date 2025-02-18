@@ -1,8 +1,5 @@
 @section('styles')
 
-    {{--    <!-- Tom Select Css -->--}}
-    {{--    <link rel="stylesheet" href="{{asset('build/assets/libs/tom-select/css/tom-select.default.min.css')}}">--}}
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
 
     <link rel="stylesheet" href="{{ asset('build/assets/libs/filepond/filepond.min.css') }}">
@@ -391,10 +388,12 @@
                 </div>
 
                 <div class="flex justify-end items-center w-full gap-3">
-                    <button type="button"
-                            class="hs-dropdown-toggle ti-btn btn-wave ti-btn-primary"
-                            data-hs-overlay="#exampleModalScrollable4">Go Back
-                    </button>
+                    <a href="{{route('meta.ads')}}">
+                        <button type="button"
+                                class="hs-dropdown-toggle ti-btn btn-wave ti-btn-primary"
+                                data-hs-overlay="#exampleModalScrollable4">Go Back
+                        </button>
+                    </a>
                     <button type="button"
                             class="hs-dropdown-toggle ti-btn btn-wave ti-btn-primary"
                             data-hs-overlay="#exampleModalScrollable4">Publish

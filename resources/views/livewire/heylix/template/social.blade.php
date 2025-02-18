@@ -16,6 +16,14 @@
         <!-- Page Header Close -->
     </div>
 
+    <div class="flex justify-end mb-2.5">
+        <a href="{{route('create.heylix')}}">
+            <button type="button"
+                    class="ti-btn ti-btn-primary-gradient btn-wave">Go Back
+            </button>
+        </a>
+    </div>
+
 
     <!-- Start::row-1 -->
     <div class="box p-5 space-y-5">

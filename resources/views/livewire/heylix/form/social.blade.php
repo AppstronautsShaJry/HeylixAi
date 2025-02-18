@@ -41,19 +41,19 @@
                     </x-input.text>
                 </div>
 
-{{--                <div class="flex flex-row col-span-12 space-x-5">--}}
-{{--                    <x-input.text label="Text T2">--}}
-{{--                        <x-tooltip.popover message="Lorem ipsum dolor sit amet, consectetur."/>--}}
-{{--                    </x-input.text>--}}
-{{--                    <x-input.text label="Text T3">--}}
-{{--                        <x-tooltip.popover message="Lorem ipsum dolor sit amet, consectetur."/>--}}
-{{--                    </x-input.text>--}}
-{{--                </div>--}}
+                {{--                <div class="flex flex-row col-span-12 space-x-5">--}}
+                {{--                    <x-input.text label="Text T2">--}}
+                {{--                        <x-tooltip.popover message="Lorem ipsum dolor sit amet, consectetur."/>--}}
+                {{--                    </x-input.text>--}}
+                {{--                    <x-input.text label="Text T3">--}}
+                {{--                        <x-tooltip.popover message="Lorem ipsum dolor sit amet, consectetur."/>--}}
+                {{--                    </x-input.text>--}}
+                {{--                </div>--}}
 
                 <div class="w-1/2 flex pr-2.5">
-                <x-input.text label="Text 3" >
-                    <x-tooltip.popover message="Lorem ipsum dolor sit amet, consectetur."/>
-                </x-input.text>
+                    <x-input.text label="Text 3">
+                        <x-tooltip.popover message="Lorem ipsum dolor sit amet, consectetur."/>
+                    </x-input.text>
                 </div>
 
                 <div class="flex flex-row col-span-12 space-x-5">
@@ -89,9 +89,13 @@
 
                 <x-input.file-upload :label="'Image 3'"/>
 
-                <button type="button"
-                        class="ti-btn ti-btn-primary-gradient btn-wave self-end mx-4">Save
-                </button>
+                <div class="flex justify-end">
+                    <a href="{{route('create.heylix')}}">
+                        <button type="button"
+                                class="ti-btn ti-btn-primary-gradient btn-wave mx-4">Save
+                        </button>
+                    </a>
+                </div>
             </form>
         </div>
 

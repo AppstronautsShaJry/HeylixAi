@@ -20,23 +20,12 @@
                 </div>
             </div>
         </div>
-        <!-- Navigation Buttons -->
-        <div class="box-tab p-5 flex justify-start items-center gap-x-2 my-10" x-data="buttonHandler">
-            <a href="/create-brand" class="dynamic-button" :class="isActive('/create-brand') ? 'current-button' : ''">
-                <button type="button"
-                        class="hs-tooltip-toggle ti-btn btn-wave"
-                        :class="isActive('/create-brand') ? 'ti-btn-primary' : 'ti-btn-light'">
-                    Create
-                </button>
-            </a>
-            <a href="/manage-brand" class="dynamic-button" :class="isActive('/manage-brand') ? 'current-button' : ''">
-                <button type="button"
-                        class="hs-tooltip-toggle ti-btn btn-wave"
-                        :class="isActive('/manage-brand') ? 'ti-btn-primary' : 'ti-btn-light'">
-                    Manage
-                </button>
-            </a>
-        </div>
+
+        <x-tabs.url-tab>
+            <x-tabs.url-content label="Create" url="/create-brand" rounded="rounded-l-md"/>
+            <x-tabs.url-content label="Manage" url="/manage-brand" rounded="rounded-r-md"/>
+        </x-tabs.url-tab>
+
         <!-- Brand Form -->
         <div class="grid grid-cols-12 sm:gap-x-6">
             <div class="xxl:col-span-9 xl:col-span-8 col-span-12">
