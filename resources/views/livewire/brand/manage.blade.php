@@ -31,45 +31,10 @@
             </div>
         </div>
 
-        <div class="box-tab p-5 flex justify-start items-center gap-x-2 my-10" x-data="buttonHandler">
-            <!-- Create Button -->
-            <a href="/create-brand"
-               class="dynamic-button"
-               :class="isActive('/create-brand') ? 'current-button' : ''">
-                <div class="hs-tooltip ti-main-tooltip [--placement:top]">
-                    <button type="button"
-                            class="hs-tooltip-toggle ti-btn btn-wave"
-                            :class="isActive('/create-brand') ? 'ti-btn-primary' : 'ti-btn-light'">
-                        Create
-                        <span
-                            class="hs-tooltip-content ti-main-tooltip-content py-1 px-2"
-                            :class="isActive('/create-brand') ? '!bg-primary !text-white' : '!bg-light !text-defaulttextcolor'"
-                            role="tooltip">
-                    Create Your Brand
-                </span>
-                    </button>
-                </div>
-            </a>
-
-            <!-- Manage Button -->
-            <a href="/manage-brand"
-               class="dynamic-button"
-               :class="isActive('/manage-brand') ? 'current-button' : ''">
-                <div class="hs-tooltip ti-main-tooltip [--placement:top]">
-                    <button type="button"
-                            class="hs-tooltip-toggle ti-btn btn-wave"
-                            :class="isActive('/manage-brand') ? 'ti-btn-primary' : 'ti-btn-light'">
-                        Manage
-                        <span
-                            class="hs-tooltip-content ti-main-tooltip-content py-1 px-2"
-                            :class="isActive('/manage-brand') ? '!bg-primary !text-white' : '!bg-light !text-defaulttextcolor'"
-                            role="tooltip">
-                    Manage Your Brand
-                </span>
-                    </button>
-                </div>
-            </a>
-        </div>
+        <x-tabs.url-tab>
+            <x-tabs.url-content label="Create" url="/create-brand" rounded="rounded-l-md"/>
+            <x-tabs.url-content label="Manage" url="/manage-brand" rounded="rounded-r-md"/>
+        </x-tabs.url-tab>
     </div>
     <!-- Brand Card -->
     <div class="box ">

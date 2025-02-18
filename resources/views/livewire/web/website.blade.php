@@ -8,38 +8,34 @@
             <x-breadcrumb.list list="Website" route="web-website"/>
         </x-breadcrumb.nav>
         <x-tabs.url-tab>
-            {{--            <x-tabs.url-content />--}}
-            <x-tabs.url-content label="Website" url="/web-website"/>
+            <x-tabs.url-content label="Website" url="/web-website" rounded="rounded-l-sm"/>
             <x-tabs.url-content label="App" url="/web-app" rounded="rounded-r-sm" class=""/>
         </x-tabs.url-tab>
+
         <x-form.body>
-{{--            <x-form.col1>--}}
                 <div class="col-span-12">
                     <div class="box space-y-8 p-5">
-                        <div x-cloak x-data="{ tab: 'tab1' }" class="h-auto gapp-5 flex flex-col justify-between">
-                            <!-- Tab Buttons -->
-                            <div class="w-full flex font-medium rounded-sm mb-10 justify-evenly">
-                                <button @click="tab = 'tab1'"
-                                        class="px-4 py-2 rounded-l-sm focus:outline-none dark:hover:text-white hover:text-black space-x-3"
-                                        :class="tab === 'tab1' ? 'bg-[#FF5D9F] text-white' : 'dark:bg-black bg-gray-200 text-gray-400'">
-                                    <input type="radio" name="tab" value="tab1" class="" :checked="tab === 'tab1'">
-                                    <span>Static Web Page</span>
-                                </button>
-                                <button @click="tab = 'tab2'"
-                                        class="px-4 py-2 focus:outline-none dark:hover:text-white hover:text-black space-x-3"
-                                        :class="tab === 'tab2' ? 'bg-[#FF5D9F] text-white' : 'dark:bg-black bg-gray-200 text-gray-400'">
-                                    <input type="radio" name="tab" value="tab2" class="" :checked="tab === 'tab2'">
-                                    <span>Website (1 - 7 Pages Includes)</span>
-                                </button>
-                                <button @click="tab = 'tab3'"
-                                        class="px-4 py-2 rounded-r-sm focus:outline-none dark:hover:text-white hover:text-black space-x-3"
-                                        :class="tab === 'tab3' ? 'bg-[#FF5D9F] text-white' : 'dark:bg-black bg-gray-200 text-gray-400'">
-                                    <input type="radio" name="tab" value="tab3" class="" :checked="tab === 'tab3'">
-                                    <span>Dynamic Web Page</span>
 
-                                </button>
+                        <div class="flex justify-end w-full h-auto mr-8">
+                            <div class="ti-btn-list flex align-center">
+                                <div class="hs-dropdown ti-dropdown ">
+                                    <button class="ti-btn btn-wave  ti-btn-primary ti-dropdown-toggle"
+                                            type="button" id="dropdownMenuButton1" aria-expanded="false">
+                                        Select<i
+                                            class="ri-arrow-down-s-line align-middle ms-1 inline-block"></i>
+                                    </button>
+                                    <ul class="hs-dropdown-menu ti-dropdown-menu hidden"
+                                        aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="ti-dropdown-item" href="javascript:void(0);">Web Page</a></li>
+                                        <li><a class="ti-dropdown-item" href="javascript:void(0);">Website</a></li>
+                                        <li><a class="ti-dropdown-item" href="javascript:void(0);">Dynamic Web Page</a></li>
+                                    </ul>
+                                </div>
+
                             </div>
+                        </div>
 
+                        <div x-cloak x-data="{ tab: 'tab1' }" class="h-auto gapp-5 flex flex-col justify-between">
                             <!-- Tab Content -->
                             <div class="text-md">
                                 <div x-cloak x-show="tab === 'tab1'" class="flex gap-x-2 items-center">
@@ -563,10 +559,8 @@
                         </div>
                     </div>
                 </div>
-{{--            </x-form.col1>--}}
-{{--            <x-form.col2>--}}
-{{--            </x-form.col2>--}}
         </x-form.body>
+
     </x-form.layout>
 </div>
 @section('scripts')

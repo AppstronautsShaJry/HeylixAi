@@ -50,7 +50,7 @@
                 {{--                </div>--}}
 
                 <div class="w-1/2 flex pr-2.5">
-                    <x-input.text label="Text T5" >
+                    <x-input.text label="Text T5">
                         <x-tooltip.popover message="Lorem ipsum dolor sit amet, consectetur."/>
                     </x-input.text>
                 </div>
@@ -88,9 +88,13 @@
 
                 <x-input.file-upload :label="'Image 3'"/>
 
-                <button type="button"
-                        class="ti-btn ti-btn-primary-gradient btn-wave self-end mx-4">Save
-                </button>
+                <div class="flex justify-end">
+                    <a href="{{route('create.heylix')}}">
+                        <button type="button"
+                                class="ti-btn ti-btn-primary-gradient btn-wave self-end mx-4">Save
+                        </button>
+                    </a>
+                </div>
             </form>
         </div>
 

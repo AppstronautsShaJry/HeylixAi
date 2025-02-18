@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Analytics\AnalyticsController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\FacebookController;
 use App\Http\Controllers\GoogleController;
@@ -169,5 +170,6 @@ Route::get('alerts', [UiElementsController::class, 'alerts']);
 
 Route::get('/web-website', App\Livewire\Web\Website::class)->name('web-website');
 Route::get('/web-app', App\Livewire\Web\App::class)->name('web-app');
+Route::resource('/analytics', AnalyticsController::class)->names('analytics')->middleware('auth');
 
 

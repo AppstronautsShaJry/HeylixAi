@@ -7,21 +7,19 @@
             <div>
                 <ol class="breadcrumb mb-0">
                     <li class="breadcrumb-item">
-                        <a href="/">
-                            Dashboard
+                        <a href="/calender-social">
+                            Social Media
                         </a>
                     </li>
                     <li class="breadcrumb-item active" aria-current="page">Post Insights</li>
                 </ol>
             </div>
-            {{--            <div class="flex gap-2 flex-wrap">--}}
-            {{--            </div>--}}
         </div>
     </div>
 
     <x-tabs.url-tab>
-        <x-tabs.url-content label=" Calender" url="/calender-social" rounded="rounded-l-sm"/>
-        <x-tabs.url-content label=" Post Insights" url="/posts-social" rounded="rounded-r-sm"/>
+        <x-tabs.url-content label=" Calender" url="/calender-social" rounded="rounded-l-md"/>
+        <x-tabs.url-content label=" Post Insights" url="/posts-social" rounded="rounded-r-md"/>
     </x-tabs.url-tab>
 
     <div>
@@ -112,9 +110,6 @@
                     </td>
                 </tr>
                 <tr class="border-b  border-defaultborder dark:border-defaultborder/10">
-                    {{--                    <th scope="row"><input class="form-check-input" type="checkbox" id="checkboxNoLabel1" value=""--}}
-                    {{--                                           aria-label="..."></th>--}}
-
                     <td>
                         <div class="flex items-center">
                             <span class="">
@@ -184,8 +179,6 @@
                     </td>
                 </tr>
                 <tr class="border-b  border-defaultborder dark:border-defaultborder/10">
-                    {{--                    <th scope="row"><input class="form-check-input" type="checkbox" id="checkboxNoLabel1" value=""--}}
-                    {{--                                           aria-label="..."></th>--}}
                     <td>
                         <div class="flex items-center">
                             <span class="">
@@ -255,8 +248,6 @@
                     </td>
                 </tr>
                 <tr class="border-b  border-defaultborder dark:border-defaultborder/10">
-                    {{--                    <th scope="row"><input class="form-check-input" type="checkbox" id="checkboxNoLabel1" value=""--}}
-                    {{--                                           aria-label="..."></th>--}}
                     <td>
                         <div class="flex items-center">
                             <span class="">
@@ -329,4 +320,3 @@
     </div>
 
 </div>
-{{--@endsection--}}

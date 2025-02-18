@@ -4,42 +4,19 @@
         <div class="flex items-center justify-between page-header-breadcrumb flex-wrap gap-2">
             <div>
                 <ol class="breadcrumb mb-0">
-                    {{--                    <li class="breadcrumb-item">--}}
-                    {{--                        <a href="/">--}}
-                    {{--                            Dashboard--}}
-                    {{--                        </a>--}}
-                    {{--                    </li>--}}
+
                     <li class="breadcrumb-item active" aria-current="page"><a href="/create-heylix">HeyLix</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Content Creation Service</li>
                 </ol>
             </div>
-            <div class="flex gap-2 flex-wrap">
-            </div>
+
         </div>
 
-        <div x-data="{ currentPage: window.location.pathname }" class="box flex flex-row p-3">
-            <div
-                :class="currentPage === '/create-heylix' ? 'bg-[#FF5D9F]  rounded-l-sm text-white ' : ' hover:text-gray-400 dark:text-gray-400  rounded-md '"
-                class="max-w-max py-3 px-2 group">
-                <a href="/create-heylix" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
-                    Create Image
-                </a>
-            </div>
-            <div
-                :class="currentPage === '/brand-heylix' ? 'bg-[#FF5D9F]  text-white ' : 'hover:text-gray-400 dark:text-gray-400 dark:bg-[#252528] bg-[#F8F9FB]'"
-                class="max-w-max py-3 px-2 group">
-                <a href="/brand-heylix" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
-                    Create Video
-                </a>
-            </div>
-            <div
-                :class="currentPage === '/jobstatus-heylix' ? 'bg-[#FF5D9F]  rounded-r-sm text-white ' : ' hover:text-gray-400 dark:text-gray-400 dark:bg-[#252528] bg-[#F8F9FB] rounded-r-sm'"
-                class="max-w-max py-3 px-2 group">
-                <a href="/jobstatus-heylix" class="text-sm flex items-center gap-x-3 dark:hover:text-white">
-                    JobStatus
-                </a>
-            </div>
-        </div>
+        <x-tabs.url-tab>
+            <x-tabs.url-content label="Create Image" url="/create-heylix" rounded="rounded-l-md"/>
+            <x-tabs.url-content label="Create Video" url="/brand-heylix" rounded=""/>
+            <x-tabs.url-content label="JobStatus" url="/jobstatus-heylix" rounded="rounded-r-md"/>
+        </x-tabs.url-tab>
     </div>
 
 

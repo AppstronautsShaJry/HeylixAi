@@ -14,9 +14,9 @@
 
         <x-tabs.url-tab>
             {{--            <x-tabs.url-content />--}}
-            <x-tabs.url-content label="Meta Ads" url="/meta-ads"/>
+            <x-tabs.url-content label="Meta Ads" url="/meta-ads" rounded="rounded-l-md"/>
             <x-tabs.url-content label="Google Ads" url="/google-ads"/>
-            <x-tabs.url-content label="Active Ads" url="/active-ads" rounded="rounded-r-sm" class=""/>
+            <x-tabs.url-content label="Active Ads" url="/active-ads" rounded="rounded-r-md" class=""/>
         </x-tabs.url-tab>
 
 {{--        <div x-data="{ currentPage: window.location.pathname }" class="box flex flex-row p-4">--}}
