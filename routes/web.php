@@ -155,13 +155,16 @@ Route::get('/filemanager-upload', \App\Livewire\Filemanager\Upload::class)->name
 Route::get('/filemanager-heylix', \App\Livewire\Filemanager\Heylix::class)->name('filemanager.heylix');
 Route::get('/filemanager-gallery', \App\Livewire\Filemanager\Gallery::class)->name('filemanager.gallery');
 
+//Analytics
+Route::get('/analytics', \App\Livewire\Analytics\Index::class)->name('analytics');
+
 Route::get('/ai-tools', [DashboardsController::class, 'aiTools']);
 Route::get('/advertising', [DashboardsController::class, 'advertising']);
 Route::get('/seo', [DashboardsController::class, 'seo']);
 Route::get('/assets', [DashboardsController::class, 'assets']);
 
 Route::get('/website', [DashboardsController::class, 'website']);
-Route::get('/analytics', [DashboardsController::class, 'analytics']);
+//Route::get('/analytics', [DashboardsController::class, 'analytics']);
 Route::get('/credits', [DashboardsController::class, 'credits']);
 Route::get('/heylix', [DashboardsController::class, 'heylix']);
 Route::get('/upgrade', [DashboardsController::class, 'upgrade']);
@@ -170,6 +173,8 @@ Route::get('alerts', [UiElementsController::class, 'alerts']);
 
 Route::get('/web-website', App\Livewire\Web\Website::class)->name('web-website');
 Route::get('/web-app', App\Livewire\Web\App::class)->name('web-app');
-Route::resource('/analytics', AnalyticsController::class)->names('analytics')->middleware('auth');
+Route::get('/tests', App\Livewire\Test\Index::class)->name('tests');
+
+
 
 
