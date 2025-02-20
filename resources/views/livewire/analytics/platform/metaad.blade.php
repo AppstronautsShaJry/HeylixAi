@@ -16,7 +16,7 @@
     </div>
 
     <div class="text-xl font-bold mb-3">
-        LinkedIn
+        MetaAd
     </div>
 
 
@@ -110,7 +110,7 @@
     <div class="grid grid-cols-2 w-full gap-4">
         <div class="box w-full">
             <div class="box-header">
-                <div class="box-title">Impression</div>
+                <div class="box-title">Impression Reach</div>
             </div>
             <div class="box-body">
                 <div id="zoom-chart-1"></div>
@@ -119,7 +119,7 @@
 
         <div class="box w-full">
             <div class="box-header">
-                <div class="box-title">Profile Reach</div>
+                <div class="box-title">Views</div>
             </div>
             <div class="box-body">
                 <div id="zoom-chart-2"></div>
@@ -128,7 +128,7 @@
 
         <div class="box w-full">
             <div class="box-header">
-                <div class="box-title">Clicks</div>
+                <div class="box-title">Amount</div>
             </div>
             <div class="box-body">
                 <div id="zoom-chart-3"></div>
@@ -137,7 +137,7 @@
 
         <div class="box w-full">
             <div class="box-header">
-                <div class="box-title">Reaction Comment</div>
+                <div class="box-title">Link Click</div>
             </div>
             <div class="box-body">
                 <div id="zoom-chart-4"></div>
@@ -199,59 +199,26 @@
                         <tr class="border-b border-defaultborder dark:border-defaultborder/10">
                             <template x-for="(column, index) in columns" :key="index">
                                 <td x-show="column.visible">
-                                    <template x-if="column.name === 'Post Name'"><span x-text="row.postName"></span>
+                                    <template x-if="column.name === 'Ad Name'"><span x-text="row.adname"></span>
                                     </template>
-                                    <template x-if="column.name === 'Type'"><span x-text="row.type"></span></template>
-                                    <template x-if="column.name === 'Date'"><span x-text="row.date"></span></template>
-                                    <template x-if="column.name === 'View'"><span x-text="row.view"></span>
-                                    </template>
-                                    <template x-if="column.name === 'Impression'"><span x-text="row.impression"></span>
-                                    </template>
+                                    <template x-if="column.name === 'Ad Id'"><span x-text="row.adid"></span></template>
+                                    <template x-if="column.name === 'Status'"><span x-text="row.status"></span>  </template>
+                                        <template x-if="column.name === 'Date'"><span x-text="row.date"></span></template>
+
                                     <template x-if="column.name === 'Reach'">
                                         <span class="badge bg-primary/10 text-primary" x-text="row.reach"></span>
                                     </template>
-                                    <template x-if="column.name === 'CTR'">
-                                        <span class="badge bg-primary/10 text-primary" x-text="row.ctr"></span>
+                                    <template x-if="column.name === 'Impression'"><span x-text="row.impression"></span>
                                     </template>
-                                    <template x-if="column.name === 'Reactions'">
-                                        <div class="flex items-center gap-x-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                 fill="currentColor" class="size-4">
-                                                <path
-                                                    d="M7.493 18.5c-.425 0-.82-.236-.975-.632A7.48 7.48 0 0 1 6 15.125c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75A.75.75 0 0 1 15 2a2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23h-.777Z"/>
-                                            </svg>
-                                            <a class="avatar avatar-sm bg-primary text-white avatar-rounded"
-                                               href="javascript:void(0);" x-text="row.reactions"></a>
-                                        </div>
+                                    <template x-if="column.name === 'Cost Per Result'">
+                                        <span class="badge bg-primary/10 text-primary"
+                                              x-text="row.costPerResult"></span>
                                     </template>
-                                    <template x-if="column.name === 'Comments'">
-                                        <div class="avatar-list-stacked inline-flex items-center gap-x-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                 fill="currentColor" class="size-4">
-                                                <path fill-rule="evenodd"
-                                                      d="M4.848 2.771A49.144 49.144 0 0 1 12 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97a48.901 48.901 0 0 1-3.476.383.39.39 0 0 0-.297.17l-2.755 4.133a.75.75 0 0 1-1.248 0l-2.755-4.133a.39.39 0 0 0-.297-.17 48.9 48.9 0 0 1-3.476-.384c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97ZM6.75 8.25a.75.75 0 0 1 .75-.75h9a.75.75 0 0 1 0 1.5h-9a.75.75 0 0 1-.75-.75Zm.75 2.25a.75.75 0 0 0 0 1.5H12a.75.75 0 0 0 0-1.5H7.5Z"
-                                                      clip-rule="evenodd"/>
-                                            </svg>
-                                            <a class="avatar avatar-sm bg-primary text-white avatar-rounded"
-                                               href="javascript:void(0);" x-text="row.comments"></a>
-                                        </div>
+                                    <template x-if="column.name === 'Amount'"><span x-text="row.amount"></span>
                                     </template>
-                                    <template x-if="column.name === 'Repost'">
-                                        <div class="avatar-list-stacked inline-flex items-center gap-x-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                 fill="currentColor" class="size-4">
-                                                <path
-                                                    d="M3.478 2.404a.75.75 0 0 0-.926.941l2.432 7.905H13.5a.75.75 0 0 1 0 1.5H4.984l-2.432 7.905a.75.75 0 0 0 .926.94 60.519 60.519 0 0 0 18.445-8.986.75.75 0 0 0 0-1.218A60.517 60.517 0 0 0 3.478 2.404Z"/>
-                                            </svg>
-                                            <a class="avatar avatar-sm bg-primary text-white avatar-rounded"
-                                               href="javascript:void(0);" x-text="row.repost"></a>
-                                        </div>
+                                    <template x-if="column.name === 'Clicks'"><span x-text="row.clicks"></span>
                                     </template>
-                                    <template x-if="column.name === 'Follows'"><span x-text="row.follows"></span>
-                                    </template>
-                                    <template x-if="column.name === 'Click'"><span x-text="row.click"></span>
-                                    </template>
-                                    <template x-if="column.name === 'Engagement'"><span x-text="row.engagement"></span>
+                                    <template x-if="column.name === 'CTR'"><span x-text="row.ctr"></span>
                                     </template>
                                 </td>
                             </template>
@@ -296,50 +263,41 @@
             document.addEventListener("alpine:init", () => {
                 Alpine.data("tableData", () => ({
                     columns: [
-                        {name: "Post Name", visible: true},
-                        {name: "Type", visible: true},
+                        {name: "Ad Name", visible: true},
+                        {name: "Ad Id", visible: true},
+                        {name: "Status", visible: true},
                         {name: "Date", visible: true},
-                        {name: "View", visible: true},
-                        {name: "Impression", visible: true},
                         {name: "Reach", visible: true},
-                        {name: "CTR", visible: true},
-                        {name: "Reactions", visible: true},
-                        {name: "Comments", visible: true},
-                        {name: "Repost", visible: true},
-                        {name: "Follows", visible: true},
-                        {name: "Click", visible: true},
-                        {name: "Engagement", visible: true}
+                        {name: "Impression", visible: true},
+                        {name: "Cost Per Result", visible: true},
+                        {name: "Amount", visible: true},
+                        {name: "Clicks", visible: true},
+                        {name: "CTR", visible: true}
                     ],
                     rows: [
                         {
-                            postName: "Blog Post",
-                            type: "Feed",
+                            adname: "Blog Post",
+                            adid: "BP001",
+                            status: "Start",
                             date: "25/02/2025",
-                            view: "Lorem5",
-                            impression: "Lorem5",
                             reach: "20%",
-                            reactions: "+24",
-                            ctr: "+24",
-                            comments: "+16",
-                            repost: "+10",
-                            follows: "Lorem3",
-                            click: "Lorem3",
-                            engagement: "Lorem3"
+                            impression: "Lorem5",
+                            costPerResult: "+24",
+                            amount: "2500",
+                            clicks: "+16",
+                            ctr: "10%",
                         },
                         {
-                            postName: "News Article",
-                            type: "News",
+                            adname: "News Article",
+                            adid: "BP002",
+                            status: "Process",
                             date: "26/02/2025",
-                            view: "Lorem6",
-                            impression: "Lorem6",
-                            reach: "30%",
-                            reactions: "+30",
-                            comments: "+12",
-                            ctr: "+12",
-                            repost: "+10",
-                            follows: "Lorem3",
-                            click: "Lorem3",
-                            engagement: "Lorem3"
+                            reach: "20%",
+                            impression: "Lorem5",
+                            costPerResult: "+24",
+                            amount: "2500",
+                            clicks: "+16",
+                            ctr: "10%",
                         },
                         // Add more rows as needed
                     ]

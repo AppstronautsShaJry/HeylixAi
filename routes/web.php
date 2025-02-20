@@ -157,6 +157,10 @@ Route::get('/filemanager-gallery', \App\Livewire\Filemanager\Gallery::class)->na
 
 //Analytics
 Route::get('/analytics', \App\Livewire\Analytics\Index::class)->name('analytics');
+Route::get('/linkedin-analytics', \App\Livewire\Analytics\Platform\Linkedin::class)->name('linkedin.analytics');
+Route::get('/youtube-analytics', \App\Livewire\Analytics\Platform\Youtube::class)->name('youtube.analytics');
+Route::get('/meta-analytics', \App\Livewire\Analytics\Platform\Metaad::class)->name('meta.analytics');
+Route::get('/instagram-analytics', \App\Livewire\Analytics\Platform\Instagram::class)->name('instagram.analytics');
 
 Route::get('/ai-tools', [DashboardsController::class, 'aiTools']);
 Route::get('/advertising', [DashboardsController::class, 'advertising']);
