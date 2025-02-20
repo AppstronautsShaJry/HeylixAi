@@ -16,6 +16,11 @@
             <div class="flex gap-2 flex-wrap">
             </div>
         </div>
+        <x-breadcrumb.nav>
+            <x-breadcrumb.list route="dashboard" list="Dashboard"/>
+            <x-breadcrumb.list route="" list="Social Media"/>
+            <x-breadcrumb.list route="" list="Social Media" active="dark:text-white text-gray-700"/>
+        </x-breadcrumb.nav>
     </div>
     <div class="box p-5 space-y-8">
         <div x-cloak x-data="{

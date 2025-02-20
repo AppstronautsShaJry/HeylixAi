@@ -4,10 +4,10 @@
         <x-breadcrumb.list route="social.temp" list="Template"/>
         <x-breadcrumb.list route="create.social" list="Social Media" active="dark:text-white text-gray-700"/>
     </x-breadcrumb.nav>
-
     <div class="grid grid-cols-12 gap-x-6">
         <div class="xl:col-span-8 col-span-12">
             <form class="p-4 flex flex-col gap-4 box">
+
                 <div class="col-span-12 ">
                     <span class="text-lg font-semibold">Create Social</span>
                 </div>
