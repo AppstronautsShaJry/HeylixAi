@@ -19,6 +19,7 @@ export default defineConfig({
                 'resources/assets/js/defaultmenu.js',
                 'resources/assets/js/simplebar.js',
                 'resources/assets/js/apexcharts-line.js',
+                'resources/assets/js/apexcharts-column.js',
 
             ],
             refresh: true,

@@ -16,9 +16,8 @@
     </div>
 
     <div class="text-xl font-bold mb-3">
-        Instagram
+        Facebook/Instagram
     </div>
-
 
     <div class="box w-full">
         <div class="w-full flex justify-between p-5">
@@ -69,23 +68,35 @@
                              class="absolute w-48 mt-2 bg-white z-30 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg shadow-md">
 
                             <!-- Dropdown Options -->
-                            <div @click="select('Facebook', Facebook)"
-                                 class="px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer flex items-center gap-2">
+                            <a href="{{route('instagram.analytics')}}" @click="select('Facebook', Facebook)"
+                               class="px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer flex items-center gap-2">
                                 <span x-html="Facebook"></span><span>Facebook</span>
 
-                            </div>
+                            </a>
                             <div @click="select('Twitter', Twitter)"
                                  class="px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer flex items-center gap-2">
                                 <span x-html="Twitter"></span> <span>Twitter</span>
                             </div>
-                            <div @click="select('Instagram', Instagram)"
-                                 class="px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer flex items-center gap-2">
+                            <a href="{{route('instagram.analytics')}}"  @click="select('Instagram', Instagram)"
+                               class="px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer flex items-center gap-2">
                                 <span x-html="Instagram"></span> <span>Instagram</span>
-                            </div>
-                            <div @click="select('Linkedin', Linkedin)"
-                                 class="px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer flex items-center gap-2">
+                            </a>
+                            <a href="{{route('linkedin.analytics')}}"  @click="select('Linkedin', Linkedin)"
+                               class="px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer flex items-center gap-2">
                                 <span x-html="Linkedin"></span> <span>Linkedin</span>
-                            </div>
+                            </a>
+                            <a href="{{route('youtube.analytics')}}" @click="select('Youtube', Youtube)"
+                               class="px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer flex items-center gap-2">
+                                <span x-html="Youtube"></span> <span>Youtube</span>
+                            </a>
+                            <a href="{{route('meta.analytics')}}" @click="select('MetaAd', MetaAd)"
+                               class="px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer flex items-center gap-2">
+                                <span x-html="MetaAd"></span> <span>MetaAd</span>
+                            </a>
+                            <a href="{{route('meta.analytics')}}" @click="select('GoogleAd', GoogleAd)"
+                               class="px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer flex items-center gap-2">
+                                <span x-html="GoogleAd"></span> <span>GoogleAd</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -140,16 +151,16 @@
                 <div class="box-title">Followers Group Comment</div>
             </div>
             <div class="box-body">
-                <div id="zoom-chart-4"></div>
+                <div id="columns-distributed-1"></div>
             </div>
         </div>
 
         <div class="box w-full">
             <div class="box-header">
-                <div class="box-title">Male/female</div>
+                <div class="box-title">Male/Female</div>
             </div>
             <div class="box-body">
-                <div id="zoom-chart-1"></div>
+                <div id="columns-distributed-2"></div>
             </div>
         </div>
 
@@ -158,7 +169,7 @@
                 <div class="box-title">Top 5 Countries</div>
             </div>
             <div class="box-body">
-                <div id="zoom-chart-2"></div>
+                <div id="bar-basic"></div>
             </div>
         </div>
 
@@ -167,7 +178,7 @@
                 <div class="box-title">Reel/Post</div>
             </div>
             <div class="box-body">
-                <div id="zoom-chart-1"></div>
+                <div id="zoom-chart-4"></div>
             </div>
         </div>
 
@@ -176,7 +187,7 @@
                 <div class="box-title">Most active Time</div>
             </div>
             <div class="box-body">
-                <div id="zoom-chart-2"></div>
+                <div id="columns-distributed-3"></div>
             </div>
         </div>
 
@@ -184,7 +195,7 @@
 
     <div x-data="tableData()">
         <!-- Sidebar Toggle Button -->
-        <div class="flex items-center gap-2" id="files-main-nav">
+        <div class="fixed -right-3 bottom-20 z-30 border border-danger/50 rounded-sm flex justify-end mr-8 items-center gap-2" id="files-main-nav">
             <a href="javascript:void(0);" data-hs-overlay="#offcanvasRight" aria-controls="offcanvasRight">
             <span class="avatar avatar-md bg-primarytint1color/10 !text-primarytint1color">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
@@ -465,6 +476,89 @@
                                     fill="#1967D2"/>
                                 </svg>
                                 `,
+                    Youtube: `<svg class="w-5 h-5" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M83.3282 25.8014C82.4082 22.3373 79.6977 19.6086 76.2555 18.6827C70.0168 17 45 17 45 17C45 17 19.9832 17 13.7441 18.6827C10.3023 19.6086 7.59136 22.3373 6.67136 25.8014C5 32.0809 5 45.1818 5 45.1818C5 45.1818 5 58.2832 6.67136 64.5627C7.59136 68.0268 10.3023 70.755 13.7441 71.6813C19.9832 73.3636 45 73.3636 45 73.3636C45 73.3636 70.0168 73.3636 76.2555 71.6813C79.6977 70.755 82.4082 68.0268 83.3282 64.5627C85 58.2832 85 45.1818 85 45.1818C85 45.1818 85 32.0809 83.3282 25.8014Z" fill="#ED1F24"/>
+<path d="M36.8125 57.0766L57.7216 45.1821L36.8125 33.2871V57.0766Z" fill="white"/>
+</svg>
+`,
+                    MetaAd: `<svg class="w-5 h-5" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_887_4007)">
+<mask id="mask0_887_4007" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="4" y="4" width="81" height="81">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M44.918 4.72705C66.9946 4.72705 84.918 22.6504 84.918 44.7269C84.918 66.8035 66.9946 84.7268 44.918 84.7268C22.8414 84.7268 4.91797 66.8035 4.91797 44.7269C4.91797 22.6504 22.8414 4.72705 44.918 4.72705ZM44.918 36.2026L33.0916 49.2722H56.7444L44.918 36.2026Z" fill="url(#paint0_linear_887_4007)"/>
+</mask>
+<g mask="url(#mask0_887_4007)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M44.918 4.72705C66.9946 4.72705 84.918 22.6504 84.918 44.7269C84.918 66.8035 66.9946 84.7268 44.918 84.7268C22.8414 84.7268 4.91797 66.8035 4.91797 44.7269C4.91797 22.6504 22.8414 4.72705 44.918 4.72705ZM44.918 36.2026L33.0916 49.2722H56.7444L44.918 36.2026Z" fill="url(#paint1_linear_887_4007)"/>
+<path d="M86.9232 -47.2184L152.467 25.8672L100.188 72.7508L34.6443 -0.334802L86.9232 -47.2184Z" fill="url(#paint2_linear_887_4007)"/>
+<path d="M21.3757 140.392L-44.168 67.3062L8.11089 20.4225L73.6545 93.5081L21.3757 140.392Z" fill="url(#paint3_linear_887_4007)"/>
+<path d="M33.1315 128.367L-32.4121 55.2817L19.8668 8.3981L85.4104 81.4837L33.1315 128.367Z" fill="url(#paint4_linear_887_4007)"/>
+<path d="M91.751 149.119L-6.41992 149.119L-6.41992 78.8965L91.751 78.8965L91.751 149.119Z" fill="url(#paint5_linear_887_4007)"/>
+<path d="M78.8204 147.798L145.137 75.4126L93.3588 27.9762L27.0425 100.362L78.8204 147.798Z" fill="url(#paint6_linear_887_4007)"/>
+<path d="M10.6894 -54.6923L-55.627 17.6934L-3.84908 65.1298L62.4673 -7.25591L10.6894 -54.6923Z" fill="url(#paint7_linear_887_4007)"/>
+<path d="M22.4374 -42.9453L-43.8789 29.4404L7.89897 76.8768L74.2153 4.49116L22.4374 -42.9453Z" fill="url(#paint8_linear_887_4007)"/>
+<path d="M86.6996 49.2764H3.78711V64.8542H86.6996V49.2764Z" fill="url(#paint9_linear_887_4007)"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_887_4007" x1="20.4947" y1="28.0803" x2="71.3873" y2="72.6696" gradientUnits="userSpaceOnUse">
+<stop stop-color="#01BB99"/>
+<stop offset="1" stop-color="#206ED4"/>
+</linearGradient>
+<linearGradient id="paint1_linear_887_4007" x1="20.4947" y1="28.0803" x2="71.3873" y2="72.6696" gradientUnits="userSpaceOnUse">
+<stop stop-color="#01BB99"/>
+<stop offset="1" stop-color="#206ED4"/>
+</linearGradient>
+<linearGradient id="paint2_linear_887_4007" x1="82.7527" y1="47.405" x2="68.6092" y2="0.940961" gradientUnits="userSpaceOnUse">
+<stop stop-color="#094FCF" stop-opacity="0.4"/>
+<stop offset="0.53" stop-color="#094FCF" stop-opacity="0.111373"/>
+<stop offset="1" stop-color="#094FCF" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint3_linear_887_4007" x1="39.0502" y1="54.9675" x2="27.6127" y2="65.435" gradientUnits="userSpaceOnUse">
+<stop stop-color="#094FCF" stop-opacity="0.1"/>
+<stop offset="0.53" stop-color="#094FCF" stop-opacity="0.027451"/>
+<stop offset="1" stop-color="#094FCF" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint4_linear_887_4007" x1="50.908" y1="42.969" x2="40.1015" y2="53.4833" gradientUnits="userSpaceOnUse">
+<stop stop-color="#094FCF" stop-opacity="0.1"/>
+<stop offset="0.53" stop-color="#094FCF" stop-opacity="0.027451"/>
+<stop offset="1" stop-color="#094FCF" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint5_linear_887_4007" x1="40.9364" y1="79.137" x2="41.5226" y2="114.87" gradientUnits="userSpaceOnUse">
+<stop stop-color="#5994FE" stop-opacity="0.2"/>
+<stop offset="1" stop-color="#5994FE" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint6_linear_887_4007" x1="62.2457" y1="62.6282" x2="73.6652" y2="73.0038" gradientUnits="userSpaceOnUse">
+<stop stop-color="#094FCF" stop-opacity="0.3"/>
+<stop offset="1" stop-color="#094FCF" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint7_linear_887_4007" x1="28.033" y1="30.2269" x2="20.0858" y2="22.4948" gradientUnits="userSpaceOnUse">
+<stop stop-color="#094FCF" stop-opacity="0.05"/>
+<stop offset="0.53" stop-color="#094FCF" stop-opacity="0.0137255"/>
+<stop offset="1" stop-color="#094FCF" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint8_linear_887_4007" x1="39.6811" y1="41.7372" x2="32.2879" y2="33.9307" gradientUnits="userSpaceOnUse">
+<stop stop-color="#094FCF" stop-opacity="0.05"/>
+<stop offset="0.53" stop-color="#094FCF" stop-opacity="0.0137255"/>
+<stop offset="1" stop-color="#094FCF" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint9_linear_887_4007" x1="83.2705" y1="56.3101" x2="18.0732" y2="56.0633" gradientUnits="userSpaceOnUse">
+<stop stop-color="#094FCF" stop-opacity="0.4"/>
+<stop offset="1" stop-color="#094FCF" stop-opacity="0"/>
+</linearGradient>
+<clipPath id="clip0_887_4007">
+<rect width="80" height="79.9998" fill="white" transform="translate(4.91797 4.72705)"/>
+</clipPath>
+</defs>
+</svg>
+`,
+                    GoogleAd: `<svg class="w-5 h-5" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M32.2234 17.2038C32.9966 15.1741 34.0598 13.3054 35.6385 11.7912C41.9533 5.63745 52.3921 7.18393 56.6771 14.9163C59.899 20.7801 63.3141 26.515 66.6326 32.3143C72.1742 41.9476 77.7802 51.5809 83.2573 61.2464C87.8645 69.3332 82.8707 79.5464 73.7206 80.9318C68.1146 81.7695 62.863 79.192 59.9634 74.166C55.0984 65.6925 50.2012 57.2191 45.3362 48.7779C45.2396 48.5846 45.1107 48.4235 44.9818 48.2624C44.4663 47.8435 44.2408 47.2314 43.9186 46.6837C41.76 42.8819 39.5369 39.1124 37.3783 35.3428C35.9929 32.8942 34.5431 30.4778 33.1577 28.0292C31.9012 25.8384 31.3213 23.4542 31.3857 20.9412C31.4823 19.6524 31.6434 18.3637 32.2234 17.2038Z" fill="#4285F4"/>
+<path d="M32.2234 17.2036C31.9334 18.3635 31.6757 19.5233 31.6112 20.7476C31.5146 23.454 32.1912 25.967 33.5443 28.319C37.0884 34.4082 40.6324 40.5297 44.1442 46.6512C44.4664 47.1989 44.7241 47.7466 45.0463 48.2621C43.1132 51.6129 41.1801 54.9313 39.2148 58.2821C36.5084 62.9537 33.8021 67.6576 31.0635 72.3293C30.9347 72.3293 30.9024 72.2648 30.8702 72.1682C30.838 71.9104 30.9347 71.6849 30.9991 71.4272C32.32 66.5944 31.2246 62.3094 27.9061 58.6365C25.8764 56.4134 23.2989 55.1569 20.3348 54.738C16.4686 54.1903 13.0535 55.1891 9.99271 57.6055C9.445 58.0243 9.0906 58.6365 8.44623 58.9586C8.31736 58.9586 8.25292 58.8942 8.2207 58.7976C9.76719 56.1234 11.2814 53.4493 12.8279 50.7752C19.2072 39.692 25.5864 28.6089 31.9979 17.558C32.0623 17.4291 32.159 17.3325 32.2234 17.2036Z" fill="#FBBC05"/>
+<path d="M8.35 58.8946C8.96215 58.3469 9.54208 57.767 10.1864 57.2515C18.0155 51.0655 29.7752 55.5439 31.4828 65.3383C31.9016 67.6902 31.6761 69.9455 30.9673 72.2008C30.9351 72.3941 30.9029 72.5552 30.8384 72.7485C30.5485 73.264 30.2907 73.8117 29.9685 74.3272C27.1011 79.0633 22.8805 81.4153 17.3389 81.0609C10.9919 80.6098 5.99806 75.8415 5.12816 69.5267C4.70932 66.4659 5.32147 63.5985 6.90017 60.9566C7.22235 60.3766 7.60898 59.8612 7.96338 59.2812C8.12447 59.1523 8.06003 58.8946 8.35 58.8946Z" fill="#34A853"/>
+<path d="M8.34964 58.8945C8.22077 59.0234 8.22077 59.2489 7.99524 59.2811C7.96302 59.0556 8.0919 58.9267 8.22077 58.7656L8.34964 58.8945Z" fill="#FBBC05"/>
+</svg>
+
+`,
+
 
                     select(optionText, optionIcon) {
                         this.selectedText = optionText;
@@ -596,7 +690,7 @@
                         chartName: "",
                         xLabel: "Date",
                         yLabel: "Stock Price (USD)",
-                        dataValues: Array.from({length: 50}, () => Math.floor(Math.random() * 2000) + 500) // Random prices for second chart
+                        dataValues: Array.from({length: 40}, () => Math.floor(Math.random() * 1000) + 500) // Random prices for second chart
                     }
                 ];
 
@@ -607,7 +701,71 @@
             });
         </script>
 
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Function to create bar chart dynamically
+                function createBarChart(chartId, chartData, categories) {
+                    var options = {
+                        series: [{data: chartData}],
+                        chart: {
+                            height: 320,
+                            type: "bar",
+                            events: {
+                                click: function (e, t, s) {
+                                    console.log(e, t, s);
+                                }
+                            }
+                        },
+                        colors: ["#5c67f7", "#e354d4", "#ff8e6f", "#0ca3e7", "#fe5454", "#0cd7b1", "#7b76fe", "#fe7c58"],
+                        plotOptions: {
+                            bar: {columnWidth: "45%", distributed: true}
+                        },
+                        dataLabels: {enabled: false},
+                        legend: {show: false},
+                        grid: {borderColor: "#f2f5f7"},
+                        xaxis: {
+                            categories: categories,
+                            labels: {
+                                style: {colors: "#8c9097", fontSize: "12px"}
+                            }
+                        },
+                        yaxis: {
+                            labels: {
+                                show: true,
+                                style: {colors: "#8c9097", fontSize: "11px", fontWeight: 600}
+                            }
+                        }
+                    };
 
+                    var chart = new ApexCharts(document.querySelector(chartId), options);
+                    chart.render();
+                }
+
+                // Define multiple chart datasets
+                const charts = [
+                    {
+                        chartId: "#columns-distributed-1",
+                        data: [21, 22, 10, 28, 16, 21, 13, 30],
+                        categories: [["John", "Doe"], ["Joe", "Smith"], ["Jake", "Williams"], "Amber", ["Peter", "Brown"], ["Mary", "Evans"], ["David", "Wilson"], ["Lily", "Roberts"]]
+                    },
+                    {
+                        chartId: "#columns-distributed-2",
+                        data: [50, 45, 70, 30, 55, 80, 60, 40],
+                        categories: ["Male", "Female", "Others", "Teen", "Adults", "Seniors", "Young", "Middle-Aged"]
+                    },
+                    {
+                        chartId: "#columns-distributed-3",
+                        data: [50, 35, 30, 45, 55, 75, 80, 40],
+                        categories: ["1hr", "58min", "2.4hr", "48sec", "3.7hr", "1hr.20min", "45min", "5hr"]
+                    }
+                ];
+
+                // Generate multiple charts dynamically
+                charts.forEach(chart => {
+                    createBarChart(chart.chartId, chart.data, chart.categories);
+                });
+            });
+        </script>
 
         <script src="{{asset('build/assets/libs/apexcharts/apexcharts.min.js')}}"></script>
 
@@ -618,6 +776,11 @@
         <script src="{{asset('build/assets/apexcharts-stock-prices.js')}}"></script>
 
         <!-- Internal Apex Line Charts JS -->
-@vite('resources/assets/js/apexcharts-line.js')
+        @vite('resources/assets/js/apexcharts-line.js')
+
+        <!-- Internal Apex-Column-Charts JS -->
+@vite('resources/assets/js/apexcharts-column.js')
+
+@vite('resources/assets/js/apexcharts-bar.js')
 
 @endsection
