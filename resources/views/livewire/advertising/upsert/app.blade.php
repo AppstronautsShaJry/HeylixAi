@@ -452,7 +452,7 @@
                 <div class="col-span-12 lg:col-span-12">
                     <h5 class="text-xs px-3  font-medium">Portrait image/video (1080x1080)</h5>
                     <div class="box-body my-2">
-                        <input type="file" class="filepond h-32" name="image2"
+                        <input type="file" class="filepond" name="image2"
                                {{--                    <input type="file" name="image" class="filepond basic-filepond"--}}
                                data-allow-reorder="true"
                                data-max-file-size="3MB"

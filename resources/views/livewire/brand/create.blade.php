@@ -14,7 +14,7 @@
             <div class="flex items-center justify-between page-header-breadcrumb flex-wrap gap-2">
                 <div>
                     <ol class="breadcrumb mb-0">
-                        <li class="breadcrumb-item"><a href="/">Dashboards</a></li>
+                        <li class="breadcrumb-item"><a href="manage-brand">Brand</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Create Brands</li>
                     </ol>
                 </div>
@@ -22,8 +22,8 @@
         </div>
 
         <x-tabs.url-tab>
-            <x-tabs.url-content label="Create" url="/create-brand" rounded="rounded-l-md"/>
-            <x-tabs.url-content label="Manage" url="/manage-brand" rounded="rounded-r-md"/>
+            <x-tabs.url-content label="Create" url="/create-brand" rounded="rounded-md"/>
+{{--            <x-tabs.url-content label="Manage" url="/manage-brand" rounded="rounded-r-md"/>--}}
         </x-tabs.url-tab>
 
         <!-- Brand Form -->

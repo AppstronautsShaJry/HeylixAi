@@ -19,11 +19,11 @@
                 <div>
                     <ol class="breadcrumb mb-0">
                         <li class="breadcrumb-item">
-                            <a href="/">
-                                Dashboards
+                            <a href="">
+                                Brands
                             </a>
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page">Manage Brands</li>
+                        <li class="breadcrumb-item active" aria-current="page">Manage</li>
                     </ol>
                 </div>
                 <div class="flex gap-2 flex-wrap">
@@ -32,8 +32,8 @@
         </div>
 
         <x-tabs.url-tab>
-            <x-tabs.url-content label="Create" url="/create-brand" rounded="rounded-l-md"/>
-            <x-tabs.url-content label="Manage" url="/manage-brand" rounded="rounded-r-md"/>
+{{--            <x-tabs.url-content label="Create" url="/create-brand" rounded="rounded-l-md"/>--}}
+            <x-tabs.url-content label="Manage" url="/manage-brand" rounded="rounded-md"/>
         </x-tabs.url-tab>
     </div>
     <!-- Brand Card -->

@@ -332,7 +332,7 @@
                 </form>
             </div>
 
-            <div class="xl:col-span-4 col-span-12  dark:bg-bodybg bg-white rounded-lg h-[30rem] px-3">
+            <div class="xl:col-span-4 col-span-12  dark:bg-bodybg bg-white rounded-lg mb-6 px-3">
                 <div class="col-span-12 lg:col-span-12">
                     <div class="w-full flex justify-between items-center my-5">
                 <span class="flex text-lg font-bold px-3 py-5">
@@ -376,7 +376,7 @@
                 </div>
 
                 <div class="col-span-12 lg:col-span-12">
-                    <h5 class="text-xs px-3  font-medium">Portrait image/video (1080x1080)</h5>
+                    <h5 class="text-xs px-3 font-medium">Portrait image/video (1080x1080)</h5>
                     <div class="box-body my-2">
                         <input type="file" class="filepond" name="image2"
                                {{--                    <input type="file" name="image" class="filepond basic-filepond"--}}

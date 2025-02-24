@@ -400,7 +400,7 @@
                 </form>
             </div>
 
-            <div class="xl:col-span-4 col-span-12  dark:bg-bodybg bg-white rounded-lg h-[30rem] px-3">
+            <div class="xl:col-span-4 col-span-12  dark:bg-bodybg bg-white rounded-lg mb-6 px-3">
                 <div class="col-span-12 lg:col-span-12">
                     <div class="w-full flex justify-between items-center my-5">
                 <span class="flex text-lg font-bold px-3 py-2">
@@ -498,10 +498,12 @@
                 </div>
 
                 <div class="flex justify-end items-center w-full gap-3">
-                    <button type="button"
-                            class="hs-dropdown-toggle ti-btn btn-wave ti-btn-primary"
-                            data-hs-overlay="#exampleModalScrollable4">Go Back
-                    </button>
+                    <a href="{{route('google.ads')}}">
+                        <button type="button"
+                                class="hs-dropdown-toggle ti-btn btn-wave ti-btn-primary"
+                                data-hs-overlay="#exampleModalScrollable4">Go Back
+                        </button>
+                    </a>
                     <button type="button"
                             class="hs-dropdown-toggle ti-btn btn-wave ti-btn-primary"
                             data-hs-overlay="#exampleModalScrollable4">Publish

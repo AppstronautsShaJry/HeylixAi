@@ -113,7 +113,7 @@
                         </div>
 
                         <div x-show="activeTab === 'lead'"
-                             class="grid grid-cols-1 xl:grid-cols-4 sm:grid-cols-3 lg:grid-cols-3 gap-6">
+                             class="grid grid-cols-1 xl:grid-cols-4 sm:grid-cols-3 lg:grid-cols-3 gap-6 p-5">
                             <x-cards.card1 :title="'Search Ad'" description="..."
                                            route="lead-search"></x-cards.card1>
                             <x-cards.card1 :title="'Display Ad'" description="..."
