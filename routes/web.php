@@ -87,7 +87,7 @@ Route::get('authLinkedin', [PlatformController::class, 'authLinkedin'])->middlew
 Route::resource('brand_categories', App\Http\Controllers\Brand\CategoryController::class)->middleware('auth');
 Route::get('/create-brand', \App\Livewire\Brand\Create::class)->name('brand.create')->middleware('auth');
 Route::get('/manage-brand', \App\Livewire\Brand\Manage::class)->name('brand.manage')->middleware('auth');
-Route::get('/edit-brand/{id}', \App\Livewire\Brand\Edit::class)->name('brand.edit')->middleware('auth');
+Route::get('/edit-brand/{id?}', \App\Livewire\Brand\Edit::class)->name('brand.edit')->middleware('auth');
 
 // Brand
 Route::get('/social-accounts', [\App\Models\SocialAccount::class, 'showSocialAccounts'])->name('social.accounts');

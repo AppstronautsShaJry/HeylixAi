@@ -41,8 +41,88 @@
         <div class="box-body">
             <div class="grid grid-cols-12 sm:gap-x-6 ">
                 <div class="xl:col-span-3 col-span-12">
+                    @forelse($brands as $row)
+                        <div class="box overflow-hidden border border-defaultborder dark:border-defaultborder/10">
+                            <div
+                                class="box-body border-b border-dashed border-defaultborder dark:border-defaultborder/10">
+                                <div class="text-center flex flex-col justify-center items-center">
+                                    <div class="w-28 h-28 rounded-full overflow-hidden">
+                                        <img src="{{ asset('storage/' . $row->image) }}"
+                                             alt="" class="w-full h-full object-cover">
+                                    </div>
+                                    <h5 class="font-semibold my-2">{{$row->name}}</h5>
+                                    <span class="block font-medium text-textmuted dark:text-textmuted/50 mb-2">{{$row->category->name}}</span>
+                                    <div class="text-xs mb-0 text-textmuted dark:text-textmuted/50 items-center inline-flex"><span class="me-3"><i
+                                                class="ri-map-pin-line me-1 align-middle"></i>{{$row->city}}</span>
+                                        <span><i class="ti ti-phone me-1 align-middle"></i>{{$row->phone}}</span></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center item-center gap-5 p-5">
+                                <div
+                                    class="bg-gradient-to-r from-blue-700 to-blue-500 rounded-md w-9 h-9  flex justify-center items-center">
+                                    <a href="{{route('brand.edit', [$row->id])}}">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                             stroke-linejoin="round"
+                                             class="icon icon-tabler icons-tabler-outline icon-tabler-eye-spark">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"/>
+                                            <path d="M11.669 17.994q -5.18 -.18 -8.669 -5.994q 3.6 -6 9 -6t 9 6"/>
+                                            <path
+                                                d="M19 22.5a4.75 4.75 0 0 1 3.5 -3.5a4.75 4.75 0 0 1 -3.5 -3.5a4.75 4.75 0 0 1 -3.5 3.5a4.75 4.75 0 0 1 3.5 3.5"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div
+                                    class="bg-gradient-to-r from-red-700 to-red-500  rounded-md w-9 h-9  flex justify-center items-center">
+                                    <a href="">
+                                        <i class="text-[20px] ti ti-trash"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        @empty
+                        <div class="box overflow-hidden border border-defaultborder dark:border-defaultborder/10">
+                            <div
+                                class="box-body border-b border-dashed border-defaultborder dark:border-defaultborder/10">
+                                <div class="text-center flex flex-col justify-center items-center">
+                                    <div class="w-28 h-28 rounded-full overflow-hidden">
+                                        <img src="{{ asset('images/partials/img3.jpeg') }}"
+                                             alt="" class="w-full h-full object-cover">
+                                    </div>
+                                    <h5 class="font-semibold my-2">{{'Brand Name'}}</h5>
+                                    <span class="block font-medium text-textmuted dark:text-textmuted/50 mb-2">{{'Category Name'}}</span>
+                                    <div class="text-xs mb-0 text-textmuted dark:text-textmuted/50 items-center inline-flex"><span class="me-3"><i
+                                                class="ri-map-pin-line me-1 align-middle"></i>{{'Bangalore'}}</span>
+                                        <span><i class="ti ti-phone me-1 align-middle"></i>{{'9876543210'}}</span></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center item-center gap-5 p-5">
+                                <div
+                                    class="bg-gradient-to-r from-blue-700 to-blue-500 rounded-md w-9 h-9  flex justify-center items-center">
+                                    <a href="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                             stroke-linejoin="round"
+                                             class="icon icon-tabler icons-tabler-outline icon-tabler-eye-spark">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"/>
+                                            <path d="M11.669 17.994q -5.18 -.18 -8.669 -5.994q 3.6 -6 9 -6t 9 6"/>
+                                            <path
+                                                d="M19 22.5a4.75 4.75 0 0 1 3.5 -3.5a4.75 4.75 0 0 1 -3.5 -3.5a4.75 4.75 0 0 1 -3.5 3.5a4.75 4.75 0 0 1 3.5 3.5"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div
+                                    class="bg-gradient-to-r from-red-700 to-red-500  rounded-md w-9 h-9 light:text-white flex justify-center items-center">
+                                    <a href="">
+                                        <i class="text-[20px] ti ti-trash"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    @endforelse
                     @foreach($brands as $row)
-
                     <div class="box overflow-hidden border border-defaultborder dark:border-defaultborder/10">
                         <div
                             class="box-body border-b border-dashed border-defaultborder dark:border-defaultborder/10">
@@ -65,7 +145,7 @@
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                          stroke-linejoin="round"
-                                         class="icon icon-tabler icons-tabler-outline icon-tabler-eye-spark">
+                                         class="icon icon-tabler icons-tabler-outline icon-tabler-eye-spark text-white">
                                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                         <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"/>
                                         <path d="M11.669 17.994q -5.18 -.18 -8.669 -5.994q 3.6 -6 9 -6t 9 6"/>
@@ -75,7 +155,7 @@
                                 </a>
                             </div>
                             <div
-                                class="bg-gradient-to-r from-red-700 to-red-500  rounded-md w-9 h-9  flex justify-center items-center">
+                                class="bg-gradient-to-r from-red-700 to-red-500 text-white fill-white rounded-md w-9 h-9  flex justify-center items-center">
                                 <a href="">
                                     <i class="text-[20px] ti ti-trash"></i>
                                 </a>

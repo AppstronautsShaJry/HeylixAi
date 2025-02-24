@@ -17,7 +17,7 @@
                 <div class="authentication-cover overflow-hidden h-screen" style="background: url('{{asset('build/assets/images/cust_partials/signin_cover_image.jpg')}}');">
                     <div class="authentication-cover-logo">
                         <a href="{{url('index')}}">
-                            <img src="{{asset('build/assets/images/brand-logos/heylix_ai.svg')}}" alt="" class="authentication-brand desktop-white">
+                            <img src="{{asset('/images/logo/Heylix_white.svg')}}" alt="" class="authentication-brand desktop-white">
                         </a>
                     </div>
                     <div class="aunthentication-cover-content flex items-center justify-center">

@@ -16,9 +16,9 @@
                         <div class="box-body p-[3rem]">
                             <div class="mb-4 flex justify-center">
                                 <a href="{{url('index')}}">
-                                    <img src="{{asset('build/assets/images/brand-logos/heylix_ai.svg')}}" alt="logo"
+                                    <img src="{{asset('/images/logo/heylix_white.png')}}" alt="{{asset('/images/logo/heylix-white.png')}}"
                                          class="desktop-logo">
-                                    <img src="{{asset('build/assets/images/brand-logos/heylix_ai.svg')}}" alt="logo"
+                                    <img src="{{asset('/images/logo/heylix_white.png')}}" alt="{{asset('/images/logo/heylix-white.png')}}"
                                          class="desktop-white">
                                 </a>
                             </div>
@@ -96,7 +96,7 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="form-check mt-3">
+                                    <div class="form-check mt-3 xl:col-span-12 col-span-12">
                                         <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"
                                                required>
                                         <label

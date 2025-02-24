@@ -11,7 +11,7 @@ class Index extends Component
 
     public function mount()
     {
-        $this->users = User::auth()->get();
+//        $this->users = User::auth()->get();
     }
 
     public function render()
