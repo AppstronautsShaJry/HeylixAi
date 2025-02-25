@@ -388,7 +388,7 @@
                 </form>
             </div>
 
-            <div class="xl:col-span-4 col-span-12  dark:bg-bodybg bg-white rounded-lg h-[30rem] px-3">
+            <div class="xl:col-span-4 col-span-12  dark:bg-bodybg bg-white rounded-lg mb-6 px-3">
                 <div class="col-span-12 lg:col-span-12">
                     <div class="w-full flex justify-between items-center my-5">
                 <span class="flex text-lg font-bold px-3 py-5">

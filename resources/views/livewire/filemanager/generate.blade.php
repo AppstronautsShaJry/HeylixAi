@@ -37,7 +37,7 @@
             </div>
         </div>
 
-        <x-tabs.url-tab >
+        <x-tabs.url-tab>
             <x-tabs.url-content label="All" url="/filemanager-index" rounded="rounded-l-md"/>
             <x-tabs.url-content label="Upload" url="/filemanager-upload" rounded="rounded-0"/>
             <x-tabs.url-content label="AI Generate" url="/filemanager-generate" rounded="rounded-0"/>
@@ -297,7 +297,6 @@
                                     </nav>
                                 </div>
                             </div>
-                            <x-test />
                         </div>
 
                         <div class="xxl:col-span-3 col-span-8 w-4/12 flex flex-col ">
