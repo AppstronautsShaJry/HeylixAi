@@ -35,12 +35,12 @@
                     </select>
                 </div>
 
-                <div x-data="theme" :class="{ 'dark': darkMode }" class="flex items-center ">
+                <div x-data="theme" :class="{ 'dark': darkMode }" class="flex items-center  ">
 
                     <div x-data="dropdown" class="relative w-48">  <!-- Set fixed width -->
                         <!-- Dropdown Button -->
                         <button @click="open = !open" @keydown.escape="open = false"
-                                class="w-48 h-10 px-4 py-2 bg-transparent border border-gray-800 text-white rounded-md shadow-md flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                class="w-48 h-10 px-4 py-2 bg-transparent border border-gray-800  rounded-md shadow-md flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-blue-400">
                             <span class="truncate inline-flex items-center gap-2">
                                 <span x-html="selectedIcon"></span>
                                 <span x-text="selectedText"></span>
